@@ -848,6 +848,468 @@ Do NOT ask before:
 
 7. The license block (610.5 TND/hour, before 2027) MUST appear in the
    footer of every template. Don't remove it.
+
+## AI Agent Prompt — Next Step: Template Onboarding
+
+> This section extends the AI Agent Prompt above. It documents the **template onboarding workflow**: the exact sequence an AI agent must follow when the human sends a template's HTML + CSS + JS files (or an admin dashboard template).
+
+================================================================================
+NEXT STEP — TEMPLATE ONBOARDING
+================================================================================
+
+You will receive ONE of these two inputs at a time:
+
+  (A) A SITE TEMPLATE        — HTML + CSS + JS files for the public-facing site
+  (B) AN ADMIN TEMPLATE      — HTML + CSS + JS files for the admin dashboard
+
+Your job is to integrate that template into the CMS without touching other
+templates. You do NOT redesign, restyle, or "improve" the template. You only
+refactor it into the CMS's file layout and wire it to the templating engine.
+
+--------------------------------------------------------------------------------
+WORKFLOW (SITE TEMPLATE) — when input is (A)
+--------------------------------------------------------------------------------
+
+Assume the human has named the template. If not, ask for a slug
+(lowercase, hyphenated, e.g. `nexva`, `w5d-classic`). Call it {name}.
+
+STEP 1 — CREATE THE TEMPLATE FOLDERS
+
+  mkdir -p views/{name}/layouts
+  mkdir -p views/{name}/partials
+  mkdir -p views/{name}/pages
+  mkdir -p assets/{name}/css
+  mkdir -p assets/{name}/js
+  mkdir -p assets/{name}/img
+  mkdir -p assets/{name}/fonts
+
+STEP 2 — MOVE THE TEMPLATE'S CSS/JS/IMG/FONTS
+
+  From the template's `assets/css/`   → assets/{name}/css/
+  From the template's `assets/js/`    → assets/{name}/js/
+  From the template's `assets/img/`   → assets/{name}/img/
+  From the template's `assets/fonts/` → assets/{name}/fonts/
+
+  Preserve subfolders. Do NOT rewrite `url(...)` inside the CSS —
+  if the template referenced `../fonts/x.woff2`, it will still resolve
+  because the relative folder structure is preserved.
+
+STEP 3 — SPLIT THE HTML
+
+  For each HTML file the human sends:
+
+  A. `index.html` (or the main/home page) becomes the LAYOUT + a PAGE:
+
+     views/{name}/layouts/app.php     ← the full <html>…</html> shell
+     views/{name}/pages/home.php      ← @extends('layouts.app') + @section('content') with the <main> content
+
+  B. Reusable <header>, <nav>, <footer>, <preloader>, mobile off-canvas,
+     search popup, language switcher, cookie banner — extract EACH into:
+
+     views/{name}/partials/header.php
+     views/{name}/partials/footer.php
+     views/{name}/partials/preloader.php
+     views/{name}/partials/offcanvas.php
+     views/{name}/partials/search.php
+     views/{name}/partials/lang-switcher.php
+     views/{name}/partials/cookie-banner.php     ← only if present in the source
+
+  C. Any OTHER HTML file (about.html, services.html, contact.html, etc.)
+     becomes a PAGE:
+
+     views/{name}/pages/{slug}.php
+
+  D. If the template has reusable section blocks (hero variants,
+     service cards, testimonials, pricing tiers, team cards), extract them
+     into `views/{name}/partials/sections/` and include them from pages:
+
+     views/{name}/partials/sections/hero.php
+     views/{name}/partials/sections/services.php
+     views/{name}/partials/sections/pricing.php
+     ...
+
+STEP 4 — WIRE THE BLADE-LIKE ENGINE
+
+  In the LAYOUT (views/{name}/layouts/app.php):
+
+    • Replace <title> and meta description with @yield():
+        <title>@yield('title', 'W5D') — W5D</title>
+        <meta name="description" content="@yield('description', t('site.tagline'))">
+
+    • Set <html lang="{{ $lang }}" dir="{{ $dir }}">
+
+    • Replace all CSS/JS src/href with @asset():
+        <link rel="stylesheet" href="@asset('css/bootstrap.css')">
+        <script src="@asset('js/app.js')"></script>
+
+    • Replace the header/footer/preloader/offcanvas block with @include():
+        @include('partials.preloader')
+        @include('partials.header')
+        <main>@yield('content')</main>
+        @include('partials.footer')
+
+    • Just before </body>, keep the base scripts the template needs, then add:
+        <script src="@asset('js/w5d-dynamic.js')" defer></script>
+        <script>{!! W5D\Lang::switcherJs() !!}</script>
+        @yield('scripts')
+
+    • Add the Arabic RTL block AFTER the base <link> tags:
+        @if($dir === 'rtl')
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+          <style>
+            body, h1, h2, h3, h4, p, span, a, li, button { font-family: 'Cairo', sans-serif; }
+          </style>
+        @endif
+
+  In EACH PAGE (views/{name}/pages/{slug}.php):
+
+        @extends('layouts.app')
+
+        @section('title', 'About')
+
+        @section('content')
+          ... page body ...
+        @endsection
+
+  In EACH PARTIAL, replace text with {{ t('key') }}. See STEP 5 for
+  key extraction.
+
+STEP 5 — EXTRACT LANGUAGE KEYS
+
+  Walk every visible user-facing string in the template and replace it
+  with {{ t('section.key') }}. Then add the key to ALL THREE language files:
+
+    lang/en.php    ← original string (source of truth)
+    lang/fr.php    ← copy of EN value (human will translate later)
+    lang/ar.php    ← copy of EN value (human will translate later)
+
+  Key naming (see the main AI Agent Prompt for the full rule):
+
+    Navbar links         → 'nav.home', 'nav.about', 'nav.services', …
+    Hero                 → 'hero.subtitle', 'hero.1.title', 'hero.1.cta', …
+    Section headings     → 'choose.title', 'about.title', 'pricing.title', …
+    Card titles          → 'services.card.1.title', 'services.card.1.desc', …
+    Buttons              → 'btn.contact', 'btn.read_more', 'btn.submit', …
+    Footer               → 'footer.tagline', 'footer.quick_links', 'footer.license', …
+    Form labels          → 'form.name', 'form.email', 'form.message', …
+    404                  → 'errors.not_found'
+
+  If the template has a phrase that is clearly data (numbers, names of
+  people, addresses), DO NOT translate it. Leave it in place or move it
+  to `views/{name}/partials/data/` if it repeats.
+
+STEP 6 — REMOVE INLINE STYLES AND SCRIPTS
+
+  For EVERY <style>…</style> block found in the template's HTML:
+    • Move the rules into assets/{name}/css/w5d-dynamic.css
+    • Keep the file ordered by section (see the CSS file's top comment)
+    • Delete the <style> block from the HTML
+
+  For EVERY inline <script>…</script> block:
+    • If it is a third-party CDN loader or config (Swiper init, GSAP,
+      countdown, etc.), keep it inside the layout or the partial it belongs
+      to — BUT prefer moving it to assets/{name}/js/w5d-dynamic.js
+    • If it is a small page-specific effect (e.g. an accordion on the About
+      page only), move it to assets/{name}/js/pages/{slug}.js and load it
+      via @section('scripts') in that page:
+
+        @section('scripts')
+          <script src="@asset('js/pages/about.js')" defer></script>
+        @endsection
+
+  The ONLY allowed inline <style> is the Arabic RTL Cairo block in the
+  layout (guarded by @if($dir === 'rtl')).
+
+STEP 7 — WIRE THE LANGUAGE SWITCHER
+
+  Find the template's language selector (usually in the header or in a
+  settings menu). Replace its links with:
+
+    <a href="#" data-w5d-lang="en">EN</a>
+    <a href="#" data-w5d-lang="fr">FR</a>
+    <a href="#" data-w5d-lang="ar">AR</a>
+
+  If the template uses a dropdown or "globe" icon, keep the styling —
+  only the <a> hrefs change to `#` + `data-w5d-lang`.
+
+  NEVER generate ?lang=xy URLs.
+
+STEP 8 — ADD ROUTES
+
+  In src/Router.php, add one entry per page:
+
+    $routes = [
+      '/'            => 'pages.home',
+      '/about'       => 'pages.about',
+      '/services'    => 'pages.services',
+      '/contact'     => 'pages.contact',
+      '/blog'        => 'pages.blog',
+      '/blog/{slug}' => 'pages.blog-detail',   ← if dynamic
+      ...
+    ];
+
+  For dynamic routes (e.g. /services/{macro}), extend siteRoute() with a
+  small dispatch table:
+
+    if (preg_match('#^/services/([a-z]+)$#', $path, $m)) {
+      $macro = $m[1];
+      $data  = ['macro' => $macro, 'services' => $services];
+      echo $this->view->render('pages.service-category', $data);
+      return;
+    }
+
+STEP 9 — UPDATE .env
+
+  ACTIVE_TEMPLATE={name}
+
+  Add any template-specific config keys under a `# --- Template: {name} ---`
+  block at the bottom of `.env`:
+
+    TEMPLATE_{NAME}_HERO_VIDEO=assets/{name}/img/hero.mp4
+    TEMPLATE_{NAME}_BRAND_COLOR=#0A5EFF
+
+  These are read via Env::get('TEMPLATE_{NAME}_…').
+
+STEP 10 — VERIFY
+
+  Run all of these before declaring done:
+
+  [ ] http://localhost/w5d/                     → home page renders
+  [ ] http://localhost/w5d/about                → page renders
+  [ ] http://localhost/w5d/contact              → page renders
+  [ ] http://localhost/w5d/nonexistent          → 404 from _shared
+  [ ] Language switcher: EN → FR → AR works
+  [ ] In AR mode: <html dir="rtl">, Cairo applied, layout flips
+  [ ] http://localhost/w5d/{ADMIN_URL_PATH}     → admin stub still loads
+  [ ] http://localhost/w5d/admin                → 403
+  [ ] DevTools → Network → all assets 200 OK
+  [ ] DevTools → Console → no errors
+  [ ] View source → no inline <style> (except the Cairo block in AR)
+  [ ] View source → no inline <script> (except the Arabic injection)
+  [ ] Footer shows: "W5D … licensed at 610.5 TND/hour … before 2027."
+  [ ] rm -rf storage/cache/views/* → pages still render (cache rebuild)
+
+--------------------------------------------------------------------------------
+WORKFLOW (ADMIN TEMPLATE) — when input is (B)
+--------------------------------------------------------------------------------
+
+Assume the human sends a full admin dashboard template. Its slug is fixed:
+`admin` (not from .env — the folder is `admin/`).
+
+STEP 1 — CREATE THE ADMIN FOLDERS
+
+  mkdir -p admin/views/layouts
+  mkdir -p admin/views/partials
+  mkdir -p admin/views/pages
+  mkdir -p admin/assets/css
+  mkdir -p admin/assets/js
+  mkdir -p admin/assets/img
+  mkdir -p admin/assets/fonts
+
+STEP 2 — MOVE THE ADMIN'S CSS/JS/IMG/FONTS
+
+  From the template's assets/ → admin/assets/
+  (same rule as site templates, preserve subfolders)
+
+STEP 3 — SPLIT THE ADMIN HTML
+
+  admin/index.html becomes:
+
+    admin/views/layouts/app.php    ← full shell
+    admin/views/pages/dashboard.php ← @extends('layouts.app')
+
+  Extract reusable pieces into:
+
+    admin/views/partials/sidebar.php
+    admin/views/partials/topbar.php
+    admin/views/partials/breadcrumb.php
+    admin/views/partials/footer.php        ← footer of the admin shell
+    admin/views/partials/notification.php
+
+  Each admin page the template ships (users.html, settings.html, etc.)
+  becomes:
+
+    admin/views/pages/{slug}.php
+
+STEP 4 — CREATE A SECOND VIEW ENGINE FOR ADMIN
+
+  The public View class resolves to views/{tpl}/ + views/_shared/.
+  Admin needs its own search paths.
+
+  In config.php, AFTER the public $view, add:
+
+    $adminView = new View(
+        W5D_ROOT . '/admin/views',
+        W5D_ROOT . '/admin/views',   // no fallback; admin is self-contained
+        W5D_ROOT . '/storage/cache/views-admin'
+    );
+    $adminView->share('lang', $lang->code());
+    $adminView->share('dir',  $lang->dir());
+
+  In Router, pass $adminView into the admin entry:
+
+    $_SERVER['W5D_ADMIN_PATH'] = $sub;
+    $_SERVER['W5D_ADMIN_VIEW'] = $adminView;   ← NEW
+    require $this->adminFolder . '/index.php';
+
+  In admin/index.php, retrieve it:
+
+    $adminView = $_SERVER['W5D_ADMIN_VIEW'] ?? $GLOBALS['w5d_admin_view'];
+
+STEP 5 — AUTHENTICATE IN admin/index.php
+
+  Replace the stub body with:
+
+    session already started by config.php.
+
+    // 1. Which admin page is requested?
+    $subPath = $_SERVER['W5D_ADMIN_PATH'] ?? '/';
+    $subPath = '/' . ltrim($subPath, '/');
+
+    // 2. Public admin routes (no auth required)
+    $publicRoutes = [
+      '/login' => 'pages.login',
+    ];
+
+    // 3. Protected routes (auth required)
+    $protectedRoutes = [
+      '/'         => 'pages.dashboard',
+      '/users'    => 'pages.users',
+      '/settings' => 'pages.settings',
+      '/content'  => 'pages.content',
+      // extend as the admin template ships pages
+    ];
+
+    // 4. If POST to /login, verify credentials
+    if ($subPath === '/login' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+        $u = trim($_POST['username'] ?? '');
+        $p = (string) ($_POST['password'] ?? '');
+        $expectedUser = (string) Env::get('WEBMASTER_USERNAME', '');
+        $expectedHash = (string) Env::get('WEBMASTER_PASSWORD_HASH', '');
+
+        if ($u === $expectedUser && $expectedHash !== ''
+            && password_verify($p, $expectedHash)
+            && csrf_verify($_POST['csrf_token'] ?? null)) {
+            session_regenerate_id(true);
+            $_SESSION['w5d_admin'] = ['user' => $u, 'at' => time()];
+            header('Location: ' . admin_url('/'));
+            exit;
+        }
+
+        $_SESSION['admin_login_error'] = 'Invalid credentials.';
+        header('Location: ' . admin_url('/login'));
+        exit;
+    }
+
+    // 5. If not authenticated and requesting a protected route → /login
+    $authed = !empty($_SESSION['w5d_admin']);
+    if (!$authed && !isset($publicRoutes[$subPath])) {
+        header('Location: ' . admin_url('/login'));
+        exit;
+    }
+
+    // 6. Logout
+    if ($subPath === '/logout') {
+        unset($_SESSION['w5d_admin']);
+        session_regenerate_id(true);
+        header('Location: ' . admin_url('/login'));
+        exit;
+    }
+
+    // 7. Dispatch to view
+    $viewName = $protectedRoutes[$subPath] ?? $publicRoutes[$subPath] ?? null;
+
+    if ($viewName === null) {
+        http_response_code(404);
+        echo $adminView->render('pages.404');
+        return;
+    }
+
+    echo $adminView->render($viewName, [
+        'user'       => $_SESSION['w5d_admin']['user'] ?? null,
+        'admin_base' => admin_url('/'),
+    ]);
+
+STEP 6 — REWRITE ADMIN ASSETS
+
+  Every <link> and <script src> in admin/views/layouts/app.php becomes:
+
+    <link rel="stylesheet" href="<?= admin_asset('css/dash.css') ?>">
+    <script src="<?= admin_asset('js/dash.js') ?>"></script>
+
+  admin_asset() already knows the obfuscated path — do NOT hardcode
+  `/admin/assets/...` anywhere.
+
+STEP 7 — ADD ADMIN LANGUAGE KEYS
+
+  Admin uses the SAME lang/*.php files as the public site.
+  New keys use a distinct prefix:
+
+    'admin.title'              → 'W5D Admin'
+    'admin.nav.dashboard'      → 'Dashboard'
+    'admin.nav.users'          → 'Users'
+    'admin.login.username'     → 'Username'
+    'admin.login.password'     → 'Password'
+    'admin.login.submit'       → 'Sign in'
+    'admin.login.error'        → 'Invalid credentials.'
+
+  Add to all three: lang/en.php, lang/fr.php, lang/ar.php.
+
+STEP 8 — VERIFY ADMIN
+
+  [ ] http://localhost/w5d/{ADMIN_URL_PATH}            → redirects to /login
+  [ ] http://localhost/w5d/{ADMIN_URL_PATH}/login      → login form
+  [ ] POST with wrong creds                            → error message
+  [ ] POST with WEBMASTER_USERNAME + password           → redirects to /
+  [ ] http://localhost/w5d/{ADMIN_URL_PATH}            → dashboard
+  [ ] /{ADMIN_URL_PATH}/users                          → users page
+  [ ] /{ADMIN_URL_PATH}/logout                         → back to login
+  [ ] http://localhost/w5d/admin                       → 403
+  [ ] Change ADMIN_URL_PATH=/new-secret in .env        → /old-secret 404,
+                                                         /new-secret works
+  [ ] Arabic works inside admin (Cairo + RTL)
+  [ ] Session cookie is HttpOnly; no token in URL
+
+--------------------------------------------------------------------------------
+RULES THAT APPLY TO BOTH WORKFLOWS
+--------------------------------------------------------------------------------
+
+DO:
+  • Preserve the template's HTML structure, class names, and JS behaviour
+  • Add CMS directives AROUND the template — never rewrite its markup
+  • Test on a real browser, not just "looks right in the file"
+  • Add missing translation keys even if translations are absent
+  • Keep the footer license block
+  • Ask for the template's slug if not provided
+
+DO NOT:
+  • Redesign or "clean up" the template's visual design
+  • Introduce a CSS framework that isn't already in the template
+  • Introduce jQuery if the template uses vanilla JS (or vice versa)
+  • Rename CSS classes the template's JS depends on
+  • Delete or overwrite another template's folder
+  • Modify .htaccess to unblock /admin/*
+  • Add ?lang=xy query parameters
+  • Remove the Arabic RTL injection from the layout
+
+--------------------------------------------------------------------------------
+TEMPLATE REGISTRY — keep this list in sync
+--------------------------------------------------------------------------------
+
+After onboarding a site template, update this list in README.md:
+
+  | Slug          | Path              | Status   | Onboarded  |
+  |---------------|-------------------|----------|------------|
+  | default       | views/default/    | demo     | 2026-11-11 |
+  | {name}        | views/{name}/     | active   | YYYY-MM-DD |
+  | {name-2}      | views/{name-2}/   | standby  | YYYY-MM-DD |
+
+Only ONE is active at a time — the one in `.env` → ACTIVE_TEMPLATE.
+
+================================================================================
+END OF NEXT-STEP PROMPT
+================================================================================
 ```
 
 ---
