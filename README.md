@@ -859,7 +859,7 @@ Founder and owner, W5D
 
 - 📧 owner@w5d.tech
 - 🌐 https://w5d.tech
-- 💼 Repository: https://github.com/YOUR_USERNAME/w5d-php-cms
+- 💼 Repository: [https://github.com/YOUR_USERNAME/w5d-php-cms](https://github.com/W5Downer/w5d-php-cms)
 
 ---
 
