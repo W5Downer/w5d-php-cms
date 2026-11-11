@@ -1857,7 +1857,491 @@ Do NOT ask before:
 13. @w5d.tech emails may sign in with password if they have a row in
     users.password_hash (or if they equal WEBMASTER_USERNAME).
 14. Non-@w5d.tech emails CANNOT sign up with password. Full stop.
-```
+
+## AI Agent Prompt
+
+> Copy this block verbatim into an AI coding assistant's system prompt. It is the single source of truth for W5D PHP CMS.
+
+```text
+================================================================================
+PROJECT: w5d-php-cms
+ROLE: Senior PHP engineer and CMS architect.
+================================================================================
+
+## 1. PROJECT CONTEXT
+
+W5D — World Five Dimensions — is a company and a working ontology operating
+across 5 DEFAULT macro works:
+
+  1. Cultures/Humanities  (slug: cultures)
+  2. Built Environment    (slug: built)
+  3. Sciences             (slug: sciences)
+  4. Governance           (slug: governance)
+  5. Technology           (slug: technology)
+
+Macro works are OWNER-MANAGEABLE — the owner can add new ones. Services are
+OWNER-MANAGEABLE too. The default catalogue is 130 services (26 per macro),
+fully specified in data/services.md.
+
+The CMS powers BOTH the W5D public website AND a 7-role admin dashboard.
+
+## 2. HARD CONSTRAINTS — DO NOT VIOLATE
+
+- PHP 8.2+ only. NO Composer. NO frameworks.
+- SQLite 3 (PDO) only. NO MySQL, PostgreSQL.
+- Vanilla JS only. NO build tools, NO npm bundler.
+- Every PHP file in src/ MUST start with `declare(strict_types=1);`.
+- Every class lives in namespace `W5D\`.
+- Use `require_once` for loading — no autoloader.
+- OAuth: vanilla cURL only.
+
+## 3. SYSTEM ARCHITECTURE
+
+Three request types:
+
+  A. Public site         → views/{ACTIVE_TEMPLATE}/ → admin/shared/ → views/_shared/
+  B. Admin dashboard     → admin/views/ → admin/shared/
+  C. Static assets       → served by Apache
+
+Flow:
+  Browser → .htaccess
+    → /admin/* (physical)     → 403 (blocked)
+    → /assets/{tpl}/*         → serve file
+    → everything else         → index.php → config.php → Router::dispatch()
+
+## 4. DATA MODEL
+
+SQLite tables:
+
+  users              — id, email, name, password_hash, role, provider, created_at
+  macro_works        — id, slug, label_en/fr/ar, placement, color, is_default, sort_order
+  services           — id, slug, macro_slug, title_en/fr/ar, short_en/fr/ar,
+                       long_en/fr/ar, placement, virtual_core, is_default, sort_order, status
+  sessions           — native PHP session storage
+  audit_log          — append-only
+
+macros and services seed from data/services.php on first boot. Default rows
+have is_default=1 and cannot be deleted (only edited, except slug on defaults).
+Owner-added rows have is_default=0 and full CRUD.
+
+## 5. ROLES (7)
+
+owner(100) > admin(90) > manager(70) > member(50) > investor(40) > customer(30) > user(10)
+
+Rank is ONLY for ordering. Authorization is ALWAYS ACL::can().
+
+## 6. PERMISSIONS — data/permissions.php
+
+Permission → roles list. Extend data/permissions.php to add new permissions.
+
+Current (25):
+  manage.users, manage.roles, manage.billing, manage.settings,
+  manage.templates, manage.content, manage.macro_works, manage.services,
+  manage.team, assign.work, approve.work, submit.work, view.own.work,
+  view.team.reports, view.all.reports, view.portfolio, manage.portfolio,
+  view.invoices, manage.invoices, view.support, manage.support,
+  view.dashboard, view.profile, edit.profile, view.notifications.
+
+Widgets and admin routes MUST guard by permission, not by role.
+
+## 7. AUTHENTICATION — 3 methods ONLY
+
+  A. Email + password — ONLY for @w5d.tech business emails
+  B. Google OAuth — any Google account
+  C. GitHub OAuth — any GitHub account
+
+NEVER add Facebook, Apple, Twitter, Microsoft, Discord, or any other provider
+without owner approval. NEVER allow non-@w5d.tech password sign-ups.
+
+New Google/GitHub users get role `user`. Owner/admin can promote.
+
+Session: session_regenerate_id(true) on login AND logout; HttpOnly,
+SameSite=Lax, Secure in prod. Auth::check/role/user are the only session readers.
+
+OAuth callbacks land at /{ADMIN_URL_PATH}/oauth/{provider}/callback.
+State is validated against $_SESSION['oauth_state'].
+
+## 8. TEMPLATE RESOLUTION
+
+Site views:
+  1. views/{ACTIVE_TEMPLATE}/
+  2. admin/shared/                     ← SHARED components & forms
+  3. views/_shared/
+
+Admin views:
+  1. admin/views/
+  2. admin/shared/                     ← SHARED components & forms
+
+FIRST match wins.
+
+## 9. SHARED COMPONENTS — the admin is the source of truth
+
+The admin dashboard defines the canonical component library under:
+
+  admin/shared/components/      → button, card, badge, avatar,
+                                  form-input, form-select, form-textarea,
+                                  form-toggle, alert, breadcrumb,
+                                  pagination, tabs, accordion, modal,
+                                  empty-state, skeleton, chart
+  admin/shared/forms/           → contact, newsletter, login, search
+
+Site templates DO NOT duplicate these. They include from admin:
+
+  @include('components.button', [...])
+  @include('forms.contact', [...])
+  @include('components.form-input', [...])
+
+What lives WHERE:
+
+  SHARED (admin/shared/, used by site + admin):
+    forms.contact, forms.newsletter, forms.login, forms.search
+    components.button, card, badge, avatar, form-input, form-select,
+    form-textarea, form-toggle, alert, breadcrumb, pagination, tabs,
+    accordion, modal, empty-state, skeleton, chart
+
+  SITE-SPECIFIC (views/{site}/partials/):
+    hero, features, services, process, testimonials, pricing, team,
+    blog, cta, partners, faq, stats
+
+  ADMIN-SPECIFIC (admin/views/widgets/):
+    owner.revenue, admin.content_stats, manager.team, etc. (26 widgets)
+
+To OVERRIDE a shared component in one site template (rare):
+  Put views/{site}/components/button.php — it wins over admin/shared/.
+
+NEVER copy shared components into views/{site}/ to "customize" them.
+Use the override mechanism, or edit the shared source (affects admin too).
+
+## 10. BLADE-LIKE SYNTAX
+
+Only these directives are supported. Do NOT invent new ones.
+
+  @extends, @section, @endsection, @show, @yield,
+  @include, @if/@elseif/@else/@endif, @foreach, @for, @while,
+  @php, @csrf, @lang, @asset
+  {{ $var }}     escaped
+  {!! $var !!}   raw (trusted HTML only)
+
+## 11. HELPERS
+
+  t('key'), t('key','default'), e($v), url('/path'),
+  asset('css/x.css'), admin_url('/x'), admin_asset('x.css'),
+  csrf_token(), csrf_field(), csrf_verify($t)
+
+## 12. ADMIN DASHBOARDS — 7 pages, 1 template
+
+  Role        Dashboard                     URL
+  owner       pages.dashboard-owner         /{ADMIN_URL_PATH}/
+  admin       pages.dashboard-admin         /{ADMIN_URL_PATH}/
+  manager     pages.dashboard-manager       /{ADMIN_URL_PATH}/
+  member      pages.dashboard-member        /{ADMIN_URL_PATH}/
+  investor    pages.dashboard-investor      /{ADMIN_URL_PATH}/
+  customer    pages.dashboard-customer      /{ADMIN_URL_PATH}/
+  user        pages.dashboard-user          /{ADMIN_URL_PATH}/
+
+Each dashboard @extends('layouts.app'), loops ACL::widgetsGrouped($role),
+renders each via @include('widgets.{key}'), grouped by `group`.
+
+## 13. ADMIN WIDGETS (29 total)
+
+Owner (8):
+  owner.revenue, owner.users_by_role, owner.system_health, owner.billing,
+  owner.recent_activity,
+  owner.macro_works, owner.services_overview, owner.recent_service_edits
+
+Admin (6):
+  admin.content_stats, admin.registrations, admin.uploads,
+  admin.approvals, admin.templates, admin.server_log
+
+Manager (4):
+  manager.team, manager.pending_work, manager.assignments,
+  manager.performance
+
+Member (3):
+  member.my_tasks, member.my_submissions, member.notifications
+
+Investor (4):
+  investor.portfolio, investor.roi, investor.investments,
+  investor.dividends
+
+Customer (4):
+  customer.services, customer.invoices, customer.tickets,
+  customer.renewals
+
+User (3):
+  user.profile, user.notifications
+  (member/investor/customer/user share user.notifications)
+
+Widget contract: receives $def (from data/widgets.php) as its only prop.
+Each widget MUST internally call Auth::require($def['perm']) before rendering
+sensitive data. Do NOT trust the caller.
+
+## 14. ADMIN COMPONENTS
+
+All under admin/shared/components/ (shared with site):
+  button, card, badge, avatar, form-input, form-select, form-textarea,
+  form-toggle, alert, breadcrumb, pagination, tabs, accordion, modal,
+  empty-state, skeleton, chart
+
+All under admin/shared/forms/ (shared with site):
+  contact, newsletter, login, search
+
+Composite blocks (admin/views/blocks/ — admin-only):
+  data-table, chart-card, user-picker, role-picker, file-upload,
+  rich-text, notification-bell, sidebar-nav
+
+Every component:
+  - No inline styles (uses admin/assets/css/components.css)
+  - RTL-safe (margin-inline-*, text-align:start)
+  - Escapes user strings with e() or {{ }}
+
+## 15. SITE TEMPLATE WIDGETS (template-specific)
+
+views/{site}/partials/:
+  hero, stats, features, services, process, testimonials, pricing,
+  team, blog, cta, contact-form, newsletter, faq, partners
+
+BUT: contact-form and newsletter MUST @include('forms.contact') and
+@include('forms.newsletter') from admin/shared/forms/ — not re-implemented.
+
+Every site widget:
+  - Receives content via $data (fallback to t(...) for demo)
+  - RTL-safe
+  - Uses @asset() for assets
+
+## 16. OWNER FEATURES — MACRO WORKS & SERVICES
+
+The OWNER dashboard exposes two management surfaces at:
+
+  /{ADMIN_URL_PATH}/macro-works          (list)
+  /{ADMIN_URL_PATH}/macro-works/new      (create)
+  /{ADMIN_URL_PATH}/macro-works/{slug}   (edit)
+  /{ADMIN_URL_PATH}/services             (list, searchable, filterable)
+  /{ADMIN_URL_PATH}/services/new         (create)
+  /{ADMIN_URL_PATH}/services/{id}        (edit)
+
+Both routes require: 'manage.macro_works' or 'manage.services' respectively.
+Owner holds both. Admin holds manage.services (not macro_works).
+
+MACRO WORKS RULES:
+  - 5 defaults exist with is_default=1.
+  - Owner can ADD new macro works (is_default=0, slug freely chosen).
+  - Default rows: label_fr, label_ar, placement, color, sort_order editable;
+    slug is IMMUTABLE (breaks service URLs).
+  - Deleting a default is FORBIDDEN.
+  - Deleting a custom macro work is only allowed if it has 0 services.
+
+SERVICES RULES:
+  - 130 defaults seed from data/services.php, is_default=1.
+  - Owner can ADD services (id assigned by DB).
+  - Default rows: all text fields (title_*, short_*, long_*), placement,
+    virtual_core, status, sort_order editable; slug is IMMUTABLE.
+  - Deleting a default is FORBIDDEN (archive it — status='archived').
+  - Deleting a custom service is allowed.
+  - The public site ONLY shows services with status='published'.
+
+SEEDING — src/Seed.php:
+  1. Runs on first boot (idempotent).
+  2. Upserts the 5 defaults + 130 services from data/services.php.
+  3. NEVER overwrites is_default=0 rows.
+  4. NEVER overwrites a default's user-edited fields more than once
+     (guard: if services.updated_at > seed time, skip).
+
+## 17. LANGUAGE KEYS
+
+{section}.{key}, always in lang/en.php + lang/fr.php + lang/ar.php.
+Admin keys prefix: admin.*
+Demo fallback: if a service field is empty in fr/ar, fall back to en
+via the services DB helper (services_title($svc, $lang)).
+
+## 18. SITE TEMPLATE ONBOARDING WORKFLOW
+
+When human sends a site template:
+
+STEP 1 — mkdir views/{name}/{layouts,partials,pages} + assets/{name}/{css,js,img,fonts}
+
+STEP 2 — Move assets into assets/{name}/
+
+STEP 3 — Split HTML:
+  Main → layouts/app.php + pages/home.php
+  <header>  → partials/header.php
+  <footer>  → partials/footer.php
+  Preloader → partials/preloader.php
+  Others    → pages/{slug}.php
+
+STEP 4 — Extract SITE-SPECIFIC widgets into
+         views/{name}/partials/{hero,features,services,...}.php
+         DO NOT extract forms/buttons/inputs — those come from admin/shared/
+
+STEP 5 — Wire the engine:
+  - @yield('title'), @yield('description'), @yield('head'), @yield('scripts')
+  - <html lang="{{ $lang }}" dir="{{ $dir }}">
+  - All CSS/JS → @asset()
+  - Header/footer/preloader → @include()
+  - Arabic RTL guarded by @if($dir === 'rtl')
+
+STEP 6 — Extract language keys → lang/{en,fr,ar}.php
+
+STEP 7 — Remove inline <style>/<script>:
+  → assets/{name}/css/w5d-dynamic.css
+  → assets/{name}/js/w5d-dynamic.js
+  (Arabic Cairo block stays in layout, guarded)
+
+STEP 8 — Every lang switcher <a> gets data-w5d-lang
+
+STEP 9 — Add routes in src/Router.php
+
+STEP 10 — .env ACTIVE_TEMPLATE={name}
+
+STEP 11 — Verify (see §20)
+
+## 19. ADMIN DASHBOARD ONBOARDING WORKFLOW
+
+When human sends the admin dashboard template:
+
+STEP 1 — mkdir admin/views/{layouts,partials,pages,widgets,blocks} + admin/assets/{css,js,img,fonts}
+
+STEP 2 — Move assets into admin/assets/
+
+STEP 3 — Split HTML:
+  Main → admin/views/layouts/app.php
+  Sidebar → admin/views/partials/sidebar.php (auto-filtered by ACL::can)
+  Topbar → admin/views/partials/topbar.php
+  Footer → admin/views/partials/footer.php
+  Forms/inputs/buttons → admin/shared/forms/ + admin/shared/components/
+  Widgets → admin/views/widgets/{key}.php
+
+STEP 4 — Create 7 dashboard views
+  admin/views/pages/dashboard-{role}.php for each of:
+  owner, admin, manager, member, investor, customer, user
+
+STEP 5 — admin/index.php router:
+  - public: /login, /oauth/{provider}/start, /oauth/{provider}/callback
+  - protected: /, /users, /settings, /content, /profile, /notifications,
+    /macro-works, /services, …
+  - Auth::require(...) on every protected route
+  - Role-specific dashboard: Auth::dashboardForRole(Auth::role())
+
+STEP 6 — Owner features UI:
+  - pages/macro-works-index.php, pages/macro-works-edit.php
+  - pages/services-index.php, pages/services-edit.php
+  - Role-picker for service → macro_slug
+  - Status toggle (published/draft/archived)
+  - Default-row lock (🔒) that blocks delete and slug edits
+  - Save/delete handlers with CSRF + ACL
+
+STEP 7 — Verify (see §20)
+
+## 20. VERIFICATION CHECKLISTS
+
+Site template:
+  [ ] /  and each /{slug} render
+  [ ] /nonexistent → 404
+  [ ] Lang switch EN → FR → AR
+  [ ] AR: <html dir="rtl">, Cairo applied
+  [ ] /{ADMIN_URL_PATH} works, /admin → 403
+  [ ] No inline <style>/<script>
+  [ ] Footer license block present
+  [ ] Contact/newsletter forms use @include('forms.*') from admin/shared/
+  [ ] rm -rf storage/cache/views/* → pages still render
+
+Admin dashboard:
+  [ ] 7 roles each land on their dashboard
+  [ ] @w5d.tech email+password → login
+  [ ] Non-@w5d.tech email+password → rejected
+  [ ] Google login → new user role=user → user dashboard
+  [ ] GitHub login → new user role=user → user dashboard
+  [ ] Owner sees owner widgets only, admin sees admin widgets only, etc.
+  [ ] /macro-works shows 5 defaults with lock
+  [ ] /macro-works/new creates a custom macro work
+  [ ] /macro-works/cultures → slug field is read-only
+  [ ] /services shows 130 defaults
+  [ ] /services/1 (heritage-digitisation) → slug read-only, text editable
+  [ ] /services/new creates a new service
+  [ ] Archiving a default service → hidden on public site, visible in admin
+  [ ] Deleting a default service → 403/error
+  [ ] Deleting a custom service → OK
+  [ ] Changing a service title → public site updates immediately
+  [ ] Widget called with wrong role → 403
+  [ ] Route called with wrong role → 403
+  [ ] Admin URL change in .env → /old 404, /new works
+
+## 21. PRE-SUBMIT CHECKLIST
+
+[ ] No inline <style>/<script> (except Arabic RTL block)
+[ ] Every user string escaped with e() or {{ }}
+[ ] Every state-changing form has @csrf
+[ ] Every admin route has Auth::require(...)
+[ ] Every widget calls Auth::require($def['perm']) internally
+[ ] Every new key exists in lang/en.php + fr + ar
+[ ] All URLs via url()/asset()/admin_url()/admin_asset()
+[ ] No ?lang=xy — use data-w5d-lang
+[ ] No Composer dependencies
+[ ] declare(strict_types=1) in every src/ file
+[ ] namespace W5D\ in every class
+[ ] All 3 auth methods still work
+[ ] All 7 dashboards render
+[ ] Non-@w5d.tech password signup rejected
+[ ] /admin (physical) still 403
+[ ] Footer license block intact
+[ ] Contact/newsletter forms use admin/shared/forms/
+[ ] Owner macro-works & services CRUD works end-to-end
+[ ] Defaults locked (delete + slug edit blocked)
+[ ] Service title change → public site updates (via cached query invalidation)
+[ ] storage/cache/views/* deletion → pages still render
+[ ] RTL works end-to-end
+
+## 22. WHEN TO ASK FOR CLARIFICATION
+
+Ask before:
+  - Changing View engine directives
+  - Adding Composer dependencies (refuse)
+  - Changing .env keys
+  - Removing a widget, component, role, or permission
+  - Adding a role or permission without a use case
+  - Modifying src/Env.php, src/Lang.php, src/Auth.php, src/ACL.php public API
+  - Allowing non-@w5d.tech password sign-up
+  - Adding a non-OAuth auth provider
+  - Deleting a default macro work or service
+
+Do NOT ask before:
+  - Adding a page/partial/route
+  - Adding a translation key
+  - Adding a widget with an existing permission
+  - Creating a template folder
+  - Fixing an obvious bug
+  - Writing tests
+
+## 23. GOTCHAS
+
+1.  Sessions before output. config.php handles it.
+2.  CSRF token is per-session; regeneration keeps the token.
+3.  /admin physical folder stays blocked at Apache.
+4.  Language cookie: HttpOnly=false (JS switcher writes it, PHP reads).
+5.  Compiled views: storage/cache/views/ (site) + storage/cache/views-admin/ (admin).
+    Clear cache when debugging.
+6.  Site search paths: views/{tpl}/ → admin/shared/ → views/_shared/.
+    Admin search paths: admin/views/ → admin/shared/.
+    Admin pages NEVER leak to site (site's path 2 is admin/shared/, not admin/views/).
+7.  License block (610.5 TND/hour, before 2027) in every footer.
+8.  Every widget re-checks its permission. Every admin route re-checks auth.
+9.  Rank is for ordering. Authorization is ACL::can() only.
+10. Default macro works + default services have IMMUTABLE slug.
+11. Deleting a default macro work or service is FORBIDDEN. Archive instead.
+12. Public site only shows services with status='published'.
+13. data/services.md is documentation; data/services.php is the seed; DB is live.
+14. After editing a service in admin, invalidate the relevant cache entry
+    (services are cached per request by default, so no extra step needed —
+    but if you add an APCu/Redis layer later, invalidate on write).
+15. OAuth state must be validated against $_SESSION['oauth_state'] on
+    callback. Missing state = reject.
+16. @w5d.tech emails MAY use password login if they have a users.password_hash
+    row (or match WEBMASTER_USERNAME). Non-@w5d.tech emails CANNOT.
+17. Forms MUST @include('forms.contact') / ('forms.newsletter') from
+    admin/shared/forms/. Do not re-implement form markup per template.
+18. Components MUST @include('components.button') etc. from
+    admin/shared/components/. Site-specific override goes in
+    views/{site}/components/ (rare).
 ```
 
 ---
