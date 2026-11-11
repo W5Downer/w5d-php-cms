@@ -1,13 +1,13 @@
 # W5D PHP CMS
 
-**A complete CMS for the W5D Team website.**
+**A complete CMS for the W5D Team website — a company and a working ontology operating at 130,000-experts scale.**
 
 [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/)
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![TailAdmin](https://img.shields.io/badge/Admin-TailAdmin-0A5EFF)](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)
 [![License](https://img.shields.io/badge/License-610.5%20TND%2Fh%20(offer%20before%202027)-0A5EFF)](#license)
 
-> **W5D** — *World Five Dimensions* — is a company and a working ontology operating across five macro works: **Cultures/Humanities**, **Built Environment**, **Sciences**, **Governance**, and **Technology**. This CMS powers its website and its multi-role admin dashboard.
+> **W5D** — *World Five Dimensions* — operates across five macro works: **Cultures/Humanities**, **Built Environment**, **Sciences**, **Governance**, and **Technology**. This CMS powers its public site, its ontology, and an 8-role administration platform sized for **130 expert leaders, 13,000 team managers, and 130,000 expert employees**.
 
 ---
 
@@ -16,14 +16,21 @@
 - [Description](#description)
 - [Features](#features)
 - [Architecture](#architecture)
+- [Organization Model](#organization-model)
+- [Data Architecture](#data-architecture)
+- [Roles & ACL](#roles--acl)
+- [Scope Enforcement](#scope-enforcement)
+- [Weekly Work Engine](#weekly-work-engine)
+- [Bulk Onboarding](#bulk-onboarding)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Multi-Template System](#multi-template-system)
 - [Multi-Language System](#multi-language-system)
 - [Admin Panel (TailAdmin)](#admin-panel-tailadmin)
-- [Roles & ACL](#roles--acl)
+- [Admin Menu](#admin-menu)
 - [Owner Features](#owner-features)
+- [Business Model Note](#business-model-note)
 - [Security](#security)
 - [Directory Structure](#directory-structure)
 - [Development Workflow](#development-workflow)
@@ -37,21 +44,21 @@
 
 ## Description
 
-**W5D PHP CMS** is a self-contained content management system built for the W5D Team website — a company and a working ontology operating across five macro works: Cultures/Humanities, Built Environment, Sciences, Governance, and Technology. The system is designed for teams that need a fast, template-driven, multi-language site **and** a multi-role administrative backend without the overhead of a heavyweight framework.
+**W5D PHP CMS** is a self-contained content management system built for the W5D Team website — a company and a working ontology operating across five macro works. The system is designed for teams that need a fast, template-driven, multi-language public site **and** a multi-role administrative platform capable of coordinating **~143,000 people** without a heavyweight framework.
 
-The CMS runs on vanilla PHP 8.2+ with SQLite — no Composer dependencies, no PHP framework lock-in. It ships with a Blade-inspired templating engine supporting `@extends`, `@section`, `@yield`, `@include`, `{{ }}` escaping, `{!! !!}` raw output, `@if`/`@foreach`/`@for`/`@while` directives, `@csrf`, `@lang`, and `@asset`. Public site views resolve in two tiers: `views/{ACTIVE_TEMPLATE}/` first, then `views/_shared/` as fallback. Every site template is fully self-contained, owning both its `views/{name}/` and `assets/{name}/` directories, so swapping the public front-end is a single `.env` change.
+The CMS runs on vanilla PHP 8.2+ with SQLite — no Composer, no PHP framework lock-in. It ships with a Blade-inspired templating engine, two-tier view resolution (`views/{ACTIVE_TEMPLATE}/` → `views/_shared/`), and per-template `assets/{name}/` folders. Swapping the public front-end is a single `.env` change.
 
-The **admin dashboard** ships with **TailAdmin** — the free, open-source Tailwind CSS + Alpine.js admin template (1 unique dashboard, 30+ dashboard components, 50+ UI elements, sidebar, charts, tables, profile page, 404, auth forms, dark mode). TailAdmin is compiled once (`npm install && npm run build`), then `node_modules/` is discarded; Tailwind CDN is **never** used at runtime. Seven role-specific dashboards — owner, admin, manager, member, investor, customer, user — share the TailAdmin shell and differ only in the widgets they display, guarded by a permission-based ACL.
+The **admin dashboard** uses **TailAdmin** (Tailwind + Alpine.js, one-time build then `node_modules/` discarded). Eight role-specific dashboards — **owner, admin, leader, manager, member, investor, customer, user** — share the TailAdmin shell and differ only in the widgets they display, guarded by a **35-permission ACL** and a **scope check** (`Scope::canActOn()`). The owner manages 130 leaders (one per service); each leader manages 100 managers; each manager manages ~10 experts; each expert submits weekly reports approved up the chain.
 
-Multi-language support is automatic. The system detects language from the browser's `Accept-Language` header on first visit, then stores the user's choice in a cookie. No `?lang=xy` query parameters are ever needed. Arabic is fully supported with RTL layout direction, Cairo typography, and Tailwind RTL injection. All strings come from `lang/{code}.php` files with English fallback via `array_merge`.
+The CMS ships the **130-service ontology** (26 per macro work, seeded from `data/services.md`). Macro works and services are **owner-manageable**; defaults have locked slugs and cannot be deleted (archive only).
 
-Configuration is environment-driven. The `.env` file holds application settings, database path, session parameters, webmaster credentials, OAuth client IDs and secrets, and — critically — the admin URL path. The `/admin` route is fully obfuscated: change `ADMIN_URL_PATH=/secret-xyz` in `.env`, and the admin dashboard moves with it. Direct HTTP access to the `/admin/` folder is blocked by `.htaccess`; only the router can dispatch admin requests.
+**Scale discipline:** at 130,000 experts × 52 weeks ≈ **6.76M weekly report rows per year**. The CMS stays on SQLite by **splitting** the database — one content DB (`w5d.sqlite`) plus **one work DB per macro work** (5 files) — with WAL, `busy_timeout`, short transactions, and composite indexes. Dashboards read **only from `rollups`**, never from raw rows. The public site reads live KPIs from a cached rollups JSON, not hard-coded strings.
 
-**Owner features** (Manage Macro Works, Manage Services) let the owner extend the ontology beyond the 5 default macro works and 130 default services — all editable in the TailAdmin shell, all backed by SQLite, all seeded from `data/services.php` on first boot.
+Multi-language is automatic (Accept-Language → cookie → `.env` fallback, no `?lang=xy`). Arabic is fully supported with RTL, Cairo typography, and Tailwind RTL. Admin URL is obfuscated (`ADMIN_URL_PATH` in `.env`); the physical `/admin/` folder is blocked at Apache.
 
-Security is built in: CSRF tokens on every form, session fixation protection, HttpOnly/SameSite cookies, OAuth state validation, path traversal prevention, and defense-in-depth `.htaccess` rules that deny access to `.env`, `.sqlite`, and `.sql` files.
+Security is built in: CSRF, session fixation protection, OAuth state validation, path traversal prevention, `.htaccess` denials, rate limiting, nightly `VACUUM INTO` backups, and an append-only audit log.
 
-The CMS is offered at **610.5 TND per hour of work** — a promotional rate valid before 2027.
+The CMS is offered at **610.5 TND per hour of work** — promotional rate valid before 2027.
 
 Built for W5D by Maher Kaddoussi. Contact: [owner@w5d.tech](mailto:owner@w5d.tech).
 
@@ -59,65 +66,76 @@ Built for W5D by Maher Kaddoussi. Contact: [owner@w5d.tech](mailto:owner@w5d.tec
 
 ## Features
 
-### Templating
-- **Blade-inspired engine**, zero Composer dependencies
-- Directives: `@extends`, `@section`, `@endsection`, `@show`, `@yield`, `@include`, `@if`/`@elseif`/`@else`/`@endif`, `@foreach`/`@endforeach`, `@for`/`@endfor`, `@while`/`@endwhile`, `@php`/`@endphp`, `@csrf`, `@lang`, `@asset`
-- `{{ $var }}` (escaped) and `{!! $var !!}` (raw)
-- Compiled templates cached under `storage/cache/views/` (site) and `storage/cache/views-admin/` (admin), keyed by md5 of path + mtime
-- Two-tier site view resolution: `views/{ACTIVE_TEMPLATE}/` → `views/_shared/`
-- Admin view resolution: `admin/views/` only (self-contained)
-
-### Multi-Template
-- Each site template owns `views/{name}/` + `assets/{name}/`
-- Activate with `ACTIVE_TEMPLATE={name}` in `.env`
-- Static assets served directly by Apache (no PHP hit)
-- Add a new template without touching existing ones
+### Templating & Public Site
+- Blade-inspired engine (no Composer): `@extends`, `@section`, `@yield`, `@include`, `@if`, `@foreach`, `@for`, `@while`, `@php`, `@csrf`, `@lang`, `@asset`; `{{ }}` escaped, `{!! !!}` raw
+- Compiled view cache: `storage/cache/views/` (site) + `storage/cache/views-admin/` (admin)
+- Two-tier site resolution: `views/{ACTIVE_TEMPLATE}/` → `views/_shared/`
+- Admin resolution: `admin/views/` only
+- Multi-template: swap via `ACTIVE_TEMPLATE` in `.env`
+- **Owl Carousel 2** sliders on the homepage, 5 macro pages, vision-2027, and countdown-festival (36 slides, animated ApexCharts, gradient backgrounds, RTL-safe — see [Sliders prompt](#sliders-prompt) at the end)
 
 ### Multi-Language
-- Auto-detection from `Accept-Language` header (quality-weighted parsing)
-- Persists user choice in a cookie (`w5d_lang`)
-- **No `?lang=xy`** — the URL never carries language state
-- Full RTL support (Arabic) with Cairo typography (site + admin)
-- Fallback chain: `lang/{code}.php` → `lang/en.php` → key string
+- Accept-Language quality-weighted parsing → cookie → `.env` fallback
+- **No `?lang=xy`** — cookie `w5d_lang` only
+- EN · FR · AR with RTL + Cairo for Arabic (site + admin)
+- Fallback: `lang/{code}.php` → `lang/en.php` → key string
 
-### Admin Panel (TailAdmin)
-- **TailAdmin** as the default admin template (Tailwind CSS + Alpine.js)
-- **7 role-specific dashboards**: owner, admin, manager, member, investor, customer, user
-- **Permission-based ACL** — sidebar items, routes, and widgets are all guarded
-- **Obfuscated URL** from `.env` (`ADMIN_URL_PATH=/secret-xyz`)
-- `/admin/` folder blocked at Apache level — only the router can dispatch
-- Admin views under `admin/views/`, assets under `admin/assets/` (router-served)
+### Admin (TailAdmin)
+- **TailAdmin** as the default shell (Tailwind + Alpine.js)
+- **8 role dashboards**: owner · admin · leader · manager · member · investor · customer · user
+- **24-item admin menu** (see [Admin Menu](#admin-menu)), filtered by ACL + scope
+- **Obfuscated URL** (`ADMIN_URL_PATH`), physical `/admin/` blocked at Apache
 - Dark mode built in
-- Charts (Line, Bar), tables, modals, dropdowns, alerts, 404, profile — all from TailAdmin
 
-### Authentication (3 methods only)
-- **Email + password** — only for `@w5d.tech` business emails
-- **Google OAuth** — any Google account (new users → role `user`)
-- **GitHub OAuth** — any GitHub account (new users → role `user`)
-- OAuth state validated against `$_SESSION['oauth_state']`
-- Session fixation protection, HttpOnly/SameSite cookies
+### Roles, Permissions, Scope
+- **8 roles**, ordered by rank (ordering only — never used for auth)
+- **35 permissions** (`ACL::can($role, $perm)`)
+- **Scope check** (`Scope::canActOn($actor, $target)`): owner/admin see all; leader sees own service; manager sees own experts; expert sees self
+- **Capacity caps**: leader ≤ 100 managers, manager ≤ 12 experts (soft 10), service ≤ 1,000 experts
+
+### Weekly Work Engine
+- Cascading directives: owner → 130 leaders → 13,000 managers → 130,000 experts
+- Weekly reports, approvals, blockers, check-ins, timesheets
+- Cron `bin/rollup.php` finalises `rollups` hourly (every 15 min on Fridays)
+- Aggregate-first dashboards — no page loads 130,000 rows
+
+### Bulk Onboarding
+- CSV import (owner area): `email, name, service_slug, parent_email`
+- One-time invitation tokens → Google/GitHub sign-in promotes `user` → `member`
+- Dyon QR identity linked to each account
 
 ### Owner Features
-- **Manage Macro Works** — 5 defaults (locked slug, delete forbidden) + full CRUD for custom macro works
-- **Manage Services** — 130 defaults seeded from `data/services.php` (locked slug, delete forbidden, archive allowed) + full CRUD for custom services
-- TailAdmin table + form components for both list and edit views
-- Changes propagate to the public site immediately (published services only)
+- **Manage Macro Works** — 5 defaults (locked slug, delete forbidden) + full CRUD for custom
+- **Manage Services** — 130 defaults (locked slug, delete forbidden, archive allowed) + full CRUD for custom
+- Changes propagate to public site (published services only)
+
+### Authentication (3 methods only)
+- Email + password — **only `@w5d.tech`**
+- Google OAuth — new users → role `user`
+- GitHub OAuth — new users → role `user`
+- OAuth state validated against `$_SESSION['oauth_state']`
+
+### Data Discipline
+- **Split SQLite**: `w5d.sqlite` (content + users) + `work_{macro}.sqlite` × 5 (tasks, reports, rollups)
+- WAL · `busy_timeout` · short transactions · composite indexes
+- **Aggregate-first**: dashboards and public site read `rollups`, never raw rows
+- **Live KPI feed**: public carousels read `/api/kpis.json` (cached rollups)
+- Nightly `VACUUM INTO` backup with off-server copy
 
 ### Security
-- CSRF tokens on all forms (`csrf_token()`, `csrf_field()`, `csrf_verify()`)
-- Session fixation protection (secure cookie params)
-- HttpOnly + SameSite=Lax cookies
-- OAuth state validation
-- Path traversal prevention in router
-- Defense-in-depth `.htaccess` (deny `.env`, `.sqlite`, `.sql`, `.md`)
-- `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy` headers
+- CSRF on all forms (`csrf_token()`, `csrf_field()`, `csrf_verify()`)
+- Session fixation protection, HttpOnly + SameSite=Lax
+- Rate limiting on login and CSV import
+- Path traversal prevention, symlink refusal
+- `.htaccess` denies `.env`, `.sqlite`, `.sql`, `.md`
+- Append-only audit log for every scope-crossing action
+- Personal data handling per Tunisia's Organic Law 2004-63 (confirm with counsel)
 
 ### Performance
-- Static assets cached for 7 days (Cache-Control)
-- Compiled template caching
-- SQLite with WAL journal mode
+- Static asset cache 7 days
+- Compiled template cache
+- TailAdmin built once (no runtime Tailwind CDN)
 - No blocking loaders, no third-party requests by default
-- TailAdmin compiled once — no runtime Tailwind CDN
 
 ---
 
@@ -126,348 +144,551 @@ Built for W5D by Maher Kaddoussi. Contact: [owner@w5d.tech](mailto:owner@w5d.tec
 ### Request lifecycle
 
 ```
-Browser
-  │
-  ▼
-.htaccess  ──── static asset? ─── yes ──► serve file
-  │
-  no
-  ▼
-index.php
-  │
-  ▼
-config.php
-  ├── Env::load('.env')
-  ├── Session::start()
-  ├── new Lang('lang/')             ← Accept-Language → cookie → .env fallback
-  ├── new View(views/{tpl}/, views/_shared/, storage/cache/views/)     ← site
-  ├── new View(admin/views/, admin/views/, storage/cache/views-admin/) ← admin
-  ├── ACL::init(data/)
-  └── new Router(basePath, adminUrlPath, adminFolder, view, adminView)
-  │
-  ▼
-$router->dispatch()
-  │
-  ├── path starts with ADMIN_URL_PATH? ── yes ─► admin/index.php
-  │                                                ├── public: /login, /oauth/*
-  │                                                ├── protected: /, /users, /macro-works, /services, …
-  │                                                ├── Auth::require($perm) per route
-  │                                                └── Auth::dashboardForRole($role)
-  │
-  no
-  ▼
-siteRoute($path)
-  │
-  ▼
-$view->render('pages.home')
-  │
-  ├── resolve('layouts.app') → views/{tpl}/layouts/app.php (or views/_shared/)
-  ├── compile → storage/cache/views/{md5}.php
-  ├── evaluate → extract($data), include compiled
-  └── echo
+Browser → .htaccess → static? → serve
+                    ↓ no
+              index.php → config.php
+                    ├── Env::load('.env')
+                    ├── Session::start()
+                    ├── Lang detection
+                    ├── View (site) + View (admin)
+                    ├── ACL::init(data/)
+                    └── Router::dispatch()
+                        ├── /{ADMIN_URL_PATH}/* → admin/index.php
+                        │   ├── Auth::require($perm)
+                        │   ├── Scope::canActOn($actor, $target)
+                        │   └── Auth::dashboardForRole($role)
+                        └── otherwise → site route → View::render()
 ```
 
 ### Key components
 
 | File | Role |
 |---|---|
-| `src/Env.php` | Minimal `.env` parser |
-| `src/Lang.php` | Language detection, cookie storage, RTL flag, `switcherJs()` |
+| `src/Env.php` | `.env` parser |
+| `src/Lang.php` | Language detection, cookie, `switcherJs()` |
 | `src/View.php` | Blade-like compiler + evaluator |
-| `src/Router.php` | Site routes + admin URL obfuscation |
-| `src/ACL.php` | Roles, permissions, widget registry, `sidebarFor()` |
-| `src/Auth.php` | Session helpers, business-email check, role dashboards |
-| `src/Auth/OAuth.php` | Google + GitHub OAuth (cURL only) |
-| `src/Seed.php` | Idempotent seeder for macro works + 130 services |
-| `src/helpers.php` | `t()`, `e()`, `url()`, `asset()`, `admin_url()`, `admin_asset()`, `csrf_*()` |
-| `config.php` | Wires everything; returns `[$view, $adminView, $router]` |
+| `src/Router.php` | Site routes + admin obfuscation |
+| `src/ACL.php` | Roles, permissions, `sidebarFor()`, capacity checks |
+| `src/Auth.php` | Session, business-email check, role dashboards |
+| `src/Auth/OAuth.php` | Google + GitHub (cURL) |
+| `src/Scope.php` | `canActOn($actor, $target)` — row-level scope |
+| `src/Week.php` | Weekly directive cascade, cutoff times |
+| `src/Rollup.php` | Aggregate refresh (called by cron) |
+| `src/Seed.php` | Idempotent seeder (5 macros, 130 services) |
+| `src/helpers.php` | `t() · e() · url() · asset() · admin_url() · admin_asset() · csrf_*()` |
+| `config.php` | Bootstraps everything |
 | `index.php` | Single entry point |
+| `bin/rollup.php` | Cron: refresh rollups hourly / 15-min Fridays |
+
+---
+
+## Organization Model
+
+```
+                              ┌──────────┐
+                              │  OWNER   │  1
+                              └────┬─────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              │                    │                    │
+        ┌─────▼─────┐        ┌─────▼─────┐        ┌─────▼─────┐
+        │  LEADER   │  … ×130 (one per service)        │  LEADER   │
+        └─────┬─────┘        └─────┬─────┘        └─────┬─────┘
+              │                    │                    │
+       100 managers per leader (13,000 total)
+              │
+        10 experts per manager (~130,000 total, 1,000 per service)
+```
+
+- **Accounts total:** ~143,131 (owner + 130 leaders + 13,000 managers + 130,000 experts)
+- **Span risk:** a leader with 100 direct reports cannot hold weekly 1:1s — the CMS supports an **optional cluster-lead flag** (`is_cluster_lead`) so leaders can sync with 10 cluster leads weekly and rotate 1:1s through all managers
+- **Manager ratio:** 1 manager per ~9 experts (soft target 10)
+- **Optional:** managers may be counted inside the 1,000 per service (making the ratio 1:9) — a **documented decision**, configured via `settings` table
+
+---
+
+## Data Architecture
+
+The CMS stays on SQLite but **splits** the database:
+
+```
+storage/
+├── w5d.sqlite                ← content, users, macro_works, services, sessions, audit_log
+├── work_cultures.sqlite      ← tasks, reports, rollups for cultures
+├── work_built.sqlite         ← same for built
+├── work_sciences.sqlite      ← same for sciences
+├── work_governance.sqlite    ← same for governance
+└── work_technology.sqlite    ← same for technology
+```
+
+**Why split:** 130,000 reports in a 48-hour window ≈ 0.75 writes/s average; a 50× Friday peak ≈ 40 small writes/s. SQLite in WAL mode on SSD handles that when sharded by macro work.
+
+**Data volume:** 130,000 × 52 ≈ **6.76M report rows per year**. Rollups keep dashboard queries at O(130 leaders) instead of O(130,000 experts).
+
+**Fallback:** the schema ports cleanly to PostgreSQL if the "no PostgreSQL" rule is ever relaxed.
+
+### Work DB schema (per macro work)
+
+```sql
+CREATE TABLE weeks (
+    id          INTEGER PRIMARY KEY,
+    iso_year    INTEGER NOT NULL,
+    iso_week    INTEGER NOT NULL,
+    state       TEXT NOT NULL DEFAULT 'open'
+                CHECK (state IN ('open','reported','approved','locked')),
+    created_at  TEXT NOT NULL,
+    locked_at   TEXT
+);
+
+CREATE TABLE directives (
+    id          INTEGER PRIMARY KEY,
+    week_id     INTEGER NOT NULL REFERENCES weeks(id),
+    from_user   INTEGER NOT NULL,
+    to_user     INTEGER NOT NULL,
+    priority    INTEGER NOT NULL DEFAULT 3,       -- 1..5
+    target_num  REAL,
+    target_unit TEXT,
+    text        TEXT NOT NULL,
+    created_at  TEXT NOT NULL
+);
+
+CREATE TABLE assignments (
+    id          INTEGER PRIMARY KEY,
+    week_id     INTEGER NOT NULL REFERENCES weeks(id),
+    expert_id   INTEGER NOT NULL,
+    task        TEXT NOT NULL,
+    placement   TEXT NOT NULL CHECK (placement IN ('real','between','virtual')),
+    evidence    TEXT,
+    due_at      TEXT NOT NULL,
+    created_at  TEXT NOT NULL
+);
+
+CREATE TABLE weekly_reports (
+    id           INTEGER PRIMARY KEY,
+    week_id      INTEGER NOT NULL REFERENCES weeks(id),
+    expert_id    INTEGER NOT NULL,
+    manager_id   INTEGER NOT NULL,
+    output_num   REAL,
+    output_unit  TEXT,
+    evidence     TEXT NOT NULL,
+    submitted_at TEXT NOT NULL,
+    status       TEXT NOT NULL DEFAULT 'submitted'
+                 CHECK (status IN ('submitted','approved','rejected','late'))
+);
+CREATE INDEX idx_reports_week_status ON weekly_reports(week_id, status);
+CREATE INDEX idx_reports_manager     ON weekly_reports(manager_id, week_id);
+
+CREATE TABLE approvals (
+    id           INTEGER PRIMARY KEY,
+    report_id    INTEGER NOT NULL REFERENCES weekly_reports(id),
+    approver_id  INTEGER NOT NULL,
+    level        TEXT NOT NULL CHECK (level IN ('manager','leader')),
+    decision     TEXT NOT NULL CHECK (decision IN ('approve','reject')),
+    reason       TEXT,
+    decided_at   TEXT NOT NULL
+);
+
+CREATE TABLE blockers (
+    id           INTEGER PRIMARY KEY,
+    week_id      INTEGER NOT NULL REFERENCES weeks(id),
+    raised_by    INTEGER NOT NULL,
+    scope_to     INTEGER NOT NULL,
+    text         TEXT NOT NULL,
+    state        TEXT NOT NULL DEFAULT 'open'
+                 CHECK (state IN ('open','escalated','closed')),
+    opened_at    TEXT NOT NULL,
+    closed_at    TEXT
+);
+
+CREATE TABLE checkins (
+    id          INTEGER PRIMARY KEY,
+    user_id     INTEGER NOT NULL,
+    kind        TEXT NOT NULL CHECK (kind IN ('in','out')),
+    at          TEXT NOT NULL,
+    dyon_token  TEXT NOT NULL
+);
+
+CREATE TABLE rollups (
+    id           INTEGER PRIMARY KEY,
+    week_id      INTEGER NOT NULL REFERENCES weeks(id),
+    level        TEXT NOT NULL CHECK (level IN ('manager','leader','macro')),
+    user_id      INTEGER,              -- null at macro level
+    headcount    INTEGER NOT NULL,
+    reports_ok   INTEGER NOT NULL,
+    reports_late INTEGER NOT NULL,
+    rework_count INTEGER NOT NULL,
+    rag          TEXT NOT NULL CHECK (rag IN ('red','amber','green')),
+    computed_at  TEXT NOT NULL
+);
+CREATE INDEX idx_rollups_week_level ON rollups(week_id, level);
+```
+
+**Rollups are the only source for dashboards.** Public carousels read the cached `storage/cache/kpis.json` (written by `bin/rollup.php`).
+
+---
+
+## Roles & ACL
+
+### 8 roles
+
+| Role | Rank | Scope | Purpose |
+|---|---:|---|---|
+| `owner` | 100 | global | Full access, billing, settings, promote/demote, payroll |
+| `admin` | 90 | global | CMS admin, content, users, templates (no billing) |
+| `leader` | **80** | own `service_slug` | 100 managers, ~1,000 experts |
+| `manager` | 70 | own `parent_id` | ~10 experts |
+| `member` | 50 | self | Expert employee — own tasks, weekly reports |
+| `investor` | 40 | global (read) | Portfolio, ROI, dividends |
+| `customer` | 30 | self | Invoices, services, support |
+| `user` | 10 | self | Profile, notifications |
+
+**Rank is ordering only.** Authorization is always `ACL::can($role, $perm)` plus `Scope::canActOn($actor, $target)`.
+
+### 35 permissions
+
+Defined in `data/permissions.php` — each lists the roles that hold it.
+
+**Account & system (13)**
+`manage.users` · `manage.roles` · `manage.billing` · `manage.settings` · `manage.templates` · `manage.content` · `manage.macro_works` · `manage.services` · `manage.leaders` · `manage.managers` · `manage.onboarding` · `manage.certification` · `manage.payroll`
+
+**Team & work (10)**
+`manage.team` · `assign.work` · `assign.experts` · `approve.work` · `approve.weekly_report` · `submit.work` · `submit.weekly_report` · `view.own.work` · `view.team.reports` · `view.service.reports`
+
+**Reporting & audit (3)**
+`view.all.reports` · `view.audit` · `view.portfolio` · `manage.portfolio`
+
+**Commerce (4)**
+`view.invoices` · `manage.invoices` · `view.support` · `manage.support`
+
+**Personal (5)**
+`view.dashboard` · `view.profile` · `edit.profile` · `view.notifications` · `view.all.reports`
+
+---
+
+## Scope Enforcement
+
+`ACL::can()` answers **"can this role perform this action?"**. `Scope::canActOn()` answers **"can this actor act on this specific target row?"**. Both must pass.
+
+```php
+<?php
+declare(strict_types=1);
+namespace W5D;
+
+final class Scope
+{
+    public static function canActOn(array $actor, array $target): bool
+    {
+        return match ($actor['role']) {
+            'owner', 'admin' => true,
+            'leader'  => $target['service_slug'] === $actor['service_slug'],
+            'manager' => (int)$target['parent_id'] === (int)$actor['id'],
+            default   => (int)$target['id'] === (int)$actor['id'],
+        };
+    }
+
+    public static function canList(array $actor, string $serviceSlug = null): bool
+    {
+        return match ($actor['role']) {
+            'owner', 'admin' => true,
+            'leader'         => $serviceSlug === null || $serviceSlug === $actor['service_slug'],
+            default          => false,
+        };
+    }
+}
+```
+
+Every admin controller calls `Scope::canActOn($actor, $row)` before rendering or mutating a target. Every list query is filtered by the scope at the SQL level (`WHERE service_slug = ?` or `WHERE parent_id = ?`).
+
+### Capacity caps (enforced in `data/permissions.php` and code)
+
+```php
+const CAPS = [
+    'leader.managers' => 100,
+    'manager.experts' => 12,     // soft 10
+    'service.experts' => 1000,
+];
+```
+
+Attempting to exceed a cap returns HTTP 422 with a message like:
+
+> "This leader already has 100 managers (cap reached). Reassign a manager first."
+
+---
+
+## Weekly Work Engine
+
+Timezone: **Africa/Tunis**, Monday–Friday.
+
+| When | System event |
+|---|---|
+| Mon 08:00 | Owner reviews last week's closed scorecards |
+| Mon 09:00 | Owner publishes weekly directives |
+| Mon 11:00 | Leaders split targets to managers |
+| Mon 14:00 | Managers assign tasks to experts |
+| Mon 17:00 | Experts accept tasks |
+| Wed 12:00 | Managers escalate blockers to leaders |
+| Wed 16:00 | Leaders send top blockers to owner |
+| Fri 12:00 | Expert reports due |
+| Fri 16:00 | Manager approvals due |
+| Fri 18:00 | Leader sign-off due · submissions lock |
+| Sat 02:00 | Rollups finalised |
+
+Late submissions are flagged automatically and count against the scorecard.
+
+### Weekly rhythm by role
+
+**Owner — ~24h/week**
+- Mon 08:00 (60 min) — review 130 leader scorecards, RAG sort
+- Mon 09:00 (60 min) — publish directives
+- Tue–Thu (5 × 60 min) — one macro review per macro work (26 leaders each)
+- Tue–Thu (10 × 20 min) — 1:1s with red-flag leaders only
+- Weekly rotation (13 × 20 min) — routine 1:1s (each leader every ~10 weeks)
+- Thu (120 min) — payroll & finance
+- Weekly (180 min) — investors, customers, partners
+- Weekly (4 × 60 min) — public site · risk · leader hiring · Friday decision log
+
+**Leader — ~20h/week**
+- Mon 08:00 (30 min) — read owner directives
+- Mon by 11:00 (90 min) — split into 100 manager targets
+- Tue (60 min) — cluster-lead sync (10 cluster leads)
+- Tue–Thu (20 × 20 min) — 1:1s with 20 managers on 5-week rotation + all red managers
+- Wed by 12:00 (60 min) — resolve escalated blockers, escalate to owner by 16:00
+- Thu (200 min) — quality sampling: 20 random reports against rubric
+- Fri (120 min) — approve manager roll-ups, sign off by 18:00
+- Fri (60 min) — one-page digest to owner
+- Weekly (60 min) — capacity & vacancies
+- Weekly (120 min) — service roadmap
+
+**Manager — ~9.7h/week management + ~31h production**
+- Mon by 14:00 (60 min) — assign 10 tasks
+- Daily 09:15 (4 × 15 min) — stand-up (Tue–Fri)
+- Tue–Thu (10 × 15 min) — 1:1 per expert
+- Wed by 12:00 (30 min) — escalate 24h+ blockers
+- Thu (60 min) — spot-check evidence (QR + outputs)
+- Fri by 16:00 (100 min) — approve 10 reports
+- Fri (60 min) — team summary
+- Weekly (60 min) — timesheets & leave
+
+**Expert employee — 40h/week**
+- Mon by 17:00 (30 min) — accept task, plan week
+- Daily (5 × 10 min) — stand-up
+- Mon–Fri (~33h) — production (Real placement = QR check-in; Virtual = logged outputs)
+- Weekly (120 min) — one Dyon module
+- Weekly (90 min) — peer review of 2 colleagues
+- Tue–Thu (15 min) — 1:1 with manager
+- Weekly (60 min) — documentation
+- Fri by 12:00 (45 min) — submit weekly report with evidence
+
+**Examples of deliverables by macro:** records digitised (cultures) · site inspection reports (built) · datasets produced (sciences) · regulatory briefs (governance) · commits, models, deployed services (technology). These become the `evidence` field on the weekly report.
+
+---
+
+## Bulk Onboarding
+
+130,000 experts cannot be typed in manually.
+
+**Owner area → Onboarding → CSV import**
+
+CSV columns:
+```csv
+email,name,service_slug,parent_email
+amina.b@example.com,Amina Ben Salah,heritage-digitisation,leader.cultures@w5d.tech
+```
+
+Each row:
+1. Creates a `user` with `role='member'`, `status='invited'`, `service_slug`, `parent_id` resolved from `parent_email`.
+2. Generates a one-time invitation token.
+3. On Google/GitHub sign-in, the token **promotes** the account from `user` to `member` (never higher).
+4. Links a Dyon QR identity.
+
+**`@w5d.tech` requirement** applies only to **leaders and above**. Experts sign in with Google or GitHub.
+
+Import is **rate-limited** (10 imports/hour per owner) and **idempotent** (re-importing the same email updates but never duplicates).
 
 ---
 
 ## Requirements
 
-- **PHP ≥ 8.2** (typed properties, named arguments, `str_contains`, `str_starts_with`, `match`)
-- **SQLite 3** (bundled with PHP by default)
-- **Apache 2.4+** with `mod_rewrite` (or Nginx with equivalent config)
-- **PHP extensions**: `pdo_sqlite`, `mbstring`, `json`, `session`, `openssl`, `curl`
-- **Node.js ≥ 18** — only for the one-time TailAdmin build (`npm install && npm run build`). Discarded after.
-- **No Composer** required
+- **PHP ≥ 8.2** with `pdo_sqlite`, `mbstring`, `json`, `session`, `openssl`, `curl`
+- **SQLite 3** (bundled)
+- **Apache 2.4+** with `mod_rewrite` (or Nginx equivalent)
+- **Node.js ≥ 18** — one-time TailAdmin build only (`npm install && npm run build`); discarded after
+- **No Composer**
 
 ---
 
 ## Installation
 
 ```bash
-# 1. Clone
 git clone https://github.com/W5Downer/w5d-php-cms.git
 cd w5d-php-cms
 
-# 2. Create required folders
-mkdir -p src/Auth admin/assets/css admin/assets/js admin/assets/img admin/assets/fonts
-mkdir -p admin/views/layouts admin/views/partials admin/views/pages admin/views/widgets
-mkdir -p assets/default/css assets/default/js assets/default/img assets/default/fonts
-mkdir -p views/default/layouts views/default/partials views/default/pages
-mkdir -p views/_shared/pages
-mkdir -p data lang
-mkdir -p storage/cache/views storage/cache/views-admin storage/sessions
+# Folders
+mkdir -p src/Auth bin data lang
+mkdir -p admin/assets/{css,js,img,fonts}
+mkdir -p admin/views/{layouts,partials,pages,widgets}
+mkdir -p assets/default/{css,js,img,fonts}
+mkdir -p views/default/{layouts,partials,pages} views/_shared/pages
+mkdir -p storage/{cache/views,cache/views-admin,sessions,backups}
 
-# 3. Configure environment
+# Env
 cp .env.example .env
-# Edit .env (see Configuration below)
-
-# 4. Generate webmaster password hash
 php -r "echo password_hash('YourStrongPassword', PASSWORD_DEFAULT), PHP_EOL;"
-# Paste the output into .env → WEBMASTER_PASSWORD_HASH=...
+# paste into .env → WEBMASTER_PASSWORD_HASH=...
 
-# 5. Build TailAdmin once (produces admin/assets/css/tailadmin.css + admin/assets/js/app.js)
+# TailAdmin (one-time build)
 cd admin/assets
 git clone https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template .
-npm install
-npm run build
+npm install && npm run build
 cd ../..
-# Delete build artefacts — they are not needed at runtime
 rm -rf admin/assets/node_modules admin/assets/package.json admin/assets/package-lock.json
 
-# 6. Seed the database on first request (automatic — no manual step)
+# Cron (add to crontab)
+# */15 * * * 5 php /path/to/w5d/bin/rollup.php
+# 0 * * * *   php /path/to/w5d/bin/rollup.php
+# 0 3 * * *   sqlite3 storage/w5d.sqlite "VACUUM INTO 'storage/backups/w5d-'\$(date +%F)'.sqlite'"
 
-# 7. Point Apache document root to the repository root
-# 8. Visit http://localhost/w5d/
+# Visit
+# http://localhost/w5d/          → home
+# http://localhost/w5d/{ADMIN_URL_PATH} → admin
+# http://localhost/w5d/admin     → 403
 ```
 
 ---
 
 ## Configuration
 
-All configuration lives in `.env`. Copy `.env.example` to `.env` and edit:
-
 ```dotenv
-# ---- Application ----
-APP_ENV=local                  # local | production
-APP_DEBUG=true                 # verbose errors (disable in production)
+# Application
+APP_ENV=local
+APP_DEBUG=true
 APP_URL=http://localhost/w5d
-APP_BASE_PATH=/w5d             # subfolder if not at document root
-APP_DEFAULT_LANG=en            # fallback language
-ACTIVE_TEMPLATE=default        # → views/default/ + assets/default/
+APP_BASE_PATH=/w5d
+APP_DEFAULT_LANG=en
+ACTIVE_TEMPLATE=default
+APP_TIMEZONE=Africa/Tunis
 
-# ---- Admin ----
-ADMIN_URL_PATH=/admin          # change to /secret-xyz in production
+# Admin
+ADMIN_URL_PATH=/admin
 WEBMASTER_USERNAME=admin
 WEBMASTER_EMAIL=owner@w5d.tech
 WEBMASTER_PASSWORD_HASH=
 
-# ---- OAuth ----
+# OAuth
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
 
-# ---- Database ----
+# Databases (split)
 DB_PATH=storage/w5d.sqlite
+WORK_DB_PATTERN=storage/work_{macro}.sqlite
 
-# ---- Session ----
+# Session
 SESSION_NAME=w5d_sess
 SESSION_LIFETIME=86400
-SESSION_SECURE=false           # true in production (HTTPS only)
+SESSION_SECURE=false
 
-# ---- License ----
+# License
 LICENSE_RATE_TND=610.5
 OFFER_DEADLINE=2026-12-31
-```
 
-### Environment presets
-
-**Local development**
-```dotenv
-APP_ENV=local
-APP_DEBUG=true
-SESSION_SECURE=false
-```
-
-**Production**
-```dotenv
-APP_ENV=production
-APP_DEBUG=false
-SESSION_SECURE=true
-ADMIN_URL_PATH=/xyz-9a1b2c-panel   # never the default /admin
+# Capacity caps
+CAP_LEADER_MANAGERS=100
+CAP_MANAGER_EXPERTS=12
+CAP_SERVICE_EXPERTS=1000
 ```
 
 ---
 
 ## Multi-Template System
 
-Each site template is a **self-contained unit**:
-
+Each site template owns:
 ```
-assets/{name}/                 ← CSS, JS, images, fonts
-views/{name}/                  ← layouts, partials, pages
+assets/{name}/    ← CSS, JS, img, fonts
+views/{name}/     ← layouts, partials, pages
 ```
 
-### How it works
+Resolution: `views/{name}/` → `views/_shared/`.
 
-1. `ACTIVE_TEMPLATE={name}` in `.env` sets the active template
-2. `View` searches `views/{name}/` first, then `views/_shared/` as fallback
-3. `asset('css/app.css')` resolves to `/w5d/assets/{name}/css/app.css`
-4. `.htaccess` serves `assets/{name}/*` directly (no PHP)
+**Adding a template:** create both folders, copy structure from `views/default/`, move assets, set `ACTIVE_TEMPLATE={name}`, reload.
 
-### Adding a new site template
-
-1. Create `assets/{new}/` and `views/{new}/`
-2. Copy the structural folders from `views/default/` as a starting point:
-   ```
-   views/{new}/layouts/app.php
-   views/{new}/partials/{header,footer,preloader}.php
-   views/{new}/pages/home.php
-   ```
-3. Move the template's CSS/JS/img into `assets/{new}/`
-4. Change `.env` → `ACTIVE_TEMPLATE={new}`
-5. Reload — new template serves automatically
-
-### What `views/_shared/` is for
-
-Template-agnostic pages that must work regardless of the active template:
-- `pages/404.php`
-- `pages/error.php`
-- Any future generic page (e.g. maintenance)
-
-`views/_shared/` **does not** need its own `layouts/` — it inherits `layouts.app` from the active template.
+`views/_shared/` is only for template-agnostic pages (404, error).
 
 ---
 
 ## Multi-Language System
 
-### Detection priority
-
-1. **Cookie** `w5d_lang` (user's saved choice)
-2. **HTTP `Accept-Language` header** — quality-weighted parsing (e.g. `fr-CH, fr;q=0.9, en;q=0.8` → `fr`)
-3. **`.env` `APP_DEFAULT_LANG`**
-
-### Supported languages
+Detection: Cookie `w5d_lang` → `Accept-Language` → `.env` `APP_DEFAULT_LANG`.
 
 | Code | Language | Direction | Font |
 |---|---|---|---|
 | `en` | English | LTR | Theme default |
 | `fr` | Français | LTR | Theme default |
-| `ar` | العربية | RTL | Cairo (auto-injected) |
+| `ar` | العربية | RTL | Cairo (auto) |
 
-### Adding a language
-
-1. Create `lang/{code}.php` mirroring `lang/en.php`
-2. Add the code to `Lang::SUPPORTED` in `src/Lang.php`
-3. Add a button in your template's language switcher: `<a href="#" data-w5d-lang="{code}">{Label}</a>`
-
-### How switching works
-
-The switcher is pure JS — no server round-trip through a controller. The `Lang::switcherJs()` snippet (injected into the footer by `layouts/app.php`) sets a cookie and reloads. On reload, `Lang` picks up the cookie and serves the right translation file.
-
-**No `?lang=xy` URLs are ever generated.**
+Switching is cookie-based (`data-w5d-lang` attribute + `Lang::switcherJs()`). **No `?lang=xy`**.
 
 ---
 
 ## Admin Panel (TailAdmin)
 
-The admin dashboard uses **[TailAdmin](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)** — the free, open-source Tailwind CSS + Alpine.js admin template.
+Admin uses **[TailAdmin](https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template)** — the free Tailwind + Alpine.js admin template.
 
-### What TailAdmin provides
-
-- 1 unique dashboard layout (sidebar + topbar + content grid)
-- 30+ dashboard components (charts, tables, activity feeds, KPI cards, stats grids)
-- 50+ UI elements (buttons, badges, avatars, alerts, dropdowns, modals, form controls)
-- Dark mode toggle (built in)
-- Profile page, 404 page, auth forms
-- Data-visualisation components (Line, Bar charts)
-
-### How it's integrated
-
-| TailAdmin piece | W5D integration |
+| TailAdmin | W5D |
 |---|---|
-| `index.html` shell | → `admin/views/layouts/app.php` (Blade-style) |
-| Sidebar | → `admin/views/partials/sidebar.php` (ACL-filtered) |
-| Topbar | → `admin/views/partials/topbar.php` (dark mode + lang switcher + profile) |
-| Footer | → `admin/views/partials/footer.php` |
-| Dashboard widgets | → `admin/views/widgets/{key}.php` (thin data adapters) |
-| Tables, charts, forms | → kept in `admin/assets/css/tailadmin.css` + `admin/assets/js/app.js` |
-| Webpack build | → one-time `npm install && npm run build`, then `node_modules/` deleted |
-| Tailwind CDN | **Not used at runtime** — compiled CSS served statically |
+| `index.html` shell | `admin/views/layouts/app.php` |
+| Sidebar | `admin/views/partials/sidebar.php` (ACL + scope filtered) |
+| Topbar | `admin/views/partials/topbar.php` (dark mode + lang + profile) |
+| Dashboard widgets | `admin/views/widgets/{key}.php` (data adapters) |
+| Tables, charts, forms | `admin/assets/css/tailadmin.css` + `admin/assets/js/app.js` |
+| Webpack build | One-time `npm install && npm run build`, then `node_modules/` deleted |
+| Tailwind CDN | **Not used** at runtime |
 
-### Access rules
+**Access rules**
 
 | URL | Result |
 |---|---|
-| `/w5d/{ADMIN_URL_PATH}` | ✅ Admin dashboard (via router) |
-| `/w5d/{ADMIN_URL_PATH}/users` | ✅ Admin page (via router) |
-| `/w5d/{ADMIN_URL_PATH}/macro-works` | ✅ Owner feature (via router, ACL-gated) |
-| `/w5d/{ADMIN_URL_PATH}/services` | ✅ Owner feature (via router, ACL-gated) |
-| `/w5d/{ADMIN_URL_PATH}/assets/css/tailadmin.css` | ✅ Admin asset (via router) |
-| `/w5d/admin` (the physical folder) | 🚫 **403 Forbidden** |
-| `/w5d/admin/index.php` | 🚫 **403 Forbidden** |
-
-The `.htaccess` at the root denies any request whose path starts with `/w5d/admin/`. The router bypasses this by `require`-ing `admin/index.php` directly from PHP — never via HTTP.
-
-### Admin assets
-
-Admin CSS/JS/images live in `admin/assets/`. They are served by the router under the obfuscated path:
-
-```html
-<link rel="stylesheet" href="<?= admin_asset('css/tailadmin.css') ?>">
-<script src="<?= admin_asset('js/app.js') ?>"></script>
-```
-
-Which renders as:
-```html
-<link rel="stylesheet" href="/w5d/admin/assets/css/tailadmin.css">            <!-- local -->
-<link rel="stylesheet" href="/w5d/xyz-panel-2026/assets/css/tailadmin.css">  <!-- production -->
-```
-
-### Webmaster credentials
-
-Stored in `.env`:
-
-```dotenv
-WEBMASTER_USERNAME=admin
-WEBMASTER_EMAIL=owner@w5d.tech
-WEBMASTER_PASSWORD_HASH=$2y$10$...   # password_hash() output
-```
-
-On first boot, the admin login page compares against these values. Change the password by regenerating the hash:
-
-```bash
-php -r "echo password_hash('NewPassword', PASSWORD_DEFAULT), PHP_EOL;"
-```
+| `/w5d/{ADMIN_URL_PATH}` | ✅ Admin dashboard |
+| `/w5d/{ADMIN_URL_PATH}/macro-works` | ✅ Owner feature (ACL-gated) |
+| `/w5d/{ADMIN_URL_PATH}/services` | ✅ Owner feature (ACL-gated) |
+| `/w5d/admin` (physical) | 🚫 **403** |
+| `/w5d/admin/index.php` | 🚫 **403** |
 
 ---
 
-## Roles & ACL
+## Admin Menu
 
-### 7 roles
+Visibility: **O** owner · **A** admin · **L** leader · **M** manager · **E** expert employee.
 
-| Role | Rank | Purpose |
-|---|---:|---|
-| `owner` | 100 | Full access, billing, settings, promote/demote |
-| `admin` | 90 | CMS admin, content, users, templates (no billing) |
-| `manager` | 70 | Team roster, assignments, approvals |
-| `member` | 50 | Own tasks, submissions |
-| `investor` | 40 | Portfolio, ROI, dividends |
-| `customer` | 30 | Invoices, services, support |
-| `user` | 10 | Profile, notifications |
+Everyone sees only their own scope.
 
-**Rank is ordering only.** Authorization is always `ACL::can($role, $perm)`.
-
-### 25 permissions
-
-Defined in `data/permissions.php` — each permission lists the roles that hold it:
-
-- Account & system: `manage.users`, `manage.roles`, `manage.billing`, `manage.settings`, `manage.templates`, `manage.content`, `manage.macro_works`, `manage.services`
-- Team & work: `manage.team`, `assign.work`, `approve.work`, `submit.work`, `view.own.work`, `view.team.reports`, `view.all.reports`
-- Investment: `view.portfolio`, `manage.portfolio`
-- Commerce: `view.invoices`, `manage.invoices`, `view.support`, `manage.support`
-- Personal: `view.dashboard`, `view.profile`, `edit.profile`, `view.notifications`
-
-### How ACL is enforced
-
-- **Routes**: `Auth::require($permission)` before dispatch
-- **Sidebar**: `ACL::sidebarFor($role)` filters menu items
-- **Widgets**: each widget calls `Auth::require($def['perm'])` internally
+| # | Item | Who | Purpose |
+|---|---|---|---|
+| 1 | Command Center | O A L M E | Role-scoped landing: headcount vs target, completion %, RAG, open blockers |
+| 2 | Organization Tree | O A L M | Drill-down with capacity bars (x/100, x/10, x/1,000) |
+| 3 | Onboarding & Capacity | O A L M | CSV import, invitations, 8-week checklist, slot assignment |
+| 4 | Macro Works & Services | O A (L read) | Owner CRUD + staffing counts per service |
+| 5 | Weekly Planner | O A L M | Cascading directives, templates, carry-over |
+| 6 | Tasks & Assignments | L M E | Task board with placement and required evidence |
+| 7 | Weekly Reports & Approvals | O A L M E | Expert submission + approval queues |
+| 8 | Check-ins & Dyon QR | M E (O A L aggregate) | QR in/out + certification status |
+| 9 | Quality & Audit Sampling | O A L M | Random-sample generator, rubric scoring, rework |
+| 10 | Scorecards & RAG | O A L M E(own) | Weekly weighted score, RAG, leaderboards |
+| 11 | Blockers & Escalations | O A L M E | Raise → manager (24h) → leader (48h) → owner (weekly top-5) |
+| 12 | Timesheets & Leave | L M E (O A aggregate) | Hours, absences, leave approvals |
+| 13 | Payroll & Finance | O (L aggregate) | 600 TND salary runs, invoices, funding vs payroll forecast |
+| 14 | Parts, Investors & Customers | O A | Parts sold (10/day, 70/week), funded vs filled, countdown |
+| 15 | Learning Hub | O A L M E | Dyon modules, onboarding courses, skill tags |
+| 16 | Announcements & Stand-ups | O A L M E | Broadcasts with read receipts, stand-up notes |
+| 17 | Reports & Exports | O A L M | Scheduled CSV/PDF within scope |
+| 18 | People Cases | O A L M | Replacements, transfers, disputes |
+| 19 | Public Site Content | O A | Carousel text, live KPI feed, countdown, EN/FR/AR |
+| 20 | Users, Roles & Scope | O A | Role assignment, scope fields, MFA, suspensions |
+| 21 | Audit Log & Security | O A | Append-only scope-crossing trail, failed logins |
+| 22 | System Health & Rollups | O A | Cron status, DB sizes, backup status, Friday-peak monitor |
+| 23 | Settings | O | Week calendar, timezone, RAG thresholds, cutoffs, caps |
+| 24 | Profile & Notifications | O A L M E | Personal data, language, alerts |
 
 ---
 
@@ -477,90 +698,58 @@ Defined in `data/permissions.php` — each permission lists the roles that hold 
 
 `/{ADMIN_URL_PATH}/macro-works`
 
-- Lists the **5 default macro works** (locked: slug immutable, delete forbidden)
-- Owner can add **custom macro works** (full CRUD, any slug)
-- Deleting a custom macro work requires **0 services** (archive services first)
-- Editable fields: label (EN/FR/AR), placement, color, sort order
+- 5 defaults (locked slug, delete forbidden) + custom CRUD
+- Editable: label (EN/FR/AR), placement, color, sort_order
+- Delete custom only if 0 services
 
 ### Manage Services
 
 `/{ADMIN_URL_PATH}/services`
 
-- Lists the **130 default services** (locked: slug immutable, delete forbidden, archive allowed)
-- Owner can add **custom services** (full CRUD)
-- Editable fields: title, short description, long description (EN/FR/AR), macro, placement, virtual core flag, status (published/draft/archived), sort order
-- Public site only shows services with `status = 'published'`
+- 130 defaults (locked slug, delete forbidden, archive allowed) + custom CRUD
+- Editable: title, short, long (EN/FR/AR), macro, placement, virtual_core, status, sort_order
+- Public site shows only `status='published'`
 
-### Seeding
+**Seeding:** `src/Seed.php` runs on first boot (idempotent). Never overwrites `is_default=0` rows or edited defaults.
 
-`src/Seed.php` runs on first boot (idempotent):
+**Sources of truth:**
+- `data/services.md` — human documentation of all 130
+- `data/services.php` — seed source
+- `w5d.sqlite` — live data
 
-1. Upserts the 5 default macro works (`is_default = 1`)
-2. Upserts the 130 default services (`is_default = 1`) from `data/services.php`
-3. **Never** overwrites `is_default = 0` rows
-4. **Never** overwrites a default's user-edited fields more than once
+---
 
-`data/services.md` is the human-readable documentation of all 130 services. `data/services.php` is the seed source.
+## Business Model Note
+
+**Open decision before seeding payroll:**
+
+- A part costs **10 TND/day** → **300 TND/month**
+- A certified post pays **600 TND/month salary**
+- At full scale: **130,000 × 600 = 78,000,000 TND/month payroll**
+
+**Options:**
+
+1. **One post needs two parts** → 600 TND/part/day. Update pricing UI to reflect.
+2. **Other funding covers the difference** → grants, sponsors, owner capital. Track per service in `Payroll & Finance`.
+3. **Salary scaled** → 300 TND/month at 1 part/day. Update the offer.
+
+**The chosen model is stored in `settings` and shown on the Payroll & Finance dashboard.** It must be decided **before** onboarding begins.
 
 ---
 
 ## Security
 
-### CSRF
-
-Every state-changing form must include:
-
-```html
-@csrf
-```
-
-This renders `<input type="hidden" name="csrf_token" value="...">`. On POST, verify with:
-
-```php
-if (!csrf_verify($_POST['csrf_token'] ?? null)) {
-    http_response_code(419);
-    exit('CSRF token mismatch');
-}
-```
-
-### Session
-
-- Session name from `.env` (`SESSION_NAME`)
-- HttpOnly cookies (JavaScript cannot read)
-- SameSite=Lax
-- `SESSION_SECURE=true` in production (HTTPS only)
-- Regenerate ID on login: `session_regenerate_id(true);`
-
-### OAuth
-
-- State parameter validated against `$_SESSION['oauth_state']` on callback
-- Client IDs and secrets stored in `.env` only
-- Google + GitHub are the only providers
-
-### File uploads
-
-- Store outside the web root (`storage/`)
-- Random UUID filenames
-- Whitelist MIME types
-- Never trust `$_FILES['type']` — use `finfo`
-
-### HTTP headers
-
-Set in `.htaccess`:
-```
-X-Content-Type-Options: nosniff
-X-Frame-Options: SAMEORIGIN
-Referrer-Policy: strict-origin-when-cross-origin
-```
-
-### Denied paths
-
-`.htaccess` `<FilesMatch>` denies direct access to:
-- `.env`, `.env.*`
-- `*.sqlite`
-- `*.sql`
-- `*.log`
-- `*.md`
+- CSRF tokens on all forms
+- Session fixation protection, HttpOnly, SameSite=Lax, Secure in prod
+- OAuth state validation
+- Rate limiting: 5 logins/hour/IP, 10 imports/hour/owner
+- Path traversal prevention, symlink refusal
+- `.htaccess`: deny `.env`, `.sqlite`, `.sql`, `.md`, `.log`, physical `/admin/`
+- HTTP headers: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`
+- Nightly `VACUUM INTO` backup + off-server copy
+- Append-only `audit_log` for every scope-crossing action
+- **Privacy review** before launch: personal data on ~143,000 people (Tunisia Organic Law 2004-63 — confirm with counsel)
+- **Load test** with 130,000 synthetic reports before festival launch
 
 ---
 
@@ -568,234 +757,107 @@ Referrer-Policy: strict-origin-when-cross-origin
 
 ```
 w5d-php-cms/
-├── .env                         ← real config (gitignored)
-├── .env.example                 ← committed template
-├── .gitignore
-├── .htaccess                    ← root rewrites + security
-├── index.php                    ← single entry point
-├── config.php                   ← bootstrap
+├── .env · .env.example · .gitignore · .htaccess
+├── index.php · config.php
 │
 ├── src/
-│   ├── Env.php                  ← .env loader
-│   ├── Lang.php                 ← multi-language detection
-│   ├── View.php                 ← Blade-like engine
-│   ├── Router.php               ← site + admin routing
-│   ├── ACL.php                  ← roles, permissions, sidebar
-│   ├── Auth.php                 ← session + business-email check
-│   ├── Auth/
-│   │   └── OAuth.php            ← Google + GitHub (cURL only)
-│   ├── Seed.php                 ← idempotent seeder
-│   └── helpers.php              ← t, e, url, asset, admin_url, admin_asset, csrf_*
+│   ├── Env.php · Lang.php · View.php · Router.php
+│   ├── ACL.php · Auth.php · Auth/OAuth.php
+│   ├── Scope.php · Week.php · Rollup.php · Seed.php
+│   └── helpers.php
+│
+├── bin/
+│   └── rollup.php                 ← cron
 │
 ├── data/
-│   ├── roles.php                ← 7 roles
-│   ├── permissions.php          ← 25 permissions × roles
-│   ├── widgets.php              ← admin widget registry
-│   ├── sidebar.php              ← sidebar menu registry
-│   ├── services.php             ← seed source for 130 services
-│   └── services.md              ← human-readable 130 services spec
+│   ├── roles.php (8) · permissions.php (35)
+│   ├── sidebar.php (24 menu items) · widgets.php
+│   ├── services.php · services.md
 │
-├── assets/                      ← ONE FOLDER PER SITE TEMPLATE
-│   └── default/
-│       ├── css/
-│       ├── js/
-│       ├── img/
-│       └── fonts/
+├── assets/{site}/…                ← per-template assets
+├── views/
+│   ├── default/  ·  _shared/
+│   └── {site}/…                    ← more site templates
 │
-├── views/                       ← ONE FOLDER PER SITE TEMPLATE
-│   ├── default/
-│   │   ├── layouts/
-│   │   │   └── app.php
-│   │   ├── partials/
-│   │   │   ├── header.php
-│   │   │   ├── footer.php
-│   │   │   └── preloader.php
-│   │   └── pages/
-│   │       └── home.php
-│   └── _shared/                 ← template-agnostic fallback
-│       └── pages/
-│           └── 404.php
+├── admin/
+│   ├── .htaccess · index.php
+│   ├── assets/{css,js,img,fonts}
+│   └── views/{layouts,partials,pages,widgets}
 │
-├── admin/                       ← TAILADMIN DASHBOARD
-│   ├── .htaccess                ← deny all direct HTTP
-│   ├── index.php                ← admin entry (router-required)
-│   ├── assets/
-│   │   ├── css/
-│   │   │   ├── tailadmin.css    ← compiled Tailwind (one-time build)
-│   │   │   └── w5d-admin.css    ← W5D additions (load after)
-│   │   ├── js/
-│   │   │   ├── app.js            ← compiled Alpine.js (one-time build)
-│   │   │   └── w5d-admin.js      ← W5D additions (load after)
-│   │   ├── img/
-│   │   └── fonts/
-│   └── views/
-│       ├── layouts/
-│       │   └── app.php           ← TailAdmin shell
-│       ├── partials/
-│       │   ├── sidebar.php       ← ACL-filtered
-│       │   ├── topbar.php        ← dark mode + lang + profile
-│       │   └── footer.php
-│       ├── pages/
-│       │   ├── dashboard-owner.php
-│       │   ├── dashboard-admin.php
-│       │   ├── dashboard-manager.php
-│       │   ├── dashboard-member.php
-│       │   ├── dashboard-investor.php
-│       │   ├── dashboard-customer.php
-│       │   ├── dashboard-user.php
-│       │   ├── login.php
-│       │   ├── macro-works-index.php
-│       │   ├── macro-works-edit.php
-│       │   ├── services-index.php
-│       │   ├── services-edit.php
-│       │   └── 404.php
-│       └── widgets/
-│           ├── owner-revenue.php
-│           ├── owner-users-by-role.php
-│           ├── …
-│           └── user-notifications.php
-│
-├── lang/
-│   ├── en.php
-│   ├── fr.php
-│   └── ar.php
+├── lang/{en,fr,ar}.php
 │
 └── storage/
-    ├── cache/
-    │   ├── views/               ← compiled site Blade templates
-    │   └── views-admin/         ← compiled admin Blade templates
-    ├── sessions/
-    └── w5d.sqlite
+    ├── w5d.sqlite
+    ├── work_{cultures,built,sciences,governance,technology}.sqlite
+    ├── cache/{views,views-admin}/
+    ├── backups/
+    └── sessions/
 ```
 
 ---
 
 ## Development Workflow
 
-### Adding a page
-
+### Add a page
 1. Create `views/{ACTIVE_TEMPLATE}/pages/{name}.php`
-2. Add a route in `src/Router.php`:
+2. Add route in `src/Router.php`
+3. `@extends('layouts.app')` + `@section('content')`
 
-   ```php
-   $routes = [
-       '/'          => 'pages.home',
-       '/about'     => 'pages.about',   // new
-   ];
-   ```
+### Add a translation key
+Add to `lang/en.php`, `lang/fr.php`, `lang/ar.php` (copy EN in FR/AR).
 
-3. Write the view:
+### Add an admin widget
+1. Add to `data/widgets.php`
+2. Create `admin/views/widgets/{key}.php` (data adapter)
+3. Call `Auth::require($def['perm'])` inside the widget
 
-   ```php
-   @extends('layouts.app')
+### Add a permission
+1. Add to `data/permissions.php` with roles
+2. Add the guard call in the route or widget
 
-   @section('title', 'About')
-
-   @section('content')
-   <div class="container py-80">
-     <h1>{{ t('about.title') }}</h1>
-     <p>{{ t('about.text') }}</p>
-   </div>
-   @endsection
-   ```
-
-### Adding a translation key
-
-1. Add to `lang/en.php`:
-   ```php
-   'about.title' => 'About W5D',
-   'about.text'  => 'A company and a working ontology.',
-   ```
-
-2. Add matching keys to `lang/fr.php` and `lang/ar.php`
-
-3. Use in views:
-   ```php
-   {{ t('about.title') }}
-   ```
-
-### Adding a partial
-
-1. Create `views/{ACTIVE_TEMPLATE}/partials/{name}.php`
-2. Include from any view:
-   ```php
-   @include('partials.{name}')
-   ```
-3. Pass data:
-   ```php
-   @include('partials.card', ['title' => 'X', 'body' => 'Y'])
-   ```
-
-### Clearing the template cache
-
+### Clear caches
 ```bash
 rm -rf storage/cache/views/* storage/cache/views-admin/*
 ```
-
-The cache auto-rebuilds on next request. Individual files are invalidated automatically when their source changes (md5 of path + mtime).
-
-### Adding an admin widget
-
-1. Add to `data/widgets.php`:
-   ```php
-   'manager.my-widget' => [
-       'title' => 'My Widget',
-       'perm'  => 'view.team.reports',
-       'roles' => ['owner', 'admin', 'manager'],
-       'group' => 'work',
-       'icon'  => 'fa-chart-bar',
-       'size'  => 'md',
-   ],
-   ```
-2. Create `admin/views/widgets/manager-my-widget.php` — a thin data adapter that renders a TailAdmin card or chart.
-3. The widget is automatically picked up by the manager dashboard.
 
 ---
 
 ## License
 
 **W5D PHP CMS — licensed at 610.5 TND per hour of work.**
-
 Promotional offer valid **before 2027** (strictly before 31 December 2026).
-
 After that date, the standard rate applies.
 
-See [`LICENSE`](https://github.com/W5Downer/w5d-php-cms/blob/main/LICENSE) for the full text.
-
-### Footer license block (required on every page)
-
+Footer license block (required on every page):
 ```html
 <p>W5D Admin Dashboard licensed at 610.5 TND/hour of work.
    Promotional offer valid before 2027.</p>
 ```
 
-This block must appear in every template's footer — site and admin.
-
 ---
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/{name}`
-3. Follow the conventions in the [AI Agent Prompt](#ai-agent-prompt) below
-4. Run the [Pre-submit checklist](#pre-submit-checklist)
-5. Open a Pull Request with a clear description
+1. Fork
+2. Branch: `git checkout -b feature/{name}`
+3. Follow the AI Agent Prompt below
+4. Run the pre-submit checklist
+5. PR
 
 ### Coding conventions
-
-- **PHP 8.2+** with `declare(strict_types=1);` at the top of every `src/*.php`
-- **PSR-4**-ish namespacing (`W5D\`) — no autoloader, `require_once` in `config.php`
-- **No Composer** dependencies for the core CMS
-- **No inline `<style>` or `<script>`** in templates — use the template's `assets/{name}/` folder
-- **Every class method typed** (parameters + return)
-- **Every user-supplied string escaped** with `e()` or `{{ }}`
-- **Every state-changing form** includes `@csrf`
+- PHP 8.2+, `declare(strict_types=1);` at the top of every `src/*.php`
+- PSR-4-ish `W5D\` namespace, `require_once` in `config.php`
+- No Composer
+- No inline `<style>` / `<script>`
+- Typed methods
+- `e()` / `{{ }}` for every user string
+- `@csrf` on every state-changing form
 
 ---
 
 ## AI Agent Prompt
 
-> Copy this block verbatim into an AI coding assistant's system prompt. Single source of truth for W5D PHP CMS.
+> Copy verbatim into an AI coding assistant's system prompt.
 
 ```text
 ================================================================================
@@ -811,63 +873,44 @@ W5D — World Five Dimensions — operates across 5 DEFAULT macro works
 OWNER-MANAGEABLE. Defaults have immutable slug and cannot be deleted
 (archive instead).
 
-The CMS powers TWO surfaces:
-  A. A multi-template public website   (views/{ACTIVE_TEMPLATE}/ + assets/{name}/)
-  B. A 7-role admin dashboard          (admin/ — powered by TailAdmin)
+The CMS powers THREE surfaces:
+  A. Public website          views/{ACTIVE_TEMPLATE}/ + assets/{name}/
+  B. Admin dashboard         admin/ (TailAdmin) — 8 roles
+  C. Weekly work engine      per-macro work DBs (tasks → reports → rollups)
 
-Roles: owner · admin · manager · member · investor · customer · user.
-Rank is ORDERING only. Authorization is ACL::can($role, $perm).
+Scale: 1 owner, 130 leaders (1/service), 13,000 managers (100/leader),
+~130,000 experts (~10/manager, 1,000/service). Total ~143,131 accounts.
 
-## 2. DEFAULT ADMIN TEMPLATE — TailAdmin
+## 2. HARD CONSTRAINTS
 
-The default admin dashboard uses TailAdmin:
+- PHP 8.2+. NO Composer. NO frameworks.
+- SQLite 3 (PDO). NO MySQL/PostgreSQL. Split: 1 content DB + 5 work DBs.
+- Vanilla JS at runtime. Webpack one-time for TailAdmin only.
+- Every src/ file: declare(strict_types=1); + namespace W5D\.
+- OAuth: cURL only.
+
+## 3. DEFAULT ADMIN TEMPLATE — TailAdmin
+
   https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template
 
-INTEGRATION RULES:
-
+INTEGRATION:
   1. ONE-TIME BUILD:
-       cd admin/assets
-       npm install
-       npm run build
-     Produces admin/assets/css/tailadmin.css + admin/assets/js/app.js.
-     Then delete node_modules/, package.json, package-lock.json.
-     Tailwind CDN is NEVER used at runtime.
-
-  2. SHELL EXTRACTION:
-     admin/views/layouts/app.php is the TailAdmin shell:
-       <html lang="{{ $lang }}" dir="{{ $dir }}">
-       <link href="<?= admin_asset('css/tailadmin.css') ?>" rel="stylesheet">
-       @include('partials.sidebar')   ← ACL-filtered
-       @include('partials.topbar')    ← dark mode + lang switcher
-       <main>@yield('content')</main>
-       @include('partials.footer')
-       <script src="<?= admin_asset('js/app.js') ?>" defer></script>
-       @yield('scripts')
-
-  3. 7 ROLE DASHBOARDS (share the TailAdmin shell):
-       admin/views/pages/dashboard-{owner,admin,manager,member,
-                                    investor,customer,user}.php
-     Each @extends('layouts.app') and renders role-specific widgets.
-
-  4. OWNER FEATURES (TailAdmin tables + forms):
-       macro-works-index.php, macro-works-edit.php,
-       services-index.php, services-edit.php.
-
-  5. RTL (Arabic):
-     TailAdmin is Tailwind-based → <html dir="rtl"> works.
-     Add in layout: @if($dir === 'rtl') body { font-family: 'Cairo', sans-serif; } @endif
-
-  6. NEVER modify TailAdmin's compiled CSS/JS. W5D additions go in
-     admin/assets/css/w5d-admin.css and admin/assets/js/w5d-admin.js,
-     loaded after tailadmin.css / app.js.
-
-## 3. HARD CONSTRAINTS
-
-  - PHP 8.2+. NO Composer. NO PHP frameworks.
-  - SQLite 3 (PDO). NO MySQL/PostgreSQL.
-  - Vanilla JS at runtime. Webpack only once for TailAdmin, then discarded.
-  - Every src/ file: declare(strict_types=1); + namespace W5D\.
-  - OAuth: cURL only.
+       cd admin/assets && npm install && npm run build
+     → admin/assets/css/tailadmin.css + admin/assets/js/app.js
+     Then DELETE node_modules/, package.json, package-lock.json.
+     Tailwind CDN never used at runtime.
+  2. SHELL: admin/views/layouts/app.php with @include('partials.sidebar')
+     and @include('partials.topbar'), @yield('content'), @yield('scripts').
+  3. SIDEBAR: admin/views/partials/sidebar.php iterates
+     ACL::sidebarFor(Auth::role()) and renders only accessible items.
+  4. TOPBAR: dark mode toggle, lang switcher (data-w5d-lang), profile.
+  5. 8 DASHBOARDS: admin/views/pages/dashboard-{owner,admin,leader,
+     manager,member,investor,customer,user}.php.
+  6. OWNER FEATURES: macro-works-index/edit, services-index/edit,
+     onboarding, payroll — all in TailAdmin tables + forms.
+  7. RTL: <html dir="rtl"> + Cairo font family.
+  8. NEVER modify tailadmin.css or app.js. W5D additions go in
+     admin/assets/css/w5d-admin.css and admin/assets/js/w5d-admin.js.
 
 ## 4. TEMPLATE RESOLUTION
 
@@ -890,38 +933,77 @@ INTEGRATION RULES:
   t('key') · t('key','default') · e($v) · url('/p') · asset('x')
   admin_url('/x') · admin_asset('x') · csrf_token() · csrf_field() · csrf_verify($t)
 
-## 7. DATA MODEL (SQLite)
+## 7. DATA MODEL
 
-  users              — id, email, name, password_hash, role, provider, created_at
-  macro_works        — id, slug, label_en/fr/ar, placement, color, is_default, sort_order
-  services           — id, slug, macro_slug, title_en/fr/ar, short_en/fr/ar,
-                       long_en/fr/ar, placement, virtual_core, is_default,
-                       sort_order, status(published|draft|archived)
-  audit_log          — append-only
+Main DB (storage/w5d.sqlite):
+  users — id, email, name, password_hash, role, provider, created_at,
+          macro_slug, service_slug, parent_id, status(invited|active|paused|exited),
+          is_cluster_lead, dyon_qr_id
+  macro_works — id, slug, label_en/fr/ar, placement, color, is_default, sort_order
+  services — id, slug, macro_slug, title_en/fr/ar, short_en/fr/ar,
+             long_en/fr/ar, placement, virtual_core, is_default, sort_order,
+             status(published|draft|archived)
+  audit_log — append-only
+  settings — key/value
+
+Work DBs (storage/work_{macro}.sqlite, one per macro work):
+  weeks, directives, assignments, weekly_reports, approvals,
+  blockers, checkins, rollups
+  → schema in README.md §Data Architecture
 
 Seeded from data/services.php on first boot (idempotent).
 Defaults: is_default=1, immutable slug, delete forbidden (archive instead).
 Custom rows: full CRUD.
 
-## 8. ROLES & PERMISSIONS
+## 8. ROLES (8) & PERMISSIONS (35)
 
-  7 roles: owner · admin · manager · member · investor · customer · user
-  Rank is ordering only. Authorization is ALWAYS ACL::can($role, $perm).
+  owner(100) > admin(90) > leader(80) > manager(70) > member(50) >
+  investor(40) > customer(30) > user(10)
 
-  25 permissions in data/permissions.php, including:
+  Rank is ORDERING only. Authorization is ALWAYS ACL::can($role,$perm).
+  Row-level access is ALWAYS Scope::canActOn($actor, $target).
+
+  35 permissions in data/permissions.php:
     manage.users · manage.roles · manage.billing · manage.settings
     manage.templates · manage.content · manage.macro_works · manage.services
-    manage.team · assign.work · approve.work · submit.work
-    view.own.work · view.team.reports · view.all.reports
+    manage.leaders · manage.managers · manage.onboarding ·
+    manage.certification · manage.payroll
+    manage.team · assign.work · assign.experts ·
+    approve.work · approve.weekly_report ·
+    submit.work · submit.weekly_report ·
+    view.own.work · view.team.reports · view.service.reports
+    view.all.reports · view.audit ·
     view.portfolio · manage.portfolio
     view.invoices · manage.invoices · view.support · manage.support
     view.dashboard · view.profile · edit.profile · view.notifications
 
-## 9. AUTHENTICATION — 3 methods ONLY
+## 9. SCOPE — src/Scope.php
 
-  A. Email + password — ONLY @w5d.tech (Auth::isBusinessEmail)
-  B. Google OAuth — any account, new users → role `user`
-  C. GitHub OAuth — any account, new users → role `user`
+  canActOn($actor, $target):
+    owner/admin → true
+    leader      → target.service_slug === actor.service_slug
+    manager     → target.parent_id === actor.id
+    default     → target.id === actor.id
+
+  canList($actor, $serviceSlug): owner/admin true; leader only own service;
+  others false.
+
+  Every list query is scoped in SQL (`WHERE service_slug = ?`
+  or `WHERE parent_id = ?`). Never load all rows then filter in PHP.
+
+## 10. CAPACITY CAPS
+
+  leader   ≤ 100 managers
+  manager  ≤ 12 experts (soft 10)
+  service  ≤ 1,000 experts
+
+  Exceeding a cap returns HTTP 422 with a clear message.
+
+## 11. AUTHENTICATION — 3 methods ONLY
+
+  A. Email + password — ONLY @w5d.tech
+  B. Google OAuth — new users → role `user`
+  C. GitHub OAuth — new users → role `user`
 
   NEVER: Facebook, Apple, Twitter, Microsoft, or non-@w5d.tech password signup.
 
@@ -929,220 +1011,192 @@ Custom rows: full CRUD.
   SameSite=Lax, Secure in prod. OAuth state validated against
   $_SESSION['oauth_state'].
 
-## 10. ADMIN URL OBFUSCATION
+  Bulk onboarding: CSV import (owner) creates role=member, status=invited,
+  parent_id from parent_email, one-time token. Google/GitHub sign-in
+  promotes `user` → `member` only. Rate-limited 10/hour/owner.
 
-  ADMIN_URL_PATH in .env controls the public path (default /admin).
-  .htaccess blocks the physical /admin/ folder for direct HTTP access.
+## 12. ADMIN URL OBFUSCATION
+
+  ADMIN_URL_PATH in .env. Physical /admin/ blocked by .htaccess.
   Router dispatches /{ADMIN_URL_PATH}/* → admin/index.php.
-  NEVER unblock /admin/* in .htaccess.
 
-## 11. OWNER FEATURES — MACRO WORKS & SERVICES
+## 13. WEEKLY WORK ENGINE
 
-  Routes (perm: manage.macro_works / manage.services):
-    /{ADMIN_URL_PATH}/macro-works          list
-    /{ADMIN_URL_PATH}/macro-works/new      create
-    /{ADMIN_URL_PATH}/macro-works/{slug}   edit
-    /{ADMIN_URL_PATH}/services             list (search, filter, status)
-    /{ADMIN_URL_PATH}/services/new         create
-    /{ADMIN_URL_PATH}/services/{id}        edit
+  Timezone: Africa/Tunis (fixed in .env APP_TIMEZONE).
+  Cutoffs: Mon 09:00 directives · Fri 12:00 reports · Fri 16:00 manager
+  approvals · Fri 18:00 leader sign-off · Sat 02:00 rollups.
+
+  Cron (bin/rollup.php):
+    */15 * * * 5  → Friday, every 15 minutes
+    0 * * * *     → hourly otherwise
+
+  Rollups write to rollups table. Dashboards and public KPI feed read
+  ONLY rollups — never raw weekly_reports.
+
+## 14. PUBLIC KPI FEED
+
+  /api/kpis.json (cached in storage/cache/kpis.json) returns:
+    { experts_employed, experts_target, services_count, macros_count,
+      % toward festival, last_updated, funding_vs_payroll }
+
+  Public carousels read this file (or fetch the JSON) — never hard-code
+  numbers in translation strings.
+
+## 15. OWNER FEATURES
+
+  /{ADMIN_URL_PATH}/macro-works           list
+  /{ADMIN_URL_PATH}/macro-works/new       create
+  /{ADMIN_URL_PATH}/macro-works/{slug}    edit
+  /{ADMIN_URL_PATH}/services              list (search, filter, status)
+  /{ADMIN_URL_PATH}/services/new          create
+  /{ADMIN_URL_PATH}/services/{id}         edit
+  /{ADMIN_URL_PATH}/onboarding            CSV import + invitations
+  /{ADMIN_URL_PATH}/payroll               funding vs payroll, 600 TND runs
 
   Rules:
     Defaults: slug IMMUTABLE, delete FORBIDDEN, other fields editable.
-    Custom rows: full CRUD.
-    Delete custom macro only if 0 services.
-    Archive = status='archived'; public site only shows 'published'.
+    Custom rows: full CRUD. Delete custom macro only if 0 services.
+    Archive = status='archived'. Public site only shows 'published'.
     Seeder never overwrites is_default=0 rows.
 
-## 12. LANGUAGE
+## 16. LANGUAGE
 
   Keys: {section}.{key}. Admin prefix: admin.*
   Every key in lang/en.php + lang/fr.php + lang/ar.php.
-  Missing fr/ar fall back to en via array_merge.
+  Missing fr/ar fall back to en.
   Service titles/shorts/longs fall back per-field to en via DB helper.
 
-## 13. WORKFLOW — SITE TEMPLATE ONBOARDING (6 STEPS)
+## 17. SITE TEMPLATE ONBOARDING (6 STEPS)
 
   1. mkdir views/{name}/{layouts,pages} + assets/{name}/{css,js,img,fonts}
-  2. Move template's CSS/JS/img/fonts → assets/{name}/ (preserve subfolders)
+  2. Move template assets → assets/{name}/ (preserve subfolders)
   3. Main HTML → views/{name}/layouts/app.php:
-       - @yield('title'), @yield('head'), @yield('content'), @yield('scripts')
+       - @yield('title') · @yield('head') · @yield('content') · @yield('scripts')
        - <html lang="{{ $lang }}" dir="{{ $dir }}">
-       - All CSS/JS → @asset()
+       - All URLs → @asset()
        - @include('partials.preloader/header/footer')
-       - @if($dir === 'rtl') Cairo font + RTL overrides @endif
-  4. Other HTML → views/{name}/pages/{slug}.php using
-       @extends('layouts.app') + @section('content')
-  5. Extract language keys → replace visible strings with {{ t('…') }};
-       add to lang/en + fr + ar.
-  6. Remove inline <style>/<script> → assets/{name}/css/w5d-dynamic.css +
-       assets/{name}/js/w5d-dynamic.js (keep only Arabic Cairo block in layout).
-       Language links → data-w5d-lang. NO ?lang=xy.
+       - @if($dir === 'rtl') Cairo + RTL overrides @endif
+  4. Other HTML → views/{name}/pages/{slug}.php with @extends + @section
+  5. Extract language keys → {{ t('…') }}; add to lang/en/fr/ar
+  6. Remove inline <style>/<script> → assets/{name}/css/w5d-dynamic.css
+       + assets/{name}/js/w5d-dynamic.js
+       Language <a> → data-w5d-lang. NO ?lang=xy.
        Add routes in src/Router.php. Set ACTIVE_TEMPLATE={name} in .env.
 
-## 14. WORKFLOW — TAILADMIN ONBOARDING (5 STEPS)
+## 18. TAILADMIN ONBOARDING (5 STEPS)
 
-  1. Clone TailAdmin into admin/assets/ (temporary):
-       git clone https://github.com/TailAdmin/tailadmin-free-tailwind-dashboard-template admin/assets
-  2. Build once:
-       cd admin/assets && npm install && npm run build
-     Then delete node_modules/, package.json, package-lock.json.
-     Verify admin/assets/css/tailadmin.css and admin/assets/js/app.js exist.
-  3. Extract shell:
-       admin/views/layouts/app.php     ← from TailAdmin's index.html
-       admin/views/partials/sidebar.php ← TailAdmin sidebar, ACL-filtered
-       admin/views/partials/topbar.php  ← dark-mode toggle + lang switcher + profile
-       admin/views/partials/footer.php
-     All asset URLs → admin_asset('…').
-  4. Create 7 dashboards:
-       admin/views/pages/dashboard-{role}.php for each of:
-         owner, admin, manager, member, investor, customer, user
-     All @extends('layouts.app'). Each renders role-specific widgets.
-  5. Create owner feature pages:
-       admin/views/pages/{macro-works-index,macro-works-edit,
-                          services-index,services-edit}.php
-     Use TailAdmin table + form classes. Wire admin/index.php with
-     Auth::require + ACL::can and role dispatch (Auth::dashboardForRole).
+  1. git clone TailAdmin into admin/assets/
+  2. cd admin/assets && npm install && npm run build
+     Delete node_modules/, package.json, package-lock.json.
+  3. Extract admin/views/layouts/app.php + partials/{sidebar,topbar,footer}.php
+     All asset URLs → admin_asset().
+  4. Create 8 dashboards (dashboard-{role}.php) + owner feature pages.
+  5. Wire admin/index.php with Auth::require + Scope::canActOn +
+     role dispatch (Auth::dashboardForRole).
 
-## 15. WIDGETS — ROLE-AGNOSTIC COMPONENTS
+## 19. SLIDERS — OWL CAROUSEL + APEXCHARTS
 
-  Admin widgets live in data/widgets.php and admin/views/widgets/{key}.php.
-  Each widget: {title, perm, roles[], group, icon, size}.
+  See "Sliders prompt" in README.md (or the appended prompt file).
+  Key rules:
+    - 8 carousels, 36 slides (or 35 when post-deadline slide is hidden)
+    - Owl Carousel 2.3.4 + ApexCharts 3.45+, jQuery 3.7.1
+    - loop: false, rewind: true (never loop — clones break chart IDs)
+    - Local fadeIn/fadeOut keyframes (animate.css banned)
+    - Counters start on FIRST active slide, support decimals/prefix/suffix
+    - Text-only KPI variant for "Dyon QR verified" etc.
+    - Contrast scrim: white text on amber/emerald/teal/cyan needs dark
+      overlay or darker gradient stops — verify ≥ 4.5:1 for every hue
+    - Chart height via matchMedia (220/260/320), not hard-coded
+    - IntersectionObserver respects prefers-reduced-motion
+    - focusin pauses autoplay
+    - json_encode(JSON_HEX_APOS|JSON_HEX_QUOT|JSON_UNESCAPED_UNICODE) + e()
+      for data-chart attribute (apostrophes in labels never break it)
+    - Illustrative badge for unsourced series
+    - ~ prefix on uncertain figures
+    - Server timezone Africa/Tunis
+    - Page reloads 2s after countdown ends (post-deadline slide appears)
+    - KPI numbers read from /api/kpis.json (live), not hard-coded
 
-  Canonical widget list (reuse, don't duplicate):
-    kpi-card · chart-card · data-table · activity-feed ·
-    stats-grid · system-health · user-card · action-list
+## 20. VERIFICATION (12 CHECKS)
 
-  Owner widgets (data adapters):
-    owner-revenue, owner-users-by-role, owner-system-health,
-    owner-billing, owner-recent-activity,
-    owner-macro-works, owner-services-overview, owner-recent-service-edits
-  Admin widgets:
-    admin-content-stats, admin-registrations, admin-uploads,
-    admin-approvals, admin-templates, admin-server-log
-  Manager widgets:
-    manager-team, manager-pending-work, manager-assignments, manager-performance
-  Member widgets:
-    member-my-tasks, member-my-submissions, member-notifications
-  Investor widgets:
-    investor-portfolio, investor-roi, investor-investments, investor-dividends
-  Customer widgets:
-    customer-services, customer-invoices, customer-tickets, customer-renewals
-  User widgets:
-    user-profile, user-notifications
-
-  Each widget file calls Auth::require($def['perm']) internally.
-
-## 16. VERIFICATION (10 CHECKS)
-
-  [ ] All 7 roles land on their dashboard (TailAdmin shell renders)
-  [ ] @w5d.tech password login works; non-@w5d.tech password rejected
+  [ ] All 8 roles land on their dashboard (TailAdmin shell renders)
+  [ ] @w5d.tech password login works; non-@w5d.tech rejected
   [ ] Google + GitHub login → role=user → user dashboard
-  [ ] Sidebar shows only items the role can access
+  [ ] Sidebar shows only items the role + scope allow
+  [ ] Scope::canActOn blocks out-of-scope reads (test a leader acting on
+      another service's manager → 403)
+  [ ] Capacity caps enforce (leader with 100 managers → 422 on 101st)
   [ ] /macro-works shows 5 defaults locked; custom creation works
   [ ] /services shows 130 defaults; custom creation works
-  [ ] Default macro/service: slug read-only, delete blocked, archive works
-  [ ] Site: home + pages render; /nonexistent → 404
+  [ ] Weekly planner → report → approval → rollup works end-to-end
+  [ ] Public carousels read live KPIs from /api/kpis.json
   [ ] AR: <html dir="rtl"> + Cairo (site + admin)
   [ ] /admin (physical) → 403; ADMIN_URL_PATH change relocates admin
 
-## 17. PRE-SUBMIT CHECKLIST
+## 21. PRE-SUBMIT CHECKLIST
 
-  [ ] TailAdmin CSS/JS served from admin/assets/css/tailadmin.css +
-      admin/assets/js/app.js (no CDN at runtime)
-  [ ] node_modules/ + package.json deleted after build
-  [ ] No inline <style>/<script> (except Arabic RTL block in layout)
+  [ ] TailAdmin built once, node_modules/ deleted
+  [ ] No inline <style>/<script> (except Arabic RTL block)
   [ ] Every user string escaped ({{ }} or e())
-  [ ] Every state-changing form has @csrf
-  [ ] Every admin route calls Auth::require($perm)
+  [ ] Every form has @csrf
+  [ ] Every admin route calls Auth::require($perm) AND Scope::canActOn($actor, $target)
   [ ] Every admin widget calls Auth::require($def['perm'])
+  [ ] Every list query is scoped in SQL
   [ ] Every new key exists in lang/en + fr + ar
   [ ] All URLs via url()/asset()/admin_url()/admin_asset()
-  [ ] No ?lang=xy — use data-w5d-lang
+  [ ] No ?lang=xy
   [ ] No Composer dependencies
   [ ] declare(strict_types=1) + namespace W5D\ in every src/ file
   [ ] Footer license block intact (610.5 TND/hour, before 2027)
-  [ ] All 3 auth methods still work
-  [ ] RTL works end-to-end (site + admin)
+  [ ] KPI feed (/api/kpis.json) served from rollups, not hard-coded
+  [ ] Business model decided (parts vs payroll) before payroll launch
+  [ ] Audit log written for every scope-crossing action
+  [ ] Backup cron verified
 
-## 18. WHEN TO ASK
+## 22. WHEN TO ASK
 
   Ask before:
-    - Modifying TailAdmin's source CSS/JS (add w5d-admin.css/js instead)
-    - Adding a new role, permission, or widget without a use case
+    - Modifying TailAdmin source (add w5d-admin.css/js)
+    - Adding a role, permission, or widget without a use case
     - Changing .env keys
-    - Modifying src/Env.php, src/Lang.php, src/Auth.php, src/ACL.php public API
+    - Modifying src/Env.php, src/Lang.php, src/Auth.php, src/ACL.php,
+      src/Scope.php public API
     - Allowing non-@w5d.tech password signup
     - Adding a non-OAuth auth provider
     - Deleting a default macro work or service
+    - Raising capacity caps (owner approval)
+    - Changing the business model (parts vs payroll)
+    - Changing the scope rules
 
-  Do NOT ask before:
+  Do NOT ask:
     - Adding a page, route, or translation key
-    - Creating a widget adapter in admin/views/widgets/
+    - Creating a widget adapter
     - Fixing an obvious bug
     - Writing tests
 
-## 19. GOTCHAS
+## 23. GOTCHAS
 
-  1. Sessions before output. config.php handles it.
+  1. Sessions before output.
   2. CSRF token survives session_regenerate_id.
-  3. /admin (physical) stays blocked at Apache.
+  3. /admin physical folder stays blocked at Apache.
   4. Language cookie HttpOnly=false (JS writes, PHP reads).
-  5. Compiled views: storage/cache/views/ (site) + storage/cache/views-admin/ (admin).
-  6. TailAdmin must be BUILT once (npm install && npm run build) then
-     node_modules/ deleted. Never rely on Tailwind CDN at runtime.
-  7. License block (610.5 TND/hour, before 2027) in every footer
-     (site footer AND admin footer).
-  8. Every admin route re-checks Auth::require; every admin widget re-checks
-     ACL::can. Do not trust the caller.
+  5. Compiled views: storage/cache/views/ + storage/cache/views-admin/.
+  6. TailAdmin built once; node_modules deleted; no CDN.
+  7. License block (610.5 TND/hour, before 2027) in every footer.
+  8. Every admin route re-checks Auth + Scope. Every widget re-checks perm.
   9. Rank is ordering only. Authorization is ACL::can() only.
- 10. Default macro/service slugs are IMMUTABLE. Delete is FORBIDDEN.
+ 10. Default macro/service slugs IMMUTABLE. Delete FORBIDDEN.
  11. Public site shows only services with status='published'.
- 12. data/services.md is documentation; data/services.php is the seed; DB is live.
+ 12. data/services.md = docs; data/services.php = seed; DB = live.
  13. OAuth state must match $_SESSION['oauth_state'].
- 14. @w5d.tech emails may use password login; non-@w5d.tech CANNOT.
- 15. NEVER modify TailAdmin's compiled tailadmin.css or app.js — W5D
-     additions go in admin/assets/css/w5d-admin.css and
-     admin/assets/js/w5d-admin.js (loaded after).
+ 14. @w5d.tech emails may use password; non-@w5d.tech CANNOT.
+ 15. NEVER modify TailAdmin's compiled CSS/JS. Add w5d-admin.css/js.
+ 16. SQLite split: main DB + 5 work DBs. Cross-DB queries are forbidden
+     — join in PHP, never in SQL.
+ 17. Rollups are the ONLY source for dashboards and public KPI feed.
+     Never SELECT from weekly_reports for a list view.
+ 18. Festival post-deadline slide renders ONLY after 2027-01-01 00:00
+     Africa/Tunis. Before that, slide count is 2 (not 3).
+ 19. Server timezone = Africa/Tunis. Set in .env and in PHP.
+ 20. Capacity caps: leader 100, manager 12 (soft 10), service 1,000.
 ```
-````
-
----
-
-## Author
-
-**Maher Kaddoussi**
-Founder and owner, W5D
-
-- 📧 [owner@w5d.tech](mailto:owner@w5d.tech)
-- 🌐 https://w5d.tech
-- 💼 Repository: https://github.com/W5Downer/w5d-php-cms
-
----
-
-## Changelog
-
-### [Unreleased]
-- **TailAdmin** integrated as the default admin dashboard (Tailwind CSS + Alpine.js)
-- **7 role dashboards** (owner, admin, manager, member, investor, customer, user)
-- **ACL system** — 7 roles, 25 permissions, sidebar/route/widget guards
-- **Owner features** — Manage Macro Works, Manage Services
-- **130 services** specification in `data/services.md`
-- **OAuth** (Google + GitHub) alongside `@w5d.tech` password login
-- `admin/shared/` shared components used by site templates
-- Updated AI Agent Prompt with TailAdmin onboarding workflow
-
-### [0.1.0] — 2026-11-11
-- Project foundation: `.env` loader, Blade-like View engine, `Lang` detection, `Router` with admin obfuscation
-- Multi-template support (`views/{name}/` + `assets/{name}/`)
-- Demo home + 404 pages
-- Initial AI Agent Prompt
-
----
-
-<div align="center">
-
-**W5D PHP CMS** — built by Maher Kaddoussi for the W5D Team.
-
-*Licensed at 610.5 TND/hour — offer valid before 2027.*
-
-</div>
