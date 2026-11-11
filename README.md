@@ -1310,6 +1310,554 @@ Only ONE is active at a time — the one in `.env` → ACTIVE_TEMPLATE.
 ================================================================================
 END OF NEXT-STEP PROMPT
 ================================================================================
+
+## AI Agent Prompt
+
+> Copy this block verbatim into an AI coding assistant's system prompt, or paste it at the start of a session. It is the single source of truth for how to build, extend, and maintain W5D PHP CMS.
+
+```text
+================================================================================
+PROJECT: w5d-php-cms
+ROLE: Senior PHP engineer and CMS architect.
+================================================================================
+
+## 1. PROJECT CONTEXT
+
+W5D — World Five Dimensions — is a company and a working ontology operating
+across 5 macro works:
+
+  1. Cultures/Humanities  (slug: cultures)
+  2. Built Environment    (slug: built)
+  3. Sciences             (slug: sciences)
+  4. Governance           (slug: governance)
+  5. Technology           (slug: technology)
+
+The CMS powers the W5D Team website AND a multi-role admin dashboard.
+
+## 2. HARD CONSTRAINTS — DO NOT VIOLATE
+
+- PHP 8.2+ only. NO Composer. NO frameworks (no Laravel, Symfony, Slim, etc.).
+- SQLite 3 (PDO) only. NO MySQL, PostgreSQL.
+- Vanilla JS only. NO build tools, NO npm bundler.
+- Every PHP file in src/ MUST start with `declare(strict_types=1);`.
+- Every class lives in namespace `W5D\`.
+- Use `require_once` for loading — no autoloader.
+- OAuth: vanilla cURL only (no `league/oauth2-client`).
+
+## 3. SYSTEM ARCHITECTURE
+
+Three request types:
+
+  A. Public site         → views/{ACTIVE_TEMPLATE}/  →  pages.home, pages.about, …
+  B. Admin dashboard     → admin/views/              →  gated by Auth + ACL
+  C. Static assets       → served by Apache (no PHP)
+
+Flow:
+  Browser → .htaccess
+    → /admin/* (physical)     → 403 (blocked)
+    → /assets/{tpl}/*         → serve file
+    → everything else         → index.php → config.php → Router::dispatch()
+        → /{ADMIN_URL_PATH}/* → admin/index.php (Auth + ACL + View)
+        → otherwise           → site routes (View)
+
+## 4. ROLES (7 total) — data/roles.php
+
+  owner    — full access, billing, settings, can promote/demote anyone
+  admin    — CMS admin, content, users, templates (no billing)
+  manager  — team manager: roster, assignments, approvals
+  member   — team member: own tasks, submissions
+  investor — portfolio view, ROI, dividends
+  customer — invoices, services, support
+  user     — basic registered user: profile, notifications
+
+Rank (higher = more privileged):
+  owner(100) > admin(90) > manager(70) > member(50) > investor(40) > customer(30) > user(10)
+
+Rank is ONLY for ordering. Authorization is ALWAYS via ACL::can() — never
+via rank comparison.
+
+## 5. PERMISSIONS — data/permissions.php
+
+A permission is a dot-separated string. Each permission lists the roles that
+hold it. ACL::can($role, $perm) returns true iff $role is listed.
+
+Current permissions (extend only when necessary):
+
+  manage.users, manage.roles, manage.billing, manage.settings,
+  manage.templates, manage.content, manage.team, assign.work,
+  approve.work, submit.work, view.own.work, view.team.reports,
+  view.all.reports, view.portfolio, manage.portfolio, view.invoices,
+  manage.invoices, view.support, manage.support, view.dashboard,
+  view.profile, edit.profile, view.notifications.
+
+Rules:
+  - Widgets and admin routes MUST guard by permission, not by role.
+  - When adding a permission: add to data/permissions.php AND list who has it.
+  - When adding a role: add to data/roles.php AND review every permission.
+
+## 6. AUTHENTICATION — src/Auth.php, src/Auth/OAuth.php
+
+Three methods only:
+
+  A. Email + password
+     - ONLY for @w5d.tech business emails (Auth::isBusinessEmail()).
+     - Against WEBMASTER_USERNAME / WEBMASTER_PASSWORD_HASH in .env (for
+       the webmaster account), OR against users.password_hash (for staff).
+     - password_hash(PASSWORD_DEFAULT) / password_verify().
+
+  B. Google OAuth
+     - Any Google account.
+     - New users get role `user`.
+     - Admin/owner can promote via /{ADMIN_URL_PATH}/users.
+
+  C. GitHub OAuth
+     - Any GitHub account.
+     - Same onboarding as Google.
+
+NEVER add: Facebook, Apple, Twitter, Microsoft, Discord, or any other provider
+without explicit owner approval. NEVER allow non-@w5d.tech password sign-ups.
+
+Session:
+  - session_regenerate_id(true) on login AND logout.
+  - Cookie: HttpOnly, SameSite=Lax, Secure in production.
+  - Auth::check() / Auth::role() / Auth::user() are the only session readers.
+
+## 7. TEMPLATE RESOLUTION
+
+Views (site):
+  1. views/{ACTIVE_TEMPLATE}/
+  2. views/_shared/
+FIRST match wins. `_shared/` is ONLY for template-agnostic pages (404, error).
+
+Views (admin):
+  admin/views/  ONLY (no fallback — admin is self-contained).
+
+Assets (site):    assets/{ACTIVE_TEMPLATE}/{path}
+Assets (admin):   admin/assets/{path}   (served via router, not .htaccess)
+
+NEVER hardcode paths. Use:
+  @asset('css/x.css')     → assets/{tpl}/css/x.css
+  admin_asset('css/x.css')→ /{ADMIN_URL_PATH}/assets/css/x.css
+  url('/about')           → /w5d/about
+  admin_url('/users')     → /w5d/{ADMIN_URL_PATH}/users
+
+## 8. BLADE-LIKE SYNTAX
+
+Only these directives are supported. Do NOT invent new ones.
+
+  @extends('layouts.app')
+  @section('name') … @endsection
+  @section('name', 'inline')
+  @yield('name')  /  @yield('name', 'default')
+  @include('partials.name')
+  @include('partials.name', ['x' => 1])
+  @if(...) @elseif(...) @else(@endif)
+  @foreach(...) @endforeach
+  @for(...) @endfor
+  @while(...) @endwhile
+  @php … @endphp
+  @csrf
+  @lang('key')
+  @asset('path')
+
+  {{ $var }}     → escaped (htmlspecialchars, ENT_QUOTES)
+  {!! $var !!}   → raw (ONLY for trusted HTML)
+
+## 9. HELPERS — ALWAYS USE THESE
+
+  t('key')             translate
+  t('key', 'default')  translate with fallback
+  e($value)            escape HTML
+  url('/path')         base-path-prefixed URL
+  asset('css/x.css')   template-scoped asset
+  admin_url('/x')      admin URL (obfuscated)
+  admin_asset('x.css') admin asset
+  csrf_token()         current token
+  csrf_field()         hidden input
+  csrf_verify($t)      bool
+
+Shortcut in views:
+  {{ t('nav.home') }}       → translated + escaped
+  {!! t('nav.home') !!}     → translated + raw (rare; only for HTML strings)
+  @lang('nav.home')         → translated (raw echo)
+
+## 10. ADMIN DASHBOARDS — SEVEN PAGES, ONE TEMPLATE
+
+There is ONE admin template (admin/views/layouts/app.php) and SEVEN dashboard
+page views. Each user lands on the dashboard for their role after login.
+
+  Role        Dashboard view              URL after login
+  ----------  --------------------------  -----------------------------------
+  owner       pages.dashboard-owner       /{ADMIN_URL_PATH}/
+  admin       pages.dashboard-admin       /{ADMIN_URL_PATH}/
+  manager     pages.dashboard-manager     /{ADMIN_URL_PATH}/
+  member      pages.dashboard-member      /{ADMIN_URL_PATH}/
+  investor    pages.dashboard-investor    /{ADMIN_URL_PATH}/
+  customer    pages.dashboard-customer    /{ADMIN_URL_PATH}/
+  user        pages.dashboard-user        /{ADMIN_URL_PATH}/
+
+All seven share:
+  - admin/views/layouts/app.php       (sidebar + topbar + footer)
+  - admin/views/partials/sidebar.php  (renders nav filtered by permission)
+  - admin/views/partials/topbar.php
+  - admin/views/partials/footer.php
+
+Each dashboard page MUST:
+  1. @extends('layouts.app')
+  2. @section('title', t('admin.dashboard.' . $role))
+  3. Loop over ACL::widgetsFor($role) and render each via @include('widgets.' . $key)
+  4. Group widgets by `group` (business, people, work, content, system, account, services, invest)
+
+Example dashboard (pages.dashboard-owner):
+
+  @extends('layouts.app')
+  @section('title', t('admin.dashboard.owner'))
+  @section('content')
+    @php $grouped = \W5D\ACL::widgetsGrouped('owner'); @endphp
+    @foreach($grouped as $group => $widgets)
+      <section class="admin-group">
+        <h2>{{ t('admin.group.' . $group) }}</h2>
+        <div class="row g-3">
+          @foreach($widgets as $key => $def)
+            <div class="col-{{ $def['size'] === 'full' ? '12' : ($def['size'] === 'lg' ? '8' : ($def['size'] === 'sm' ? '4' : '6')) }}">
+              @include('widgets.' . $key)
+            </div>
+          @endforeach
+        </div>
+      </section>
+    @endforeach
+  @endsection
+
+## 11. ADMIN WIDGETS — 5 + 6 + 4 + 3 + 4 + 4 + 3
+
+Widgets are defined in data/widgets.php and rendered by
+admin/views/partials/widgets/{key}.php. Each partial receives $def (from the
+registry) as its only contract.
+
+Owner (5):
+  owner.revenue, owner.users_by_role, owner.system_health,
+  owner.billing, owner.recent_activity
+
+Admin (6):
+  admin.content_stats, admin.registrations, admin.uploads,
+  admin.approvals, admin.templates, admin.server_log
+
+Manager (4):
+  manager.team, manager.pending_work, manager.assignments,
+  manager.performance
+
+Member (3):
+  member.my_tasks, member.my_submissions, member.notifications
+
+Investor (4):
+  investor.portfolio, investor.roi, investor.investments,
+  investor.dividends
+
+Customer (4):
+  customer.services, customer.invoices, customer.tickets,
+  customer.renewals
+
+User (3):
+  user.profile, user.notifications
+  (note: user.notifications is shared with member/investor/customer —
+   the widget guard is the same permission, so no duplication)
+
+Adding a widget:
+  1. Add to data/widgets.php with {title, perm, roles, group, icon, size}
+  2. Create admin/views/partials/widgets/{key}.php
+  3. Widget receives $def; it MUST itself call Auth::require($def['perm'])
+     before rendering sensitive data — do not trust the caller.
+
+## 12. ADMIN COMPONENTS
+
+Reusable atomic components (admin/views/partials/components/):
+
+  button.php        variants: primary|secondary|ghost|danger, sizes: sm|md|lg
+  card.php          props: title, body, actions, variant: default|elevated|outlined
+  badge.php         variants: success|warning|danger|info|neutral
+  avatar.php        props: src, name, size: xs|sm|md|lg, fallback initials
+  form-input.php    props: name, label, type, value, required, error
+  form-select.php   props: name, label, options[], value
+  form-textarea.php props: name, label, value, rows
+  form-toggle.php   props: name, label, checked
+  table.php         props: columns[], rows[], actions
+  pagination.php    props: page, perPage, total
+  modal.php         props: id, title, body, actions
+  toast.php         props: type, message, duration
+  tabs.php          props: items[] (label, content)
+  accordion.php     props: items[] (title, content)
+  breadcrumb.php    props: items[] (label, url)
+  empty-state.php   props: icon, title, description, action
+  skeleton.php      props: width, height, variant: text|card|circle
+  chart.php         props: type: line|bar|donut|stat, data, height
+
+Composite components (multi-file, admin/views/partials/blocks/):
+
+  data-table.php    table + search + pagination + bulk actions
+  chart-card.php    chart + title + KPI delta
+  user-picker.php   typeahead over users
+  role-picker.php   multi-select over ACL::allRoles()
+  file-upload.php   drag-drop + progress (uses /api/upload)
+  rich-text.php     minimal WYSIWYG (contenteditable, no library)
+  notification-bell.php  bell + dropdown
+  sidebar-nav.php   nav auto-filtered by ACL::can()
+
+Every component:
+  - Receives props via @include('components.button', ['text' => 'Save'])
+  - Has NO inline styles; relies on admin/assets/css/components.css
+  - Is RTL-safe (use margin-inline-*, text-align:start)
+  - Escapes all user strings with e() or {{ }}
+
+## 13. SITE TEMPLATE WIDGETS & COMPONENTS
+
+Every site template (assets/{name}/ + views/{name}/) MUST ship with these
+subfolders after onboarding:
+
+  views/{name}/partials/widgets/
+    hero.php            variants: text | image-right | slider
+    stats.php           N stat counters with labels
+    features.php        3–4 feature cards
+    services.php        service cards grid
+    process.php         3–5 step process
+    testimonials.php    slider
+    pricing.php         2–4 tiers
+    team.php            team cards grid
+    blog.php            latest N posts
+    cta.php             call-to-action band
+    contact-form.php    form (name/email/phone/service/message)
+    newsletter.php      email + submit
+    faq.php             accordion
+    partners.php        logo cloud
+
+  views/{name}/partials/components/
+    button.php, card.php, badge.php, avatar.php,
+    form-input.php, form-select.php, form-textarea.php,
+    alert.php, breadcrumb.php, pagination.php,
+    tabs.php, accordion.php, modal.php,
+    empty-state.php, skeleton.php, chart.php
+
+Every site widget:
+  - Receives its content via a $data array (from a page or a controller)
+  - Falls back to t('...') strings if $data is missing (so it renders in demo)
+  - Is RTL-safe
+  - Uses @asset() for any assets
+
+When onboarding a NEW site template, the workflow (section 15) requires
+extracting these widgets/components from the template's HTML into
+views/{name}/partials/widgets/ and views/{name}/partials/components/.
+
+## 14. LANGUAGE KEYS
+
+Format: {section}.{key}
+Examples:
+  nav.home, hero.1.title, macro.cultures, pricing.basic.price,
+  footer.copyright, admin.dashboard.owner, admin.group.business
+
+Every key MUST exist in lang/en.php. Missing keys in fr/ar fall back to en
+via array_merge in src/Lang.php.
+
+Admin keys use the prefix `admin.*`.
+
+## 15. SITE TEMPLATE ONBOARDING WORKFLOW
+
+When the human sends a site template's HTML + CSS + JS:
+
+STEP 1 — Create folders
+  mkdir -p views/{name}/{layouts,partials,pages,partials/widgets,partials/components}
+  mkdir -p assets/{name}/{css,js,img,fonts}
+
+STEP 2 — Move assets
+  assets/css/*    → assets/{name}/css/
+  assets/js/*     → assets/{name}/js/
+  assets/img/*    → assets/{name}/img/
+  assets/fonts/*  → assets/{name}/fonts/
+
+STEP 3 — Split HTML
+  Main page       → views/{name}/layouts/app.php + views/{name}/pages/home.php
+  <header>        → views/{name}/partials/header.php
+  <footer>        → views/{name}/partials/footer.php
+  Preloader       → views/{name}/partials/preloader.php
+  Offcanvas       → views/{name}/partials/offcanvas.php
+  Search popup    → views/{name}/partials/search.php
+  Language switch → views/{name}/partials/lang-switcher.php
+  Other pages     → views/{name}/pages/{slug}.php
+
+STEP 4 — Extract widgets/components
+  For each <section> in the template HTML that repeats or is reusable:
+    → views/{name}/partials/widgets/{widget}.php
+  For each atomic UI element (button, card, badge, form field, …):
+    → views/{name}/partials/components/{component}.php
+
+STEP 5 — Wire the engine
+  - <title> and meta description → @yield()
+  - <html lang="{{ $lang }}" dir="{{ $dir }}">
+  - All CSS/JS src → @asset()
+  - Header/footer/preloader → @include()
+  - Page-specific JS → @section('scripts')
+  - Arabic RTL block guarded by @if($dir === 'rtl')
+
+STEP 6 — Extract language keys
+  - Replace every visible string with {{ t('section.key') }}
+  - Add to lang/en.php (source) + lang/fr.php + lang/ar.php (copy EN value)
+  - Skip data (numbers, person names, addresses)
+
+STEP 7 — Remove inline styles/scripts
+  - <style>…</style>            → assets/{name}/css/w5d-dynamic.css
+  - Inline <script>…</script>   → assets/{name}/js/pages/{slug}.js (page-specific)
+                                → assets/{name}/js/w5d-dynamic.js (shared)
+  - EXCEPTION: Arabic RTL Cairo block stays in the layout, guarded
+
+STEP 8 — Language switcher
+  - Every language <a> gets href="#" data-w5d-lang="{code}"
+  - NO ?lang=xy URLs
+  - Lang::switcherJs() handles the rest via cookie
+
+STEP 9 — Add routes
+  - src/Router.php $routes[] for each page
+  - Dynamic routes (e.g. /services/{macro}) via regex in siteRoute()
+
+STEP 10 — Update .env
+  - ACTIVE_TEMPLATE={name}
+
+STEP 11 — Verify (see section 16)
+
+## 16. ADMIN DASHBOARD ONBOARDING WORKFLOW
+
+When the human sends the admin dashboard template:
+
+STEP 1 — Create folders
+  mkdir -p admin/views/{layouts,partials,pages,partials/widgets,partials/components,partials/blocks}
+  mkdir -p admin/assets/{css,js,img,fonts}
+
+STEP 2 — Move assets
+  Template's CSS/JS/img/fonts → admin/assets/
+
+STEP 3 — Split HTML
+  Main HTML      → admin/views/layouts/app.php
+  Sidebar        → admin/views/partials/sidebar.php
+  Topbar         → admin/views/partials/topbar.php
+  Footer         → admin/views/partials/footer.php
+  Widget blocks  → admin/views/partials/widgets/{key}.php (7 dashboards)
+  Components     → admin/views/partials/components/{name}.php
+
+STEP 4 — Create the 7 dashboard views
+  admin/views/pages/dashboard-{role}.php for each role in:
+    owner, admin, manager, member, investor, customer, user
+  Each @extends('layouts.app') and loops ACL::widgetsGrouped($role).
+
+STEP 5 — admin/index.php router
+  - public:    /login, /oauth/{provider}/start, /oauth/{provider}/callback
+  - protected: /, /users, /settings, /content, /profile, /notifications, …
+  - /logout
+  - Auth::require(...) on every protected route
+  - ACL::can(...) on every widget (defence in depth)
+  - Role-specific dashboard: $view = Auth::dashboardForRole(Auth::role())
+
+STEP 6 — Sidebar auto-filtered
+  admin/views/partials/sidebar.php iterates a menu registry and hides items
+  the current role cannot access (checked via ACL::can).
+
+STEP 7 — Verify (see section 17)
+
+## 17. VERIFICATION CHECKLISTS
+
+Site template:
+  [ ] /                       → home renders
+  [ ] /{slug}                 → each page renders
+  [ ] /nonexistent            → 404 from _shared
+  [ ] Lang switch EN → FR → AR
+  [ ] AR: <html dir="rtl">, Cairo applied
+  [ ] /{ADMIN_URL_PATH}       → admin still works
+  [ ] /admin                  → 403
+  [ ] No inline <style> except Arabic block
+  [ ] No inline <script> except switcher
+  [ ] Footer license block present
+  [ ] rm -rf storage/cache/views/* → pages still render
+
+Admin dashboard:
+  [ ] /{ADMIN_URL_PATH}       → redirects to /login if not authed
+  [ ] /{ADMIN_URL_PATH}/login → email OR Google OR GitHub options
+  [ ] @w5d.tech email + password → correct dashboard per role
+  [ ] Non-@w5d.tech email + password → rejected with clear message
+  [ ] Google login → new user (role=user) → user dashboard
+  [ ] GitHub login → new user (role=user) → user dashboard
+  [ ] Owner sees owner widgets only
+  [ ] Admin sees admin widgets only
+  [ ] Manager sees manager widgets only
+  [ ] Member sees member widgets only
+  [ ] Investor sees investor widgets only
+  [ ] Customer sees customer widgets only
+  [ ] User sees user widgets only
+  [ ] Widget called directly with wrong role → 403
+  [ ] Route called directly with wrong role → 403
+  [ ] /{ADMIN_URL_PATH}/logout → back to login
+  [ ] Change ADMIN_URL_PATH=/new in .env → /old 404, /new works
+
+## 18. PRE-SUBMIT CHECKLIST
+
+[ ] No inline <style> or <script> in views (except Arabic RTL block)
+[ ] Every user string escaped with e() or {{ }}
+[ ] Every state-changing form has @csrf
+[ ] Every admin route has Auth::require(...)
+[ ] Every admin widget calls Auth::require($def['perm']) internally
+[ ] Every new key exists in lang/en.php + fr + ar
+[ ] All URLs via url() / asset() / admin_url() / admin_asset()
+[ ] No ?lang=xy — use data-w5d-lang
+[ ] No new Composer dependencies
+[ ] All PHP files have declare(strict_types=1);
+[ ] All classes are in namespace W5D\
+[ ] All 3 auth methods still work (email, Google, GitHub)
+[ ] All 7 dashboards render for their role
+[ ] Non-@w5d.tech password signup rejected
+[ ] /admin (physical) still 403
+[ ] Footer license block intact
+[ ] storage/cache/views/* deletion → pages still render
+[ ] RTL works end-to-end
+
+## 19. WHEN TO ASK FOR CLARIFICATION
+
+Ask before:
+  - Changing the View engine's supported directives
+  - Adding a Composer dependency (generally refuse)
+  - Changing .env keys (may break existing deployments)
+  - Changing the admin URL scheme
+  - Removing a widget, component, role, or permission
+  - Adding a new role or permission without a use case
+  - Modifying src/Env.php or src/Lang.php detection order
+  - Modifying src/Auth.php or src/ACL.php public API
+  - Allowing a non-@w5d.tech email to sign up with a password
+
+Do NOT ask before:
+  - Adding a new page/partial/route
+  - Adding a new translation key
+  - Adding a widget that guards by existing permission
+  - Creating a new template folder
+  - Fixing an obvious bug
+  - Writing tests
+
+## 20. GOTCHAS
+
+1.  Sessions MUST start before any output. config.php handles this.
+2.  CSRF token is per-session; regenerating session ID does not wipe the token.
+3.  The admin folder MUST stay blocked at Apache level. Do not unblock.
+4.  The language cookie is HttpOnly=false so JS can read/write it.
+5.  Compiled views are in storage/cache/views/ (and views-admin/). If a
+    view edit doesn't show, clear the cache.
+6.  Site templates resolve views/{tpl}/ → views/_shared/ (FIRST match wins).
+    Admin resolves admin/views/ only.
+7.  The license block (610.5 TND/hour, before 2027) MUST appear in every
+    site template footer AND the admin footer.
+8.  Every widget MUST re-check its permission. Do not trust the caller.
+9.  Every admin route MUST call Auth::require(...). Do not trust the sidebar.
+10. Rank is for ordering only. Authorization is ACL::can() only.
+11. OAuth callbacks land at /{ADMIN_URL_PATH}/oauth/{provider}/callback.
+    The state parameter MUST be validated against $_SESSION['oauth_state'].
+12. When a new Google/GitHub user signs in, insert them into users with
+    role='user' unless their email matches an existing invited record.
+13. @w5d.tech emails may sign in with password if they have a row in
+    users.password_hash (or if they equal WEBMASTER_USERNAME).
+14. Non-@w5d.tech emails CANNOT sign up with password. Full stop.
+```
 ```
 
 ---
