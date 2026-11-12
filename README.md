@@ -1,257 +1,408 @@
 # W5D PHP CMS
 
-**A JSON-driven static site generator for the W5D Team website — five macro works, 130 services, six ontology layers, multi-template, three languages.**
+**A dynamic PHP + MySQL CMS for the W5D Team website — five macro works, 130 services, six ontology layers, multi-template, three languages, country-scoped, single domain.**
 
 [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/)
-[![Build](https://img.shields.io/badge/build-bin%2Fbuild.php-0A5EFF)](#build)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Templates](https://img.shields.io/badge/templates-ledger%20%C2%B7%20atlas%20%C2%B7%20folio-0A5EFF)](#templates)
 [![Languages](https://img.shields.io/badge/languages-en%20%C2%B7%20fr%20%C2%B7%20ar-0A5EFF)](#languages)
+[![Sampling](https://img.shields.io/badge/sampling-5%25-0A5EFF)](#quality--sampling)
 [![License](https://img.shields.io/badge/License-610.5%20TND%2Fh%20(before%202027)-0A5EFF)](#license)
 
-> **W5D** — *World Five Dimensions* — is a company and a working ontology operating across five macro works: **Cultures/Humanities**, **Built Environment**, **Sciences**, **Governance**, and **Technology**. This repository turns that ontology into a **static site** that the owner compiles and uploads.
+> **W5D** — *World Five Dimensions* — is a company and a working ontology operating across five macro works: **Cultures/Humanities**, **Built Environment**, **Sciences**, **Governance**, and **Technology**. This CMS renders that ontology as a live website with a registration and certification portal attached.
 
 ---
 
 ## Table of Contents
 
-- [What this repository is](#what-this-repository-is)
+- [What this is](#what-this-is)
 - [The owner's strategy (130,000 experts)](#the-owners-strategy-130000-experts)
-- [Audience types and meta websites](#audience-types-and-meta-websites)
+- [Deployment model](#deployment-model)
 - [Architecture](#architecture)
-- [The six-layer ontology](#the-six-layer-ontology)
-- [Build](#build)
-- [Templates](#templates)
-- [Languages](#languages)
+- [Design system](#design-system)
+- [Pages](#pages)
+- [Owner dashboard](#owner-dashboard)
+- [Quality & sampling](#quality--sampling)
+- [Single source of truth](#single-source-of-truth)
 - [Data model](#data-model)
-- [Directory structure](#directory-structure)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Security](#security)
+- [Directory structure](#directory-structure)
+- [Templates](#templates)
+- [Languages](#languages)
 - [License](#license)
 - [AI Agent Prompt](#ai-agent-prompt)
 - [Author](#author)
 
 ---
 
-## What this repository is
+## What this is
 
-W5D PHP CMS is **a static site generator**, not a runtime CMS. You edit JSON and PHP, run `php bin/build.php`, and upload the `dist/` folder to the root of `https://w5d.tech`. There is no database on the host, no installer, no SSH command, and no PHP running at the host.[reference:2]
+W5D PHP CMS is a **dynamic content management system**: PHP 8.2 + MySQL 8, no framework, no Composer, no third‑party runtime requests. Every page is rendered at request time from two layers:
+
+- **Content** — JSON files under `data/content/` (pages, macros, services, projects, ontology layers, audiences, variables). Content is versioned in git, reviewed by the owner, and edited as files.
+- **State** — MySQL tables (users, applicants, teams, weekly reports, payroll, tickets, audit). State is edited through the portal.
+
+Both layers are joined by **slug** at render time. A service JSON defines what the service *is*; the `services_country` MySQL table says whether it is *active* in Tunisia and how many seats it has.
 
 Three rules the engine enforces:
 
-1. **One page = one JSON file.** Every page, service, macro, project, declaration, and ontology layer lives in its own file under `data/content/`. No two pages share a data source, so no two pages can contradict each other.
-2. **Any page renders in any installed template.** Blocks resolve two-tier: `views/{ACTIVE_TEMPLATE}/blocks/{type}.php` → `views/_blocks/{type}.php`. A template restyles blocks; it never restates content.
-3. **Every number is a PHP variable.** `config/variables.php` holds counts, capacity ratios, money figures, and doctrine thresholds. Page JSON refers to them as `{{ counts.services.value }}`. Unknown types throw at load — a typo cannot publish.[reference:3]
+1. **One fact, one place.** Every number, vocabulary, country, and service fact is declared once — in `config/variables.php`, `config/vocab.php`, `data/countries/{iso}.json`, or the content JSON. Duplicates fail the linter.
+2. **Any page renders in any template.** Blocks resolve two‑tier: `views/{ACTIVE_TEMPLATE}/blocks/{type}.php` → `views/_blocks/{type}.php`. A template restyles; it never restates content.
+3. **Every number is a token.** Page JSON refers to variables as `{{ counts.services }}`. Tokens resolve at render; unresolved tokens fail the linter.
 
-A clean build today is **639 files across 3 languages and 3 templates**, zero render errors.
+**No CDN, no jQuery, no icon font.** The carousel, theme switch, language switcher, and map are dependency‑free in `assets/_base/js/site.js` and `assets/_base/css/attention.css`.
+
+**Honesty constraint.** `experts_current` is **0** today. The real footprint is **26 developers in Tunisia**. "130,000 experts" is a **design equation** (5 × 26 × 1,000), not a claim of employment. Every page that mentions the number links to `/trust/statement/`, and no page promises a job. See `docs/ontology-six-layers.md`.
 
 ---
 
 ## The owner's strategy (130,000 experts)
 
-The owner runs a **single dynamic strategy**: turn 130,000 unemployed Tunisian higher-education graduates into certified W5D team members, then use those teams to solve problems inside the five macro works. The generator models this strategy as a **four-stage pipeline**, each stage a JSON collection the owner edits.
+The owner runs a **single dynamic strategy**: turn 130,000 unemployed Tunisian higher‑education graduates into certified W5D team members, then use those teams to solve problems inside the five macro works. The CMS models this as a **four‑stage pipeline**, each stage a collection the owner edits from the portal.
 
 ### Stage 1 — Ontology (what needs solving)
 - **5 macro works** — `data/content/macros/*.json`
-- **130 services** — 26 per macro work, `data/content/services/*.json`
+- **130 services** — 26 per macro, `data/content/services/*.json`
 - **Meta solutions** — `data/content/layers/meta-solutions.json`
-- **Projects** — 25 records in `data/content/projects/*.json`, each carrying `meta_solution` and `services_consumed`[reference:4]
+- **Projects** — 25 records, `data/content/projects/*.json`
 
 ### Stage 2 — Certification (how a member becomes an expert)
-Every service declares a **certification task set** (`data/content/certification/{service_slug}.json`). A task is:
-
-```json
-{
-  "id": "heritage-digitisation-L2-T3",
-  "service_slug": "heritage-digitisation",
-  "level": 2,
-  "title": { "en": "...", "fr": "...", "ar": "..." },
-  "instructions": { "en": "...", "fr": "...", "ar": "..." },
-  "evidence": "signed PDF + metadata sheet",
-  "pass_rule": "all fields present; 0 schema errors"
-}
-```
-
-A member subscribes → completes the task set → the owner (or a delegate) marks each task `approved` → the member becomes a **certified expert team member** for that service.
+Each service declares a **certification task set** in `data/content/certification/{service_slug}.json`. A task is a JSON object with `id`, `level` (1–4), `title` (en/fr/ar), `instructions` (en/fr/ar), `evidence`, `pass_rule`. A member registers → completes the task set → the owner (or a delegate) marks each task `approved` in MySQL → the member becomes a **certified expert team member** for that service.
 
 ### Stage 3 — Delivery (what the certified team produces)
-Each certified service carries a **delivery contract** (`data/content/delivery/{service_slug}.json`): deliverable unit, weekly target, evidence rule. This is what the team actually ships once certified.
+Each service carries a **delivery contract** in `data/content/delivery/{service_slug}.json` — deliverable unit, weekly target, evidence rule. This is what the team actually ships once certified.
 
 ### Stage 4 — Reporting (how the owner sees it)
-Every delivery row becomes a **rollup** the owner reads on `/ecosystem/`. No page loads the raw 130,000 rows — the generator only publishes aggregates.
+Every delivery row feeds the weekly report engine. `bin/rollup.php` (a cron script) writes daily aggregates to `rollups_daily`, and every dashboard reads **only** from `rollups_daily`. No page loads the raw 130,000 rows.
 
-> **Honesty constraint (kept from the ontology spec):** 130,000 is a design equation. The real footprint today is 26 developers in Tunisia. “Live” never means “1,000 experts employed”. See `docs/ontology-six-layers.md`.[reference:5]
+**Realistic claim:** one month is enough to **register and verify** 130,000 people (~4,334/day, ~1,000 per service). Certification takes longer. Every CTA below promises a **path**, never a job.
 
 ---
 
-## Audience types and meta websites
+## Deployment model
 
-The owner manages **audience types** as a vocabulary in `config/audiences.php`. Each audience is a first-class record with its own meta website under `views/templates/{template}` + `data/content/audiences/{slug}.json`.
+**One domain, one repository root, one entry point.**
 
-| Audience | Default template | Meta website purpose |
-|---|---|---|
-| `owner` | `ledger` | Internal strategy and status register |
-| `admin` | `ledger` | Operations and content admin |
-| `leader` | `ledger` | Service scorecards and team view |
-| `member` | `atlas` | Certification path and weekly work |
-| `investor` | `folio` | Portfolio, ROI, dividends |
-| `customer` | `atlas` | Services, invoices, support |
-| `user` | `folio` | Profile and notifications |
+```
+https://w5d.tech/
+├── /                    → public site (dynamic)
+├── /macro-works/{slug}/ → public site (dynamic)
+├── /services/{slug}/    → public site (dynamic)
+├── /projects/{slug}/    → public site (dynamic)
+├── /join/, /app/*       → registration flow (dynamic)
+├── /{ADMIN_URL_PATH}/*  → owner portal (dynamic, auth required)
+└── /assets/*            → static assets (served directly by Apache)
+```
 
-**Two things the owner controls:**
+- **Repository root = Apache document root.** You point the vhost at the repository root; Apache serves `assets/*` directly and rewrites every other request to `index.php`.
+- **`index.php` is at the root.** One front controller. Same file for the public site, the registration flow, and the portal.
+- **Sensitive folders are denied by `.htaccess`**: `src/`, `config/`, `data/`, `lang/`, `db/`, `bin/`, `storage/`, and every `.env`, `.sql`, `.log`, `.md` file.
+- **No `dist/`, no build step, no upload.** Deploy = `git pull` + `php bin/migrate.php` (if migrations changed).
+- **Portal on the same domain.** The portal mounts at `/{ADMIN_URL_PATH}` — obfuscated, set in `.env`, default `/panel-x9z`. Registration flow mounts at `/app/*` and requires no login. Both are served by the same `index.php`.
 
-1. **Which template an audience uses.** Set `template` in the audience record. The build renders the audience's meta site in that template only.
-2. **Which audiences exist.** Add a new record to `config/audiences.php` and a matching `data/content/audiences/{slug}.json` — a new meta website appears at build time.
-
-This is why the repository ships multiple templates: **each audience can be exposed under its own skin**, and a single audience can be re-skinned by changing one field.
+The `.htaccess` at the root performs four duties: serve `assets/*` directly, block the sensitive folders, block `.env`/`.sql`/`.log`/`.md`, and rewrite everything else to `index.php`.
 
 ---
 
 ## Architecture
 
 ```
-data/content/           JSON — one file per page, service, macro, project, audience
-config/variables.php    Every number the site publishes
-config/audiences.php    Audience registry
-views/_blocks/          Block implementations (hero, cards, carousel, form, ...)
-views/_shared/          Layouts and partials shared across templates
-views/templates/{name}  Additive CSS only — never restates content
-assets/_base/           Base CSS + JS (zero third-party requests)
-lang/{en,fr,ar}.php     UI chrome only
-bin/build.php           Compiles everything into dist/
-dist/                   The folder you upload to w5d.tech
+Browser
+  │
+  ▼
+Apache + .htaccess
+  ├── /assets/*            → served directly
+  ├── /src/*, /config/*,
+  │   /data/*, /lang/*,
+  │   /db/*, /bin/*,
+  │   /storage/*           → 403 (denied)
+  └── everything else      → index.php
+        │
+        ▼
+src/App.php — bootstrap
+  ├── Env::load('.env')
+  ├── Session::start()
+  ├── Lang detection (cookie → Accept-Language → env)
+  ├── DB::connect(PDO MySQL 8)
+  ├── Content::load('services')  → data/content/services/*.json
+  ├── Variables::load()          → config/variables.php
+  ├── Vocab::load()              → config/vocab.php
+  └── Router::dispatch()
+      ├── /                        → public site
+      ├── /macro-works/{slug}/     → 5 macro pages
+      ├── /services/{slug}/        → 130 service pages
+      ├── /projects/{slug}/        → 25 project pages
+      ├── /{ADMIN_URL_PATH}/*      → portal (auth required)
+      ├── /app/*                   → registration + role dashboards
+      └── /api/*                   → JSON APIs (rollups, eligibility)
 ```
 
-**Block resolution is two-tier:** `views/{ACTIVE_TEMPLATE}/blocks/{type}.php` → `views/_blocks/{type}.php`. A template restyles; it never restates.
+**Two rendering modes, one engine.** Public pages and portal pages both use the same View engine, the same blocks, and the same layout. The only differences are which routes require authentication and which queries touch state tables.
 
-**Zero third-party requests.** No CDN, no jQuery, no icon font. The carousel, theme switch, and language switcher are dependency-free in `assets/_base/js/site.js`.[reference:6]
+**Rollups.** `bin/rollup.php` runs hourly (every 15 minutes on Fridays) and writes to `rollups_daily`. Public KPI tiles, `/api/kpis.json`, and every dashboard read only from `rollups_daily`. The raw `weekly_reports` table is never selected for a list view.
 
----
-
-## The six-layer ontology
-
-The site models the W5D structure as a **stacked ontology**, not a flat list:
-
-| Layer | Content | Page |
-|---|---|---|
-| **L5 Projects** | `data/content/projects/*.json` (25) | `/ecosystem/` |
-| **L4 Meta Solutions** | `data/content/layers/meta-solutions.json` | `/ontology/meta-solutions/` |
-| **L3 Macro Works** | `data/content/macros/*.json` (5) | `/macro-works/` |
-| **L2 Services** | `data/content/services/*.json` (130) | `/services/` |
-| **L1 Expert Teams** | `data/content/layers/expert-teams.json` | `/ontology/expert-teams/` |
-| **L0 Academies** | `data/content/layers/academies.json` | `/ontology/academies/` |
-
-The full diagram is one block (`stack`) rendered by one file — every page draws the same stack from the same source.
+**No external dependencies at runtime.** No CDN. No jQuery. No icon font. No Tailwind at runtime. The portal and the public site share `attention.css` and `site.js`.
 
 ---
 
-## Build
+## Design system
 
-```bash
-php bin/build.php                              # → dist/ (default template, 3 languages)
-php bin/build.php --template=atlas             # → dist/ (atlas template)
-php bin/build.php --template=folio             # → dist/ (folio template)
-php bin/build.php --out=/tmp/site              # → anywhere else
+One CSS file: `assets/_base/css/attention.css`. All templates import it. All templates may add additive rules in `assets/_base/css/templates/{name}.css`.
+
+### Reading tiers — every section gets exactly one
+
+| Tier | Code | Voice | Example |
+|---|---|---|---|
+| Easy | `E` | Short sentences, Darija‑friendly Arabic, warm | «شهادتك تنجم تولّي خدمة» |
+| In‑between | `I` | Explains how it works: steps, numbers, dates | "4 certification levels, weekly reports due Fri 12:00" |
+| Expert | `X` | Ontology, evidence levels, schemas | "L2 service, E1 evidence, sampled at 5%" |
+
+### Focus levels — F1 to F5 (peak‑end rule)
+
+| Focus | Purpose |
+|---|---|
+| `F1` | Background context |
+| `F2` | Supporting detail |
+| `F3` | Explaining section (warm) |
+| `F4` | Secondary action |
+| `F5` | **The** main action — max one per screen |
+
+### Gradient tokens (Tunisian palette)
+
+```css
+--g-calm:  linear-gradient(135deg,#0E3B5C,#1B6F8A);  /* F1–F2 Sidi Bou Said blue */
+--g-warm:  linear-gradient(135deg,#F7EEDD,#E9C37A);  /* F3 jasmine & sand */
+--g-focus: linear-gradient(135deg,#1B6F8A,#2BB3A3);  /* F4 secondary */
+--g-peak:  linear-gradient(135deg,#C8102E,#F05A28);  /* F5 primary CTA */
+/* macro accents */
+--g-cultures:   #B5532E → #E39B5B;
+--g-built:      #5E6B3A → #B8A36A;
+--g-sciences:   #2B2F7A → #5A6CF0;
+--g-governance: #0F4D3A → #C9A227;
+--g-technology: #0B7FA6 → #7B4DE0;
 ```
 
-Upload the contents of `dist/` to the root of `https://w5d.tech`. There is no installer, no database, no PHP at the host.[reference:7]
+### Button classes
 
----
-
-## Templates
-
-Three skins ship today. Each adds **only additive CSS** over `assets/_base/css/base.css` and may override any block or partial.
-
-| Template | Feel | Overrides allowed |
+| Class | Focus | Use |
 |---|---|---|
-| `ledger` | Editorial / brass | Any block, any partial |
-| `atlas` | Cartographic / cyan | Any block, any partial |
-| `folio` | Paper / oxblood | Any block, any partial |
+| `btn-peak` | F5 | The single main action (Register / Check eligibility) |
+| `btn-focus` | F4 | Next step (Choose my service) |
+| `btn-ghost` | F2 | Explore (Read more) |
+| `btn-link` | F1 | Expert detail (See the schema) |
+| `sticky-cta` | F5 | Mobile bottom bar after 40% scroll |
 
-**Switching** is `--template=` at build time, or `active_template` in `config/app.php`.
-
-**Adding a template** (see also AI Agent Task 4):
-1. Create `views/templates/{name}/blocks/` (empty is fine — falls back to `_blocks/`).
-2. Create `assets/_base/css/templates/{name}.css` with additive rules only.
-3. Build with `--template={name}` and verify the site renders.
-
-**`views/templates/cda-w5d-template/`** — this folder contains an HTML template (`index.html` + `assets/`) that has **not yet been exposed** into the block system. Exposing it is AI Agent Task 3.
+**Honest psychology only:**
+- Social proof uses **real rollup numbers**.
+- Deadlines come from **dated variables**, never fake scarcity.
+- Every CTA carries its matching **declared limit** one click away.
+- The linter enforces **one `btn-peak` per section** — no double call‑to‑action per screen.
 
 ---
 
-## Languages
+## Pages
 
-Content is `{en, fr, ar}` maps inside JSON. UI chrome lives only in `lang/{code}.php`. Arabic is RTL with its own font stack and `assets/_base/css/rtl.css` equivalent.[reference:8]
+Every page is a route. Every route is a template + a content JSON + (optionally) a MySQL query. Section IDs are fixed — the linter checks that every section declared here is present in the rendered output.
 
-Language switching is cookie-based. No `?lang=xy` URLs.
+### Homepage `/`
+
+| # | Section ID | Block | Tier | Focus | Main CTA |
+|---|---|---|---|---|---|
+| 1 | `home-hero` | hero | E | F5 · g-peak | **Check my eligibility** → `/join/eligibility/` |
+| 2 | `home-trust-strip` | kpis | E | F2 · g-calm | — |
+| 3 | `home-problem` | prose | E | F3 · g-warm | Is this me? → `#home-fit` |
+| 4 | `home-fit` | cards | E | F3 | Find my field → macro page |
+| 5 | `home-pipeline` | **pipeline** | I | F3 | See the certification path → `/how-it-works/` |
+| 6 | `home-macros` | carousel | I | F3 · macro gradients | Explore the 26 services → macro |
+| 7 | `home-mid-cta` | cta | E | F5 · g-peak | **Register now** → `/app/register` |
+| 8 | `home-gov-map` | **gov-map** | E | F3 | See my governorate → `/tn/{gov}/` |
+| 9 | `home-stack` | stack | X | F1 | See the ontology → `/ontology/` |
+| 10 | `home-projects` | cards | I | F2 | View project → project page |
+| 11 | `home-founder` | quote | E | F2 · g-warm | Read declarations |
+| 12 | `home-limits` | notice | I | F1 | Read our limits → `/trust/statement/` |
+| 13 | `home-faq` | **faq** | E | F2 | Ask us → contact |
+| 14 | `home-final` | cta | E | F5 · g-peak | **Start my registration** |
+| — | `sticky` | **sticky-cta** | E | F5 | Check eligibility |
+
+### Macro work landing pages `/macro-works/{slug}/` × 5
+
+Slugs: `cultures`, `built`, `sciences`, `governance`, `technology`. Each uses its own macro gradient.
+
+| # | Section ID | Block | Tier | Focus | Main CTA |
+|---|---|---|---|---|---|
+| 1 | `mw-hero` | hero | E | F5 · g-{macro} | **Find my service here** → `#mw-catalog` |
+| 2 | `mw-why-tn` | prose | E | F3 | — |
+| 3 | `mw-kpis` | kpis | I | F2 | — |
+| 4 | `mw-diplomas` | table | E | F3 · g-warm | Check my diploma → eligibility |
+| 5 | `mw-catalog` | service-catalog | I | F4 | Open service → service page |
+| 6 | `mw-mid-cta` | cta | E | F5 · g-peak | **Register in {macro}** |
+| 7 | `mw-projects` | cards | I | F2 | View project |
+| 8 | `mw-stack` | stack (highlight L3) | X | F1 | — |
+| 9 | `mw-leaders` | roster | I | F2 | Apply as leader → careers |
+| 10 | `mw-faq` | faq | E | F2 | — |
+| 11 | `mw-final` | cta | E | F5 · g-peak | **Join {macro} now** |
+
+### Service pages `/services/{slug}/` × 130
+
+| # | Section ID | Block | Tier | Focus | Main CTA |
+|---|---|---|---|---|---|
+| 1 | `svc-hero` | hero | E | F5 · g-{macro} | **Apply to this service** → `/app/register?service={slug}` |
+| 2 | `svc-problem` | prose | E | F3 | — |
+| 3 | `svc-fit` | **eligibility** | E | F4 · g-focus | Check in 30 seconds |
+| 4 | `svc-path` | steps | I | F3 | See L1 tasks → `#svc-tasks` |
+| 5 | `svc-tasks` | cards | X | F2 | — |
+| 6 | `svc-week` | definitions | I | F2 | — |
+| 7 | `svc-seats` | bars | I | F3 | — |
+| 8 | `svc-mid-cta` | cta | E | F5 · g-peak | **Reserve my place in the L1 cohort** |
+| 9 | `svc-delivery` | definitions | X | F1 | — |
+| 10 | `svc-limits` | notice | I | F1 | — |
+| 11 | `svc-projects` | cards | I | F2 | View project |
+| 12 | `svc-related` | cards (generated) | I | F2 | Compare |
+| 13 | `svc-faq` | faq | E | F2 | — |
+| 14 | `svc-final` | cta | E | F5 · g-peak | **Apply now** |
+
+### Project pages `/projects/{slug}/` × 25
+
+| # | Section ID | Block | Tier | Focus | Main CTA |
+|---|---|---|---|---|---|
+| 1 | `prj-hero` | hero | E | F5 · g-peak | **Contribute to this project** |
+| 2 | `prj-outcome` | prose | E | F3 | — |
+| 3 | `prj-status` | register | X | F2 | Read evidence |
+| 4 | `prj-meta` | definitions | X | F1 | — |
+| 5 | `prj-services` | cards | I | F3 | Apply to a needed service |
+| 6 | `prj-team` | bars | I | F3 | — |
+| 7 | `prj-timeline` | timeline | I | F2 | — |
+| 8 | `prj-split-cta` | cta (3 actions) | E | F5 / F4 / F4 | **Join as expert** / Become a client / Invest |
+| 9 | `prj-limits` | notice | I | F1 | — |
+| 10 | `prj-final` | cta | E | F5 | **Join the team** |
+
+### Basic pages
+
+| Page | URL | Main CTA |
+|---|---|---|
+| Join (main recruiting landing) | `/join/` | **Register now** |
+| Eligibility | `/join/eligibility/` | **Continue to registration** |
+| How it works | `/how-it-works/` | Start L1 |
+| Country hub (Tunisia) | `/countries/tunisia/` | See my governorate |
+| Governorate × 24 | `/tn/{gov}/` | Register from {gov} |
+| Partners / Clients | `/partners/` | Book a scoping call |
+| Investors | `/investors/` | Request the dossier |
+| About | `/about/` | Meet the founder |
+| Ontology | `/ontology/` | Read the expert docs |
+| Careers | `/careers/` | Apply as manager |
+| FAQ | `/faq/` | Ask a question |
+| Contact | `/contact/` | Write to the right desk |
+| Status | `/status/` | — |
+| Trust | `/trust/*` | File a correction |
+| Thank you | `/join/thanks/` | Share with a friend |
+| 404 | `/404` | Back home |
+
+---
+
+## Owner dashboard
+
+**Mount path:** `/{ADMIN_URL_PATH}` — obfuscated, set in `.env`, default `/panel-x9z`. Same domain as the public site.
+
+**Global header:** country switcher (`All countries` · `🇹🇳 Tunisia` · `+ Add country`), language switch, quick search for a person by CIN, email, or ID. **Every menu filters by the selected country.**
+
+| # | Menu | Key owner actions |
+|---|---|---|
+| 1 | **Command Center** | 30‑day burn‑down (target 130,000 vs actual), today's registrations, funnel, per‑macro heatmap, alerts |
+| 2 | **Countries** | Add country wizard (ISO code, languages, currency, timezone, legal entity, data‑protection authority, salary model, calendar with Ramadan/Eid), activate/pause |
+| 3 | **Regions & Hubs** | 24 governorates → delegations, universities, physical hubs, regional coordinators, per‑region quotas |
+| 4 | **Recruitment Campaigns** | Waves (W1–W4), channels (Facebook, WhatsApp, universities, ANETI‑style offices), UTM tracking, daily quotas |
+| 5 | **Applicants** | Pipeline board: Registered → Verified → Screened → Assigned → L1; filters by macro, service, region, degree |
+| 6 | **Identity & Verification** | CIN checks, diploma upload review, duplicate detection, Dyon competency records |
+| 7 | **Macro Works & Services** | Activate the 130 services per country, capacity per service, service leaders |
+| 8 | **Academies & Certification** | Task sets L1–L4 per service, review queues, pass rates, certificate issuing |
+| 9 | **Teams & Org** | Tree leader → managers → experts; enforces cap 12 experts per manager; orphan alerts |
+| 10 | **Weekly Work Engine** | Directives (Mon 09:00), reports (Fri 12:00), approvals, lock (Fri 18:00), rollup (Sat 02:00), timed per country timezone |
+| 11 | **Projects** | 25 projects, services consumed, staffing gaps, milestones |
+| 12 | **Clients & Contracts** | Clients, scopes, quotes, invoices (local currency), licence (610.5 TND/h) |
+| 13 | **Quality & Sampling** | RAG scores (red < 70, amber < 90), **5% sampling queue**, blockers past SLA |
+| 14 | **Payroll & Finance** | Salary model (600 TND per certified post), payroll simulation per country, cash forecast |
+| 15 | **Investors** | Investor list, parts, reports, dividends (modelled) |
+| 16 | **Communications** | SMS, email, WhatsApp templates in ar/Darija/fr/en; segmented broadcasts; Ramadan‑aware send times |
+| 17 | **Support & Tickets** | Applicant questions, blockers, SLA timers, macro answers |
+| 18 | **Website & Content** | Pages, blocks, CTA variants, live content re‑render, cache purge |
+| 19 | **Variables & Vocabularies** | Edit counts, money, time, doctrine values (derived ones read‑only) |
+| 20 | **Users, Roles & Permissions** | 8 roles, 35 permissions, each scoped by country and region |
+| 21 | **Reports & Analytics** | Rollups only: country, macro, service, governorate; cohort retention; CTA conversion per section ID |
+| 22 | **Compliance & Privacy** | Consent records, retention, data‑subject requests, country law profile (Tunisia: Organic Law 2004‑63, INPDP) |
+| 23 | **Audit Log & Corrections** | Every approval and edit with user and timestamp; public corrections with 14‑day SLA |
+| 24 | **System** | DB shards per country, backups, queues, health, integrations (SMS, email), security headers |
+
+**Role dashboards.** `leader`, `manager`, `member`, `investor`, `customer`, `user` each land on a scoped dashboard after login. They share the same sidebar shell but see only their permitted items. The sidebar is filtered by `ACL::can($role, $perm)` and by `Scope::canActOn($actor, $target)`.
+
+---
+
+## Quality & sampling
+
+**Sampling rule: 5%.** Every week, 5% of submitted reports are randomly selected for re‑review by the leader or a delegate. The sampled 5% is re‑scored against the same rubric the manager used, and the pass rate is tracked per service and per manager.
+
+- **Scope:** 5% of `weekly_reports` rows where `status = 'submitted'` for the current week.
+- **Selection:** deterministic random sample per country, macro, and service, seeded by `(country_id, week_id)` so the sample is reproducible.
+- **Reviewer:** the service leader, or a manager the leader delegates (no self‑review, no manager reviewing their own team's sample).
+- **Outcome:** each sampled report is marked `sampled_pass` or `sampled_fail`. A `sampled_fail` triggers the same rework path as a manager rejection.
+- **Owner dashboard:** the "Quality & Sampling" menu shows the sample size, pass rate, and rework rate per service.
+- **Honesty:** the 5% is published on `/status/` and on each service page (`svc-seats` block) as part of the declared limits. It is a real number, not marketing.
+
+**Why 5%:** it is large enough to detect a manager approving low‑quality work (a manager with 10 reports will, on average, have one sampled every two weeks) and small enough that 130,000 reports × 5% = 6,500 re‑reviews per week — ~1,300 per working day, spread across 130 leaders and 13,000 managers, i.e. under 1 sampled report per manager per week.
+
+**No alternate rule exists.** The dossier's older "2% baseline vs 5% proposal" is superseded. This repository uses **5%**.
+
+---
+
+## Single source of truth
+
+Many facts have historically been edited in more than one place. One change fixes all of them: **every fact is declared once, every derived figure is computed, and a linter fails if a fact is duplicated.**
+
+| Problem | Fix |
+|---|---|
+| Three audience vocabularies | One `config/vocab.php`: `audience` (who reads) vs `role` (who logs in) |
+| Three token syntaxes | One syntax: `{{ counts.services }}`. Anything else fails the linter |
+| Broken keys (`money.salary_month` vs `salary_monthly`) | Lint unresolved tokens |
+| Derived numbers typed by hand | `'derive' => 'experts_target * salary_monthly'` evaluated at render |
+| Counts not computed from content | Count the files in `data/content/*` |
+| Block lists disagree | Generate the vocabulary from `views/_blocks/*.php` |
+| Template paths disagree | One path rule, documented once in `docs/templates.md` |
+| Static vs dynamic contradiction | Both the public site and the portal are dynamic. No `dist/` exists |
+| Service files repeat data | Store the number once in `macros/*.json`; build related cards automatically |
+| Tunisia hard‑coded | `data/countries/tn.json`. Everything country‑specific reads from it |
 
 ---
 
 ## Data model
 
-Every content record is a JSON file with a `type` field validated at load. Unknown values throw.
+Single MySQL 8 database: `w5d`. Every table carries `country_id`.
 
-**Page types:** `home`, `about`, `service`, `macro`, `project`, `ontology`, `audience`
-**Block types:** `hero`, `cards`, `bars`, `carousel`, `contact-desks`, `cta`, `definitions`, `form`, `stack`
+### Content tables (mirror of `data/content/`)
+Populated by `bin/sync-content.php` on deploy or on demand from the owner dashboard. Content JSON remains the source of truth; the tables exist for joins and search.
 
-**Variables** live in `config/variables.php` and are referenced as `{{ counts.services.value }}` or `{{ money.salary_month }}`. Numbers never appear in prose.
+`pages`, `macros`, `services`, `projects`, `layers`, `audiences`, `certification_tasks`, `delivery_contracts`
 
----
+### Platform tables
+`countries`, `regions`, `users`, `roles`, `permissions`, `applicants`, `documents`, `verifications`, `services_country`, `cohorts`, `cert_submissions`, `teams`, `team_members`, `directives`, `weekly_reports`, `approvals`, `clients`, `contracts`, `invoices`, `payroll_runs`, `campaigns`, `messages`, `tickets`, `audit_log`, `consents`, `rollups_daily`
 
-## Directory structure
+### Scale & indexing
+- `applicants` — ~150,000 rows; indexes on `(country_id, status)`, `(country_id, macro_slug, status)`, `(country_id, region_id, status)`, and a unique index on `cin` per country.
+- `weekly_reports` — ~7,000,000 rows per year; partitioned by `country_id` and `YEAR(created_at)`.
+- `rollups_daily` — every dashboard and `/api/kpis.json` reads only from this table.
 
-```
-w5d-php-cms/
-├── bin/
-│   └── build.php                       # the static build
-├── config/
-│   ├── app.php                         # active_template, base URL
-│   ├── variables.php                   # every number the site publishes
-│   └── audiences.php                   # audience registry
-├── data/
-│   └── content/
-│       ├── pages/                      # home, about, ...
-│       ├── macros/                     # 5 files
-│       ├── services/                   # 130 files
-│       ├── projects/                   # 25 files
-│       ├── layers/                     # meta-solutions, expert-teams, academies
-│       ├── audiences/                  # one JSON per audience
-│       ├── certification/              # one JSON per service (task set)
-│       └── delivery/                   # one JSON per service (contract)
-├── views/
-│   ├── _blocks/                        # hero, cards, carousel, form, ...
-│   ├── _shared/
-│   │   ├── layouts/                    # app.php, home.php
-│   │   └── partials/                   # head, header, footer, band, subnav, ...
-│   └── templates/
-│       ├── ledger/                     # additive CSS only
-│       ├── atlas/
-│       ├── folio/
-│       └── cda-w5d-template/           # NOT YET EXPOSED — see Task 3
-├── assets/
-│   └── _base/
-│       ├── css/                        # base.css, rtl.css, templates/
-│       └── js/                         # site.js (zero dependencies)
-├── lang/
-│   ├── en.php
-│   ├── fr.php
-│   └── ar.php
-├── docs/
-│   ├── ontology-six-layers.md
-│   ├── page-data.md
-│   ├── variables.md
-│   ├── developer-guide.md
-│   ├── deployment.md
-│   └── templates.md
-└── dist/                               # ← upload this to w5d.tech
-```
+### Migration discipline
+One migration file per schema change under `db/migrations/`. Applied in order by `bin/migrate.php`. No `ALTER TABLE` outside a migration.
 
 ---
 
 ## Requirements
 
-- **PHP ≥ 8.2** — no extensions beyond the defaults
-- **No Composer**, **no Node.js at build time**, **no database**
-- **Zero third-party runtime requests** (no CDN, no jQuery, no icon font)
+- **PHP ≥ 8.2** with `pdo_mysql`, `mbstring`, `json`, `session`, `openssl`, `curl`
+- **MySQL ≥ 8.0** (InnoDB, `utf8mb4_unicode_ci`)
+- **Apache 2.4+** with `mod_rewrite` (or Nginx equivalent)
+- **No Composer at runtime**
+- **Zero third‑party runtime requests** (no CDN, no jQuery, no icon font)
 
 ---
 
@@ -260,21 +411,183 @@ w5d-php-cms/
 ```bash
 git clone https://github.com/W5Downer/w5d-php-cms.git
 cd w5d-php-cms
-php bin/build.php
-# verify: ls dist/ → HTML files for 3 languages × 3 templates
+
+# 1. MySQL
+mysql -u root -e "CREATE DATABASE w5d CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql -u root -e "CREATE USER 'w5d'@'localhost' IDENTIFIED BY '***';"
+mysql -u root -e "GRANT ALL PRIVILEGES ON w5d.* TO 'w5d'@'localhost';"
+
+# 2. Configure
+cp .env.example .env
+# Edit .env with DB credentials, APP_URL, ADMIN_URL_PATH, webmaster credentials
+
+# 3. Migrate + seed
+php bin/migrate.php
+php bin/sync-content.php
+
+# 4. Generate the webmaster password hash
+php -r "echo password_hash('YourStrongPassword', PASSWORD_DEFAULT), PHP_EOL;"
+# Paste into .env → WEBMASTER_PASSWORD_HASH
+
+# 5. Point Apache document root at the repository root
+#    (the same folder that contains index.php)
 ```
 
-There is no `.env`, no SQLite, no admin server. The owner's controls live in `config/` and `data/content/`.
+**Cron:**
+
+```cron
+*/15 * * * 5  php /path/to/w5d/bin/rollup.php
+0    * * * *  php /path/to/w5d/bin/rollup.php
+0    3 * * *  php /path/to/w5d/bin/backup.php
+```
+
+**First login:** `https://w5d.tech/{ADMIN_URL_PATH}` — sign in as `WEBMASTER_USERNAME` / `WEBMASTER_PASSWORD_HASH`.
+
+---
+
+## Security
+
+- CSRF token on every state‑changing form
+- Session fixation protection — `session_regenerate_id(true)` on login and logout
+- HttpOnly, SameSite=Lax, Secure in production
+- Argon2id password hashing
+- Prepared statements everywhere (PDO)
+- Rate limiting on login and registration (per IP, per CIN)
+- OAuth state validated against `$_SESSION['oauth_state']` (Google + GitHub only)
+- Path traversal prevention in the router
+- `.htaccess` denies `src/`, `config/`, `data/`, `lang/`, `db/`, `bin/`, `storage/`, and every `.env`, `.sql`, `.log`, `.md` file
+- HTTP headers: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`
+- Append‑only `audit_log` for every approval and every scope‑crossing action
+- Nightly `mysqldump` + off‑server copy
+- Privacy: personal data on ~150,000 people — Tunisia Organic Law 2004‑63, INPDP (confirm with counsel)
+
+---
+
+## Directory structure
+
+```
+w5d-php-cms/                    ← Apache document root
+├── .env                        (denied)
+├── .env.example
+├── .htaccess                   ← serves assets/, blocks sensitive folders, rewrites
+├── index.php                   ← single entry point
+│
+├── assets/                     ← public, served directly
+│   ├── _base/
+│   │   ├── css/                ← attention.css, templates/{name}.css
+│   │   └── js/                 ← site.js (zero dependencies)
+│   └── img/
+│
+├── src/                        (denied)
+│   ├── App.php
+│   ├── Env.php
+│   ├── DB.php
+│   ├── Lang.php
+│   ├── View.php
+│   ├── Router.php
+│   ├── ACL.php
+│   ├── Auth.php
+│   ├── Auth/OAuth.php
+│   ├── Scope.php
+│   ├── Content.php
+│   ├── Variables.php
+│   ├── Vocab.php
+│   ├── Country.php
+│   ├── Rollup.php
+│   ├── Lint.php
+│   ├── controllers/
+│   └── models/
+│
+├── views/                      (denied)
+│   ├── _blocks/
+│   ├── _shared/
+│   │   ├── layouts/
+│   │   └── partials/
+│   └── templates/
+│       ├── ledger/
+│       ├── atlas/
+│       └── folio/
+│
+├── data/                       (denied — KEPT FROM REPO)
+│   ├── content/
+│   │   ├── pages/
+│   │   ├── macros/
+│   │   ├── services/
+│   │   ├── projects/
+│   │   ├── layers/
+│   │   ├── audiences/
+│   │   ├── certification/
+│   │   └── delivery/
+│   └── countries/
+│       └── tn.json
+│
+├── config/                     (denied)
+│   ├── app.php
+│   ├── variables.php
+│   └── vocab.php
+│
+├── lang/                       (denied)
+│   ├── en.php
+│   ├── fr.php
+│   └── ar.php
+│
+├── db/                         (denied)
+│   └── migrations/
+│
+├── bin/                        (denied)
+│   ├── migrate.php
+│   ├── sync-content.php
+│   ├── rollup.php
+│   ├── backup.php
+│   └── lint.php
+│
+├── docs/                       (denied)
+│   ├── ontology-six-layers.md
+│   ├── templates.md
+│   └── design.md
+│
+└── storage/                    (denied)
+    ├── cache/views/
+    ├── logs/
+    └── uploads/
+```
+
+---
+
+## Templates
+
+Three skins ship today. Each template lives in `views/templates/{name}/blocks/` (overrides, optional) and `assets/_base/css/templates/{name}.css` (additive rules only). Blocks fall back to `views/_blocks/` when a template does not override them.
+
+| Template | Feel |
+|---|---|
+| `ledger` | Editorial / brass |
+| `atlas` | Cartographic / cyan |
+| `folio` | Paper / oxblood |
+
+Switching is a single config value in `config/app.php`. Adding a template: create the two folders, add the additive CSS, reload — no content files change.
+
+---
+
+## Languages
+
+Content is `{en, fr, ar}` maps inside JSON. UI chrome lives only in `lang/{code}.php`. Arabic is RTL with its own font stack and `assets/_base/css/rtl.css`.
+
+Switching is cookie‑based. No `?lang=xy` URLs.
 
 ---
 
 ## License
 
-**W5D PHP CMS — licensed at 610.5 TND per hour of work.**
+See [LICENSE](LICENSE) for the full text.
 
-Promotional offer valid **before 2027** (strictly before 31 December 2026). After that date, the standard rate applies.
+**Summary:**
 
-Every rendered page must carry the license footer:
+- **W5D PHP CMS** is licensed at **610.5 TND per hour of work**.
+- Promotional offer valid **before 2027** (strictly before 31 December 2026).
+- **Sampling rule: 5%** of weekly reports are re‑reviewed each week. This is an operating doctrine of the software, not an optional setting.
+- **Honesty constraint:** "130,000 experts" is a design equation, not a claim of employment.
+
+Every rendered page carries the license footer:
 
 ```html
 <p>W5D Admin Dashboard licensed at 610.5 TND/hour of work.
@@ -287,205 +600,345 @@ Every rendered page must carry the license footer:
 
 > **Copy this block verbatim into an AI coding assistant's system prompt.**
 >
-> **Why this prompt is different:** the previous prompt was a 23-section plan. Agents loop on plans. This prompt is **12 atomic, sequential tasks**, each ending in a PASS/FAIL check. Do not skip a task. Do not start task N+1 until task N passes.
+> **Why this prompt is different:** the previous prompt was a 23‑section plan. Agents loop on plans. This prompt is **18 atomic, sequential tasks** across **4 phases**, each ending in a PASS/FAIL check. Do not skip. Do not start Phase N+1 until Phase N passes.
 
 ```text
 ================================================================================
 PROJECT: w5d-php-cms
-ROLE: Senior PHP engineer working on a JSON-driven static site generator.
-STYLE: Sequential task list. One task at a time. Every task has a PASS/FAIL
-       check. Do not loop. Do not skip. Do not redesign. Do not add features.
+ROLE: Senior PHP 8.2 engineer working on a dynamic CMS.
+STYLE: Sequential tasks. One at a time. Every task has a PASS/FAIL check.
+       Do not loop. Do not skip. Do not redesign. Do not add features.
 
-READ FIRST — the three rules of the engine
-  1. One page = one JSON file under data/content/.
+ARCHITECTURE (fixed, do not change)
+  Runtime:    PHP 8.2, MySQL 8 (InnoDB, utf8mb4_unicode_ci)
+  Deployment: SINGLE DOMAIN — index.php at the repository root.
+              Apache document root = repository root.
+              assets/* served directly by Apache.
+              src/, config/, data/, lang/, db/, bin/, storage/, docs/
+              and every .env, .sql, .log, .md file are denied by .htaccess.
+              All other requests rewrite to /index.php.
+  Content:    JSON under data/content/ (KEPT — do not delete, do not rename)
+  State:      MySQL tables (users, applicants, teams, weekly_reports, ...)
+  Render:     Dynamic at request time — no static build, no dist/,
+              no bin/build.php
+  Portal:     /{ADMIN_URL_PATH} + /app/* — SAME domain as public site
+  Templates:  ledger, atlas, folio — blocks fall back to views/_blocks/
+  Sampling:   5% of weekly_reports, fixed. No alternate rule exists.
+  Constraint: zero third-party runtime requests
+              (no CDN, no jQuery, no icon font)
+
+READ FIRST — the three rules
+  1. One fact, one place. Duplicates fail the linter.
   2. Any page renders in any template. Blocks resolve two-tier:
      views/{ACTIVE_TEMPLATE}/blocks/{type}.php → views/_blocks/{type}.php
-  3. Every number is a PHP variable in config/variables.php, referenced as
-     {{ counts.services.value }}. Numbers never appear in prose.
+  3. Every number is a token {{ counts.services }}. Unresolved tokens
+     fail the linter.
 
-HARD CONSTRAINTS
-  - PHP 8.2+ only. No Composer. No Node at build time. No database.
-  - Zero third-party runtime requests. No CDN. No jQuery. No icon font.
-  - Do not modify TailAdmin, admin/, or the old PHP-CMS sections of the
-    repository — this build is static-only.
-  - Do not rename or reorder the 130 services or the 5 macro works.
-  - Every change must survive `php bin/build.php` with zero render errors.
-  - Every task ends with a PASS/FAIL report line. Stop and report on FAIL.
-
-================================================================================
-TASK 1 — Baseline the build
-================================================================================
-Run:   php bin/build.php
-Check: dist/ exists; a clean build reports 639 files, 3 languages, 3 templates,
-       zero render errors.
-PASS if: build exits 0 and file count = 639.
-FAIL if: build errors or file count diverges — stop and report the diff.
-Do not modify any file in Task 1.
+STOP CONDITIONS
+  - Any PASS/FAIL reports FAIL: stop and report.
+  - Any test requires deleting a file under data/content/: stop and report.
+  - Any task requires a Composer dependency: stop and report.
+  - Any task requires a CDN or jQuery: stop and report.
+  - Any task tries to introduce a public/ folder or a dist/ folder:
+    stop and report.
 
 ================================================================================
-TASK 2 — Map the current block surface
+PHASE A — SINGLE SOURCE OF TRUTH (7 tasks)
 ================================================================================
-Read:  views/_blocks/ (one file per block type)
-       views/_shared/layouts/app.php and home.php
-       views/_shared/partials/ (head, header, footer, band, subnav, ...)
-Produce a table (in your report only): block_type | file | used_by_pages
-PASS if: table covers every file in views/_blocks/ and every partial.
-Do not create or edit files in Task 2.
+
+TASK A1 — Baseline
+  Run:      php bin/migrate.php && php bin/lint.php
+  Check:    migration applies cleanly; lint reports zero errors.
+  PASS if:  both exit 0.
+  FAIL if:  any error — stop and report.
+  Do not edit files in A1.
+
+TASK A2 — Vocabularies
+  Create config/vocab.php containing:
+    audience (owner|admin|leader|member|investor|customer|user),
+    role (8 values matching audiences),
+    status (registered|verified|screened|assigned|l1|l2|l3|l4|certified),
+    evidence (E0|E1|E2|E3),
+    block (hero|kpis|cards|bars|carousel|contact-desks|cta|definitions|
+           form|stack|prose|table|steps|notice|quote|register|timeline|
+           roster|service-catalog|pipeline|eligibility|faq|gov-map|
+           sticky-cta|progress|country-switch),
+    ontology_layer (L0|L1|L2|L3|L4|L5),
+    meta_solution (list — read from data/content/layers/meta-solutions.json).
+  Remove duplicated arrays from config/variables.php.
+  PASS if: grep -r shows each vocabulary defined exactly once.
+  FAIL if: any vocabulary appears in more than one file.
+
+TASK A3 — Token syntax
+  Standardize on {{ path.to.var }} (e.g. {{ counts.services }}).
+  Migrate every JSON under data/content/ to this syntax.
+  Remove any {{ var.* }} prefix.
+  Fix money.salary_month → money.salary_monthly (or vice versa — pick one,
+  update both config/variables.php and every JSON referencing it).
+  Fix license_footer to use an existing token for the deadline year.
+  Extend bin/lint.php to fail on any unresolved token.
+  PASS if: php bin/lint.php exits 0.
+  FAIL if: any token is unresolved, or any JSON still uses {{ var.* }}.
+
+TASK A4 — Derived variables
+  Extend config/variables.php with 'derive' expressions for:
+    accounts_total   = experts_target + managers_target + leaders_target + 1
+    reports_per_year = experts_target * 52
+    payroll_monthly  = experts_target * money.salary_monthly
+    part_monthly     = money.part_day * 30
+    managers_target  = leaders_target * 100
+  Compute counts.services, counts.projects, counts.macros from the files
+  under data/content/ at render (Content::count).
+  PASS if: changing experts_target in config/variables.php updates every
+           derived figure on the next request (test: change to 1000, load
+           /, confirm all figures scale, revert).
+  FAIL if: any figure is hard-coded in a JSON file or in a block.
+
+TASK A5 — Block vocabulary and paths
+  Generate the block vocabulary from views/_blocks/*.php (one file per
+  block type). Remove 'sparkline' if it has no renderer; implement it if
+  it is used.
+  Document the template path rule ONCE in docs/templates.md:
+    Template blocks: views/templates/{name}/blocks/{type}.php
+    Template CSS:    assets/_base/css/templates/{name}.css
+    Fallback block:  views/_blocks/{type}.php
+  Update config/app.php to follow this rule.
+  PASS if: config/vocab.php 'block' list matches ls views/_blocks/*.php
+           exactly (same count, same names).
+  FAIL if: any block file has no vocabulary entry, or vice versa.
+
+TASK A6 — Service JSON cleanup
+  For each file under data/content/services/*.json:
+    - Remove the repeated service number (store it once in macros/*.json
+      as the label source).
+    - Remove macro name translations (they belong in macros/*.json).
+    - Remove "Other services" cards that copy sibling titles — related
+      cards are generated at render from macro membership.
+    - Add fr and ar fields where missing (placeholders copied from en
+      with a TODO note).
+  Extend bin/lint.php to report:
+    - duplicated literals across services,
+    - missing fr/ar fields,
+    - services whose macro_slug does not exist in macros/*.json.
+  PASS if: php bin/lint.php exits 0.
+  FAIL if: any service has an unresolved macro_slug or any field is
+           empty in en.
+
+TASK A7 — Country entity
+  Create data/countries/tn.json with:
+    iso, names {en, fr, ar}, currency TND, timezone Africa/Tunis,
+    locale ar_TN, regions (24 governorates), legal_profile
+    (Organic Law 2004-63, INPDP), salary_model ref, calendar
+    (Ramadan, Eid), default_languages [ar, fr, en].
+  Remove every Tunisia-specific literal from config/, src/, and
+  views/_shared/. Replace each with a read from Country::get('tn').
+  PASS if: grep for "Tunisia", "TND", "Africa/Tunis", "ar_TN" outside
+           data/countries/tn.json returns zero hits in config/, src/,
+           views/_shared/.
+  FAIL if: any Tunisia literal remains outside data/countries/tn.json.
 
 ================================================================================
-TASK 3 — Expose views/templates/cda-w5d-template/ into the block system
+PHASE B — DESIGN SYSTEM & PAGES (5 tasks)
 ================================================================================
-This folder ships an HTML template (index.html + assets/) that is not yet
-part of the engine. Expose it as a proper template.
 
-  3a. Create views/templates/cda-w5d-template/blocks/ (empty is fine —
-      it will fall back to views/_blocks/).
-  3b. Read index.html. For each <section> in it, decide whether it maps
-      to an existing block type (hero, cards, bars, carousel, contact-desks,
-      cta, definitions, form, stack) or needs a new block type.
-  3c. If a section maps to an existing block, do NOT copy its markup —
-      instead create a page JSON under data/content/pages/ that uses
-      that block with the cda-w5d-template's content.
-  3d. If a section needs a NEW block type, create ONLY:
-        views/_blocks/{new-type}.php          (the block implementation)
-        one page JSON under data/content/pages/ that exercises it
-      Do NOT modify any existing block.
-  3e. Copy the template's CSS/JS into assets/_base/css/templates/
-      cda-w5d-template.css and assets/_base/js/templates/cda-w5d-template.js
-      (only the additive rules — never duplicate base.css or site.js).
-  3f. Register the template name in config/app.php under `templates`.
-PASS if: `php bin/build.php --template=cda-w5d-template` exits 0 and
-         dist/ contains the rendered pages for this template in en/fr/ar.
-FAIL if: build errors, or any existing template (ledger/atlas/folio) breaks.
-Report which files you created and which existing files (if any) you touched.
+TASK B1 — attention.css
+  Create assets/_base/css/attention.css with:
+    --g-calm, --g-warm, --g-focus, --g-peak (Tunisian palette),
+    --g-cultures, --g-built, --g-sciences, --g-governance, --g-technology,
+    reading-tier classes (.tier-e, .tier-i, .tier-x),
+    focus classes (.focus-1 .. .focus-5),
+    button classes (.btn-peak, .btn-focus, .btn-ghost, .btn-link,
+                    .sticky-cta).
+  Extend bin/lint.php to fail if any rendered page contains more than one
+  .btn-peak inside a single <section>.
+  Verify contrast for all gradient tokens: each block with text on a
+  gradient must have a scrim or darker stops, achieving >= 4.5:1. Add the
+  proof (computed ratios) to docs/design.md.
+  PASS if: lint enforces one .btn-peak per section; docs/design.md has
+           contrast proof for every gradient token.
+  FAIL if: any gradient fails contrast without a scrim.
 
-================================================================================
-TASK 4 — Document the template
-================================================================================
-Update docs/templates.md with a new section "cda-w5d-template":
-  - which block types it uses,
-  - which blocks it overrides (or "none"),
-  - which additive CSS/JS file it adds,
-  - a one-line build command.
-PASS if: section exists and matches Task 3's actual files.
-Do not touch any other doc.
+TASK B2 — Block signature
+  Every block under views/_blocks/ accepts these props via $data:
+    id (string, required),
+    tier ('E'|'I'|'X', required),
+    focus (1..5, required),
+    gradient (string|null),
+    cta (array|null — {label{en,fr,ar}, href, class, psychology}).
+  Validate in the block loader (src/View.php): a block that renders
+  without tier or focus throws.
+  PASS if: rendering any page fails loudly if tier or focus is missing.
+  FAIL if: a block renders with missing tier or focus.
 
-================================================================================
-TASK 5 — Define the certification task model
-================================================================================
-Create data/content/certification/README.md (schema only, no data yet):
-  - one JSON file per service: data/content/certification/{service_slug}.json
-  - fields: id, service_slug, level (1–4), title {en,fr,ar},
-            instructions {en,fr,ar}, evidence, pass_rule
-  - a task belongs to exactly one service
-  - a service's certification is complete when every task in its file is
-    approved (approval is out of scope for the static build)
-PASS if: README.md exists and the schema is valid JSON in an example block.
-Do not create 130 certification files in Task 5 — schema only.
+TASK B3 — New blocks
+  Create these blocks under views/_blocks/:
+    pipeline.php       — Register -> Verify -> Certify (L1-L4) -> Deliver
+    eligibility.php    — 3-question check (degree, field, availability)
+    faq.php            — accordion, no JS dependencies
+    gov-map.php        — inline SVG of Tunisia (24 governorates), no
+                         external tiles, no Leaflet
+    sticky-cta.php     — mobile bottom bar after 40% scroll
+    progress.php       — open progress bar (Zeigarnik)
+    country-switch.php — country selector in the portal header
+  PASS if: php bin/lint.php exits 0 and each block appears in
+           config/vocab.php.
+  FAIL if: any of these blocks references an external URL.
 
-================================================================================
-TASK 6 — Define the delivery contract model
-================================================================================
-Create data/content/delivery/README.md (schema only):
-  - one JSON file per service: data/content/delivery/{service_slug}.json
-  - fields: service_slug, deliverable_unit, weekly_target, evidence_rule
-PASS if: README.md exists and the schema is valid JSON in an example block.
-Do not create 130 delivery files in Task 6 — schema only.
+TASK B4 — Pages
+  Implement routes exactly as specified in the README section Pages, using
+  the section IDs listed there. For each route:
+    - create the controller in src/controllers/,
+    - render the template + JSON content,
+    - wire CTAs to /app/register (public) and portal routes.
+  Required routes:
+    / , /macro-works/{slug}/ x 5, /services/{slug}/ x 130,
+    /projects/{slug}/ x 25,
+    /join/ , /join/eligibility/ , /join/thanks/ ,
+    /how-it-works/ , /countries/tunisia/ , /tn/{gov}/ x 24,
+    /partners/ , /investors/ , /about/ , /ontology/ , /careers/ ,
+    /faq/ , /contact/ , /status/ , /trust/* , /404
+  PASS if: every route returns HTTP 200 in ledger, atlas, and folio
+           templates, in en, fr, and ar (3 x 3 x route count all 200).
+  FAIL if: any route returns non-200 in any template or language.
 
-================================================================================
-TASK 7 — Define the audience meta-website model
-================================================================================
-Create data/content/audiences/README.md (schema only):
-  - one JSON file per audience: data/content/audiences/{slug}.json
-  - fields: slug, label {en,fr,ar}, template (ledger|atlas|folio|cda-w5d-template),
-            audience_type (owner|admin|leader|member|investor|customer|user)
-  - the build MUST render the audience's meta site in the assigned template
-PASS if: README.md exists, schema is valid JSON, and the 7 default audience
-         slugs are listed.
-Do not create the 7 audience JSON files in Task 7 — schema only.
-
-================================================================================
-TASK 8 — Add ONE example certification file
-================================================================================
-Create data/content/certification/heritage-digitisation.json as the single
-reference example. Include exactly 3 tasks at levels 1, 2, 3. Every field
-populated, all three languages present.
-PASS if: `php bin/build.php` still exits 0 and the file validates against
-         the schema from Task 5.
-Do not create any other certification file.
+TASK B5 — Honesty constraints
+  - No countdown or scarcity claim unless backed by a dated variable
+    from config/variables.php or a value from rollups_daily.
+  - Every page renders the limits notice (home-limits / svc-limits /
+    prj-limits).
+  - Every CTA to /app/register carries its declared limit one click away.
+  PASS if: grep finds no hard-coded "2027" or "130,000" outside
+           config/variables.php and data/countries/tn.json.
+  FAIL if: any page hard-codes a number that should be a token.
 
 ================================================================================
-TASK 9 — Add ONE example delivery file
+PHASE C — PORTAL (5 tasks)
 ================================================================================
-Create data/content/delivery/heritage-digitisation.json as the reference
-example. All fields populated.
-PASS if: build exits 0 and the file validates against the schema from Task 6.
-Do not create any other delivery file.
+
+TASK C1 — MySQL schema
+  Create db/migrations/001_initial.sql with:
+    countries, regions, users, roles, permissions, applicants, documents,
+    verifications, services_country, cohorts, cert_submissions, teams,
+    team_members, directives, weekly_reports, approvals, clients,
+    contracts, invoices, payroll_runs, campaigns, messages, tickets,
+    audit_log, consents, rollups_daily.
+  Every table carries country_id (FK to countries.id).
+  Indexes:
+    applicants: (country_id, status), (country_id, macro_slug, status),
+                (country_id, region_id, status), unique(country_id, cin)
+    weekly_reports: PARTITION BY country_id + YEAR(created_at),
+                    (country_id, week_id, status),
+                    (country_id, manager_id, week_id)
+    rollups_daily: (country_id, day), (country_id, macro_slug, day)
+  PASS if: php bin/migrate.php applies 001 cleanly on an empty MySQL 8.
+  FAIL if: migration errors, or any table lacks country_id.
+
+TASK C2 — Registration
+  Build /app/register:
+    - 4-minute flow: eligibility -> account -> CIN + diploma upload ->
+      service choice
+    - ar/fr/en, mobile-first
+    - OTP by SMS (interface only — stub adapter)
+    - duplicate CIN guard (unique index)
+    - consent capture written to consents
+    - rate limited 5/hour/IP
+  Load target: 5,000 registrations/day; p95 < 500 ms (test with
+  wrk/ab on the /app/register POST path, 100 concurrent, 10 minutes).
+  PASS if: load test reaches 5,000 registrations/day with p95 < 500 ms,
+           and every CIN duplicate is rejected with HTTP 409.
+  FAIL if: p95 > 500 ms, or a duplicate CIN is accepted.
+
+TASK C3 — Owner dashboard
+  Implement the 24 menus from README section Owner dashboard at
+  /{ADMIN_URL_PATH}/. Each menu:
+    - is scoped by the currently selected country,
+    - calls Auth::require($perm) and Scope::canActOn($actor, $row)
+      on every action,
+    - reads list data only from rollups_daily or from indexed,
+      paginated, filtered MySQL queries,
+    - paginates at 50 rows/page.
+  Sidebar items are filtered by ACL::can($role, $perm).
+  The "Quality & Sampling" menu shows the 5% rule and its current sample
+  size and pass rate — 5% is fixed and cannot be changed from the UI.
+  PASS if: the sidebar shows only permitted items for each of the 8 roles;
+           no menu loads more than 50 rows; changing the country switcher
+           filters every menu; the Quality & Sampling menu displays the
+           fixed 5% rule.
+  FAIL if: any menu renders > 50 rows in a single response, or a role
+           sees a menu item it cannot access, or the UI allows changing
+           the sampling rate away from 5%.
+
+TASK C4 — Country wizard
+  Implement /{ADMIN_URL_PATH}/countries/new:
+    - writes data/countries/{iso}.json,
+    - inserts a countries row,
+    - clones Tunisia defaults (roles, permissions, 130 services as
+      inactive, salary model, calendar, 5% sampling rule).
+  PASS if: adding a test country 'ma' works end-to-end (wizard completes,
+           data/countries/ma.json appears, the country switcher lists it,
+           every menu filters to it), and deleting it removes the row and
+           the file.
+  FAIL if: any menu leaks data from another country when 'ma' is selected.
+
+TASK C5 — Nightly rollup
+  Implement bin/rollup.php to aggregate weekly_reports -> rollups_daily.
+  Cron: */15 * * * 5 (Friday) and 0 * * * * (otherwise).
+  Expose /api/kpis.json (served from rollups_daily).
+  PASS if: after a synthetic load of 10,000 weekly_reports, rollups_daily
+           has the correct aggregates and /api/kpis.json returns them in
+           < 50 ms.
+  FAIL if: /api/kpis.json queries weekly_reports directly.
 
 ================================================================================
-TASK 10 — Add ONE example audience file
+PHASE D — VERIFY & REPORT (1 task)
 ================================================================================
-Create data/content/audiences/member.json with template = "atlas".
-PASS if: `php bin/build.php --template=atlas` exits 0 and a member meta site
-         appears in dist/.
-Do not create the other 6 audience files.
+
+TASK D1 — Final verification
+  Run all of the following:
+    - php bin/migrate.php (clean DB)
+    - php bin/sync-content.php
+    - php bin/lint.php
+    - A browser pass on: /, /macro-works/technology/,
+      /services/heritage-digitisation/, /projects/meta-x-academy/,
+      /join/, /join/eligibility/, /tn/tunis/, /app/register,
+      /{ADMIN_URL_PATH}/, /{ADMIN_URL_PATH}/applicants
+    - All 3 templates x 3 languages on /, /macro-works/technology/,
+      /services/heritage-digitisation/
+    - Load test on /app/register POST (p95 < 500 ms)
+    - Security: no third-party requests in any HTML; license footer on
+      every page; .htaccess denies src/, config/, data/, lang/, db/,
+      bin/, storage/, docs/, .env, .sql, .log, .md; the physical
+      folders are not reachable directly.
+    - Confirm index.php lives at the repository root (no public/ folder).
+  Produce a final report:
+    Files created      : (list)
+    Files modified     : (list)
+    Files deleted      : (must be empty — data/content/ must be intact)
+    Migrations applied : (list)
+    Lint result        : PASS/FAIL
+    Load p95           : (ms)
+    Third-party check  : PASS/FAIL
+    License footer     : PASS/FAIL
+    Sampling rule      : 5% (confirmed fixed)
+    Open items         : (list — nothing in Phase A-C should be open)
+  PASS if: every line above reports PASS.
+  FAIL if: any line reports FAIL — stop and report the details.
+  STOP after Phase D. Do not start new features.
 
 ================================================================================
-TASK 11 — Wire the example into a page
+COMMON LOOP TRIGGERS — do not do these
 ================================================================================
-Create data/content/pages/membership.json that:
-  - uses the `cards` block to show the 3 certification tasks from Task 8,
-  - uses the `bars` block to show the weekly target from Task 9,
-  - links to the member meta site from Task 10.
-PASS if: build exits 0 for ledger, atlas, and cda-w5d-template; the page
-         renders in all three languages.
-Do not add new block types in Task 11.
-
-================================================================================
-TASK 12 — Final verification and report
-================================================================================
-Run:   php bin/build.php
-       php bin/build.php --template=atlas
-       php bin/build.php --template=folio
-       php bin/build.php --template=cda-w5d-template
-Check:
-  - all four builds exit 0,
-  - file counts match the baseline from Task 1 (plus the new template's files),
-  - zero third-party requests in the generated HTML,
-  - license footer present in every rendered page,
-  - no existing service, macro, or project was renamed.
-PASS if: all four conditions hold.
-Produce a final report:
-  Files created      : (list)
-  Files modified     : (list)
-  Files deleted      : (list — should be empty)
-  Build file counts  : baseline vs after, per template
-  New block types    : (list or "none")
-  New audience files : member.json only
-  New cert files     : heritage-digitisation.json only
-  New delivery files : heritage-digitisation.json only
-  Third-party check  : PASS/FAIL
-  License footer     : PASS/FAIL
-
-================================================================================
-STOP CONDITION
-================================================================================
-You are done when Task 12 reports PASS. Do not continue past Task 12.
-Do not add features, do not optimise, do not rename, do not "improve" the
-engine. The next 127 certification files, the next 129 delivery files, and
-the next 6 audience files are a follow-up prompt — not this one.
-
-================================================================================
-WHAT NOT TO DO — common loop triggers
-================================================================================
-  ✗ Do not "also fix" the old PHP-CMS admin/ folder.
-  ✗ Do not touch TailAdmin or SQLite.
-  ✗ Do not create all 130 certification files at once.
-  ✗ Do not rewrite existing blocks to "make them generic".
-  ✗ Do not rename a block, a service, a macro, or a project.
-  ✗ Do not add a second templating syntax.
-  ✗ Do not introduce a framework, a bundler, or a CDN.
-  ✗ Do not enter a loop re-reading the whole README. Read it once.
+  x Do not create a public/ folder. index.php is at the repository root.
+  x Do not bring back a static build (bin/build.php, dist/).
+  x Do not switch to SQLite.
+  x Do not add TailAdmin, Bootstrap, or any framework.
+  x Do not rename a service, a macro, or a project.
+  x Do not create all 130 certification files or all 25 project state
+    rows — that is a follow-up prompt.
+  x Do not modify data/content/ in Phase B or C.
+  x Do not re-read the whole README more than once per phase.
+  x Do not change the 5% sampling rule. It is fixed.
+  x Do not split the site onto app.w5d.tech. One domain, one index.php.
 ================================================================================
 ```
 
