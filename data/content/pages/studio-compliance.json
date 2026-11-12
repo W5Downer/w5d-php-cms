@@ -1,0 +1,100 @@
+{
+  "id": "studio-compliance",
+  "path": "/studio/compliance/",
+  "kind": "page",
+  "nav_group": "studio",
+  "audience": "client",
+  "title": {
+    "en": "Compliance"
+  },
+  "nav_label": {
+    "en": "Compliance"
+  },
+  "summary": {
+    "en": "Checks against a stated standard, reported with what was and was not tested. The studio does not issue certificates."
+  },
+  "description": {
+    "en": "Privacy and accessibility, checked."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Studio"
+        },
+        "grand": {
+          "en": "Privacy and accessibility, checked."
+        },
+        "lead": {
+          "en": "Checks against a stated standard, reported with what was and was not tested. The studio does not issue certificates."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "Checks"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Accessibility"
+            },
+            "value": {
+              "en": "WCAG 2.2 AA with automated tools and keyboard-only, screen-reader and mobile walkthroughs."
+            }
+          },
+          {
+            "term": {
+              "en": "Privacy"
+            },
+            "value": {
+              "en": "An inventory of cookies, storage, third-party requests and forms, matched against what the privacy notice says."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "It is not a certification, an audit by an accredited body, or legal advice. A site that passes these checks has passed these checks on that date."
+          }
+        ]
+      },
+      "title": {
+        "en": "What this is not"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Every claim on this site is dated, and every limit declared."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Start with an audit"
+            },
+            "href": "page:studio-audit",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Write to the studio"
+            },
+            "href": "page:contact"
+          }
+        ]
+      }
+    }
+  ]
+}

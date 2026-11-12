@@ -1,0 +1,117 @@
+{
+  "id": "trust-ai",
+  "path": "/trust/ai/",
+  "kind": "legal",
+  "nav_group": "trust",
+  "audience": "public",
+  "title": {
+    "en": "AI use",
+    "fr": "Usage de l'IA",
+    "ar": "استخدام الذكاء الاصطناعي"
+  },
+  "nav_label": {
+    "en": "AI use",
+    "fr": "Usage de l'IA",
+    "ar": "استخدام الذكاء الاصطناعي"
+  },
+  "summary": {
+    "en": "Where AI is, and is not, involved.",
+    "fr": "Où l'IA est impliquée, et où elle ne l'est pas.",
+    "ar": "أين يُستخدم الذكاء الاصطناعي وأين لا."
+  },
+  "description": {
+    "en": "Where AI is, and is not, involved in this website and in W5D's programmes."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Trust · Policies"
+        },
+        "grand": {
+          "en": "Where AI is, and is not, involved."
+        },
+        "lead": {
+          "en": "This page states plainly what an AI assistant did on this site, and where no AI is present at all."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "This website"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "p",
+            "text": {
+              "en": "The site was specified and built with the help of an AI coding assistant, working from the founder's texts. Statements of fact come from supplied material or from public pages checked on the dates shown. Nothing on the site is generated at visit time, and the site has no chatbot."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "Programmes"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "SelfAI is a concept. No model or service exists."
+              },
+              {
+                "en": "The Ontology AI Agent is described by the Ontology Department as trained on first principles and allowed to say \"I do not know yet\". Its behaviour is not evaluated here."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "info",
+        "body": [
+          {
+            "en": "A person remains responsible for what is published. Mistakes can be reported as corrections."
+          }
+        ]
+      },
+      "title": {
+        "en": "Human review"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "No claim on this site is generated at visit time."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Corrections"
+            },
+            "href": "page:corrections",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Privacy"
+            },
+            "href": "page:privacy"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "id": "be-smarter",
+  "slug": "be-smarter",
+  "order": 10,
+  "layer": "L3",
+  "status": "operational",
+  "evidence": "E1",
+  "stage": 89,
+  "horizon": "macro",
+  "group": {
+    "en": "2030B · dimension 1",
+    "fr": "2030B · dimension 1",
+    "ar": "2030B · البُعد الأول"
+  },
+  "parent": "2030b",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "Be Smarter",
+    "fr": "Be Smarter",
+    "ar": "كن أذكى"
+  },
+  "subtitle": {
+    "en": "Smart · العقل",
+    "fr": "Smart · العقل",
+    "ar": "الذكاء · العقل"
+  },
+  "short": {
+    "en": "Operational (2025 in the published roadmap)."
+  },
+  "summary": {
+    "en": "Operational (2025 in the published roadmap)."
+  },
+  "description": {
+    "en": "Smart · العقل",
+    "fr": "Smart · العقل",
+    "ar": "الذكاء · العقل"
+  },
+  "exists": {
+    "en": "Operational (2025 in the published roadmap)."
+  },
+  "missing": {
+    "en": "Reader numbers, completion rates and outcomes have not been published."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L3 project",
+        "grand": {
+          "en": "Be Smarter",
+          "fr": "Be Smarter",
+          "ar": "كن أذكى"
+        },
+        "lead": {
+          "en": "Smart · العقل",
+          "fr": "Smart · العقل",
+          "ar": "الذكاء · العقل"
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "operational"
+          },
+          {
+            "label": "Evidence",
+            "value": "E1",
+            "sub": null
+          },
+          {
+            "label": "Layer",
+            "value": "L3"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "The first of the ten 2030B dimensions, with its own books, a currency code (CTC) and a SelfAI module (SelfAI-S)."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "operational"
+          },
+          {
+            "term": "Evidence",
+            "value": "E1",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Project"
+          },
+          {
+            "term": "Horizon",
+            "value": "macro"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "to be confirmed"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "Smart · العقل"
+            }
+          },
+          {
+            "term": "Currency code",
+            "value": "CTC"
+          },
+          {
+            "term": "SelfAI module",
+            "value": "SelfAI-S"
+          },
+          {
+            "term": "Books in the draft index",
+            "value": "3"
+          },
+          {
+            "term": "Published roadmap year",
+            "value": "2025"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "Operational (2025 in the published roadmap)."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "Reader numbers, completion rates and outcomes have not been published."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Operational means in use for its stated purpose, with known limits. It is not evidence of learning outcomes."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "href": null,
+            "open": true
+          },
+          {
+            "term": "State",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

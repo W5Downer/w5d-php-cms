@@ -1,0 +1,270 @@
+{
+  "id": "be-braver",
+  "slug": "be-braver",
+  "order": 15,
+  "layer": "L3",
+  "status": "planned",
+  "evidence": "E1",
+  "stage": 22,
+  "horizon": "macro",
+  "group": {
+    "en": "2030B · dimension 6",
+    "fr": "2030B · dimension 6",
+    "ar": "2030B · البُعد 6"
+  },
+  "parent": "2030b",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "Be Braver",
+    "fr": "Be Braver",
+    "ar": "كن أشجع"
+  },
+  "subtitle": {
+    "en": "Brave · الشجاعة",
+    "fr": "Brave · الشجاعة",
+    "ar": "كن أشجع · الشجاعة"
+  },
+  "short": {
+    "en": "Planned. Book index drafted."
+  },
+  "summary": {
+    "en": "Planned. Book index drafted."
+  },
+  "description": {
+    "en": "Brave · الشجاعة",
+    "fr": "Brave · الشجاعة",
+    "ar": "كن أشجع · الشجاعة"
+  },
+  "exists": {
+    "en": "Planned. Book index drafted."
+  },
+  "missing": {
+    "en": "No public product. The book index exists as a draft only, and the schedule has not been supplied."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L3 project",
+        "grand": {
+          "en": "Be Braver",
+          "fr": "Be Braver",
+          "ar": "كن أشجع"
+        },
+        "lead": {
+          "en": "Brave · الشجاعة",
+          "fr": "Brave · الشجاعة",
+          "ar": "كن أشجع · الشجاعة"
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "planned"
+          },
+          {
+            "label": "Evidence",
+            "value": "E1",
+            "sub": null
+          },
+          {
+            "label": "Layer",
+            "value": "L3"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "The 6th 2030B dimension, with currency code WPC and SelfAI module SelfAI-V."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "planned"
+          },
+          {
+            "term": "Evidence",
+            "value": "E1",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Project"
+          },
+          {
+            "term": "Horizon",
+            "value": "macro"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "to be confirmed"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "Brave · الشجاعة"
+            }
+          },
+          {
+            "term": "Currency code",
+            "value": "WPC"
+          },
+          {
+            "term": "SelfAI module",
+            "value": "SelfAI-V"
+          },
+          {
+            "term": "Books in the draft index",
+            "value": "3"
+          },
+          {
+            "term": "Published roadmap year",
+            "value": {
+              "en": "to be confirmed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "Planned. Book index drafted."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "No public product. The book index exists as a draft only, and the schedule has not been supplied."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Planned means intended and named, with no build that can be shown."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "href": null,
+            "open": true
+          },
+          {
+            "term": "State",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

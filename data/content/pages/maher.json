@@ -1,0 +1,177 @@
+{
+  "id": "maher",
+  "path": "/maher/",
+  "kind": "page",
+  "nav_group": "company",
+  "audience": "public",
+  "title": {
+    "en": "Maher",
+    "fr": "Maher",
+    "ar": "ماهر"
+  },
+  "nav_label": {
+    "en": "Maher",
+    "fr": "Maher",
+    "ar": "ماهر"
+  },
+  "summary": {
+    "en": "Founder of World 5 Dimensions and author of the seven declarations.",
+    "fr": "Fondateur de World 5 Dimensions et auteur des sept déclarations.",
+    "ar": "مؤسس World 5 Dimensions ومؤلف الإعلانات السبعة."
+  },
+  "description": {
+    "en": "Founder of World 5 Dimensions, creator of 2030B."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Company"
+        },
+        "grand": {
+          "en": "Maher"
+        },
+        "lead": {
+          "en": "Founder of World 5 Dimensions, creator of 2030B, and author of the seven declarations published here."
+        },
+        "split": false
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "Role"
+      },
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "Maher founded World 5 Dimensions and writes its foundational texts in the first person. The texts present themselves as working frameworks, not final definitions."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "roster",
+      "title": {
+        "en": "Responsibilities"
+      },
+      "data": {
+        "items": [
+          {
+            "name": {
+              "en": "World 5 Dimensions (W5D)"
+            },
+            "role": {
+              "en": "Founder"
+            }
+          },
+          {
+            "name": {
+              "en": "2030B"
+            },
+            "role": {
+              "en": "Creator"
+            },
+            "note": {
+              "en": "A long-term educational and innovation platform whose stated aim is \"a complete human by 2030\"."
+            }
+          },
+          {
+            "name": {
+              "en": "KernID, Aevum, Meridian, W5D UUID"
+            },
+            "role": {
+              "en": "Curator"
+            }
+          },
+          {
+            "name": {
+              "en": "The seven declarations"
+            },
+            "role": {
+              "en": "Author"
+            },
+            "note": {
+              "en": "Also the specification of the Aevum and Meridian architectures."
+            }
+          },
+          {
+            "name": {
+              "en": "Ontology Department"
+            },
+            "role": {
+              "en": "Established within W5D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "info",
+        "body": [
+          {
+            "en": "The 2030B principles include \"God first, then human\", and the Ontology Department orients its work toward al-Ḥaqq, the Real. W5D states this openly rather than leaving it implicit. It is not a claim that the five-dimensional ontology depends on it."
+          }
+        ]
+      },
+      "title": {
+        "en": "Orientation, stated openly"
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "Photograph and biography"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Photograph"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Longer biography"
+            },
+            "open": true,
+            "note": {
+              "en": "Not supplied. None is invented here."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Writing to Maher: use the contact page. Press requests go to the press desk."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Contact"
+            },
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Press"
+            },
+            "href": "page:press"
+          }
+        ]
+      }
+    }
+  ]
+}

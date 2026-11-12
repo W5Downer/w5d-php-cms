@@ -1,0 +1,246 @@
+{
+  "id": "w5d-uuid",
+  "slug": "w5d-uuid",
+  "order": 29,
+  "layer": "L3",
+  "status": "research-preview",
+  "evidence": "E1",
+  "stage": 67,
+  "horizon": "meta",
+  "group": {
+    "en": "Infrastructure · identity",
+    "fr": "Infrastructure · identité",
+    "ar": "البنية التحتية · الهوية"
+  },
+  "parent": "kernid",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "W5D UUID",
+    "fr": "W5D UUID",
+    "ar": "W5D UUID"
+  },
+  "subtitle": {
+    "en": "An identifier that carries its own digital DNA.",
+    "fr": "Un identifiant porteur de son propre ADN numérique.",
+    "ar": "معرّف يحمل حمضه النووي الرقمي."
+  },
+  "short": {
+    "en": "A research direction described in a founder declaration. No specification is published."
+  },
+  "summary": {
+    "en": "A research direction described in a founder declaration. No specification is published."
+  },
+  "description": {
+    "en": "An identifier that carries its own digital DNA.",
+    "fr": "Un identifiant porteur de son propre ADN numérique.",
+    "ar": "معرّف يحمل حمضه النووي الرقمي."
+  },
+  "exists": {
+    "en": "A research direction described in a founder declaration. No specification is published."
+  },
+  "missing": {
+    "en": "No specification, reference implementation or storage and transfer measurements are published."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L3 project",
+        "grand": {
+          "en": "W5D UUID",
+          "fr": "W5D UUID",
+          "ar": "W5D UUID"
+        },
+        "lead": {
+          "en": "An identifier that carries its own digital DNA.",
+          "fr": "Un identifiant porteur de son propre ADN numérique.",
+          "ar": "معرّف يحمل حمضه النووي الرقمي."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "research-preview"
+          },
+          {
+            "label": "Evidence",
+            "value": "E1",
+            "sub": null
+          },
+          {
+            "label": "Layer",
+            "value": "L3"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "A conventional UUID is 128 bits that point at an object. The W5D UUID is described as a long-form identifier, possibly 8 to 16 MB, whose embedded structure turns the identifier from a pointer into a genome."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "research-preview"
+          },
+          {
+            "term": "Evidence",
+            "value": "E1",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Project"
+          },
+          {
+            "term": "Horizon",
+            "value": "meta"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "to be confirmed"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "A research direction described in a founder declaration. No specification is published."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "No specification, reference implementation or storage and transfer measurements are published."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "An identifier of 8 to 16 MB has storage, transfer, indexing and verification costs that have not been measured. It is unrelated to the standard UUID formats in RFC 9562 and must not be used where a 16-byte UUID is expected."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "href": null,
+            "open": true
+          },
+          {
+            "term": "State",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

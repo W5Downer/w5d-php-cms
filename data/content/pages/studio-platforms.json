@@ -1,0 +1,104 @@
+{
+  "id": "studio-platforms",
+  "path": "/studio/platforms/",
+  "kind": "page",
+  "nav_group": "studio",
+  "audience": "client",
+  "title": {
+    "en": "Platforms"
+  },
+  "nav_label": {
+    "en": "Platforms"
+  },
+  "summary": {
+    "en": "Sites generated at build time, served as files, with behaviour added only where it is needed."
+  },
+  "description": {
+    "en": "Static-first sites and web platforms."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Studio"
+        },
+        "grand": {
+          "en": "Static-first sites and web platforms."
+        },
+        "lead": {
+          "en": "Sites generated at build time, served as files, with behaviour added only where it is needed."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "How it is built"
+      },
+      "data": {
+        "body": [
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "Pages are generated at build time, so the content is in the HTML for crawlers, readers without JavaScript and slow connections."
+              },
+              {
+                "en": "Fonts and icons are self-hosted; there are no third-party requests."
+              },
+              {
+                "en": "All text lives in one file per language. Adding a language needs no code change, and right-to-left languages are supported."
+              },
+              {
+                "en": "Forms post to an endpoint you choose, and show a clear disabled state until one is configured."
+              },
+              {
+                "en": "Status and evidence labels are first-class, so drafts are never presented as products."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A static-first approach is a poor fit for sites that need per-user content on every page. The studio will say so rather than force it."
+          }
+        ]
+      },
+      "title": {
+        "en": "Declared limits"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Every claim on this site is dated, and every limit declared."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Start with an audit"
+            },
+            "href": "page:studio-audit",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Write to the studio"
+            },
+            "href": "page:contact"
+          }
+        ]
+      }
+    }
+  ]
+}

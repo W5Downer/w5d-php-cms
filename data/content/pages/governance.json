@@ -1,0 +1,168 @@
+{
+  "id": "governance",
+  "path": "/governance/",
+  "kind": "page",
+  "nav_group": "company",
+  "audience": "public",
+  "title": {
+    "en": "Governance",
+    "fr": "Gouvernance",
+    "ar": "الحوكمة"
+  },
+  "nav_label": {
+    "en": "Governance",
+    "fr": "Gouvernance",
+    "ar": "الحوكمة"
+  },
+  "summary": {
+    "en": "Who decides, and how corrections happen.",
+    "fr": "Qui décide, et comment les corrections ont lieu.",
+    "ar": "من يقرّر، وكيف تحدث التصحيحات."
+  },
+  "description": {
+    "en": "Decision rights and the correction process."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Company"
+        },
+        "grand": {
+          "en": "Who decides, and how corrections happen."
+        },
+        "lead": {
+          "en": "W5D is curated by its founder. This page states what is decided where, and how anyone can challenge it."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "Decision rights"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Doctrine and wording"
+            },
+            "value": {
+              "en": "Decided by Maher. The seven declarations carry his name and are versioned."
+            }
+          },
+          {
+            "term": {
+              "en": "Status words"
+            },
+            "value": {
+              "en": "Assigned from the fixed nine-word vocabulary on the status register and dated when verified."
+            }
+          },
+          {
+            "term": {
+              "en": "Corrections"
+            },
+            "value": {
+              "en": "Published with reasons on the corrections page."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "title": {
+        "en": "How a correction happens"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "File a defect"
+            },
+            "text": {
+              "en": "Anyone files a defect through the contact page with the reason set to \"Correction\"."
+            }
+          },
+          {
+            "title": {
+              "en": "Record it"
+            },
+            "text": {
+              "en": "The correction desk records it. The desk address is still to be confirmed."
+            },
+            "meta": {
+              "en": "Desk: to be confirmed"
+            }
+          },
+          {
+            "title": {
+              "en": "Change or decline"
+            },
+            "text": {
+              "en": "If accepted, the text changes and the change is listed with its date and reason. If declined, the reason is recorded."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "What is not yet settled"
+      },
+      "data": {
+        "lead": {
+          "en": "These are listed with every other open item on the status register."
+        },
+        "items": [
+          {
+            "term": {
+              "en": "Legal form"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Succession arrangements"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Publication director"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "A correction is an ordinary event, not a scandal."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Corrections record"
+            },
+            "href": "page:corrections",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "File a correction"
+            },
+            "href": "page:contact"
+          }
+        ]
+      }
+    }
+  ]
+}

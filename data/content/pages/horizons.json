@@ -1,0 +1,145 @@
+{
+  "id": "horizons",
+  "path": "/horizons/",
+  "kind": "page",
+  "nav_group": "dimensions",
+  "audience": "public",
+  "title": {
+    "en": "Meta, macro and beyond",
+    "fr": "Méta, macro et au-delà",
+    "ar": "ميتا وماكرو وما بعد"
+  },
+  "nav_label": {
+    "en": "Meta, macro, beyond",
+    "fr": "Méta, macro, au-delà",
+    "ar": "ميتا، ماكرو، ما بعد"
+  },
+  "summary": {
+    "en": "Three operators, not slogans.",
+    "fr": "Trois opérateurs, pas des slogans.",
+    "ar": "ثلاثة عوامل، لا شعارات."
+  },
+  "description": {
+    "en": "Meta, macro and beyond are operators in one framework."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Dimensions"
+        },
+        "grand": {
+          "en": "Meta, macro and beyond are operators, not slogans."
+        },
+        "lead": {
+          "en": "W5D creates meta, macro and beyond technology. The phrase is an ontological programme: technology is structured, scaled and generated."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "The problem"
+      },
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "Technology is commonly treated as a neutral instrument or as a self-generating force. W5D holds both views to be inadequate. Technology is structured, scaled and generated, and the three words name those three conditions."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "title": {
+        "en": "The three layers"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "Meta: the reflexive layer"
+            },
+            "text": {
+              "en": "The layer at which a system becomes aware of its own structure. Its institution is MetaX Academy, built on one constraint: every substantive claim carries what a stranger needs in order to find out that it is wrong. In operation it is the fourth dimension, Information/Structure."
+            }
+          },
+          {
+            "title": {
+              "en": "Macro: the systemic layer"
+            },
+            "text": {
+              "en": "Technology understood as a large-scale ensemble rather than an isolated artefact: a macrosystem. Its institution is MacroLifeTech (Meta-X), a research-preview umbrella. In operation it is the fifth dimension, Possibility/Modality, extended across large-scale systems."
+            }
+          },
+          {
+            "title": {
+              "en": "Beyond: the generative layer"
+            },
+            "text": {
+              "en": "The layer of creators, conditions and intelligences from which technology emerges. It is an ontological claim about priority: technology is a dependent entity and does not self-originate. It is neither a spatial nor a temporal beyond. BCIA is the first research programme from the beyond."
+            }
+          }
+        ],
+        "ordered": false
+      }
+    },
+    {
+      "type": "quote",
+      "data": {
+        "text": {
+          "en": "To create technology without meta is to create blindly, without macro to create parochially, and without beyond to create idolatrously."
+        },
+        "cite": {
+          "en": "W5D official wording"
+        },
+        "source": {
+          "en": "The official wording of meta, macro and beyond"
+        }
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "The mapping of meta to the fourth dimension and macro to the fifth is the W5D mapping. Other mappings exist in the wider literature and are not adopted here."
+          }
+        ]
+      },
+      "title": {
+        "en": "Declared limits"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Each layer has an institution, and each institution has a dated status."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "The ecosystem"
+            },
+            "href": "page:ecosystem",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Architecture L1–L8"
+            },
+            "href": "page:architecture"
+          }
+        ]
+      }
+    }
+  ]
+}

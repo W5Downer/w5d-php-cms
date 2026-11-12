@@ -1,0 +1,171 @@
+{
+  "id": "timeline",
+  "path": "/timeline/",
+  "kind": "page",
+  "nav_group": "company",
+  "audience": "public",
+  "title": {
+    "en": "Timeline",
+    "fr": "Calendrier",
+    "ar": "الجدول الزمني"
+  },
+  "nav_label": {
+    "en": "Timeline",
+    "fr": "Calendrier",
+    "ar": "الجدول الزمني"
+  },
+  "summary": {
+    "en": "Dated milestones and roadmap.",
+    "fr": "Jalons datés et feuille de route.",
+    "ar": "محطات مؤرَّخة وخريطة طريق."
+  },
+  "description": {
+    "en": "Roadmap years come from the published 2030B roadmap."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Company"
+        },
+        "grand": {
+          "en": "Dated milestones and roadmap."
+        },
+        "lead": {
+          "en": "Roadmap years come from the published 2030B roadmap. Events carry the date they were recorded."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "timeline",
+      "title": {
+        "en": "Milestones"
+      },
+      "data": {
+        "items": [
+          {
+            "date": "2025",
+            "kind": "roadmap",
+            "title": {
+              "en": "Be Smarter"
+            },
+            "chip": "operational",
+            "text": {
+              "en": "Published as operational."
+            }
+          },
+          {
+            "date": "2026",
+            "kind": "roadmap",
+            "title": {
+              "en": "Be Honester"
+            },
+            "chip": "building",
+            "text": {
+              "en": "Published as building."
+            }
+          },
+          {
+            "date": "2027",
+            "kind": "roadmap",
+            "title": {
+              "en": "Be Healthier"
+            },
+            "chip": "planned",
+            "text": {
+              "en": "Published as planned."
+            }
+          },
+          {
+            "date": "2028",
+            "kind": "roadmap",
+            "title": {
+              "en": "Be Creater"
+            },
+            "chip": "planned",
+            "text": {
+              "en": "Published as planned."
+            }
+          },
+          {
+            "date": "2029",
+            "kind": "roadmap",
+            "title": {
+              "en": "Be Kinder"
+            },
+            "chip": "planned",
+            "text": {
+              "en": "Published as planned."
+            }
+          },
+          {
+            "date": "2030",
+            "kind": "roadmap",
+            "title": {
+              "en": "Full 2030B ecosystem"
+            },
+            "text": {
+              "en": "Published as the target."
+            }
+          },
+          {
+            "date": "2026-10-03",
+            "kind": "event",
+            "title": {
+              "en": "Gloulou case"
+            },
+            "text": {
+              "en": "A blocking page loader removed from a client site."
+            }
+          },
+          {
+            "date": "2026-10-10",
+            "kind": "event",
+            "title": {
+              "en": "MetaX Academy demo build v2026.10.1"
+            },
+            "text": {
+              "en": "Observed live; first status verification of the register."
+            }
+          },
+          {
+            "date": "2026-10-10",
+            "kind": "event",
+            "title": {
+              "en": "This site specified and built in preview mode"
+            }
+          }
+        ],
+        "open": {
+          "en": "The published roadmap shows five projects across 2025 to 2029 and a full ecosystem in 2030, but 2030B documents ten projects. The schedule for projects 6 to 10 is still to be confirmed."
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Every date on this site is either a recorded event or a published roadmap year."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Status register"
+            },
+            "href": "page:status",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Corrections"
+            },
+            "href": "page:corrections"
+          }
+        ]
+      }
+    }
+  ]
+}

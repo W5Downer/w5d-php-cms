@@ -1,0 +1,466 @@
+{
+  "id": "technology",
+  "slug": "technology",
+  "order": 5,
+  "placement": "virtual-core",
+  "status": "building",
+  "audience": "public",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Technology",
+    "fr": "Technologie",
+    "ar": "التقنية"
+  },
+  "short": {
+    "en": "How systems are engineered, deployed and operated at scale.",
+    "fr": "Comment les systèmes sont conçus, déployés et exploités à l'échelle.",
+    "ar": "كيف تُهندَس الأنظمة وتُنشَر وتُشغَّل على نطاق واسع."
+  },
+  "summary": {
+    "en": "How systems are engineered, deployed and operated at scale.",
+    "fr": "Comment les systèmes sont conçus, déployés et exploités à l'échelle.",
+    "ar": "كيف تُهندَس الأنظمة وتُنشَر وتُشغَّل على نطاق واسع."
+  },
+  "description": {
+    "en": "How are systems engineered, deployed and operated at scale?",
+    "fr": "Comment les systèmes sont-ils conçus, déployés et exploités à l'échelle ?",
+    "ar": "كيف تُهندَس الأنظمة وتُنشَر وتُشغَّل على نطاق واسع؟"
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Macro work · 105–130",
+        "grand": {
+          "en": "Technology",
+          "fr": "Technologie",
+          "ar": "التقنية"
+        },
+        "lead": {
+          "en": "How are systems engineered, deployed and operated at scale?",
+          "fr": "Comment les systèmes sont-ils conçus, déployés et exploités à l'échelle ?",
+          "ar": "كيف تُهندَس الأنظمة وتُنشَر وتُشغَّل على نطاق واسع؟"
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Placement",
+            "value": "Virtual core"
+          },
+          {
+            "label": "Registered services",
+            "value": "26"
+          },
+          {
+            "label": "Service numbers",
+            "value": {
+              "en": "105–130"
+            }
+          },
+          {
+            "label": "Designed capacity",
+            "var": "counts.service_capacity"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "The domain question",
+      "data": {
+        "body": [
+          {
+            "en": "How are systems engineered, deployed and operated at scale?",
+            "fr": "Comment les systèmes sont-ils conçus, déployés et exploités à l'échelle ?",
+            "ar": "كيف تُهندَس الأنظمة وتُنشَر وتُشغَّل على نطاق واسع؟"
+          },
+          {
+            "en": "Technology is the delivery layer, not the whole ontology. Its services are held to the same rule as the rest: every claim is dated, and a draft is never presented as a product."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Macro record",
+      "data": {
+        "items": [
+          {
+            "term": "Placement",
+            "value": "Virtual core"
+          },
+          {
+            "term": "Registered services",
+            "value": "26"
+          },
+          {
+            "term": "Expert fields",
+            "value": {
+              "en": "software engineering, data engineering, infrastructure, cybersecurity, industrial systems"
+            }
+          },
+          {
+            "term": "Characteristic output unit",
+            "value": {
+              "en": "commits, deployed services, verified uptime windows"
+            }
+          },
+          {
+            "term": "Feeds",
+            "value": {
+              "en": "every other macro: the delivery layer for data, publishing, measurement and public services"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "How the services relate",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "Technology is the delivery layer, not the whole ontology. Its services are held to the same rule as the rest: every claim is dated, and a draft is never presented as a product."
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Each service below is a registered entry with its own page, placement and declared boundary.",
+              "The list is generated from the service records, so adding or retiring a service updates this page on the next build.",
+              "No service page claims more than its own record states."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Registered services",
+      "data": {
+        "items": [
+          {
+            "title": "Software Engineering Teams",
+            "summary": "Full-stack, APIs, QA, DevOps.",
+            "href": "service:software-eng",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "105"
+              }
+            ]
+          },
+          {
+            "title": "Cybersecurity Operations",
+            "summary": "SOC, pentesting, incident response.",
+            "href": "service:cybersecurity",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "106"
+              }
+            ]
+          },
+          {
+            "title": "Cloud & Infrastructure",
+            "summary": "Migration, IaC, cost optimisation.",
+            "href": "service:cloud-infra",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "107"
+              }
+            ]
+          },
+          {
+            "title": "Data Engineering & Analytics",
+            "summary": "Pipelines, warehouses, BI.",
+            "href": "service:data-engineering",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "108"
+              }
+            ]
+          },
+          {
+            "title": "AI & Machine Learning",
+            "summary": "Model development, MLOps, evaluation.",
+            "href": "service:ai-ml",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "109"
+              }
+            ]
+          },
+          {
+            "title": "Network Engineering",
+            "summary": "Design, rollout, monitoring.",
+            "href": "service:networking",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "110"
+              }
+            ]
+          },
+          {
+            "title": "Digital Identity & Authentication",
+            "summary": "SSO, eKYC, credential wallets.",
+            "href": "service:digital-identity",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "111"
+              }
+            ]
+          },
+          {
+            "title": "Platform Engineering",
+            "summary": "Internal developer platforms, SRE.",
+            "href": "service:platform-eng",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "112"
+              }
+            ]
+          },
+          {
+            "title": "Geospatial & Remote Sensing",
+            "summary": "GIS, satellite analytics, mapping.",
+            "href": "service:geospatial",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "113"
+              }
+            ]
+          },
+          {
+            "title": "Quantum & Advanced Computing",
+            "summary": "Simulation, algorithm design, education.",
+            "href": "service:quantum",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "114"
+              }
+            ]
+          },
+          {
+            "title": "Blockchain & Distributed Systems",
+            "summary": "Ledgers, smart contracts, audit.",
+            "href": "service:blockchain",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "115"
+              }
+            ]
+          },
+          {
+            "title": "Robotics Software",
+            "summary": "Perception, control, simulation.",
+            "href": "service:robotics",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "116"
+              }
+            ]
+          },
+          {
+            "title": "IT Governance & Compliance",
+            "summary": "ISO 27001, audits, policies.",
+            "href": "service:it-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "117"
+              }
+            ]
+          },
+          {
+            "title": "Construction Technology Deployment",
+            "summary": "Site sensors, digital twins, automation.",
+            "href": "service:construction-tech-deploy",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "118"
+              }
+            ]
+          },
+          {
+            "title": "Renewable Energy Systems",
+            "summary": "Solar, wind, storage installation.",
+            "href": "service:renewable-systems",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "119"
+              }
+            ]
+          },
+          {
+            "title": "Water Treatment Technology",
+            "summary": "Desalination, filtration, reuse.",
+            "href": "service:water-treatment",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "120"
+              }
+            ]
+          },
+          {
+            "title": "Biotech & Lab Automation",
+            "summary": "Bioreactors, LIMS, quality systems.",
+            "href": "service:biotech",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "121"
+              }
+            ]
+          },
+          {
+            "title": "Advanced Manufacturing",
+            "summary": "CNC, additive, lean production.",
+            "href": "service:manufacturing",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "122"
+              }
+            ]
+          },
+          {
+            "title": "Agricultural Technology",
+            "summary": "Precision irrigation, drones, sensors.",
+            "href": "service:agri-tech",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "123"
+              }
+            ]
+          },
+          {
+            "title": "Energy Efficiency Audits",
+            "summary": "Industrial audits, retrofits, monitoring.",
+            "href": "service:energy-audits",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "124"
+              }
+            ]
+          },
+          {
+            "title": "Waste-to-Resource Technology",
+            "summary": "Sorting, composting, anaerobic digestion.",
+            "href": "service:waste-to-resource",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "125"
+              }
+            ]
+          },
+          {
+            "title": "Medical Device & Diagnostics Tech",
+            "summary": "Installation, maintenance, training.",
+            "href": "service:medical-devices",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "126"
+              }
+            ]
+          },
+          {
+            "title": "Mining & Materials Processing Tech",
+            "summary": "Extraction, safety, environmental controls.",
+            "href": "service:mining-tech",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "127"
+              }
+            ]
+          },
+          {
+            "title": "Transportation Technology",
+            "summary": "EV charging, fleet telematics, ticketing.",
+            "href": "service:transport-tech",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "128"
+              }
+            ]
+          },
+          {
+            "title": "Cold Chain & Logistics Tech",
+            "summary": "Refrigeration, tracking, last-mile.",
+            "href": "service:cold-chain",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "129"
+              }
+            ]
+          },
+          {
+            "title": "Disaster Response Technology",
+            "summary": "Early warning, drones, portable comms.",
+            "href": "service:disaster-tech",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "130"
+              }
+            ]
+          }
+        ],
+        "columns": 2
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Nothing is deployed to a client environment without a documented rollback path and a named owner."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "The whole register is one artefact. Read it once, and every macro page is a view of the same data.",
+        "actions": [
+          {
+            "label": "All {{ counts.services }} services",
+            "href": "page:services",
+            "primary": true
+          },
+          {
+            "label": "The status register",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

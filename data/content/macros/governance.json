@@ -1,0 +1,466 @@
+{
+  "id": "governance",
+  "slug": "governance",
+  "order": 4,
+  "placement": "between",
+  "status": "building",
+  "audience": "public",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Governance",
+    "fr": "Gouvernance",
+    "ar": "الحوكمة"
+  },
+  "short": {
+    "en": "How rules are made, legitimate decisions taken, public money allocated and accountability maintained.",
+    "fr": "Comment les règles sont faites, les décisions légitimes prises, l'argent public alloué et la responsabilité maintenue.",
+    "ar": "كيف تُصنع القواعد وتُتخذ القرارات المشروعة وتُخصَّص الأموال العامة وتُصان المساءلة."
+  },
+  "summary": {
+    "en": "How rules are made, legitimate decisions taken, public money allocated and accountability maintained.",
+    "fr": "Comment les règles sont faites, les décisions légitimes prises, l'argent public alloué et la responsabilité maintenue.",
+    "ar": "كيف تُصنع القواعد وتُتخذ القرارات المشروعة وتُخصَّص الأموال العامة وتُصان المساءلة."
+  },
+  "description": {
+    "en": "How are rules made, legitimate decisions taken, public money allocated and accountability maintained?",
+    "fr": "Comment les règles sont-elles faites, les décisions légitimes prises, l'argent public alloué et la responsabilité maintenue ?",
+    "ar": "كيف تُصنع القواعد وتُتخذ القرارات المشروعة وتُخصَّص الأموال العامة وتُصان المساءلة؟"
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Macro work · 079–104",
+        "grand": {
+          "en": "Governance",
+          "fr": "Gouvernance",
+          "ar": "الحوكمة"
+        },
+        "lead": {
+          "en": "How are rules made, legitimate decisions taken, public money allocated and accountability maintained?",
+          "fr": "Comment les règles sont-elles faites, les décisions légitimes prises, l'argent public alloué et la responsabilité maintenue ?",
+          "ar": "كيف تُصنع القواعد وتُتخذ القرارات المشروعة وتُخصَّص الأموال العامة وتُصان المساءلة؟"
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Placement",
+            "value": "Between 1.0"
+          },
+          {
+            "label": "Registered services",
+            "value": "26"
+          },
+          {
+            "label": "Service numbers",
+            "value": {
+              "en": "079–104"
+            }
+          },
+          {
+            "label": "Designed capacity",
+            "var": "counts.service_capacity"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "The domain question",
+      "data": {
+        "body": [
+          {
+            "en": "How are rules made, legitimate decisions taken, public money allocated and accountability maintained?",
+            "fr": "Comment les règles sont-elles faites, les décisions légitimes prises, l'argent public alloué et la responsabilité maintenue ?",
+            "ar": "كيف تُصنع القواعد وتُتخذ القرارات المشروعة وتُخصَّص الأموال العامة وتُصان المساءلة؟"
+          },
+          {
+            "en": "Governance services advise, draft and evaluate. They never exercise a public power that belongs to an elected or statutory body."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Macro record",
+      "data": {
+        "items": [
+          {
+            "term": "Placement",
+            "value": "Between 1.0"
+          },
+          {
+            "term": "Registered services",
+            "value": "26"
+          },
+          {
+            "term": "Expert fields",
+            "value": {
+              "en": "law, public finance, regulatory economics, statistics, public administration, data protection"
+            }
+          },
+          {
+            "term": "Characteristic output unit",
+            "value": {
+              "en": "regulatory briefs, legislative drafts, published open-data sets"
+            }
+          },
+          {
+            "term": "Feeds",
+            "value": {
+              "en": "Technology (digital services, data protection), Sciences (statistics, evaluation), Built Environment (procurement, zoning)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "How the services relate",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "Governance services advise, draft and evaluate. They never exercise a public power that belongs to an elected or statutory body."
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Each service below is a registered entry with its own page, placement and declared boundary.",
+              "The list is generated from the service records, so adding or retiring a service updates this page on the next build.",
+              "No service page claims more than its own record states."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Registered services",
+      "data": {
+        "items": [
+          {
+            "title": "Regulatory Impact Assessment",
+            "summary": "Cost–benefit, stakeholder consultation.",
+            "href": "service:regulatory-impact",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "079"
+              }
+            ]
+          },
+          {
+            "title": "Legal Drafting & Legislative Review",
+            "summary": "Statutes, decrees, plain-language versions.",
+            "href": "service:legal-drafting",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "080"
+              }
+            ]
+          },
+          {
+            "title": "Anti-Corruption & Integrity",
+            "summary": "Risk mapping, whistleblowing channels.",
+            "href": "service:anti-corruption",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "081"
+              }
+            ]
+          },
+          {
+            "title": "Public Procurement Reform",
+            "summary": "Transparency, e-tendering, audit.",
+            "href": "service:procurement-reform",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "082"
+              }
+            ]
+          },
+          {
+            "title": "Digital Governance & e-Services",
+            "summary": "Portals, identity, service design.",
+            "href": "service:digital-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "083"
+              }
+            ]
+          },
+          {
+            "title": "Data Protection & Privacy",
+            "summary": "GDPR-style compliance, DPIAs.",
+            "href": "service:data-protection",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "084"
+              }
+            ]
+          },
+          {
+            "title": "Municipal Capacity Building",
+            "summary": "Budgeting, HR, service delivery.",
+            "href": "service:municipal-capacity",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "085"
+              }
+            ]
+          },
+          {
+            "title": "Rule of Law & Access to Justice",
+            "summary": "Legal aid, court modernisation.",
+            "href": "service:rule-of-law",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "086"
+              }
+            ]
+          },
+          {
+            "title": "Tax Administration Modernisation",
+            "summary": "Filing, risk scoring, taxpayer services.",
+            "href": "service:tax-admin",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "087"
+              }
+            ]
+          },
+          {
+            "title": "Social Protection Delivery",
+            "summary": "Targeting, payments, grievance redress.",
+            "href": "service:social-protection",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "088"
+              }
+            ]
+          },
+          {
+            "title": "Border & Migration Governance",
+            "summary": "Documentation, screening, rights.",
+            "href": "service:border-migration",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "089"
+              }
+            ]
+          },
+          {
+            "title": "Climate Governance & NDCs",
+            "summary": "MRV, policy alignment, reporting.",
+            "href": "service:climate-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "090"
+              }
+            ]
+          },
+          {
+            "title": "Public Financial Management",
+            "summary": "MTEF, cash management, internal audit.",
+            "href": "service:pfm",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "091"
+              }
+            ]
+          },
+          {
+            "title": "Elections & Civic Participation",
+            "summary": "Roll management, observation, civic tech.",
+            "href": "service:elections",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "092"
+              }
+            ]
+          },
+          {
+            "title": "Platform & AI Governance",
+            "summary": "Transparency, audits, redress mechanisms.",
+            "href": "service:platform-ai-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "093"
+              }
+            ]
+          },
+          {
+            "title": "Labour Market Governance",
+            "summary": "Inspection, tripartite dialogue, ALMPs.",
+            "href": "service:labour-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "094"
+              }
+            ]
+          },
+          {
+            "title": "Land Governance & Cadastre",
+            "summary": "Registration, dispute resolution, GIS.",
+            "href": "service:land-cadastre",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "095"
+              }
+            ]
+          },
+          {
+            "title": "Security Sector Governance",
+            "summary": "Oversight, complaints, human rights.",
+            "href": "service:security-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "096"
+              }
+            ]
+          },
+          {
+            "title": "Health Governance",
+            "summary": "Insurance design, accreditation, quality.",
+            "href": "service:health-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "097"
+              }
+            ]
+          },
+          {
+            "title": "Education Governance",
+            "summary": "School mapping, teacher deployment, QA.",
+            "href": "service:education-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "098"
+              }
+            ]
+          },
+          {
+            "title": "Water & Energy Regulation",
+            "summary": "Tariffs, licensing, consumer protection.",
+            "href": "service:utility-regulation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "099"
+              }
+            ]
+          },
+          {
+            "title": "Statistics & Official Data",
+            "summary": "Survey design, dissemination, quality.",
+            "href": "service:official-stats",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "100"
+              }
+            ]
+          },
+          {
+            "title": "Crisis & Emergency Governance",
+            "summary": "Plans, drills, inter-agency coordination.",
+            "href": "service:crisis-governance",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "101"
+              }
+            ]
+          },
+          {
+            "title": "State-Owned Enterprise Oversight",
+            "summary": "Performance contracts, boards.",
+            "href": "service:soe-oversight",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "102"
+              }
+            ]
+          },
+          {
+            "title": "Decentralisation & Local Finance",
+            "summary": "Own-source revenue, transfers, capacity.",
+            "href": "service:decentralisation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "103"
+              }
+            ]
+          },
+          {
+            "title": "Treaty & International Cooperation",
+            "summary": "Negotiation support, compliance reporting.",
+            "href": "service:treaty-cooperation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "104"
+              }
+            ]
+          }
+        ],
+        "columns": 2
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "This service advises and drafts. It does not exercise a public power that belongs to an elected or statutory body."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "The whole register is one artefact. Read it once, and every macro page is a view of the same data.",
+        "actions": [
+          {
+            "label": "All {{ counts.services }} services",
+            "href": "page:services",
+            "primary": true
+          },
+          {
+            "label": "The status register",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+/* ==========================================================================
+   W5D — rtl.css
+   Directional corrections for Arabic. Loaded only when the document direction is
+   rtl, so an LTR page loads one stylesheet fewer.
+
+   Font: Arabic uses the Cairo/system stack. Nothing is downloaded from a CDN —
+   if a Cairo file is added to assets/_base/fonts it is picked up automatically.
+   ========================================================================== */
+
+@font-face {
+  font-family: "W5D Arabic";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: local("Cairo"), local("Noto Naskh Arabic"), local("Noto Sans Arabic"),
+       local("Segoe UI"), local("Geeza Pro"), local("Tahoma");
+}
+
+html[dir="rtl"] {
+  --sans: "W5D Arabic", "Inter", ui-sans-serif, system-ui, "Segoe UI", Tahoma, sans-serif;
+}
+
+html[dir="rtl"] body {
+  letter-spacing: 0;
+  line-height: 1.85;
+}
+
+/* Numerals stay Western and tabular so figures line up across the two scripts. */
+html[dir="rtl"] .kpi__value,
+html[dir="rtl"] .band__value,
+html[dir="rtl"] .bar__value,
+html[dir="rtl"] .card__num,
+html[dir="rtl"] .catalog__num,
+html[dir="rtl"] .step__num,
+html[dir="rtl"] .badge,
+html[dir="rtl"] time {
+  font-family: "Inter", var(--mono);
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Chevrons and arrows flip. */
+html[dir="rtl"] .carousel__btn[data-carousel-prev] { transform: scaleX(-1); }
+html[dir="rtl"] .carousel__btn[data-carousel-next] { transform: scaleX(-1); }
+
+/* Pseudo-element markers that assume a left edge. */
+html[dir="rtl"] .notice__list li::before { content: "—"; }
+html[dir="rtl"] .openchip { font-style: normal; }
+
+/* Latin-script proper nouns inside Arabic prose read better isolated. */
+html[dir="rtl"] code,
+html[dir="rtl"] .brand__name,
+html[dir="rtl"] .langswitch__code {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Headings need a touch more leading in Arabic than the Latin measure allows. */
+html[dir="rtl"] .hero__title,
+html[dir="rtl"] .block__title,
+html[dir="rtl"] .card__title {
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+/* The drop cap does not apply to Arabic script. */
+html[dir="rtl"] .prose__main > p:first-child::first-letter {
+  float: none;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+/* Keep the licence block readable in RTL without mixing punctuation direction. */
+html[dir="rtl"] .sitefoot__licence { line-height: 1.8; }

@@ -1,0 +1,117 @@
+{
+  "id": "bcia",
+  "slug": "bcia",
+  "order": 6,
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "The Beyond: Why BCIA Comes First"
+  },
+  "grand_title": {
+    "en": "The first research programme from the beyond."
+  },
+  "summary": {
+    "en": "An argument that technology is a dependent entity, and that a research programme on living substrates belongs at the generative layer."
+  },
+  "description": {
+    "en": "An argument that technology is a dependent entity, and that a research programme on living substrates belongs at the generative layer."
+  },
+  "date": "2026-10-10",
+  "version": "1.0",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Declaration 6 of 7"
+        },
+        "grand": {
+          "en": "The first research programme from the beyond."
+        },
+        "lead": {
+          "en": "An argument that technology is a dependent entity, and that a research programme on living substrates belongs at the generative layer."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "In brief"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "Technology does not self-originate."
+              },
+              {
+                "en": "BCIA is a programme, not an achievement: no findings are reported."
+              },
+              {
+                "en": "Work on living substrates requires a consent policy that is not yet published."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "The text"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "p",
+            "text": {
+              "en": "The founder's full text is written in the first person and has not been reproduced here. This record states what the declaration claims, where it is used on this site, and what would refute it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A declaration is a working framework, not a final definition. Each claim above is stated so that a reader can check it and file a correction."
+          }
+        ]
+      },
+      "title": {
+        "en": "Declared limits"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Read the other declarations, or check the register."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "All declarations"
+            },
+            "href": "page:declarations",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Status register"
+            },
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

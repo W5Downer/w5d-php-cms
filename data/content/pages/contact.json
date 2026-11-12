@@ -1,0 +1,170 @@
+{
+  "id": "contact",
+  "path": "/contact/",
+  "kind": "page",
+  "nav_group": "company",
+  "audience": "public",
+  "title": {
+    "en": "Contact",
+    "fr": "Contact",
+    "ar": "اتصال"
+  },
+  "nav_label": {
+    "en": "Contact",
+    "fr": "Contact",
+    "ar": "اتصال"
+  },
+  "summary": {
+    "en": "Write to the right desk.",
+    "fr": "Écrire au bon bureau.",
+    "ar": "اكتب إلى المكتب المناسب."
+  },
+  "description": {
+    "en": "One form, six reasons, and a direct address for each desk."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Company"
+        },
+        "grand": {
+          "en": "Write to the right desk."
+        },
+        "lead": {
+          "en": "One form, six reasons, and a direct address for each desk. A desk whose address has not been supplied is shown as open, not invented."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "form",
+      "title": {
+        "en": "Send a message"
+      },
+      "data": {
+        "reasons": [
+          "build",
+          "press",
+          "careers",
+          "correction",
+          "security",
+          "other"
+        ],
+        "address": "",
+        "endpoint": ""
+      }
+    },
+    {
+      "type": "contact-desks",
+      "title": {
+        "en": "Desks and addresses"
+      },
+      "data": {
+        "desks": [
+          {
+            "label": {
+              "en": "General"
+            },
+            "address": ""
+          },
+          {
+            "label": {
+              "en": "Studio"
+            },
+            "address": ""
+          },
+          {
+            "label": {
+              "en": "Press"
+            },
+            "address": ""
+          },
+          {
+            "label": {
+              "en": "Careers"
+            },
+            "address": ""
+          },
+          {
+            "label": {
+              "en": "Corrections"
+            },
+            "address": ""
+          },
+          {
+            "label": {
+              "en": "Security"
+            },
+            "address": ""
+          },
+          {
+            "label": {
+              "en": "Privacy"
+            },
+            "address": ""
+          }
+        ],
+        "items": [
+          {
+            "label": {
+              "en": "Telephone"
+            },
+            "open": true
+          },
+          {
+            "label": {
+              "en": "Office hours"
+            },
+            "open": true
+          },
+          {
+            "label": {
+              "en": "Address"
+            },
+            "value": "{{ site.address }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "info",
+        "body": [
+          {
+            "en": "Report vulnerabilities to the security desk. The address is still to be confirmed. See the security policy for how this site is built."
+          }
+        ]
+      },
+      "title": {
+        "en": "Security reports"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "A correction is always welcome, and it is recorded whether accepted or declined."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Corrections record"
+            },
+            "href": "page:corrections",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Security policy"
+            },
+            "href": "page:security"
+          }
+        ]
+      }
+    }
+  ]
+}

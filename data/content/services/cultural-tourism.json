@@ -1,0 +1,199 @@
+{
+  "id": "cultural-tourism",
+  "slug": "cultural-tourism",
+  "number": 3,
+  "macro": "cultures",
+  "placement": "real",
+  "status": "building",
+  "audience": "client",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Cultural Tourism Design"
+  },
+  "short": {
+    "en": "Interpretive trails, multilingual guides, heritage routes."
+  },
+  "summary": {
+    "en": "Interpretive trails, multilingual guides, heritage routes."
+  },
+  "description": {
+    "en": "Design and delivery of cultural tourism products — interpretive signage, multilingual audio guides, curated heritage routes, and local partnership models that respect community consent."
+  },
+  "order": 3,
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "003 · Cultures / Humanities",
+        "grand": "Cultural Tourism Design",
+        "lead": "Design and delivery of cultural tourism products — interpretive signage, multilingual audio guides, curated heritage routes, and local partnership models that respect community consent.",
+        "split": false,
+        "meta": [
+          {
+            "label": "Service number",
+            "value": "003"
+          },
+          {
+            "label": "Macro work",
+            "value": {
+              "en": "Cultures / Humanities",
+              "fr": "Cultures / Humanités",
+              "ar": "الثقافات / الإنسانيات"
+            }
+          },
+          {
+            "label": "Placement",
+            "value": "Real 1.0"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What the service does",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": "Design and delivery of cultural tourism products — interpretive signage, multilingual audio guides, curated heritage routes, and local partnership models that respect community consent."
+          },
+          {
+            "type": "p",
+            "text": "Interpretive trails, multilingual guides, heritage routes."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Service record",
+      "data": {
+        "items": [
+          {
+            "term": "Registered number",
+            "value": "003"
+          },
+          {
+            "term": "Macro work",
+            "value": {
+              "en": "Cultures / Humanities",
+              "fr": "Cultures / Humanités",
+              "ar": "الثقافات / الإنسانيات"
+            }
+          },
+          {
+            "term": "Placement",
+            "value": "Real 1.0"
+          },
+          {
+            "term": "Designed capacity",
+            "var": "counts.service_capacity"
+          },
+          {
+            "term": "Output unit",
+            "value": {
+              "en": "accepted capture packages, annotated records, translated words"
+            }
+          },
+          {
+            "term": "Publication status",
+            "chip": "building"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "Outputs and boundaries",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "accepted capture packages, annotated records, translated words"
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Deliverables are recorded against the weekly report as evidence, not as a claim.",
+              "Every figure published about this service is dated and carries its source."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Custodial permission and community consent precede publication. Dyon never substitutes for the statutory heritage authority."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cards",
+      "title": "Other services in Cultures / Humanities",
+      "data": {
+        "items": [
+          {
+            "title": "Heritage Digitisation",
+            "summary": "3D scanning, archival metadata, virtual museums.",
+            "href": "service:heritage-digitisation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "001"
+              }
+            ]
+          },
+          {
+            "title": "Language Preservation",
+            "summary": "Corpus building, lexicography, endangered-language tools.",
+            "href": "service:language-preservation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "002"
+              }
+            ]
+          },
+          {
+            "title": "Museum Experience Engineering",
+            "summary": "Interactive exhibits, accessibility, narrative design.",
+            "href": "service:museum-experience",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "004"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read the macro work, or the whole register of {{ counts.services }} services.",
+        "actions": [
+          {
+            "label": "The macro work",
+            "href": "macro:cultures"
+          },
+          {
+            "label": "All services",
+            "href": "page:services",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

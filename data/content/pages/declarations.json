@@ -1,0 +1,76 @@
+{
+  "id": "declarations",
+  "path": "/declarations/",
+  "kind": "index",
+  "nav_group": "ecosystem",
+  "audience": "public",
+  "title": {
+    "en": "Declarations",
+    "fr": "Déclarations",
+    "ar": "الإعلانات"
+  },
+  "nav_label": {
+    "en": "Declarations",
+    "fr": "الإعلانات",
+    "ar": "الإعلانات"
+  },
+  "summary": {
+    "en": "The founder's seven texts.",
+    "fr": "Les sept textes du fondateur.",
+    "ar": "نصوص المؤسس السبعة."
+  },
+  "description": {
+    "en": "Each declaration carries declared limits and a corrections link."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Trust · Doctrine"
+        },
+        "grand": {
+          "en": "The founder's seven texts."
+        },
+        "lead": {
+          "en": "Each declaration is written in the first person, carries its declared limits, and can be corrected by anyone who files a defect."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "cards",
+      "title": {
+        "en": "The seven declarations"
+      },
+      "data": {
+        "source": "declarations",
+        "columns": 2
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "A declaration is a working framework, not a final definition."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "The five dimensions"
+            },
+            "href": "page:dimensions",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Corrections"
+            },
+            "href": "page:corrections"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "cybersecurity",
+  "slug": "cybersecurity",
+  "number": 106,
+  "macro": "technology",
+  "placement": "virtual-core",
+  "status": "building",
+  "audience": "client",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Cybersecurity Operations"
+  },
+  "short": {
+    "en": "SOC, pentesting, incident response."
+  },
+  "summary": {
+    "en": "SOC, pentesting, incident response."
+  },
+  "description": {
+    "en": "Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001."
+  },
+  "order": 106,
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "106 · Technology",
+        "grand": "Cybersecurity Operations",
+        "lead": "Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001.",
+        "split": false,
+        "meta": [
+          {
+            "label": "Service number",
+            "value": "106"
+          },
+          {
+            "label": "Macro work",
+            "value": {
+              "en": "Technology",
+              "fr": "Technologie",
+              "ar": "التقنية"
+            }
+          },
+          {
+            "label": "Placement",
+            "value": "Virtual core"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What the service does",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": "Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001."
+          },
+          {
+            "type": "p",
+            "text": "SOC, pentesting, incident response."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Service record",
+      "data": {
+        "items": [
+          {
+            "term": "Registered number",
+            "value": "106"
+          },
+          {
+            "term": "Macro work",
+            "value": {
+              "en": "Technology",
+              "fr": "Technologie",
+              "ar": "التقنية"
+            }
+          },
+          {
+            "term": "Placement",
+            "value": "Virtual core"
+          },
+          {
+            "term": "Designed capacity",
+            "var": "counts.service_capacity"
+          },
+          {
+            "term": "Output unit",
+            "value": {
+              "en": "commits, deployed services, verified uptime windows"
+            }
+          },
+          {
+            "term": "Publication status",
+            "chip": "building"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "Outputs and boundaries",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "commits, deployed services, verified uptime windows"
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Deliverables are recorded against the weekly report as evidence, not as a claim.",
+              "Every figure published about this service is dated and carries its source."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Nothing is deployed to a client environment without a documented rollback path and a named owner."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cards",
+      "title": "Other services in Technology",
+      "data": {
+        "items": [
+          {
+            "title": "Software Engineering Teams",
+            "summary": "Full-stack, APIs, QA, DevOps.",
+            "href": "service:software-eng",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "105"
+              }
+            ]
+          },
+          {
+            "title": "Cloud & Infrastructure",
+            "summary": "Migration, IaC, cost optimisation.",
+            "href": "service:cloud-infra",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "107"
+              }
+            ]
+          },
+          {
+            "title": "Data Engineering & Analytics",
+            "summary": "Pipelines, warehouses, BI.",
+            "href": "service:data-engineering",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "108"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read the macro work, or the whole register of {{ counts.services }} services.",
+        "actions": [
+          {
+            "label": "The macro work",
+            "href": "macro:technology"
+          },
+          {
+            "label": "All services",
+            "href": "page:services",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

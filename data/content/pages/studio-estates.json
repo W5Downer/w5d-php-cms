@@ -1,0 +1,90 @@
+{
+  "id": "studio-estates",
+  "path": "/studio/estates/",
+  "kind": "page",
+  "nav_group": "studio",
+  "audience": "client",
+  "title": {
+    "en": "Estates"
+  },
+  "nav_label": {
+    "en": "Estates"
+  },
+  "summary": {
+    "en": "The studio's service for developers: fast, accessible estate sites. It is related to the MetaX Estates project but is not the same thing."
+  },
+  "description": {
+    "en": "Websites for real-estate developers."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Studio"
+        },
+        "grand": {
+          "en": "Websites for real-estate developers."
+        },
+        "lead": {
+          "en": "The studio's service for developers: fast, accessible estate sites. It is related to the MetaX Estates project but is not the same thing."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "What is offered"
+      },
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "Websites for developers and their programmes: listings, plans, enquiry forms, and location information, built static-first. Details and examples are not published yet."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "No client names, listings or results are shown, because none were supplied for publication."
+          }
+        ]
+      },
+      "title": {
+        "en": "Declared limits"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Every claim on this site is dated, and every limit declared."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Start with an audit"
+            },
+            "href": "page:studio-audit",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Write to the studio"
+            },
+            "href": "page:contact"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": "architecture",
+  "path": "/architecture/",
+  "kind": "page",
+  "nav_group": "dimensions",
+  "audience": "public",
+  "title": {
+    "en": "Architecture L1–L8",
+    "fr": "Architecture L1–L8",
+    "ar": "المعمار L1–L8"
+  },
+  "nav_label": {
+    "en": "Architecture L1–L8",
+    "fr": "Architecture L1–L8",
+    "ar": "المعمار L1–L8"
+  },
+  "summary": {
+    "en": "A containment hierarchy, L1 to L8.",
+    "fr": "Une hiérarchie de contenance, de L1 à L8.",
+    "ar": "هرمية احتواء من L1 إلى L8."
+  },
+  "description": {
+    "en": "Only the levels that a supplied text defines are described here."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Dimensions"
+        },
+        "grand": {
+          "en": "A containment hierarchy, L1 to L8."
+        },
+        "lead": {
+          "en": "The architecture runs from L1 to L8. Only the levels that a supplied text defines are described here; the rest are marked as open."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "table",
+      "title": {
+        "en": "What is defined"
+      },
+      "data": {
+        "head": [
+          {
+            "en": "Level"
+          },
+          {
+            "en": "Name"
+          },
+          {
+            "en": "Meaning"
+          }
+        ],
+        "rows": [
+          [
+            "L1",
+            {
+              "en": "Level 1"
+            },
+            {
+              "en": "to be confirmed"
+            }
+          ],
+          [
+            "L2",
+            {
+              "en": "Programme (register use)"
+            },
+            {
+              "en": "In the W5D register, an L2 item is a programme under W5D, such as 2030B or MetaX."
+            }
+          ],
+          [
+            "L3",
+            {
+              "en": "Project (register use)"
+            },
+            {
+              "en": "In the W5D register, an L3 item is a project under a programme, such as Be Smarter under 2030B."
+            }
+          ],
+          [
+            "L4",
+            {
+              "en": "Nation"
+            },
+            {
+              "en": "The supranational layer: macro-regional identity, three of which together complete the one human identity."
+            }
+          ],
+          [
+            "L5",
+            {
+              "en": "Continent"
+            },
+            {
+              "en": "The continental layer: bioregional and macro-systemic coordination, already factual before it is legal."
+            }
+          ],
+          [
+            "L6",
+            {
+              "en": "Country"
+            },
+            {
+              "en": "The bordered artefact: a historically recent term, created by a political ideology to make borders."
+            }
+          ],
+          [
+            "L7",
+            {
+              "en": "Level 7"
+            },
+            {
+              "en": "to be confirmed"
+            }
+          ],
+          [
+            "L8",
+            {
+              "en": "Level 8"
+            },
+            {
+              "en": "to be confirmed"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "The programme register uses L2 for a programme and L3 for a project. The nation and country declaration uses L4 for nation, L5 for continent and L6 for country. No supplied text says whether these are one ladder. Definitions for L1, L7 and L8, and the reconciliation, are to be confirmed."
+          }
+        ]
+      },
+      "title": {
+        "en": "Two uses of \"L\""
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "Worked example"
+      },
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "The identity infrastructure shows how one concept maps across the three operators:"
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "Meta — KernID is the meta-layer of identity: identity aware of its own structure. The W5D UUID is the meta-layer of data: data aware of its own genome."
+              },
+              {
+                "en": "Macro — Aevum and Meridian operate at civilisational economic scale."
+              },
+              {
+                "en": "Beyond — all four presuppose the generative layer of creators, conditions and intelligences from which technology emerges."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": {
+        "en": "Read the programmes"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "KernID"
+            },
+            "summary": {
+              "en": "The identity kernel."
+            },
+            "href": "project:kernid",
+            "chip": "concept"
+          },
+          {
+            "title": {
+              "en": "Aevum and Meridian"
+            },
+            "summary": {
+              "en": "Systems of engagement and record."
+            },
+            "href": "project:aevum",
+            "chip": "specification"
+          },
+          {
+            "title": {
+              "en": "W5D UUID"
+            },
+            "summary": {
+              "en": "An identifier that carries its own digital DNA."
+            },
+            "href": "project:w5d-uuid",
+            "chip": "research-preview"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "L4 and L6 are different orders of reality."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Nation versus country"
+            },
+            "href": "page:nation-country",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "The five dimensions"
+            },
+            "href": "page:dimensions"
+          }
+        ]
+      }
+    }
+  ]
+}
