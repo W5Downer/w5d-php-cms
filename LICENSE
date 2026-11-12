@@ -1,16 +1,176 @@
-W5D PHP CMS
-===========
+W5D PHP CMS — License
 
-Copyright © 2026 Maher Kaddoussi / W5D
-
-Licensed at 610.5 TND per hour of work.
-
-Promotional offer valid until 31 December 2026 (strictly before 2027).
-After that date, the standard rate applies.
-
-The footer license block must appear in every rendered page:
-  "W5D Admin Dashboard licensed at 610.5 TND/hour of work.
-   Promotional offer valid before 2027."
+Copyright © 2026 Maher Kaddoussi / W5D. All rights reserved.
 
 Contact: owner@w5d.tech
 Website: https://w5d.tech
+Repository: https://github.com/W5Downer/w5d-php-cms
+
+────────────────────────────────────────────────────────────────────────────
+1. LICENSE RATE
+────────────────────────────────────────────────────────────────────────────
+
+W5D PHP CMS is licensed at 610.5 TND per hour of work.
+
+Promotional offer valid before 2027 — strictly before 31 December 2026.
+After that date, the standard rate applies.
+
+The rate applies to:
+  - Initial implementation and onboarding of a new deployment.
+  - Custom templates, blocks, or modules built for a specific deployment.
+  - Migrations, refactors, and feature additions requested by the licensee.
+  - Integration work: payment gateways, SMS gateways, OAuth providers,
+    external APIs.
+  - Training, documentation, and support hours beyond the documented
+    baseline.
+
+A running total of hours × 610.5 TND must be visible on the owner
+dashboard and in the license footer of every rendered page:
+
+  "W5D Admin Dashboard licensed at 610.5 TND/hour of work.
+   Promotional offer valid before 2027."
+
+────────────────────────────────────────────────────────────────────────────
+2. OPERATING DOCTRINE — 5% SAMPLING RULE
+────────────────────────────────────────────────────────────────────────────
+
+The software enforces a 5% sampling rule on weekly reports:
+
+  - Every week, 5% of submitted reports are randomly selected for
+    re-review by the service leader or a delegate.
+  - Selection is deterministic per (country_id, week_id) so the sample
+    is reproducible.
+  - Each sampled report is re-scored against the same rubric the
+    manager used, and the result is recorded.
+  - A sampled failure triggers the same rework path as a manager
+    rejection.
+
+The 5% rate is a fixed operating doctrine of this software. It is not
+configurable from the owner dashboard, not editable in configuration
+files, and not subject to per-country override. Any fork that changes
+this rate must remove the W5D name and branding.
+
+The 5% rate is published on the public status page (/status/) and on
+each service page as part of the declared limits.
+
+────────────────────────────────────────────────────────────────────────────
+3. HONESTY CONSTRAINT
+────────────────────────────────────────────────────────────────────────────
+
+The figure "130,000 experts" is a DESIGN EQUATION:
+
+  5 macro works × 26 services per macro work × 1,000 experts per
+  service = 130,000.
+
+It is NOT a claim that 130,000 experts are currently employed by W5D.
+As of the date of this license:
+
+  - The real footprint of W5D is 26 developers in Tunisia.
+  - The number of certified W5D expert team members is 0.
+  - "Live" in the status register does not mean "1,000 experts
+    employed".
+
+The software must not be deployed, marketed, or represented in a way
+that contradicts this constraint. Every page that mentions the number
+130,000 must link to the trust statement (/trust/statement/) and must
+not promise a job. The linter enforces this constraint: any hard-coded
+"130,000" or "2027" outside config/variables.php and
+data/countries/tn.json fails the build.
+
+────────────────────────────────────────────────────────────────────────────
+4. WHAT IS LICENSED
+────────────────────────────────────────────────────────────────────────────
+
+The license grants the licensee the right to:
+
+  - Deploy W5D PHP CMS on domains operated by the licensee.
+  - Customise templates, blocks, and content for the licensee's own
+    deployments.
+  - Extend the software with the licensee's own code, provided the
+    extensions are not resold as W5D PHP CMS.
+  - Run multiple instances (development, staging, production) without
+    additional license fees.
+
+────────────────────────────────────────────────────────────────────────────
+5. WHAT IS NOT LICENSED
+────────────────────────────────────────────────────────────────────────────
+
+The license does NOT grant the right to:
+
+  - Resell, sublicense, or redistribute W5D PHP CMS as a product,
+    template, or SaaS offering under the W5D name or a derived name.
+  - Remove or alter the license footer or the license block from the
+    source files.
+  - Change the 5% sampling rule and continue to represent the result
+    as W5D PHP CMS.
+  - Represent the software as providing employment, guaranteed jobs,
+    or a hiring pipeline.
+  - Use the W5D name, logo, or ontology vocabulary (macro works,
+    services, meta solutions, layers L0–L5) to describe a product
+    that is not W5D PHP CMS as delivered by the copyright holder.
+
+────────────────────────────────────────────────────────────────────────────
+6. THIRD-PARTY COMPONENTS
+────────────────────────────────────────────────────────────────────────────
+
+W5D PHP CMS is delivered with no third-party runtime dependencies:
+
+  - No Composer packages.
+  - No CDN requests.
+  - No jQuery.
+  - No icon font.
+  - No Tailwind at runtime.
+
+Any future addition of a third-party dependency must be documented in
+docs/dependencies.md with the license of the dependency, its version,
+and its URL.
+
+────────────────────────────────────────────────────────────────────────────
+7. DATA & PRIVACY
+────────────────────────────────────────────────────────────────────────────
+
+W5D PHP CMS stores personal data (names, CINs, diplomas, contact
+details) for applicants and team members. The licensee is the data
+controller for their own deployment and is responsible for compliance
+with:
+
+  - Tunisia: Organic Law 2004-63 on personal data protection
+    (regulator: INPDP).
+  - Any other jurisdiction where the licensee operates.
+
+The software provides consent capture, retention configuration, and
+data-subject-request workflows. The licensee must configure these
+before launch and must not disable the audit log.
+
+────────────────────────────────────────────────────────────────────────────
+8. NO WARRANTY
+────────────────────────────────────────────────────────────────────────────
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT,
+OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+────────────────────────────────────────────────────────────────────────────
+9. ACCEPTANCE
+────────────────────────────────────────────────────────────────────────────
+
+Deploying W5D PHP CMS, modifying its source, or operating it on any
+domain constitutes acceptance of this license.
+
+For a signed commercial agreement, a per-deployment quote, or a
+multi-deployment license, contact:
+
+  Maher Kaddoussi
+  owner@w5d.tech
+  maher@w5d.tech
+
+────────────────────────────────────────────────────────────────────────────
+
+Version 1.0 — 2026-11-12
+Copyright © 2026 Maher Kaddoussi / W5D
