@@ -1,0 +1,44 @@
+{
+  "id": "biodiversity",
+  "slug": "biodiversity",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Biodiversity & Conservation Science",
+    "fr": "Biodiversity & Conservation Science",
+    "ar": "Biodiversity & Conservation Science"
+  },
+  "short": {
+    "en": "Species monitoring, habitat restoration.",
+    "fr": "Species monitoring, habitat restoration.",
+    "ar": "Species monitoring, habitat restoration."
+  },
+  "long": {
+    "en": "Biodiversity and conservation science — species monitoring, habitat restoration planning, and conservation effectiveness assessment across protected areas.",
+    "fr": "Biodiversity and conservation science — species monitoring, habitat restoration planning, and conservation effectiveness assessment across protected areas.",
+    "ar": "Biodiversity and conservation science — species monitoring, habitat restoration planning, and conservation effectiveness assessment across protected areas."
+  },
+  "problem": {
+    "en": "Unmeasured habitat change prevents credible conservation planning.",
+    "fr": "Unmeasured habitat change prevents credible conservation planning.",
+    "ar": "Unmeasured habitat change prevents credible conservation planning."
+  },
+  "solution": {
+    "en": "Repeatable baseline surveys, monitoring, and restoration-design support.",
+    "fr": "Repeatable baseline surveys, monitoring, and restoration-design support.",
+    "ar": "Repeatable baseline surveys, monitoring, and restoration-design support."
+  },
+  "likely_buyer": {
+    "en": "Agencies/developers",
+    "fr": "Agencies/developers",
+    "ar": "Agencies/developers"
+  },
+  "acceptance_boundary": {
+    "en": "survey reproducibility and expert identification review. Obtain permissions and restrict endangered-species location data where needed.",
+    "fr": "survey reproducibility and expert identification review. Obtain permissions and restrict endangered-species location data where needed.",
+    "ar": "survey reproducibility and expert identification review. Obtain permissions and restrict endangered-species location data where needed."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

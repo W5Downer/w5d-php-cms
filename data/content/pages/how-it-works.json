@@ -1,0 +1,218 @@
+{
+  "id": "how-it-works",
+  "path": "/how-it-works/",
+  "title": {
+    "en": "How it works",
+    "fr": "How it works",
+    "ar": "How it works"
+  },
+  "description": {
+    "en": "The certification path from registration to delivery.",
+    "fr": "The certification path from registration to delivery.",
+    "ar": "The certification path from registration to delivery."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "how-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "How it works",
+        "fr": "How it works",
+        "ar": "How it works"
+      },
+      "data": {
+        "lead": {
+          "en": "Registration, verification, certification and delivery are separate decisions. Each has its own evidence.",
+          "fr": "Registration, verification, certification and delivery are separate decisions. Each has its own evidence.",
+          "ar": "Registration, verification, certification and delivery are separate decisions. Each has its own evidence."
+        }
+      }
+    },
+    {
+      "type": "pipeline",
+      "id": "how-pipe",
+      "tier": "I",
+      "focus": 3,
+      "title": {
+        "en": "The path",
+        "fr": "The path",
+        "ar": "The path"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "Register",
+              "fr": "Register",
+              "ar": "Register"
+            },
+            "text": {
+              "en": "Interest and a service choice.",
+              "fr": "Interest and a service choice.",
+              "ar": "Interest and a service choice."
+            },
+            "state": "open",
+            "state_label": {
+              "en": "Open now",
+              "fr": "Open now",
+              "ar": "Open now"
+            }
+          },
+          {
+            "title": {
+              "en": "Verify",
+              "fr": "Verify",
+              "ar": "Verify"
+            },
+            "text": {
+              "en": "Identity check. Not yet live.",
+              "fr": "Identity check. Not yet live.",
+              "ar": "Identity check. Not yet live."
+            },
+            "state": "pending",
+            "state_label": {
+              "en": "Not yet available",
+              "fr": "Not yet available",
+              "ar": "Not yet available"
+            }
+          },
+          {
+            "title": {
+              "en": "Certify L1–L4",
+              "fr": "Certify L1–L4",
+              "ar": "Certify L1–L4"
+            },
+            "text": {
+              "en": "C1 supervised task to C4 assessor. Each step has a rubric.",
+              "fr": "C1 supervised task to C4 assessor. Each step has a rubric.",
+              "ar": "C1 supervised task to C4 assessor. Each step has a rubric."
+            },
+            "state": "pending",
+            "state_label": {
+              "en": "Per service",
+              "fr": "Per service",
+              "ar": "Per service"
+            }
+          },
+          {
+            "title": {
+              "en": "Deliver",
+              "fr": "Deliver",
+              "ar": "Deliver"
+            },
+            "text": {
+              "en": "Scoped, paid work, accepted by the client.",
+              "fr": "Scoped, paid work, accepted by the client.",
+              "ar": "Scoped, paid work, accepted by the client."
+            },
+            "state": "pending",
+            "state_label": {
+              "en": "Only when funded",
+              "fr": "Only when funded",
+              "ar": "Only when funded"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "id": "how-steps",
+      "tier": "I",
+      "focus": 2,
+      "title": {
+        "en": "Assessment rules",
+        "fr": "Assessment rules",
+        "ar": "Assessment rules"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "Published rubric",
+              "fr": "Published rubric",
+              "ar": "Published rubric"
+            },
+            "text": {
+              "en": "Each service publishes what is assessed and the evidence needed.",
+              "fr": "Each service publishes what is assessed and the evidence needed.",
+              "ar": "Each service publishes what is assessed and the evidence needed."
+            }
+          },
+          {
+            "title": {
+              "en": "Independent review",
+              "fr": "Independent review",
+              "ar": "Independent review"
+            },
+            "text": {
+              "en": "The assessor is independent of the person who trains you.",
+              "fr": "The assessor is independent of the person who trains you.",
+              "ar": "The assessor is independent of the person who trains you."
+            }
+          },
+          {
+            "title": {
+              "en": "Appeal",
+              "fr": "Appeal",
+              "ar": "Appeal"
+            },
+            "text": {
+              "en": "A failed assessment can be appealed, and you can retry after remediation.",
+              "fr": "A failed assessment can be appealed, and you can retry after remediation.",
+              "ar": "A failed assessment can be appealed, and you can retry after remediation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "how-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "Certification is not a statutory licence and is not an accredited degree.",
+          "fr": "Certification is not a statutory licence and is not an accredited degree.",
+          "ar": "Certification is not a statutory licence and is not an accredited degree."
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "id": "how-cta",
+      "tier": "E",
+      "focus": 5,
+      "gradient": "peak",
+      "title": {
+        "en": "Start L1",
+        "fr": "Start L1",
+        "ar": "Start L1"
+      },
+      "data": {
+        "text": {
+          "en": "Registration takes about four minutes.",
+          "fr": "Registration takes about four minutes.",
+          "ar": "Registration takes about four minutes."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Register now",
+          "fr": "Register now",
+          "ar": "Register now"
+        },
+        "href": "/app/register/",
+        "class": "btn-peak"
+      }
+    }
+  ]
+}

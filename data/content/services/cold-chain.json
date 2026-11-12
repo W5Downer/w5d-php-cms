@@ -1,0 +1,44 @@
+{
+  "id": "cold-chain",
+  "slug": "cold-chain",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cold Chain & Logistics Tech",
+    "fr": "Cold Chain & Logistics Tech",
+    "ar": "Cold Chain & Logistics Tech"
+  },
+  "short": {
+    "en": "Refrigeration, tracking, last-mile.",
+    "fr": "Refrigeration, tracking, last-mile.",
+    "ar": "Refrigeration, tracking, last-mile."
+  },
+  "long": {
+    "en": "Cold chain and logistics — refrigeration, real-time tracking, and last-mile delivery systems for pharma, food, and perishables.",
+    "fr": "Cold chain and logistics — refrigeration, real-time tracking, and last-mile delivery systems for pharma, food, and perishables.",
+    "ar": "Cold chain and logistics — refrigeration, real-time tracking, and last-mile delivery systems for pharma, food, and perishables."
+  },
+  "problem": {
+    "en": "Temperature excursions cause spoilage and compromised products.",
+    "fr": "Temperature excursions cause spoilage and compromised products.",
+    "ar": "Temperature excursions cause spoilage and compromised products."
+  },
+  "solution": {
+    "en": "Validated refrigeration, calibrated logging, routing, and traceability controls.",
+    "fr": "Validated refrigeration, calibrated logging, routing, and traceability controls.",
+    "ar": "Validated refrigeration, calibrated logging, routing, and traceability controls."
+  },
+  "likely_buyer": {
+    "en": "Food/pharma logistics",
+    "fr": "Food/pharma logistics",
+    "ar": "Food/pharma logistics"
+  },
+  "acceptance_boundary": {
+    "en": "excursion records and calibration tests. Do not substitute technology reports for authorized product-quality or health clearance.",
+    "fr": "excursion records and calibration tests. Do not substitute technology reports for authorized product-quality or health clearance.",
+    "ar": "excursion records and calibration tests. Do not substitute technology reports for authorized product-quality or health clearance."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

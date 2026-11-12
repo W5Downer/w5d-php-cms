@@ -1,0 +1,61 @@
+{
+  "id": "join-thanks",
+  "path": "/join/thanks/",
+  "title": {
+    "en": "Thank you",
+    "fr": "Thank you",
+    "ar": "Thank you"
+  },
+  "description": {
+    "en": "Your interest has been recorded.",
+    "fr": "Your interest has been recorded.",
+    "ar": "Your interest has been recorded."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "thanks-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Thank you",
+        "fr": "Thank you",
+        "ar": "Thank you"
+      },
+      "data": {
+        "lead": {
+          "en": "Your interest is recorded. Verification is not yet available on this site.",
+          "fr": "Your interest is recorded. Verification is not yet available on this site.",
+          "ar": "Your interest is recorded. Verification is not yet available on this site."
+        }
+      }
+    },
+    {
+      "type": "notice",
+      "id": "thanks-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "What this means",
+        "fr": "What this means",
+        "ar": "What this means"
+      },
+      "data": {
+        "text": {
+          "en": "This confirms registration only. It is not an assessment, a certificate or an offer of work.",
+          "fr": "This confirms registration only. It is not an assessment, a certificate or an offer of work.",
+          "ar": "This confirms registration only. It is not an assessment, a certificate or an offer of work."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Back to home",
+          "fr": "Back to home",
+          "ar": "Back to home"
+        },
+        "href": "/",
+        "class": "btn-ghost"
+      }
+    }
+  ]
+}

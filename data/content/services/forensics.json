@@ -1,0 +1,44 @@
+{
+  "id": "forensics",
+  "slug": "forensics",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Forensic Science Support",
+    "fr": "Forensic Science Support",
+    "ar": "Forensic Science Support"
+  },
+  "short": {
+    "en": "DNA, ballistics, digital forensics.",
+    "fr": "DNA, ballistics, digital forensics.",
+    "ar": "DNA, ballistics, digital forensics."
+  },
+  "long": {
+    "en": "Forensic science support — DNA analysis, ballistics, digital forensics, and quality-management frameworks aligned with international forensic standards.",
+    "fr": "Forensic science support — DNA analysis, ballistics, digital forensics, and quality-management frameworks aligned with international forensic standards.",
+    "ar": "Forensic science support — DNA analysis, ballistics, digital forensics, and quality-management frameworks aligned with international forensic standards."
+  },
+  "problem": {
+    "en": "Mishandled evidence can invalidate legitimate investigations.",
+    "fr": "Mishandled evidence can invalidate legitimate investigations.",
+    "ar": "Mishandled evidence can invalidate legitimate investigations."
+  },
+  "solution": {
+    "en": "Authorized custody workflows and validated specialist analysis support.",
+    "fr": "Authorized custody workflows and validated specialist analysis support.",
+    "ar": "Authorized custody workflows and validated specialist analysis support."
+  },
+  "likely_buyer": {
+    "en": "Authorized laboratories/legal actors",
+    "fr": "Authorized laboratories/legal actors",
+    "ar": "Authorized laboratories/legal actors"
+  },
+  "acceptance_boundary": {
+    "en": "method and admissibility review, access logs, and custody integrity. No private surveillance or unauthorized evidence acquisition.",
+    "fr": "method and admissibility review, access logs, and custody integrity. No private surveillance or unauthorized evidence acquisition.",
+    "ar": "method and admissibility review, access logs, and custody integrity. No private surveillance or unauthorized evidence acquisition."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

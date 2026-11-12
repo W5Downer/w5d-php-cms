@@ -1,0 +1,44 @@
+{
+  "id": "anti-corruption",
+  "slug": "anti-corruption",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Anti-Corruption & Integrity",
+    "fr": "Anti-Corruption & Integrity",
+    "ar": "Anti-Corruption & Integrity"
+  },
+  "short": {
+    "en": "Risk mapping, whistleblowing channels.",
+    "fr": "Risk mapping, whistleblowing channels.",
+    "ar": "Risk mapping, whistleblowing channels."
+  },
+  "long": {
+    "en": "Anti-corruption and integrity programs — corruption risk mapping, whistleblowing channels, and procurement integrity frameworks.",
+    "fr": "Anti-corruption and integrity programs — corruption risk mapping, whistleblowing channels, and procurement integrity frameworks.",
+    "ar": "Anti-corruption and integrity programs — corruption risk mapping, whistleblowing channels, and procurement integrity frameworks."
+  },
+  "problem": {
+    "en": "Conflicts and unsafe complaint channels undermine accountability.",
+    "fr": "Conflicts and unsafe complaint channels undermine accountability.",
+    "ar": "Conflicts and unsafe complaint channels undermine accountability."
+  },
+  "solution": {
+    "en": "Integrity-risk mapping, preventive controls, and secure reporting procedures.",
+    "fr": "Integrity-risk mapping, preventive controls, and secure reporting procedures.",
+    "ar": "Integrity-risk mapping, preventive controls, and secure reporting procedures."
+  },
+  "likely_buyer": {
+    "en": "Enterprises/public bodies",
+    "fr": "Enterprises/public bodies",
+    "ar": "Enterprises/public bodies"
+  },
+  "acceptance_boundary": {
+    "en": "tested case handling and protection controls. Avoid unverified public accusations; preserve due process and confidentiality.",
+    "fr": "tested case handling and protection controls. Avoid unverified public accusations; preserve due process and confidentiality.",
+    "ar": "tested case handling and protection controls. Avoid unverified public accusations; preserve due process and confidentiality."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

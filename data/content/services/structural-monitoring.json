@@ -1,0 +1,44 @@
+{
+  "id": "structural-monitoring",
+  "slug": "structural-monitoring",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Structural Health Monitoring",
+    "fr": "Structural Health Monitoring",
+    "ar": "Structural Health Monitoring"
+  },
+  "short": {
+    "en": "Sensors, inspection drones, analytics.",
+    "fr": "Sensors, inspection drones, analytics.",
+    "ar": "Sensors, inspection drones, analytics."
+  },
+  "long": {
+    "en": "Structural health monitoring — sensor networks, drone-based inspection, vibration analysis, and analytics platforms for asset managers.",
+    "fr": "Structural health monitoring — sensor networks, drone-based inspection, vibration analysis, and analytics platforms for asset managers.",
+    "ar": "Structural health monitoring — sensor networks, drone-based inspection, vibration analysis, and analytics platforms for asset managers."
+  },
+  "problem": {
+    "en": "Latent defects require trustworthy measurements and response protocols.",
+    "fr": "Latent defects require trustworthy measurements and response protocols.",
+    "ar": "Latent defects require trustworthy measurements and response protocols."
+  },
+  "solution": {
+    "en": "Engineered sensor/inspection system, calibrated thresholds, and escalation plan.",
+    "fr": "Engineered sensor/inspection system, calibrated thresholds, and escalation plan.",
+    "ar": "Engineered sensor/inspection system, calibrated thresholds, and escalation plan."
+  },
+  "likely_buyer": {
+    "en": "Asset owners",
+    "fr": "Asset owners",
+    "ar": "Asset owners"
+  },
+  "acceptance_boundary": {
+    "en": "calibration and validated alarms with licensed-engineer oversight. Monitoring does not automatically declare a structure safe.",
+    "fr": "calibration and validated alarms with licensed-engineer oversight. Monitoring does not automatically declare a structure safe.",
+    "ar": "calibration and validated alarms with licensed-engineer oversight. Monitoring does not automatically declare a structure safe."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

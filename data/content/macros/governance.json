@@ -1,0 +1,139 @@
+{
+  "id": "governance",
+  "slug": "governance",
+  "number": 4,
+  "placement": "Between 1.0",
+  "title": {
+    "en": "Governance",
+    "fr": "Governance",
+    "ar": "Governance"
+  },
+  "domain_question": {
+    "en": "How are rules made, legitimate decisions taken, public money allocated and accountability maintained?"
+  },
+  "typical_fields": {
+    "en": "Law, public administration, economics, audit, social policy, statistics, international relations"
+  },
+  "output_unit": {
+    "en": "Regulatory option briefs, draft clause packages, integrity risk reviews, cash forecast reviews, MRV dataset reviews"
+  },
+  "recurring_boundary": {
+    "en": "Only authorised institutions adopt law, set tariffs, declare emergencies or award accreditation; W5D supports evidence and referrals, not statutory powers"
+  },
+  "problem": {
+    "en": "fragmented processes and unreliable evidence can weaken public-service access, accountability, and spending quality. Procurement cycles, slow receivables, political sensitivity, and reserved public powers make this a demanding commercial domain."
+  },
+  "premium_offer": {
+    "en": "bounded advisory and implementation support: process mapping, privacy controls, data-quality improvement, accessible service design, and transparent reporting. Buyers may include authorized public bodies, municipalities, regulated enterprises, donors, and NGOs. A possible public-service bundle is 083/084/100/111, with agency ownership of eligibility, identity authority, and public decisions."
+  },
+  "delivery_economics": {
+    "en": "contract milestones, lawful tender participation, independent review, and explicit conflict-of-interest controls. Begin with low-risk process/data work, not sovereign functions. Never infer authority to issue titles, enforce tax, adjudicate benefits, run elections, or conduct security operations. Track lawful process completion, data quality, accessibility, appeals, reconciliations, and receivables—not political outcomes."
+  },
+  "services": [
+    {
+      "number": 79,
+      "slug": "regulatory-impact"
+    },
+    {
+      "number": 80,
+      "slug": "legal-drafting"
+    },
+    {
+      "number": 81,
+      "slug": "anti-corruption"
+    },
+    {
+      "number": 82,
+      "slug": "procurement-reform"
+    },
+    {
+      "number": 83,
+      "slug": "digital-governance"
+    },
+    {
+      "number": 84,
+      "slug": "data-protection"
+    },
+    {
+      "number": 85,
+      "slug": "municipal-capacity"
+    },
+    {
+      "number": 86,
+      "slug": "rule-of-law"
+    },
+    {
+      "number": 87,
+      "slug": "tax-admin"
+    },
+    {
+      "number": 88,
+      "slug": "social-protection"
+    },
+    {
+      "number": 89,
+      "slug": "border-migration"
+    },
+    {
+      "number": 90,
+      "slug": "climate-governance"
+    },
+    {
+      "number": 91,
+      "slug": "pfm"
+    },
+    {
+      "number": 92,
+      "slug": "elections"
+    },
+    {
+      "number": 93,
+      "slug": "platform-ai-governance"
+    },
+    {
+      "number": 94,
+      "slug": "labour-governance"
+    },
+    {
+      "number": 95,
+      "slug": "land-cadastre"
+    },
+    {
+      "number": 96,
+      "slug": "security-governance"
+    },
+    {
+      "number": 97,
+      "slug": "health-governance"
+    },
+    {
+      "number": 98,
+      "slug": "education-governance"
+    },
+    {
+      "number": 99,
+      "slug": "utility-regulation"
+    },
+    {
+      "number": 100,
+      "slug": "official-stats"
+    },
+    {
+      "number": 101,
+      "slug": "crisis-governance"
+    },
+    {
+      "number": 102,
+      "slug": "soe-oversight"
+    },
+    {
+      "number": 103,
+      "slug": "decentralisation"
+    },
+    {
+      "number": 104,
+      "slug": "treaty-cooperation"
+    }
+  ],
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

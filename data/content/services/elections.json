@@ -1,0 +1,44 @@
+{
+  "id": "elections",
+  "slug": "elections",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Elections & Civic Participation",
+    "fr": "Elections & Civic Participation",
+    "ar": "Elections & Civic Participation"
+  },
+  "short": {
+    "en": "Roll management, observation, civic tech.",
+    "fr": "Roll management, observation, civic tech.",
+    "ar": "Roll management, observation, civic tech."
+  },
+  "long": {
+    "en": "Elections and civic participation — voter roll management, election observation, and civic-tech platforms that increase participation.",
+    "fr": "Elections and civic participation — voter roll management, election observation, and civic-tech platforms that increase participation.",
+    "ar": "Elections and civic participation — voter roll management, election observation, and civic-tech platforms that increase participation."
+  },
+  "problem": {
+    "en": "Access and information barriers weaken inclusive civic participation.",
+    "fr": "Access and information barriers weaken inclusive civic participation.",
+    "ar": "Access and information barriers weaken inclusive civic participation."
+  },
+  "solution": {
+    "en": "Nonpartisan accessible information and explicitly authorized observation/civic tools.",
+    "fr": "Nonpartisan accessible information and explicitly authorized observation/civic tools.",
+    "ar": "Nonpartisan accessible information and explicitly authorized observation/civic tools."
+  },
+  "likely_buyer": {
+    "en": "Authorized bodies/NGOs",
+    "fr": "Authorized bodies/NGOs",
+    "ar": "Authorized bodies/NGOs"
+  },
+  "acceptance_boundary": {
+    "en": "accuracy, access, and security checks. No political microtargeting, unauthorized voter-roll access, or assumption of election administration.",
+    "fr": "accuracy, access, and security checks. No political microtargeting, unauthorized voter-roll access, or assumption of election administration.",
+    "ar": "accuracy, access, and security checks. No political microtargeting, unauthorized voter-roll access, or assumption of election administration."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

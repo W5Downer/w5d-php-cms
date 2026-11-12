@@ -1,0 +1,44 @@
+{
+  "id": "urban-heat",
+  "slug": "urban-heat",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Urban Heat Island Mitigation",
+    "fr": "Urban Heat Island Mitigation",
+    "ar": "Urban Heat Island Mitigation"
+  },
+  "short": {
+    "en": "Shading, materials, green corridors.",
+    "fr": "Shading, materials, green corridors.",
+    "ar": "Shading, materials, green corridors."
+  },
+  "long": {
+    "en": "Urban heat island mitigation — shading strategies, reflective and permeable materials, green corridor design, and urban cooling measurement programs.",
+    "fr": "Urban heat island mitigation — shading strategies, reflective and permeable materials, green corridor design, and urban cooling measurement programs.",
+    "ar": "Urban heat island mitigation — shading strategies, reflective and permeable materials, green corridor design, and urban cooling measurement programs."
+  },
+  "problem": {
+    "en": "Heat exposure burdens health, comfort, and energy demand.",
+    "fr": "Heat exposure burdens health, comfort, and energy demand.",
+    "ar": "Heat exposure burdens health, comfort, and energy demand."
+  },
+  "solution": {
+    "en": "Heat mapping, shading, cool materials, and maintainable green-corridor plan.",
+    "fr": "Heat mapping, shading, cool materials, and maintainable green-corridor plan.",
+    "ar": "Heat mapping, shading, cool materials, and maintainable green-corridor plan."
+  },
+  "likely_buyer": {
+    "en": "Cities/campuses",
+    "fr": "Cities/campuses",
+    "ar": "Cities/campuses"
+  },
+  "acceptance_boundary": {
+    "en": "agreed temperature-measurement protocol and feasibility review. Include water, survival, upkeep, and seasonal limits.",
+    "fr": "agreed temperature-measurement protocol and feasibility review. Include water, survival, upkeep, and seasonal limits.",
+    "ar": "agreed temperature-measurement protocol and feasibility review. Include water, survival, upkeep, and seasonal limits."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

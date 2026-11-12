@@ -1,0 +1,4 @@
+/* ledger — editorial / brass. Additive only: tokens and accents. */
+:root { --accent: #6b4a12; --gold: #B8860B; --paper: #fffdf7; }
+.brand { letter-spacing: .02em; }
+.blk-title { border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: .15rem; }

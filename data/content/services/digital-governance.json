@@ -1,0 +1,44 @@
+{
+  "id": "digital-governance",
+  "slug": "digital-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Digital Governance & e-Services",
+    "fr": "Digital Governance & e-Services",
+    "ar": "Digital Governance & e-Services"
+  },
+  "short": {
+    "en": "Portals, identity, service design.",
+    "fr": "Portals, identity, service design.",
+    "ar": "Portals, identity, service design."
+  },
+  "long": {
+    "en": "Digital governance and e-services — public service portals, digital identity, and service-design methods that put citizens first.",
+    "fr": "Digital governance and e-services — public service portals, digital identity, and service-design methods that put citizens first.",
+    "ar": "Digital governance and e-services — public service portals, digital identity, and service-design methods that put citizens first."
+  },
+  "problem": {
+    "en": "Complicated journeys prevent people from completing public services.",
+    "fr": "Complicated journeys prevent people from completing public services.",
+    "ar": "Complicated journeys prevent people from completing public services."
+  },
+  "solution": {
+    "en": "Accessible service mapping, user research, and authorized portal implementation.",
+    "fr": "Accessible service mapping, user research, and authorized portal implementation.",
+    "ar": "Accessible service mapping, user research, and authorized portal implementation."
+  },
+  "likely_buyer": {
+    "en": "Agencies/municipalities",
+    "fr": "Agencies/municipalities",
+    "ar": "Agencies/municipalities"
+  },
+  "acceptance_boundary": {
+    "en": "completion and usability tests. Public bodies approve service rules; privacy and offline access remain design requirements.",
+    "fr": "completion and usability tests. Public bodies approve service rules; privacy and offline access remain design requirements.",
+    "ar": "completion and usability tests. Public bodies approve service rules; privacy and offline access remain design requirements."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

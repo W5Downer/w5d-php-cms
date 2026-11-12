@@ -1,0 +1,44 @@
+{
+  "id": "public-space",
+  "slug": "public-space",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Public Space Design",
+    "fr": "Public Space Design",
+    "ar": "Public Space Design"
+  },
+  "short": {
+    "en": "Parks, plazas, accessibility, lighting.",
+    "fr": "Parks, plazas, accessibility, lighting.",
+    "ar": "Parks, plazas, accessibility, lighting."
+  },
+  "long": {
+    "en": "Public space design — parks, plazas, streetscape renewal, universal accessibility, and safety-focused lighting strategies.",
+    "fr": "Public space design — parks, plazas, streetscape renewal, universal accessibility, and safety-focused lighting strategies.",
+    "ar": "Public space design — parks, plazas, streetscape renewal, universal accessibility, and safety-focused lighting strategies."
+  },
+  "problem": {
+    "en": "Poor lighting, access, and shading exclude users.",
+    "fr": "Poor lighting, access, and shading exclude users.",
+    "ar": "Poor lighting, access, and shading exclude users."
+  },
+  "solution": {
+    "en": "Co-designed park/plaza accessibility, lighting, and thermal-comfort package.",
+    "fr": "Co-designed park/plaza accessibility, lighting, and thermal-comfort package.",
+    "ar": "Co-designed park/plaza accessibility, lighting, and thermal-comfort package."
+  },
+  "likely_buyer": {
+    "en": "Cities/developers",
+    "fr": "Cities/developers",
+    "ar": "Cities/developers"
+  },
+  "acceptance_boundary": {
+    "en": "access audit and community review. Confirm permits, maintenance, and public-safety responsibilities before construction.",
+    "fr": "access audit and community review. Confirm permits, maintenance, and public-safety responsibilities before construction.",
+    "ar": "access audit and community review. Confirm permits, maintenance, and public-safety responsibilities before construction."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

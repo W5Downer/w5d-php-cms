@@ -1,0 +1,44 @@
+{
+  "id": "lab-accreditation",
+  "slug": "lab-accreditation",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Laboratory Accreditation Support",
+    "fr": "Laboratory Accreditation Support",
+    "ar": "Laboratory Accreditation Support"
+  },
+  "short": {
+    "en": "ISO 17025, audits, method validation.",
+    "fr": "ISO 17025, audits, method validation.",
+    "ar": "ISO 17025, audits, method validation."
+  },
+  "long": {
+    "en": "Laboratory accreditation support — ISO 17025 implementation, internal audits, and method validation for university and commercial labs.",
+    "fr": "Laboratory accreditation support — ISO 17025 implementation, internal audits, and method validation for university and commercial labs.",
+    "ar": "Laboratory accreditation support — ISO 17025 implementation, internal audits, and method validation for university and commercial labs."
+  },
+  "problem": {
+    "en": "Incomplete methods and quality systems prevent audit readiness.",
+    "fr": "Incomplete methods and quality systems prevent audit readiness.",
+    "ar": "Incomplete methods and quality systems prevent audit readiness."
+  },
+  "solution": {
+    "en": "ISO 17025 gap review, validation support, and mock audit.",
+    "fr": "ISO 17025 gap review, validation support, and mock audit.",
+    "ar": "ISO 17025 gap review, validation support, and mock audit."
+  },
+  "likely_buyer": {
+    "en": "Laboratories",
+    "fr": "Laboratories",
+    "ar": "Laboratories"
+  },
+  "acceptance_boundary": {
+    "en": "verified closure of nonconformities. Only the relevant independent accreditor awards accreditation; support does not guarantee success.",
+    "fr": "verified closure of nonconformities. Only the relevant independent accreditor awards accreditation; support does not guarantee success.",
+    "ar": "verified closure of nonconformities. Only the relevant independent accreditor awards accreditation; support does not guarantee success."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

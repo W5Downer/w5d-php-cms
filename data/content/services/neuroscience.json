@@ -1,0 +1,44 @@
+{
+  "id": "neuroscience",
+  "slug": "neuroscience",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Neuroscience & Cognition Labs",
+    "fr": "Neuroscience & Cognition Labs",
+    "ar": "Neuroscience & Cognition Labs"
+  },
+  "short": {
+    "en": "Experimental design, neuroimaging analysis.",
+    "fr": "Experimental design, neuroimaging analysis.",
+    "ar": "Experimental design, neuroimaging analysis."
+  },
+  "long": {
+    "en": "Neuroscience and cognition labs — experimental design, neuroimaging analysis, behavioural paradigms, and data-management standards for reproducible research.",
+    "fr": "Neuroscience and cognition labs — experimental design, neuroimaging analysis, behavioural paradigms, and data-management standards for reproducible research.",
+    "ar": "Neuroscience and cognition labs — experimental design, neuroimaging analysis, behavioural paradigms, and data-management standards for reproducible research."
+  },
+  "problem": {
+    "en": "Biased designs and weak QC undermine cognitive research.",
+    "fr": "Biased designs and weak QC undermine cognitive research.",
+    "ar": "Biased designs and weak QC undermine cognitive research."
+  },
+  "solution": {
+    "en": "Ethics-reviewed experimental design, preregistration support, and analysis.",
+    "fr": "Ethics-reviewed experimental design, preregistration support, and analysis.",
+    "ar": "Ethics-reviewed experimental design, preregistration support, and analysis."
+  },
+  "likely_buyer": {
+    "en": "Universities",
+    "fr": "Universities",
+    "ar": "Universities"
+  },
+  "acceptance_boundary": {
+    "en": "protocol adherence, data QC, and reproducibility. No health or treatment claims without appropriate clinical validation and authorization.",
+    "fr": "protocol adherence, data QC, and reproducibility. No health or treatment claims without appropriate clinical validation and authorization.",
+    "ar": "protocol adherence, data QC, and reproducibility. No health or treatment claims without appropriate clinical validation and authorization."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

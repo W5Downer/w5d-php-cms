@@ -1,0 +1,44 @@
+{
+  "id": "digital-humanities",
+  "slug": "digital-humanities",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Digital Humanities Labs",
+    "fr": "Digital Humanities Labs",
+    "ar": "Digital Humanities Labs"
+  },
+  "short": {
+    "en": "Text mining, network analysis, scholarly tooling.",
+    "fr": "Text mining, network analysis, scholarly tooling.",
+    "ar": "Text mining, network analysis, scholarly tooling."
+  },
+  "long": {
+    "en": "Digital humanities research labs supporting scholars with text-mining pipelines, network analysis, geospatial humanities, and long-term preservation of scholarly digital outputs.",
+    "fr": "Digital humanities research labs supporting scholars with text-mining pipelines, network analysis, geospatial humanities, and long-term preservation of scholarly digital outputs.",
+    "ar": "Digital humanities research labs supporting scholars with text-mining pipelines, network analysis, geospatial humanities, and long-term preservation of scholarly digital outputs."
+  },
+  "problem": {
+    "en": "Fragmented texts and undocumented methods prevent reproducible scholarship.",
+    "fr": "Fragmented texts and undocumented methods prevent reproducible scholarship.",
+    "ar": "Fragmented texts and undocumented methods prevent reproducible scholarship."
+  },
+  "solution": {
+    "en": "OCR corpus, annotated datasets, provenance, and reproducible research notebooks.",
+    "fr": "OCR corpus, annotated datasets, provenance, and reproducible research notebooks.",
+    "ar": "OCR corpus, annotated datasets, provenance, and reproducible research notebooks."
+  },
+  "likely_buyer": {
+    "en": "Research institutions",
+    "fr": "Research institutions",
+    "ar": "Research institutions"
+  },
+  "acceptance_boundary": {
+    "en": "sampled transcription accuracy and rerunnable analysis. Respect source licenses; disclose OCR/model errors and never invent missing sources.",
+    "fr": "sampled transcription accuracy and rerunnable analysis. Respect source licenses; disclose OCR/model errors and never invent missing sources.",
+    "ar": "sampled transcription accuracy and rerunnable analysis. Respect source licenses; disclose OCR/model errors and never invent missing sources."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "official-stats",
+  "slug": "official-stats",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Statistics & Official Data",
+    "fr": "Statistics & Official Data",
+    "ar": "Statistics & Official Data"
+  },
+  "short": {
+    "en": "Survey design, dissemination, quality.",
+    "fr": "Survey design, dissemination, quality.",
+    "ar": "Survey design, dissemination, quality."
+  },
+  "long": {
+    "en": "Official statistics — survey design, data dissemination, and quality assurance aligned with the Fundamental Principles of Official Statistics.",
+    "fr": "Official statistics — survey design, data dissemination, and quality assurance aligned with the Fundamental Principles of Official Statistics.",
+    "ar": "Official statistics — survey design, data dissemination, and quality assurance aligned with the Fundamental Principles of Official Statistics."
+  },
+  "problem": {
+    "en": "Weak survey methods and metadata create misleading public figures.",
+    "fr": "Weak survey methods and metadata create misleading public figures.",
+    "ar": "Weak survey methods and metadata create misleading public figures."
+  },
+  "solution": {
+    "en": "Survey QA, documented estimation, anonymization, and dissemination support.",
+    "fr": "Survey QA, documented estimation, anonymization, and dissemination support.",
+    "ar": "Survey QA, documented estimation, anonymization, and dissemination support."
+  },
+  "likely_buyer": {
+    "en": "Statistics bodies",
+    "fr": "Statistics bodies",
+    "ar": "Statistics bodies"
+  },
+  "acceptance_boundary": {
+    "en": "published methods, error bounds, and review. Official designation remains with authorized institutions; missing data must not become zero.",
+    "fr": "published methods, error bounds, and review. Official designation remains with authorized institutions; missing data must not become zero.",
+    "ar": "published methods, error bounds, and review. Official designation remains with authorized institutions; missing data must not become zero."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

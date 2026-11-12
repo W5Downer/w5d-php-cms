@@ -1,0 +1,44 @@
+{
+  "id": "indigenous-studies",
+  "slug": "indigenous-studies",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Indigenous & Minority Studies",
+    "fr": "Indigenous & Minority Studies",
+    "ar": "Indigenous & Minority Studies"
+  },
+  "short": {
+    "en": "Participatory research, language rights.",
+    "fr": "Participatory research, language rights.",
+    "ar": "Participatory research, language rights."
+  },
+  "long": {
+    "en": "Participatory research and programs with Indigenous and minority communities — community-led inquiry, language rights advocacy, land-based knowledge documentation, and equitable benefit-sharing protocols.",
+    "fr": "Participatory research and programs with Indigenous and minority communities — community-led inquiry, language rights advocacy, land-based knowledge documentation, and equitable benefit-sharing protocols.",
+    "ar": "Participatory research and programs with Indigenous and minority communities — community-led inquiry, language rights advocacy, land-based knowledge documentation, and equitable benefit-sharing protocols."
+  },
+  "problem": {
+    "en": "Extractive research and imposed identity labels misrepresent communities.",
+    "fr": "Extractive research and imposed identity labels misrepresent communities.",
+    "ar": "Extractive research and imposed identity labels misrepresent communities."
+  },
+  "solution": {
+    "en": "Participatory, community-led study with agreed representation and access rules.",
+    "fr": "Participatory, community-led study with agreed representation and access rules.",
+    "ar": "Participatory, community-led study with agreed representation and access rules."
+  },
+  "likely_buyer": {
+    "en": "Universities/rights organizations",
+    "fr": "Universities/rights organizations",
+    "ar": "Universities/rights organizations"
+  },
+  "acceptance_boundary": {
+    "en": "community-reviewed outputs and consent evidence. Do not infer or assign sensitive identities without appropriate basis.",
+    "fr": "community-reviewed outputs and consent evidence. Do not infer or assign sensitive identities without appropriate basis.",
+    "ar": "community-reviewed outputs and consent evidence. Do not infer or assign sensitive identities without appropriate basis."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

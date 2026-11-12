@@ -1,0 +1,44 @@
+{
+  "id": "software-eng",
+  "slug": "software-eng",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Software Engineering Teams",
+    "fr": "Software Engineering Teams",
+    "ar": "Software Engineering Teams"
+  },
+  "short": {
+    "en": "Full-stack, APIs, QA, DevOps.",
+    "fr": "Full-stack, APIs, QA, DevOps.",
+    "ar": "Full-stack, APIs, QA, DevOps."
+  },
+  "long": {
+    "en": "Software engineering teams — full-stack development, API design, QA, and DevOps pipelines delivering production-grade software with observability built in.",
+    "fr": "Software engineering teams — full-stack development, API design, QA, and DevOps pipelines delivering production-grade software with observability built in.",
+    "ar": "Software engineering teams — full-stack development, API design, QA, and DevOps pipelines delivering production-grade software with observability built in."
+  },
+  "problem": {
+    "en": "Unreliable business applications create operational friction and security risk.",
+    "fr": "Unreliable business applications create operational friction and security risk.",
+    "ar": "Unreliable business applications create operational friction and security risk."
+  },
+  "solution": {
+    "en": "Scoped application/API releases with QA, documentation, and maintenance options.",
+    "fr": "Scoped application/API releases with QA, documentation, and maintenance options.",
+    "ar": "Scoped application/API releases with QA, documentation, and maintenance options."
+  },
+  "likely_buyer": {
+    "en": "SMEs/export buyers",
+    "fr": "SMEs/export buyers",
+    "ar": "SMEs/export buyers"
+  },
+  "acceptance_boundary": {
+    "en": "acceptance and security tests, bounded warranty. Contract lawful outcomes, not disguised client-directed labor supply.",
+    "fr": "acceptance and security tests, bounded warranty. Contract lawful outcomes, not disguised client-directed labor supply.",
+    "ar": "acceptance and security tests, bounded warranty. Contract lawful outcomes, not disguised client-directed labor supply."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

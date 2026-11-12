@@ -1,0 +1,44 @@
+{
+  "id": "music-archives",
+  "slug": "music-archives",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Music & Sound Archives",
+    "fr": "Music & Sound Archives",
+    "ar": "Music & Sound Archives"
+  },
+  "short": {
+    "en": "Recording, rights management, distribution.",
+    "fr": "Recording, rights management, distribution.",
+    "ar": "Recording, rights management, distribution."
+  },
+  "long": {
+    "en": "Music and sound archive services — professional recording, metadata and rights management, and streaming distribution agreements that respect performers' and composers' rights.",
+    "fr": "Music and sound archive services — professional recording, metadata and rights management, and streaming distribution agreements that respect performers' and composers' rights.",
+    "ar": "Music and sound archive services — professional recording, metadata and rights management, and streaming distribution agreements that respect performers' and composers' rights."
+  },
+  "problem": {
+    "en": "Recordings disappear while unlicensed reuse creates disputes.",
+    "fr": "Recordings disappear while unlicensed reuse creates disputes.",
+    "ar": "Recordings disappear while unlicensed reuse creates disputes."
+  },
+  "solution": {
+    "en": "Audio digitization, descriptive metadata, ownership research, and licensing records.",
+    "fr": "Audio digitization, descriptive metadata, ownership research, and licensing records.",
+    "ar": "Audio digitization, descriptive metadata, ownership research, and licensing records."
+  },
+  "likely_buyer": {
+    "en": "Labels/archives",
+    "fr": "Labels/archives",
+    "ar": "Labels/archives"
+  },
+  "acceptance_boundary": {
+    "en": "audio QC, file integrity, and rights-chain acceptance. Record performer and recording rights separately; unresolved material remains restricted.",
+    "fr": "audio QC, file integrity, and rights-chain acceptance. Record performer and recording rights separately; unresolved material remains restricted.",
+    "ar": "audio QC, file integrity, and rights-chain acceptance. Record performer and recording rights separately; unresolved material remains restricted."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

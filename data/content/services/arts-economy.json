@@ -1,0 +1,44 @@
+{
+  "id": "arts-economy",
+  "slug": "arts-economy",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Arts & Creative Economy",
+    "fr": "Arts & Creative Economy",
+    "ar": "Arts & Creative Economy"
+  },
+  "short": {
+    "en": "Artist residencies, creative entrepreneurship.",
+    "fr": "Artist residencies, creative entrepreneurship.",
+    "ar": "Artist residencies, creative entrepreneurship."
+  },
+  "long": {
+    "en": "Support programs for creative economy actors — residencies, business training for artists, licensing infrastructure, and market access platforms that respect fair-trade principles.",
+    "fr": "Support programs for creative economy actors — residencies, business training for artists, licensing infrastructure, and market access platforms that respect fair-trade principles.",
+    "ar": "Support programs for creative economy actors — residencies, business training for artists, licensing infrastructure, and market access platforms that respect fair-trade principles."
+  },
+  "problem": {
+    "en": "Artists struggle with contracts, distribution, and sustainable commercial models.",
+    "fr": "Artists struggle with contracts, distribution, and sustainable commercial models.",
+    "ar": "Artists struggle with contracts, distribution, and sustainable commercial models."
+  },
+  "solution": {
+    "en": "Costed catalogs, licensing packages, business support, and distribution experiments.",
+    "fr": "Costed catalogs, licensing packages, business support, and distribution experiments.",
+    "ar": "Costed catalogs, licensing packages, business support, and distribution experiments."
+  },
+  "likely_buyer": {
+    "en": "Creative enterprises/venues",
+    "fr": "Creative enterprises/venues",
+    "ar": "Creative enterprises/venues"
+  },
+  "acceptance_boundary": {
+    "en": "executed rights agreements and documented net artist income. No promised sales or investor returns.",
+    "fr": "executed rights agreements and documented net artist income. No promised sales or investor returns.",
+    "ar": "executed rights agreements and documented net artist income. No promised sales or investor returns."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

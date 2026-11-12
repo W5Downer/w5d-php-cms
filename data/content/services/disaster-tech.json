@@ -1,0 +1,44 @@
+{
+  "id": "disaster-tech",
+  "slug": "disaster-tech",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Disaster Response Technology",
+    "fr": "Disaster Response Technology",
+    "ar": "Disaster Response Technology"
+  },
+  "short": {
+    "en": "Early warning, drones, portable comms.",
+    "fr": "Early warning, drones, portable comms.",
+    "ar": "Early warning, drones, portable comms."
+  },
+  "long": {
+    "en": "Disaster response technology — early-warning systems, drones, and portable communications for emergency responders.",
+    "fr": "Disaster response technology — early-warning systems, drones, and portable communications for emergency responders.",
+    "ar": "Disaster response technology — early-warning systems, drones, and portable communications for emergency responders."
+  },
+  "problem": {
+    "en": "Warning and communication failures delay authorized response.",
+    "fr": "Warning and communication failures delay authorized response.",
+    "ar": "Warning and communication failures delay authorized response."
+  },
+  "solution": {
+    "en": "Early-warning, portable communications, and permitted drone-system pilot.",
+    "fr": "Early-warning, portable communications, and permitted drone-system pilot.",
+    "ar": "Early-warning, portable communications, and permitted drone-system pilot."
+  },
+  "likely_buyer": {
+    "en": "Response agencies",
+    "fr": "Response agencies",
+    "ar": "Response agencies"
+  },
+  "acceptance_boundary": {
+    "en": "drills, uptime, and communication coverage tests. Authorities control operational response; drone permits and safety rules apply.",
+    "fr": "drills, uptime, and communication coverage tests. Authorities control operational response; drone permits and safety rules apply.",
+    "ar": "drills, uptime, and communication coverage tests. Authorities control operational response; drone permits and safety rules apply."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

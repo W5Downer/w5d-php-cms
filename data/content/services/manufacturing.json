@@ -1,0 +1,44 @@
+{
+  "id": "manufacturing",
+  "slug": "manufacturing",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Advanced Manufacturing",
+    "fr": "Advanced Manufacturing",
+    "ar": "Advanced Manufacturing"
+  },
+  "short": {
+    "en": "CNC, additive, lean production.",
+    "fr": "CNC, additive, lean production.",
+    "ar": "CNC, additive, lean production."
+  },
+  "long": {
+    "en": "Advanced manufacturing — CNC, additive manufacturing, and lean production systems for industrial modernization.",
+    "fr": "Advanced manufacturing — CNC, additive manufacturing, and lean production systems for industrial modernization.",
+    "ar": "Advanced manufacturing — CNC, additive manufacturing, and lean production systems for industrial modernization."
+  },
+  "problem": {
+    "en": "Scrap and inconsistent tolerances constrain productive capacity.",
+    "fr": "Scrap and inconsistent tolerances constrain productive capacity.",
+    "ar": "Scrap and inconsistent tolerances constrain productive capacity."
+  },
+  "solution": {
+    "en": "Process audit, CNC/additive pilot, and repeatable production controls.",
+    "fr": "Process audit, CNC/additive pilot, and repeatable production controls.",
+    "ar": "Process audit, CNC/additive pilot, and repeatable production controls."
+  },
+  "likely_buyer": {
+    "en": "Factories",
+    "fr": "Factories",
+    "ar": "Factories"
+  },
+  "acceptance_boundary": {
+    "en": "baseline-adjusted yield and tolerance tests. Confirm machine safety and operator competence; modeled throughput is not guaranteed production.",
+    "fr": "baseline-adjusted yield and tolerance tests. Confirm machine safety and operator competence; modeled throughput is not guaranteed production.",
+    "ar": "baseline-adjusted yield and tolerance tests. Confirm machine safety and operator competence; modeled throughput is not guaranteed production."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

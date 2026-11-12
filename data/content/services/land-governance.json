@@ -1,0 +1,44 @@
+{
+  "id": "land-governance",
+  "slug": "land-governance",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Land-Use & Property Governance",
+    "fr": "Land-Use & Property Governance",
+    "ar": "Land-Use & Property Governance"
+  },
+  "short": {
+    "en": "Cadastre, titling, dispute resolution.",
+    "fr": "Cadastre, titling, dispute resolution.",
+    "ar": "Cadastre, titling, dispute resolution."
+  },
+  "long": {
+    "en": "Land-use governance — cadastral mapping, property titling, land dispute resolution frameworks, and public registries for transparent land administration.",
+    "fr": "Land-use governance — cadastral mapping, property titling, land dispute resolution frameworks, and public registries for transparent land administration.",
+    "ar": "Land-use governance — cadastral mapping, property titling, land dispute resolution frameworks, and public registries for transparent land administration."
+  },
+  "problem": {
+    "en": "Unclear parcel constraints expose construction projects to disputes.",
+    "fr": "Unclear parcel constraints expose construction projects to disputes.",
+    "ar": "Unclear parcel constraints expose construction projects to disputes."
+  },
+  "solution": {
+    "en": "Project-specific land due diligence, GIS constraints, and legal-review dossier.",
+    "fr": "Project-specific land due diligence, GIS constraints, and legal-review dossier.",
+    "ar": "Project-specific land due diligence, GIS constraints, and legal-review dossier."
+  },
+  "likely_buyer": {
+    "en": "Developers/local bodies",
+    "fr": "Developers/local bodies",
+    "ar": "Developers/local bodies"
+  },
+  "acceptance_boundary": {
+    "en": "reconciled records and licensed legal review. This supports project decisions; service 095 concerns official registry systems.",
+    "fr": "reconciled records and licensed legal review. This supports project decisions; service 095 concerns official registry systems.",
+    "ar": "reconciled records and licensed legal review. This supports project decisions; service 095 concerns official registry systems."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

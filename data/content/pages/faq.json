@@ -1,0 +1,101 @@
+{
+  "id": "faq",
+  "path": "/faq/",
+  "title": {
+    "en": "Questions",
+    "fr": "Questions",
+    "ar": "Questions"
+  },
+  "description": {
+    "en": "Common questions about registration, assessment and work.",
+    "fr": "Common questions about registration, assessment and work.",
+    "ar": "Common questions about registration, assessment and work."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "faq-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Questions",
+        "fr": "Questions",
+        "ar": "Questions"
+      },
+      "data": {
+        "lead": {
+          "en": "Short answers. The statement has the full limits.",
+          "fr": "Short answers. The statement has the full limits.",
+          "ar": "Short answers. The statement has the full limits."
+        }
+      }
+    },
+    {
+      "type": "faq",
+      "id": "faq-items",
+      "tier": "E",
+      "focus": 2,
+      "data": {
+        "items": [
+          {
+            "q": {
+              "en": "Does registering mean I am certified?",
+              "fr": "Does registering mean I am certified?",
+              "ar": "Does registering mean I am certified?"
+            },
+            "a": {
+              "en": "No. Certification follows a practical assessment against a published rubric.",
+              "fr": "No. Certification follows a practical assessment against a published rubric.",
+              "ar": "No. Certification follows a practical assessment against a published rubric."
+            }
+          },
+          {
+            "q": {
+              "en": "What does the 5% mean?",
+              "fr": "What does the 5% mean?",
+              "ar": "What does the 5% mean?"
+            },
+            "a": {
+              "en": "Five percent of submitted weekly reports are re-reviewed independently each week. The rate is fixed.",
+              "fr": "Five percent of submitted weekly reports are re-reviewed independently each week. The rate is fixed.",
+              "ar": "Five percent of submitted weekly reports are re-reviewed independently each week. The rate is fixed."
+            }
+          },
+          {
+            "q": {
+              "en": "Where is my data kept?",
+              "fr": "Where is my data kept?",
+              "ar": "Where is my data kept?"
+            },
+            "a": {
+              "en": "Personal data is limited to what the form asks for. Retention and transfer rules are under counsel review.",
+              "fr": "Personal data is limited to what the form asks for. Retention and transfer rules are under counsel review.",
+              "ar": "Personal data is limited to what the form asks for. Retention and transfer rules are under counsel review."
+            }
+          },
+          {
+            "q": {
+              "en": "Can I leave at any time?",
+              "fr": "Can I leave at any time?",
+              "ar": "Can I leave at any time?"
+            },
+            "a": {
+              "en": "Yes. Withdrawal does not carry a penalty.",
+              "fr": "Yes. Withdrawal does not carry a penalty.",
+              "ar": "Yes. Withdrawal does not carry a penalty."
+            }
+          }
+        ]
+      },
+      "cta": {
+        "label": {
+          "en": "Ask a question",
+          "fr": "Ask a question",
+          "ar": "Ask a question"
+        },
+        "href": "/contact/",
+        "class": "btn-ghost"
+      }
+    }
+  ]
+}

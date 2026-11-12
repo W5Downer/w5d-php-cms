@@ -1,109 +1,64 @@
 # Developer guide
 
-## Architecture
+W5D is a dynamic PHP 8.2+ application. One front controller (`index.php`) serves the public site,
+registration (`/app/register/`), the owner portal (`/{ADMIN_URL_PATH}/`) and the JSON API.
+Read `docs/templates.md`, `docs/variables.md` and `docs/design.md` before changing a view.
+
+## Layout
 
 ```
-config/app.php            app config (paths, languages, templates, build flags)
-config/variables.php      the variable registry + type vocabularies
-src/bootstrap.php         explicit require list, config load, Registry::boot()
-src/Registry.php          static container: config, vars, lang, content, route, view
-src/Content.php           loads + validates data/content/**, exposes collections
-src/Route.php             id → path map, language-aware URLs, output paths
-src/View.php              two-tier view resolver + Blade-inspired compiler
-src/Site.php              record → document → rendered HTML
-src/helpers.php           global v(), t(), e(), href(), asset(), type_label(), …
-src/Support/{Text,Vars,Markup,Json}.php
-views/_blocks/*.php       one renderer per block type (shared tier)
-views/_shared/…           layouts + partials (shared tier)
-views/{template}/…        per-template overrides
-assets/_base/…            base CSS/JS every template builds on
-assets/{template}/…       per-template CSS
-lang/{code}.php           UI chrome only (no content)
-bin/build.php             the static generator
-tools/gen_*.py            content generators (not part of the runtime)
+index.php                 front controller (repository root)
+src/                      engine: App, Router, View, Page, Content, Variables, Country, DB, Auth, ACL, Scope,
+                          Sampling, Rollup, RateLimit, Audit, Sms (stub), Controllers/{Site,Register,Portal,Forms,Api}
+views/_blocks/            one renderer per block type (vocabulary: config/vocab.php, lint enforces the match)
+views/_shared/            layouts, partials and page bodies shared by every template
+views/templates/{name}/   per-template overrides (may be empty)
+assets/_base/            attention.css, site.js (no dependencies), templates/{name}.css (additive)
+data/content/             JSON content: pages, macros, services, projects, layers, statistics
+data/countries/tn.json    every Tunisia-specific fact (regions, currency, legal profile, calendar)
+config/                   app.php, variables.php (numbers, one place), vocab.php, roles.php
+lang/{en,fr,ar}.php       UI chrome only (content text lives in JSON)
+db/migrations/            ordered SQL, applied by bin/migrate.php
+bin/                      migrate, sync-content, rollup, lint, import-w5d.py (content generator)
+tests/                    RouteMatrixTest.php, FlowTest.php, serve.php (local router)
 ```
 
-## Request/render flow (build time)
+## Request path
 
-```
-bin/build.php
-  → Registry::boot()
-  → for each language:
-      → for each record (pages, macros, services, projects, declarations, layers)
-          → Site::documentForX()   builds the document, localises, resolves {{ tokens }}, builds TOC
-          → Site::render()         picks layout by kind, renders blocks through View
-          → Route::outputPath()    decides dist/{path}/index.html
+`index.php` → `App::run()` → `App::handle()`: method check, path check, session (only for POST and
+the app/portal/form routes), language (cookie `w5d_lang`, then `Accept-Language`) → `Router::match()` →
+controller → `Page::render()` or `Page::wrap()` → layout. Every error goes through `App::error()`.
+
+## Content
+
+- Services, macros, projects and layers are generated from the sources by `python3 bin/import-w5d.py`.
+  Edit the source (`data/services.md`, the HTML report, the legacy registry) and regenerate. Do not
+  hand-edit generated fields.
+- Static pages are `data/content/pages/{id}.json`. Blocks are `{type, id, tier, focus, title, data, cta}`.
+- Numbers are tokens, `{{ counts.services }}`, `{{ experts.target }}`. `bin/lint.php` fails on any
+  unresolved token, on a literal `130,000` or `2027` outside `config/variables.php`, and on Tunisia
+  literals in code.
+- Translation status: fr/ar values equal to the English text are placeholders. The page shows the
+  "not reviewed yet" notice, and lint reports the count.
+
+## Checks before every commit
+
+```bash
+php bin/lint.php                # must print lint: PASS
+php tests/RouteMatrixTest.php   # 200 for every route, 3 templates x 3 languages
+php tests/FlowTest.php          # needs a migrated database (php bin/migrate.php)
 ```
 
 ## Adding a block type
 
-1. Create `views/_blocks/myblock.php`. Read `$block['data']`, `$doc`, `$lang`.
-2. Register it in `config/variables.php` → `types.block.options` (this is what validation checks).
-3. Add styles to `assets/_base/css/base.css`.
-4. Use it in any page JSON: `{ "type": "myblock", "title": {...}, "data": {...} }`.
-5. If it carries a heading that should appear in the sidebar TOC, add its type to the
-   `$headingBlocks` list in `Site::prepareBlocks()`.
+1. Create `views/_blocks/{type}.php`. Read only `$block['data']`, `$block['title']`, `$lang`, `$doc`.
+2. Add the name to `config/vocab.php` under `block` (lint fails if the two lists differ).
+3. Use it in a page JSON with `tier`, `focus` and an `id`. A block without them throws.
 
-## Adding a language
+## Security rules
 
-1. Add the code to `config/app.php` → `langs`, `lang_names`, `lang_dirs`, `locales`; add to
-   `rtl_langs` if it is right-to-left.
-2. Copy `lang/en.php` → `lang/{code}.php` and translate the values (keep the keys).
-3. Build — every page renders in the new language immediately (content falls back to English where
-   a translation is missing).
-
-## Adding a collection kind (e.g. `layers`)
-
-The `layers` kind is the worked example:
-
-1. Property + `readCollection('layers')` in `Content`, plus an accessor.
-2. Route keys in `Route::index()`.
-3. `documentForLayer()` in `Site`.
-4. A loop in `bin/build.php`'s document collector.
-5. A block to render it, and (optionally) an index page.
-
-## The compiler
-
-`View::compileString()` supports `@extends @section @endsection @show @yield @include @block`,
-`@if/@elseif/@else/@endif`, `@foreach @for @while @unless`, `@php/@endphp`, and
-`{{ escaped }}` / `{!! raw !!}`.
-
-**Gotcha that once broke every page:** a view's opening `<?php declare(strict_types=1);` is illegal
-inside `eval()`, so the compiler strips *only the declare statement* and keeps the opening `<?php`.
-Removing the tag too would emit the rest of the file as literal text.
-
-## Build and verify
-
-```bash
-php -l src/View.php                                   # lint one file
-for f in $(find src -name '*.php'); do php -l "$f"; done   # lint everything
-rm -rf storage/cache/views/*                          # compiled-view cache
-php bin/build.php --out=/tmp/site                     # must report zero errors
-for t in ledger atlas folio; do php bin/build.php --template=$t --out=/tmp/s-$t; done
-```
-
-A clean run currently reports **639 files** per template across three languages.
-
-## Conventions
-
-- `declare(strict_types=1)` in every PHP file.
-- No Composer, no autoloader — `src/bootstrap.php` lists files explicitly, in order.
-- English comments; template output escaped through `Markup`/`e()`.
-- Content changes go in `data/content/`, never in a view.
-- Numbers go in `config/variables.php`, never in a page.
-
-## Content generators
-
-`tools/gen_*.py` re-derive the JSON from source documents (`data/services.md`, the dossiers) so the
-130 services and 25 register entries are reproducible rather than hand-maintained:
-
-```bash
-python3 tools/gen_services.py     # 130 services from data/services.md
-python3 tools/gen_macros.py       # 5 macro works
-python3 tools/gen_projects.py     # 25 register entries
-python3 tools/gen_pages_a.py      # 12 pages
-python3 tools/gen_pages_b.py      # 25 pages
-python3 tools/gen_declarations.py # 7 declarations
-python3 tools/gen_site.py         # site.json nav + footer
-python3 tools/gen_ontology.py     # 6 ontology layers + /ontology/ page
-```
+- Never emit raw content HTML. Use `e()` or `Markup::inline()`.
+- SQL is prepared statements only (`DB::all/one/value/run`).
+- Forms carry a CSRF token (`csrf_field()`), are checked with `csrf_valid()`, and have a honeypot.
+- The 5% sample rate is a constant (`Sampling::RATE_PERCENT`). It has no setter and no UI control.
+- Audit rows are append-only. Personal data (e-mail, CIN) is stored as keyed HMAC, not plain text.

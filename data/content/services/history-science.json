@@ -1,0 +1,44 @@
+{
+  "id": "history-science",
+  "slug": "history-science",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "History of Science & Technology",
+    "fr": "History of Science & Technology",
+    "ar": "History of Science & Technology"
+  },
+  "short": {
+    "en": "Research, exhibits, curriculum.",
+    "fr": "Research, exhibits, curriculum.",
+    "ar": "Research, exhibits, curriculum."
+  },
+  "long": {
+    "en": "Historical research on science and technology — archival research, museum exhibits, curriculum development, and public scholarship on the history of scientific and technical institutions.",
+    "fr": "Historical research on science and technology — archival research, museum exhibits, curriculum development, and public scholarship on the history of scientific and technical institutions.",
+    "ar": "Historical research on science and technology — archival research, museum exhibits, curriculum development, and public scholarship on the history of scientific and technical institutions."
+  },
+  "problem": {
+    "en": "Weakly sourced narratives distort scientific and technological heritage.",
+    "fr": "Weakly sourced narratives distort scientific and technological heritage.",
+    "ar": "Weakly sourced narratives distort scientific and technological heritage."
+  },
+  "solution": {
+    "en": "Source-critical research, curated exhibits, and reviewed curriculum material.",
+    "fr": "Source-critical research, curated exhibits, and reviewed curriculum material.",
+    "ar": "Source-critical research, curated exhibits, and reviewed curriculum material."
+  },
+  "likely_buyer": {
+    "en": "Universities/museums",
+    "fr": "Universities/museums",
+    "ar": "Universities/museums"
+  },
+  "acceptance_boundary": {
+    "en": "independent historian review and verifiable citations. Distinguish documented facts from contested interpretations.",
+    "fr": "independent historian review and verifiable citations. Distinguish documented facts from contested interpretations.",
+    "ar": "independent historian review and verifiable citations. Distinguish documented facts from contested interpretations."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "crisis-governance",
+  "slug": "crisis-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Crisis & Emergency Governance",
+    "fr": "Crisis & Emergency Governance",
+    "ar": "Crisis & Emergency Governance"
+  },
+  "short": {
+    "en": "Plans, drills, inter-agency coordination.",
+    "fr": "Plans, drills, inter-agency coordination.",
+    "ar": "Plans, drills, inter-agency coordination."
+  },
+  "long": {
+    "en": "Crisis and emergency governance — contingency planning, drills, and inter-agency coordination protocols for national and local emergencies.",
+    "fr": "Crisis and emergency governance — contingency planning, drills, and inter-agency coordination protocols for national and local emergencies.",
+    "ar": "Crisis and emergency governance — contingency planning, drills, and inter-agency coordination protocols for national and local emergencies."
+  },
+  "problem": {
+    "en": "Unclear responsibilities delay coordinated emergency response.",
+    "fr": "Unclear responsibilities delay coordinated emergency response.",
+    "ar": "Unclear responsibilities delay coordinated emergency response."
+  },
+  "solution": {
+    "en": "Role-based plans, exercises, inter-agency protocols, and after-action register.",
+    "fr": "Role-based plans, exercises, inter-agency protocols, and after-action register.",
+    "ar": "Role-based plans, exercises, inter-agency protocols, and after-action register."
+  },
+  "likely_buyer": {
+    "en": "Municipalities/industry",
+    "fr": "Municipalities/industry",
+    "ar": "Municipalities/industry"
+  },
+  "acceptance_boundary": {
+    "en": "drill measures and corrective-action closure. Authorized incident command retains operational decisions and public warnings.",
+    "fr": "drill measures and corrective-action closure. Authorized incident command retains operational decisions and public warnings.",
+    "ar": "drill measures and corrective-action closure. Authorized incident command retains operational decisions and public warnings."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

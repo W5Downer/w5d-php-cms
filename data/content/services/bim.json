@@ -1,0 +1,44 @@
+{
+  "id": "bim",
+  "slug": "bim",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Building Information Modelling",
+    "fr": "Building Information Modelling",
+    "ar": "Building Information Modelling"
+  },
+  "short": {
+    "en": "Coordination, clash detection, asset handover.",
+    "fr": "Coordination, clash detection, asset handover.",
+    "ar": "Coordination, clash detection, asset handover."
+  },
+  "long": {
+    "en": "BIM delivery — federated model coordination, clash detection, construction sequencing, and digital asset handover to facility management.",
+    "fr": "BIM delivery — federated model coordination, clash detection, construction sequencing, and digital asset handover to facility management.",
+    "ar": "BIM delivery — federated model coordination, clash detection, construction sequencing, and digital asset handover to facility management."
+  },
+  "problem": {
+    "en": "Design clashes and inconsistent models cause rework.",
+    "fr": "Design clashes and inconsistent models cause rework.",
+    "ar": "Design clashes and inconsistent models cause rework."
+  },
+  "solution": {
+    "en": "Coordinated BIM model, clash register, and asset-handover package.",
+    "fr": "Coordinated BIM model, clash register, and asset-handover package.",
+    "ar": "Coordinated BIM model, clash register, and asset-handover package."
+  },
+  "likely_buyer": {
+    "en": "AEC firms",
+    "fr": "AEC firms",
+    "ar": "AEC firms"
+  },
+  "acceptance_boundary": {
+    "en": "agreed model checks and clash closure. Architects/engineers retain design authority; define model detail and reliance boundaries contractually.",
+    "fr": "agreed model checks and clash closure. Architects/engineers retain design authority; define model detail and reliance boundaries contractually.",
+    "ar": "agreed model checks and clash closure. Architects/engineers retain design authority; define model detail and reliance boundaries contractually."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "smart-buildings",
+  "slug": "smart-buildings",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Smart Buildings & IoT",
+    "fr": "Smart Buildings & IoT",
+    "ar": "Smart Buildings & IoT"
+  },
+  "short": {
+    "en": "Sensors, BMS, energy dashboards.",
+    "fr": "Sensors, BMS, energy dashboards.",
+    "ar": "Sensors, BMS, energy dashboards."
+  },
+  "long": {
+    "en": "Building management systems with integrated IoT — sensor networks, BMS integration, real-time energy dashboards, and cybersecurity baselines for operational technology.",
+    "fr": "Building management systems with integrated IoT — sensor networks, BMS integration, real-time energy dashboards, and cybersecurity baselines for operational technology.",
+    "ar": "Building management systems with integrated IoT — sensor networks, BMS integration, real-time energy dashboards, and cybersecurity baselines for operational technology."
+  },
+  "problem": {
+    "en": "Opaque energy and comfort problems persist without reliable measurements.",
+    "fr": "Opaque energy and comfort problems persist without reliable measurements.",
+    "ar": "Opaque energy and comfort problems persist without reliable measurements."
+  },
+  "solution": {
+    "en": "Calibrated sensors, BMS integration, dashboard, and commissioning record.",
+    "fr": "Calibrated sensors, BMS integration, dashboard, and commissioning record.",
+    "ar": "Calibrated sensors, BMS integration, dashboard, and commissioning record."
+  },
+  "likely_buyer": {
+    "en": "Building owners",
+    "fr": "Building owners",
+    "ar": "Building owners"
+  },
+  "acceptance_boundary": {
+    "en": "sensor accuracy, uptime, and functional tests. Secure network segmentation; focus on occupied-building operation, not service 118 site deployment.",
+    "fr": "sensor accuracy, uptime, and functional tests. Secure network segmentation; focus on occupied-building operation, not service 118 site deployment.",
+    "ar": "sensor accuracy, uptime, and functional tests. Secure network segmentation; focus on occupied-building operation, not service 118 site deployment."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

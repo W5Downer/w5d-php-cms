@@ -1,0 +1,44 @@
+{
+  "id": "construction-tech-deploy",
+  "slug": "construction-tech-deploy",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Construction Technology Deployment",
+    "fr": "Construction Technology Deployment",
+    "ar": "Construction Technology Deployment"
+  },
+  "short": {
+    "en": "Site sensors, digital twins, automation.",
+    "fr": "Site sensors, digital twins, automation.",
+    "ar": "Site sensors, digital twins, automation."
+  },
+  "long": {
+    "en": "Construction technology deployment — site sensors, digital twins, and automation that improve productivity and safety on active sites.",
+    "fr": "Construction technology deployment — site sensors, digital twins, and automation that improve productivity and safety on active sites.",
+    "ar": "Construction technology deployment — site sensors, digital twins, and automation that improve productivity and safety on active sites."
+  },
+  "problem": {
+    "en": "Unintegrated site tools fail to improve usable project information.",
+    "fr": "Unintegrated site tools fail to improve usable project information.",
+    "ar": "Unintegrated site tools fail to improve usable project information."
+  },
+  "solution": {
+    "en": "Commissioned site sensors, digital twins, and safe integration.",
+    "fr": "Commissioned site sensors, digital twins, and safe integration.",
+    "ar": "Commissioned site sensors, digital twins, and safe integration."
+  },
+  "likely_buyer": {
+    "en": "Contractors",
+    "fr": "Contractors",
+    "ar": "Contractors"
+  },
+  "acceptance_boundary": {
+    "en": "site acceptance and interoperability tests. Distinguish deployment from 031 process design and 030 occupied-building systems; enforce site safety.",
+    "fr": "site acceptance and interoperability tests. Distinguish deployment from 031 process design and 030 occupied-building systems; enforce site safety.",
+    "ar": "site acceptance and interoperability tests. Distinguish deployment from 031 process design and 030 occupied-building systems; enforce site safety."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

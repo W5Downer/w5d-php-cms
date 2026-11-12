@@ -1,0 +1,44 @@
+{
+  "id": "education-culture",
+  "slug": "education-culture",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Education through Culture",
+    "fr": "Education through Culture",
+    "ar": "Education through Culture"
+  },
+  "short": {
+    "en": "Curriculum design, teacher training.",
+    "fr": "Curriculum design, teacher training.",
+    "ar": "Curriculum design, teacher training."
+  },
+  "long": {
+    "en": "Cultural education programs — curriculum design, teacher training, school-museum partnerships, and assessment frameworks that evaluate cultural literacy outcomes.",
+    "fr": "Cultural education programs — curriculum design, teacher training, school-museum partnerships, and assessment frameworks that evaluate cultural literacy outcomes.",
+    "ar": "Cultural education programs — curriculum design, teacher training, school-museum partnerships, and assessment frameworks that evaluate cultural literacy outcomes."
+  },
+  "problem": {
+    "en": "Disconnected curricula reduce local relevance and engagement.",
+    "fr": "Disconnected curricula reduce local relevance and engagement.",
+    "ar": "Disconnected curricula reduce local relevance and engagement."
+  },
+  "solution": {
+    "en": "Teacher-co-designed cultural lessons, classroom materials, and training.",
+    "fr": "Teacher-co-designed cultural lessons, classroom materials, and training.",
+    "ar": "Teacher-co-designed cultural lessons, classroom materials, and training."
+  },
+  "likely_buyer": {
+    "en": "Schools/NGOs",
+    "fr": "Schools/NGOs",
+    "ar": "Schools/NGOs"
+  },
+  "acceptance_boundary": {
+    "en": "appropriately designed learning assessment and teacher acceptance. Child safeguarding and consent precede data collection or recordings.",
+    "fr": "appropriately designed learning assessment and teacher acceptance. Child safeguarding and consent precede data collection or recordings.",
+    "ar": "appropriately designed learning assessment and teacher acceptance. Child safeguarding and consent precede data collection or recordings."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

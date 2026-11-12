@@ -1,0 +1,44 @@
+{
+  "id": "theatre-archives",
+  "slug": "theatre-archives",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Performance & Theatre Archives",
+    "fr": "Performance & Theatre Archives",
+    "ar": "Performance & Theatre Archives"
+  },
+  "short": {
+    "en": "Recording, rights, pedagogy.",
+    "fr": "Recording, rights, pedagogy.",
+    "ar": "Recording, rights, pedagogy."
+  },
+  "long": {
+    "en": "Performance archives — video and audio recording of live performance, rights clearing, pedagogical extracts, and public access platforms for drama schools and researchers.",
+    "fr": "Performance archives — video and audio recording of live performance, rights clearing, pedagogical extracts, and public access platforms for drama schools and researchers.",
+    "ar": "Performance archives — video and audio recording of live performance, rights clearing, pedagogical extracts, and public access platforms for drama schools and researchers."
+  },
+  "problem": {
+    "en": "Ephemeral work is lost, while recording rights remain unclear.",
+    "fr": "Ephemeral work is lost, while recording rights remain unclear.",
+    "ar": "Ephemeral work is lost, while recording rights remain unclear."
+  },
+  "solution": {
+    "en": "Licensed performance capture, catalog, preservation copies, and teaching resources.",
+    "fr": "Licensed performance capture, catalog, preservation copies, and teaching resources.",
+    "ar": "Licensed performance capture, catalog, preservation copies, and teaching resources."
+  },
+  "likely_buyer": {
+    "en": "Theatres/schools",
+    "fr": "Theatres/schools",
+    "ar": "Theatres/schools"
+  },
+  "acceptance_boundary": {
+    "en": "performer consent, file integrity, and metadata acceptance. Obtain production and distribution rights, not only venue permission.",
+    "fr": "performer consent, file integrity, and metadata acceptance. Obtain production and distribution rights, not only venue permission.",
+    "ar": "performer consent, file integrity, and metadata acceptance. Obtain production and distribution rights, not only venue permission."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

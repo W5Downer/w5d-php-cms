@@ -1,0 +1,44 @@
+{
+  "id": "security-governance",
+  "slug": "security-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Security Sector Governance",
+    "fr": "Security Sector Governance",
+    "ar": "Security Sector Governance"
+  },
+  "short": {
+    "en": "Oversight, complaints, human rights.",
+    "fr": "Oversight, complaints, human rights.",
+    "ar": "Oversight, complaints, human rights."
+  },
+  "long": {
+    "en": "Security sector governance — parliamentary oversight, complaints mechanisms, and human rights compliance frameworks for security forces.",
+    "fr": "Security sector governance — parliamentary oversight, complaints mechanisms, and human rights compliance frameworks for security forces.",
+    "ar": "Security sector governance — parliamentary oversight, complaints mechanisms, and human rights compliance frameworks for security forces."
+  },
+  "problem": {
+    "en": "Inadequate oversight and complaints systems undermine rights and accountability.",
+    "fr": "Inadequate oversight and complaints systems undermine rights and accountability.",
+    "ar": "Inadequate oversight and complaints systems undermine rights and accountability."
+  },
+  "solution": {
+    "en": "Authorized policy, oversight, complaint-process, and audit support.",
+    "fr": "Authorized policy, oversight, complaint-process, and audit support.",
+    "ar": "Authorized policy, oversight, complaint-process, and audit support."
+  },
+  "likely_buyer": {
+    "en": "Oversight bodies",
+    "fr": "Oversight bodies",
+    "ar": "Oversight bodies"
+  },
+  "acceptance_boundary": {
+    "en": "tested accountability controls and rights review. Exclude covert monitoring, weapons, surveillance operations, and coercive functions.",
+    "fr": "tested accountability controls and rights review. Exclude covert monitoring, weapons, surveillance operations, and coercive functions.",
+    "ar": "tested accountability controls and rights review. Exclude covert monitoring, weapons, surveillance operations, and coercive functions."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

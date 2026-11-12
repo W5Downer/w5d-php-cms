@@ -1,0 +1,44 @@
+{
+  "id": "neighbourhood-upgrading",
+  "slug": "neighbourhood-upgrading",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Participatory Neighbourhood Upgrading",
+    "fr": "Participatory Neighbourhood Upgrading",
+    "ar": "Participatory Neighbourhood Upgrading"
+  },
+  "short": {
+    "en": "Co-design, tenure, phased works.",
+    "fr": "Co-design, tenure, phased works.",
+    "ar": "Co-design, tenure, phased works."
+  },
+  "long": {
+    "en": "Participatory neighbourhood upgrading — co-design with residents, tenure regularization, and phased infrastructure works that respect community priorities and existing social networks.",
+    "fr": "Participatory neighbourhood upgrading — co-design with residents, tenure regularization, and phased infrastructure works that respect community priorities and existing social networks.",
+    "ar": "Participatory neighbourhood upgrading — co-design with residents, tenure regularization, and phased infrastructure works that respect community priorities and existing social networks."
+  },
+  "problem": {
+    "en": "Fragmented works and insecure tenure can displace residents.",
+    "fr": "Fragmented works and insecure tenure can displace residents.",
+    "ar": "Fragmented works and insecure tenure can displace residents."
+  },
+  "solution": {
+    "en": "Tenure-sensitive co-design, phased infrastructure, and grievance process.",
+    "fr": "Tenure-sensitive co-design, phased infrastructure, and grievance process.",
+    "ar": "Tenure-sensitive co-design, phased infrastructure, and grievance process."
+  },
+  "likely_buyer": {
+    "en": "Cities/donors",
+    "fr": "Cities/donors",
+    "ar": "Cities/donors"
+  },
+  "acceptance_boundary": {
+    "en": "resident participation, documented concerns, and accepted milestones. No eviction authority or claim to resolve land rights unilaterally.",
+    "fr": "resident participation, documented concerns, and accepted milestones. No eviction authority or claim to resolve land rights unilaterally.",
+    "ar": "resident participation, documented concerns, and accepted milestones. No eviction authority or claim to resolve land rights unilaterally."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

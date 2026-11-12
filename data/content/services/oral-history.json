@@ -1,0 +1,44 @@
+{
+  "id": "oral-history",
+  "slug": "oral-history",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Oral History Programs",
+    "fr": "Oral History Programs",
+    "ar": "Oral History Programs"
+  },
+  "short": {
+    "en": "Recording, transcription, ethical archiving.",
+    "fr": "Recording, transcription, ethical archiving.",
+    "ar": "Recording, transcription, ethical archiving."
+  },
+  "long": {
+    "en": "End-to-end oral history programs — consent-driven recording sessions, professional transcription and translation, ethical archiving, and public access frameworks that honour narrators' wishes.",
+    "fr": "End-to-end oral history programs — consent-driven recording sessions, professional transcription and translation, ethical archiving, and public access frameworks that honour narrators' wishes.",
+    "ar": "End-to-end oral history programs — consent-driven recording sessions, professional transcription and translation, ethical archiving, and public access frameworks that honour narrators' wishes."
+  },
+  "problem": {
+    "en": "Witness accounts disappear; careless publication can expose interviewees.",
+    "fr": "Witness accounts disappear; careless publication can expose interviewees.",
+    "ar": "Witness accounts disappear; careless publication can expose interviewees."
+  },
+  "solution": {
+    "en": "Consent-tier interviews, checked transcripts, metadata, and embargo-aware deposits.",
+    "fr": "Consent-tier interviews, checked transcripts, metadata, and embargo-aware deposits.",
+    "ar": "Consent-tier interviews, checked transcripts, metadata, and embargo-aware deposits."
+  },
+  "likely_buyer": {
+    "en": "Archives/universities",
+    "fr": "Archives/universities",
+    "ar": "Archives/universities"
+  },
+  "acceptance_boundary": {
+    "en": "audio–transcript fidelity and consent/embargo compliance. Separate participation from permission to publish identifying material.",
+    "fr": "audio–transcript fidelity and consent/embargo compliance. Separate participation from permission to publish identifying material.",
+    "ar": "audio–transcript fidelity and consent/embargo compliance. Separate participation from permission to publish identifying material."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

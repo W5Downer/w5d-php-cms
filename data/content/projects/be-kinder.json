@@ -1,0 +1,23 @@
+{
+  "id": "be-kinder",
+  "slug": "be-kinder",
+  "status": "planned",
+  "evidence": "E1",
+  "meta_solution": null,
+  "title": {
+    "en": "Be Kinder",
+    "fr": "Be Kinder",
+    "ar": "كن أرحم"
+  },
+  "short": {
+    "en": "Planned. Book index drafted."
+  },
+  "summary": {
+    "en": "Planned. Book index drafted."
+  },
+  "evidence_note": {
+    "en": "No public product. The book index exists as a draft only, and the schedule has not been supplied."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "translation-hubs",
+  "slug": "translation-hubs",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Translation & Localisation Hubs",
+    "fr": "Translation & Localisation Hubs",
+    "ar": "Translation & Localisation Hubs"
+  },
+  "short": {
+    "en": "Arabic–French–English professional translation.",
+    "fr": "Arabic–French–English professional translation.",
+    "ar": "Arabic–French–English professional translation."
+  },
+  "long": {
+    "en": "Managed translation and localisation hubs across Arabic, French, and English — terminology management, cultural adaptation, quality assurance, and multilingual accessibility for publications, apps, and public services.",
+    "fr": "Managed translation and localisation hubs across Arabic, French, and English — terminology management, cultural adaptation, quality assurance, and multilingual accessibility for publications, apps, and public services.",
+    "ar": "Managed translation and localisation hubs across Arabic, French, and English — terminology management, cultural adaptation, quality assurance, and multilingual accessibility for publications, apps, and public services."
+  },
+  "problem": {
+    "en": "Language errors block trade, knowledge access, and usable Arabic interfaces.",
+    "fr": "Language errors block trade, knowledge access, and usable Arabic interfaces.",
+    "ar": "Language errors block trade, knowledge access, and usable Arabic interfaces."
+  },
+  "solution": {
+    "en": "Arabic–French–English translation with terminology management, second review, and RTL testing.",
+    "fr": "Arabic–French–English translation with terminology management, second review, and RTL testing.",
+    "ar": "Arabic–French–English translation with terminology management, second review, and RTL testing."
+  },
+  "likely_buyer": {
+    "en": "Exporters/publishers",
+    "fr": "Exporters/publishers",
+    "ar": "Exporters/publishers"
+  },
+  "acceptance_boundary": {
+    "en": "agreed linguistic-error rubric and functional acceptance. Legal/medical texts require appropriately qualified review; machine output is not automatic approval.",
+    "fr": "agreed linguistic-error rubric and functional acceptance. Legal/medical texts require appropriately qualified review; machine output is not automatic approval.",
+    "ar": "agreed linguistic-error rubric and functional acceptance. Legal/medical texts require appropriately qualified review; machine output is not automatic approval."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

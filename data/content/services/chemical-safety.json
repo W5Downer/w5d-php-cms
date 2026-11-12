@@ -1,0 +1,44 @@
+{
+  "id": "chemical-safety",
+  "slug": "chemical-safety",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Chemical Safety & Toxicology",
+    "fr": "Chemical Safety & Toxicology",
+    "ar": "Chemical Safety & Toxicology"
+  },
+  "short": {
+    "en": "Risk assessment, SDS authoring.",
+    "fr": "Risk assessment, SDS authoring.",
+    "ar": "Risk assessment, SDS authoring."
+  },
+  "long": {
+    "en": "Chemical safety and toxicology — risk assessment, SDS authoring, and exposure-reduction programs for labs, factories, and public institutions.",
+    "fr": "Chemical safety and toxicology — risk assessment, SDS authoring, and exposure-reduction programs for labs, factories, and public institutions.",
+    "ar": "Chemical safety and toxicology — risk assessment, SDS authoring, and exposure-reduction programs for labs, factories, and public institutions."
+  },
+  "problem": {
+    "en": "Exposure risks and incorrect labeling can harm workers and users.",
+    "fr": "Exposure risks and incorrect labeling can harm workers and users.",
+    "ar": "Exposure risks and incorrect labeling can harm workers and users."
+  },
+  "solution": {
+    "en": "SDS preparation, qualified hazard/exposure assessment, and control recommendations.",
+    "fr": "SDS preparation, qualified hazard/exposure assessment, and control recommendations.",
+    "ar": "SDS preparation, qualified hazard/exposure assessment, and control recommendations."
+  },
+  "likely_buyer": {
+    "en": "Factories/labs",
+    "fr": "Factories/labs",
+    "ar": "Factories/labs"
+  },
+  "acceptance_boundary": {
+    "en": "current classifications and qualified review. Assessment is not regulatory approval; obtain required permits and safety oversight.",
+    "fr": "current classifications and qualified review. Assessment is not regulatory approval; obtain required permits and safety oversight.",
+    "ar": "current classifications and qualified review. Assessment is not regulatory approval; obtain required permits and safety oversight."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "real-estate",
+  "slug": "real-estate",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Real Estate Market Analysis",
+    "fr": "Real Estate Market Analysis",
+    "ar": "Real Estate Market Analysis"
+  },
+  "short": {
+    "en": "Valuation, feasibility, regulatory mapping.",
+    "fr": "Valuation, feasibility, regulatory mapping.",
+    "ar": "Valuation, feasibility, regulatory mapping."
+  },
+  "long": {
+    "en": "Real estate market analysis — valuation, feasibility studies, regulatory mapping, and investment-grade market reports for developers and institutional investors.",
+    "fr": "Real estate market analysis — valuation, feasibility studies, regulatory mapping, and investment-grade market reports for developers and institutional investors.",
+    "ar": "Real estate market analysis — valuation, feasibility studies, regulatory mapping, and investment-grade market reports for developers and institutional investors."
+  },
+  "problem": {
+    "en": "Investment choices rely on weak comparables and optimistic assumptions.",
+    "fr": "Investment choices rely on weak comparables and optimistic assumptions.",
+    "ar": "Investment choices rely on weak comparables and optimistic assumptions."
+  },
+  "solution": {
+    "en": "Verified market comparables, feasibility study, and sensitivity analysis.",
+    "fr": "Verified market comparables, feasibility study, and sensitivity analysis.",
+    "ar": "Verified market comparables, feasibility study, and sensitivity analysis."
+  },
+  "likely_buyer": {
+    "en": "Investors/developers",
+    "fr": "Investors/developers",
+    "ar": "Investors/developers"
+  },
+  "acceptance_boundary": {
+    "en": "auditable sources and assumptions. Do not imply licensed valuation without qualifications or promise appreciation/returns.",
+    "fr": "auditable sources and assumptions. Do not imply licensed valuation without qualifications or promise appreciation/returns.",
+    "ar": "auditable sources and assumptions. Do not imply licensed valuation without qualifications or promise appreciation/returns."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

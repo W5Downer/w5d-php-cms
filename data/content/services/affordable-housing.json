@@ -1,0 +1,44 @@
+{
+  "id": "affordable-housing",
+  "slug": "affordable-housing",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Affordable Housing Delivery",
+    "fr": "Affordable Housing Delivery",
+    "ar": "Affordable Housing Delivery"
+  },
+  "short": {
+    "en": "Design, finance structuring, construction management.",
+    "fr": "Design, finance structuring, construction management.",
+    "ar": "Design, finance structuring, construction management."
+  },
+  "long": {
+    "en": "End-to-end affordable housing delivery — design for cost, finance structuring with public and private capital, construction management, and long-term asset management.",
+    "fr": "End-to-end affordable housing delivery — design for cost, finance structuring with public and private capital, construction management, and long-term asset management.",
+    "ar": "End-to-end affordable housing delivery — design for cost, finance structuring with public and private capital, construction management, and long-term asset management."
+  },
+  "problem": {
+    "en": "Low sale prices can hide unaffordable maintenance and energy costs.",
+    "fr": "Low sale prices can hide unaffordable maintenance and energy costs.",
+    "ar": "Low sale prices can hide unaffordable maintenance and energy costs."
+  },
+  "solution": {
+    "en": "Costed feasibility, design coordination, financing options, and whole-life analysis.",
+    "fr": "Costed feasibility, design coordination, financing options, and whole-life analysis.",
+    "ar": "Costed feasibility, design coordination, financing options, and whole-life analysis."
+  },
+  "likely_buyer": {
+    "en": "Developers/housing agencies",
+    "fr": "Developers/housing agencies",
+    "ar": "Developers/housing agencies"
+  },
+  "acceptance_boundary": {
+    "en": "approved package and lifecycle costs. Licensed design, permits, and client financing remain necessary; no housing-finance guarantee.",
+    "fr": "approved package and lifecycle costs. Licensed design, permits, and client financing remain necessary; no housing-finance guarantee.",
+    "ar": "approved package and lifecycle costs. Licensed design, permits, and client financing remain necessary; no housing-finance guarantee."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

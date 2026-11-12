@@ -1,0 +1,44 @@
+{
+  "id": "regulatory-impact",
+  "slug": "regulatory-impact",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Regulatory Impact Assessment",
+    "fr": "Regulatory Impact Assessment",
+    "ar": "Regulatory Impact Assessment"
+  },
+  "short": {
+    "en": "Cost–benefit, stakeholder consultation.",
+    "fr": "Cost–benefit, stakeholder consultation.",
+    "ar": "Cost–benefit, stakeholder consultation."
+  },
+  "long": {
+    "en": "Regulatory impact assessment — structured cost-benefit analysis, stakeholder consultation, and publication of impact statements for proposed regulations.",
+    "fr": "Regulatory impact assessment — structured cost-benefit analysis, stakeholder consultation, and publication of impact statements for proposed regulations.",
+    "ar": "Regulatory impact assessment — structured cost-benefit analysis, stakeholder consultation, and publication of impact statements for proposed regulations."
+  },
+  "problem": {
+    "en": "Rules may impose costs without evaluated benefits or alternatives.",
+    "fr": "Rules may impose costs without evaluated benefits or alternatives.",
+    "ar": "Rules may impose costs without evaluated benefits or alternatives."
+  },
+  "solution": {
+    "en": "Options appraisal, cost–benefit model, and stakeholder consultation.",
+    "fr": "Options appraisal, cost–benefit model, and stakeholder consultation.",
+    "ar": "Options appraisal, cost–benefit model, and stakeholder consultation."
+  },
+  "likely_buyer": {
+    "en": "Ministries/associations",
+    "fr": "Ministries/associations",
+    "ar": "Ministries/associations"
+  },
+  "acceptance_boundary": {
+    "en": "reproducible assumptions and documented responses. Advice supports authorized rule-makers; it does not create binding regulation.",
+    "fr": "reproducible assumptions and documented responses. Advice supports authorized rule-makers; it does not create binding regulation.",
+    "ar": "reproducible assumptions and documented responses. Advice supports authorized rule-makers; it does not create binding regulation."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

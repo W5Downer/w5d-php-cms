@@ -1,0 +1,23 @@
+{
+  "id": "metax-academy-site",
+  "slug": "metax-academy-site",
+  "status": "live",
+  "evidence": "E2",
+  "meta_solution": null,
+  "title": {
+    "en": "MetaX Academy site",
+    "fr": "Site MetaX Academy",
+    "ar": "موقع أكاديمية ميتاكس"
+  },
+  "short": {
+    "en": "Live: nine pillars, licence ML-2.3 and a register of 25 structural harms."
+  },
+  "summary": {
+    "en": "Live: nine pillars, licence ML-2.3 and a register of 25 structural harms."
+  },
+  "evidence_note": {
+    "en": "Enrolment, accreditation and pricing are not published on the site."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

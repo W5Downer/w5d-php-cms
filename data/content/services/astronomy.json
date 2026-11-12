@@ -1,0 +1,44 @@
+{
+  "id": "astronomy",
+  "slug": "astronomy",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Astronomy & Space Science Outreach",
+    "fr": "Astronomy & Space Science Outreach",
+    "ar": "Astronomy & Space Science Outreach"
+  },
+  "short": {
+    "en": "Observing programs, citizen science.",
+    "fr": "Observing programs, citizen science.",
+    "ar": "Observing programs, citizen science."
+  },
+  "long": {
+    "en": "Astronomy and space science outreach — observing programs, citizen-science campaigns, and planetarium-based learning that scales across regions.",
+    "fr": "Astronomy and space science outreach — observing programs, citizen-science campaigns, and planetarium-based learning that scales across regions.",
+    "ar": "Astronomy and space science outreach — observing programs, citizen-science campaigns, and planetarium-based learning that scales across regions."
+  },
+  "problem": {
+    "en": "Limited practical access weakens STEM engagement.",
+    "fr": "Limited practical access weakens STEM engagement.",
+    "ar": "Limited practical access weakens STEM engagement."
+  },
+  "solution": {
+    "en": "Safe observing activities, teaching modules, and citizen-science programs.",
+    "fr": "Safe observing activities, teaching modules, and citizen-science programs.",
+    "ar": "Safe observing activities, teaching modules, and citizen-science programs."
+  },
+  "likely_buyer": {
+    "en": "Schools/science centers",
+    "fr": "Schools/science centers",
+    "ar": "Schools/science centers"
+  },
+  "acceptance_boundary": {
+    "en": "learning assessment and safe observation procedures. Start with partner equipment; no expensive observatory investment without funded demand.",
+    "fr": "learning assessment and safe observation procedures. Start with partner equipment; no expensive observatory investment without funded demand.",
+    "ar": "learning assessment and safe observation procedures. Start with partner equipment; no expensive observatory investment without funded demand."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

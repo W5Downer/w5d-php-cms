@@ -1,0 +1,44 @@
+{
+  "id": "it-governance",
+  "slug": "it-governance",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "IT Governance & Compliance",
+    "fr": "IT Governance & Compliance",
+    "ar": "IT Governance & Compliance"
+  },
+  "short": {
+    "en": "ISO 27001, audits, policies.",
+    "fr": "ISO 27001, audits, policies.",
+    "ar": "ISO 27001, audits, policies."
+  },
+  "long": {
+    "en": "IT governance and compliance — ISO 27001 implementation, audits, and policy frameworks for technology organizations.",
+    "fr": "IT governance and compliance — ISO 27001 implementation, audits, and policy frameworks for technology organizations.",
+    "ar": "IT governance and compliance — ISO 27001 implementation, audits, and policy frameworks for technology organizations."
+  },
+  "problem": {
+    "en": "Undocumented controls create inconsistent security and audit readiness.",
+    "fr": "Undocumented controls create inconsistent security and audit readiness.",
+    "ar": "Undocumented controls create inconsistent security and audit readiness."
+  },
+  "solution": {
+    "en": "Control inventory, risk treatment, policy evidence, and ISO 27001 readiness support.",
+    "fr": "Control inventory, risk treatment, policy evidence, and ISO 27001 readiness support.",
+    "ar": "Control inventory, risk treatment, policy evidence, and ISO 27001 readiness support."
+  },
+  "likely_buyer": {
+    "en": "Firms",
+    "fr": "Firms",
+    "ar": "Firms"
+  },
+  "acceptance_boundary": {
+    "en": "auditable control operation and closed gaps. Independent certifiers, not W5D’s internal badges, award external certification.",
+    "fr": "auditable control operation and closed gaps. Independent certifiers, not W5D’s internal badges, award external certification.",
+    "ar": "auditable control operation and closed gaps. Independent certifiers, not W5D’s internal badges, award external certification."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

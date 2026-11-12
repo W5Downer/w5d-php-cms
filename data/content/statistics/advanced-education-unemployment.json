@@ -1,0 +1,958 @@
+{
+  "id": "advanced-education-unemployment",
+  "indicator": "SL.UEM.ADVN.ZS",
+  "definition": {
+    "en": "Unemployment among the labour force with advanced education (%). Not a headcount of W5D experts, not a 2026 estimate, not a recruitment quota."
+  },
+  "source": {
+    "en": "World Bank WDI indicator SL.UEM.ADVN.ZS (ILO provenance); secondary tabulation reproduced in the W5D assessment, retrieved 12 November 2026."
+  },
+  "caveat": {
+    "en": "Observation years differ widely (2000 to 2025). Rows are source-order and are not a current ranking. Countries absent from the table are unobserved here, not zero."
+  },
+  "rows": [
+    {
+      "country": "Angola",
+      "year": 2024,
+      "rate": 28.808
+    },
+    {
+      "country": "Haiti",
+      "year": 2012,
+      "rate": 26.802
+    },
+    {
+      "country": "Jordan",
+      "year": 2023,
+      "rate": 26.608
+    },
+    {
+      "country": "Morocco",
+      "year": 2022,
+      "rate": 25.85
+    },
+    {
+      "country": "Congo, Rep.",
+      "year": 2009,
+      "rate": 25.768
+    },
+    {
+      "country": "West Bank and Gaza",
+      "year": 2025,
+      "rate": 25.563
+    },
+    {
+      "country": "Eswatini",
+      "year": 2023,
+      "rate": 22.458
+    },
+    {
+      "country": "Sudan",
+      "year": 2022,
+      "rate": 22.381
+    },
+    {
+      "country": "Tunisia",
+      "year": 2023,
+      "rate": 21.715
+    },
+    {
+      "country": "Botswana",
+      "year": 2024,
+      "rate": 19.885
+    },
+    {
+      "country": "Lesotho",
+      "year": 2024,
+      "rate": 19.682
+    },
+    {
+      "country": "Iraq",
+      "year": 2021,
+      "rate": 18.841
+    },
+    {
+      "country": "Cameroon",
+      "year": 2021,
+      "rate": 18.774
+    },
+    {
+      "country": "Guinea",
+      "year": 2019,
+      "rate": 17.519
+    },
+    {
+      "country": "Djibouti",
+      "year": 2017,
+      "rate": 16.29
+    },
+    {
+      "country": "Somalia, Fed. Rep.",
+      "year": 2022,
+      "rate": 15.111
+    },
+    {
+      "country": "Yemen, Rep.",
+      "year": 2014,
+      "rate": 14.786
+    },
+    {
+      "country": "Burkina Faso",
+      "year": 2024,
+      "rate": 14.688
+    },
+    {
+      "country": "Lebanon",
+      "year": 2019,
+      "rate": 14.469
+    },
+    {
+      "country": "Mali",
+      "year": 2024,
+      "rate": 14.226
+    },
+    {
+      "country": "Senegal",
+      "year": 2024,
+      "rate": 13.61
+    },
+    {
+      "country": "India",
+      "year": 2024,
+      "rate": 13.47
+    },
+    {
+      "country": "Egypt, Arab Rep.",
+      "year": 2024,
+      "rate": 13.248
+    },
+    {
+      "country": "South Africa",
+      "year": 2024,
+      "rate": 12.771
+    },
+    {
+      "country": "Mauritania",
+      "year": 2019,
+      "rate": 12.767
+    },
+    {
+      "country": "Namibia",
+      "year": 2018,
+      "rate": 12.18
+    },
+    {
+      "country": "Rwanda",
+      "year": 2024,
+      "rate": 11.354
+    },
+    {
+      "country": "Malawi",
+      "year": 2024,
+      "rate": 11.35
+    },
+    {
+      "country": "Iran, Islamic Rep.",
+      "year": 2024,
+      "rate": 11.258
+    },
+    {
+      "country": "Pakistan",
+      "year": 2025,
+      "rate": 11.116
+    },
+    {
+      "country": "Comoros",
+      "year": 2021,
+      "rate": 10.969
+    },
+    {
+      "country": "Bangladesh",
+      "year": 2024,
+      "rate": 10.853
+    },
+    {
+      "country": "Gambia, The",
+      "year": 2023,
+      "rate": 10.724
+    },
+    {
+      "country": "Curacao",
+      "year": 2020,
+      "rate": 10.584
+    },
+    {
+      "country": "Ethiopia",
+      "year": 2021,
+      "rate": 10.561
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "year": 2022,
+      "rate": 10.51
+    },
+    {
+      "country": "Benin",
+      "year": 2022,
+      "rate": 10.297
+    },
+    {
+      "country": "Uganda",
+      "year": 2021,
+      "rate": 9.947
+    },
+    {
+      "country": "Afghanistan",
+      "year": 2021,
+      "rate": 9.797
+    },
+    {
+      "country": "Algeria",
+      "year": 2014,
+      "rate": 9.681
+    },
+    {
+      "country": "Mozambique",
+      "year": 2022,
+      "rate": 9.301
+    },
+    {
+      "country": "Puerto Rico (US)",
+      "year": 2020,
+      "rate": 9.296
+    },
+    {
+      "country": "Burundi",
+      "year": 2020,
+      "rate": 9.208
+    },
+    {
+      "country": "Nigeria",
+      "year": 2024,
+      "rate": 9.197
+    },
+    {
+      "country": "Turkiye",
+      "year": 2024,
+      "rate": 9.129
+    },
+    {
+      "country": "Zambia",
+      "year": 2024,
+      "rate": 9.104
+    },
+    {
+      "country": "Ukraine",
+      "year": 2021,
+      "rate": 9.026
+    },
+    {
+      "country": "Colombia",
+      "year": 2025,
+      "rate": 9.022
+    },
+    {
+      "country": "Georgia",
+      "year": 2024,
+      "rate": 8.494
+    },
+    {
+      "country": "Madagascar",
+      "year": 2015,
+      "rate": 8.451
+    },
+    {
+      "country": "Liberia",
+      "year": 2017,
+      "rate": 8.385
+    },
+    {
+      "country": "Nepal",
+      "year": 2017,
+      "rate": 8.325
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "year": 2024,
+      "rate": 7.86
+    },
+    {
+      "country": "Chad",
+      "year": 2022,
+      "rate": 7.731
+    },
+    {
+      "country": "Zimbabwe",
+      "year": 2024,
+      "rate": 7.719
+    },
+    {
+      "country": "Chile",
+      "year": 2025,
+      "rate": 7.711
+    },
+    {
+      "country": "Kenya",
+      "year": 2022,
+      "rate": 7.675
+    },
+    {
+      "country": "Montenegro",
+      "year": 2024,
+      "rate": 7.547
+    },
+    {
+      "country": "Armenia",
+      "year": 2023,
+      "rate": 7.505
+    },
+    {
+      "country": "Kyrgyz Republic",
+      "year": 2013,
+      "rate": 7.472
+    },
+    {
+      "country": "North Macedonia",
+      "year": 2024,
+      "rate": 7.299
+    },
+    {
+      "country": "Greece",
+      "year": 2024,
+      "rate": 7.251
+    },
+    {
+      "country": "Cabo Verde",
+      "year": 2019,
+      "rate": 7.13
+    },
+    {
+      "country": "Nicaragua",
+      "year": 2014,
+      "rate": 7.101
+    },
+    {
+      "country": "Togo",
+      "year": 2022,
+      "rate": 7.068
+    },
+    {
+      "country": "Panama",
+      "year": 2024,
+      "rate": 7.04
+    },
+    {
+      "country": "Belize",
+      "year": 2019,
+      "rate": 7.019
+    },
+    {
+      "country": "St. Lucia",
+      "year": 2024,
+      "rate": 6.739
+    },
+    {
+      "country": "Albania",
+      "year": 2024,
+      "rate": 6.624
+    },
+    {
+      "country": "Kosovo",
+      "year": 2024,
+      "rate": 6.576
+    },
+    {
+      "country": "San Marino",
+      "year": 2022,
+      "rate": 6.544
+    },
+    {
+      "country": "South Sudan",
+      "year": 2008,
+      "rate": 6.437
+    },
+    {
+      "country": "Spain",
+      "year": 2025,
+      "rate": 6.364
+    },
+    {
+      "country": "Sri Lanka",
+      "year": 2023,
+      "rate": 6.211
+    },
+    {
+      "country": "Monaco",
+      "year": 2016,
+      "rate": 6.171
+    },
+    {
+      "country": "Guyana",
+      "year": 2019,
+      "rate": 6.133
+    },
+    {
+      "country": "Guinea-Bissau",
+      "year": 2022,
+      "rate": 6.132
+    },
+    {
+      "country": "Serbia",
+      "year": 2024,
+      "rate": 5.931
+    },
+    {
+      "country": "Micronesia, Fed. Sts.",
+      "year": 2014,
+      "rate": 5.863
+    },
+    {
+      "country": "Bhutan",
+      "year": 2024,
+      "rate": 5.761
+    },
+    {
+      "country": "Venezuela, RB",
+      "year": 2017,
+      "rate": 5.76
+    },
+    {
+      "country": "Ghana",
+      "year": 2024,
+      "rate": 5.729
+    },
+    {
+      "country": "Ecuador",
+      "year": 2025,
+      "rate": 5.687
+    },
+    {
+      "country": "Tanzania",
+      "year": 2024,
+      "rate": 5.54
+    },
+    {
+      "country": "Azerbaijan",
+      "year": 2013,
+      "rate": 5.508
+    },
+    {
+      "country": "Congo, Dem. Rep.",
+      "year": 2020,
+      "rate": 5.496
+    },
+    {
+      "country": "Canada",
+      "year": 2025,
+      "rate": 5.388
+    },
+    {
+      "country": "Brunei Darussalam",
+      "year": 2024,
+      "rate": 5.341
+    },
+    {
+      "country": "Honduras",
+      "year": 2025,
+      "rate": 5.276
+    },
+    {
+      "country": "Saudi Arabia",
+      "year": 2024,
+      "rate": 5.108
+    },
+    {
+      "country": "Finland",
+      "year": 2024,
+      "rate": 5.056
+    },
+    {
+      "country": "France",
+      "year": 2024,
+      "rate": 5.016
+    },
+    {
+      "country": "Fiji",
+      "year": 2024,
+      "rate": 5.014
+    },
+    {
+      "country": "Luxembourg",
+      "year": 2024,
+      "rate": 4.874
+    },
+    {
+      "country": "Sierra Leone",
+      "year": 2018,
+      "rate": 4.867
+    },
+    {
+      "country": "Peru",
+      "year": 2025,
+      "rate": 4.804
+    },
+    {
+      "country": "Sweden",
+      "year": 2024,
+      "rate": 4.766
+    },
+    {
+      "country": "Costa Rica",
+      "year": 2025,
+      "rate": 4.71
+    },
+    {
+      "country": "Denmark",
+      "year": 2024,
+      "rate": 4.683
+    },
+    {
+      "country": "Estonia",
+      "year": 2024,
+      "rate": 4.658
+    },
+    {
+      "country": "Niger",
+      "year": 2022,
+      "rate": 4.617
+    },
+    {
+      "country": "Oman",
+      "year": 2021,
+      "rate": 4.517
+    },
+    {
+      "country": "Mongolia",
+      "year": 2024,
+      "rate": 4.48
+    },
+    {
+      "country": "Portugal",
+      "year": 2025,
+      "rate": 4.444
+    },
+    {
+      "country": "Dominican Republic",
+      "year": 2025,
+      "rate": 4.396
+    },
+    {
+      "country": "Bolivia",
+      "year": 2024,
+      "rate": 4.375
+    },
+    {
+      "country": "Bermuda",
+      "year": 2012,
+      "rate": 4.367
+    },
+    {
+      "country": "Grenada",
+      "year": 2023,
+      "rate": 4.246
+    },
+    {
+      "country": "Papua New Guinea",
+      "year": 2022,
+      "rate": 4.244
+    },
+    {
+      "country": "Lithuania",
+      "year": 2024,
+      "rate": 4.13
+    },
+    {
+      "country": "Austria",
+      "year": 2025,
+      "rate": 4.125
+    },
+    {
+      "country": "Cyprus",
+      "year": 2024,
+      "rate": 3.993
+    },
+    {
+      "country": "China",
+      "year": 2000,
+      "rate": 3.843
+    },
+    {
+      "country": "New Caledonia",
+      "year": 2023,
+      "rate": 3.75
+    },
+    {
+      "country": "Mauritius",
+      "year": 2024,
+      "rate": 3.683
+    },
+    {
+      "country": "Suriname",
+      "year": 2016,
+      "rate": 3.606
+    },
+    {
+      "country": "El Salvador",
+      "year": 2024,
+      "rate": 3.598
+    },
+    {
+      "country": "Indonesia",
+      "year": 2023,
+      "rate": 3.571
+    },
+    {
+      "country": "Latvia",
+      "year": 2024,
+      "rate": 3.537
+    },
+    {
+      "country": "Kazakhstan",
+      "year": 2017,
+      "rate": 3.486
+    },
+    {
+      "country": "Malaysia",
+      "year": 2022,
+      "rate": 3.468
+    },
+    {
+      "country": "Switzerland",
+      "year": 2024,
+      "rate": 3.414
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2025,
+      "rate": 3.367
+    },
+    {
+      "country": "Italy",
+      "year": 2024,
+      "rate": 3.366
+    },
+    {
+      "country": "Antigua and Barbuda",
+      "year": 2018,
+      "rate": 3.359
+    },
+    {
+      "country": "Philippines",
+      "year": 2023,
+      "rate": 3.352
+    },
+    {
+      "country": "Singapore",
+      "year": 2024,
+      "rate": 3.312
+    },
+    {
+      "country": "Ireland",
+      "year": 2024,
+      "rate": 3.295
+    },
+    {
+      "country": "Croatia",
+      "year": 2024,
+      "rate": 3.295
+    },
+    {
+      "country": "Belgium",
+      "year": 2024,
+      "rate": 3.246
+    },
+    {
+      "country": "Brazil",
+      "year": 2025,
+      "rate": 3.215
+    },
+    {
+      "country": "Mexico",
+      "year": 2024,
+      "rate": 3.21
+    },
+    {
+      "country": "Samoa",
+      "year": 2022,
+      "rate": 3.181
+    },
+    {
+      "country": "Guatemala",
+      "year": 2024,
+      "rate": 3.178
+    },
+    {
+      "country": "Bahamas, The",
+      "year": 2023,
+      "rate": 3.101
+    },
+    {
+      "country": "New Zealand",
+      "year": 2020,
+      "rate": 3.007
+    },
+    {
+      "country": "Tuvalu",
+      "year": 2017,
+      "rate": 2.978
+    },
+    {
+      "country": "United States",
+      "year": 2025,
+      "rate": 2.927
+    },
+    {
+      "country": "Barbados",
+      "year": 2023,
+      "rate": 2.926
+    },
+    {
+      "country": "Hong Kong SAR, China",
+      "year": 2024,
+      "rate": 2.867
+    },
+    {
+      "country": "Kiribati",
+      "year": 2020,
+      "rate": 2.802
+    },
+    {
+      "country": "Lao PDR",
+      "year": 2022,
+      "rate": 2.796
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "year": 2024,
+      "rate": 2.783
+    },
+    {
+      "country": "Paraguay",
+      "year": 2017,
+      "rate": 2.762
+    },
+    {
+      "country": "Korea, Rep.",
+      "year": 2025,
+      "rate": 2.743
+    },
+    {
+      "country": "Norway",
+      "year": 2024,
+      "rate": 2.693
+    },
+    {
+      "country": "United Arab Emirates",
+      "year": 2023,
+      "rate": 2.659
+    },
+    {
+      "country": "Maldives",
+      "year": 2019,
+      "rate": 2.603
+    },
+    {
+      "country": "Netherlands",
+      "year": 2024,
+      "rate": 2.543
+    },
+    {
+      "country": "Germany",
+      "year": 2024,
+      "rate": 2.528
+    },
+    {
+      "country": "Cayman Islands",
+      "year": 2015,
+      "rate": 2.515
+    },
+    {
+      "country": "Japan",
+      "year": 2020,
+      "rate": 2.468
+    },
+    {
+      "country": "Australia",
+      "year": 2024,
+      "rate": 2.468
+    },
+    {
+      "country": "Bahrain",
+      "year": 2012,
+      "rate": 2.463
+    },
+    {
+      "country": "Moldova",
+      "year": 2024,
+      "rate": 2.372
+    },
+    {
+      "country": "Israel",
+      "year": 2024,
+      "rate": 2.363
+    },
+    {
+      "country": "Malta",
+      "year": 2024,
+      "rate": 2.344
+    },
+    {
+      "country": "Timor-Leste",
+      "year": 2022,
+      "rate": 2.343
+    },
+    {
+      "country": "Viet Nam",
+      "year": 2024,
+      "rate": 2.297
+    },
+    {
+      "country": "Nauru",
+      "year": 2021,
+      "rate": 2.283
+    },
+    {
+      "country": "Iceland",
+      "year": 2024,
+      "rate": 2.252
+    },
+    {
+      "country": "Vanuatu",
+      "year": 2020,
+      "rate": 2.113
+    },
+    {
+      "country": "Belarus",
+      "year": 2024,
+      "rate": 2.101
+    },
+    {
+      "country": "Slovenia",
+      "year": 2024,
+      "rate": 2.064
+    },
+    {
+      "country": "Slovak Republic",
+      "year": 2024,
+      "rate": 2.024
+    },
+    {
+      "country": "Uruguay",
+      "year": 2024,
+      "rate": 1.909
+    },
+    {
+      "country": "Romania",
+      "year": 2024,
+      "rate": 1.904
+    },
+    {
+      "country": "Hungary",
+      "year": 2024,
+      "rate": 1.821
+    },
+    {
+      "country": "Marshall Islands",
+      "year": 2021,
+      "rate": 1.813
+    },
+    {
+      "country": "Seychelles",
+      "year": 2024,
+      "rate": 1.73
+    },
+    {
+      "country": "Thailand",
+      "year": 2024,
+      "rate": 1.707
+    },
+    {
+      "country": "Jamaica",
+      "year": 2023,
+      "rate": 1.682
+    },
+    {
+      "country": "Uzbekistan",
+      "year": 2020,
+      "rate": 1.508
+    },
+    {
+      "country": "Cuba",
+      "year": 2012,
+      "rate": 1.506
+    },
+    {
+      "country": "Macao SAR, China",
+      "year": 2016,
+      "rate": 1.492
+    },
+    {
+      "country": "Russian Federation",
+      "year": 2024,
+      "rate": 1.467
+    },
+    {
+      "country": "Bulgaria",
+      "year": 2024,
+      "rate": 1.456
+    },
+    {
+      "country": "Poland",
+      "year": 2024,
+      "rate": 1.35
+    },
+    {
+      "country": "Czechia",
+      "year": 2024,
+      "rate": 1.22
+    },
+    {
+      "country": "Cambodia",
+      "year": 2019,
+      "rate": 0.982
+    },
+    {
+      "country": "Solomon Islands",
+      "year": 2013,
+      "rate": 0.969
+    },
+    {
+      "country": "Tonga",
+      "year": 2023,
+      "rate": 0.826
+    },
+    {
+      "country": "Myanmar",
+      "year": 2020,
+      "rate": 0.78
+    },
+    {
+      "country": "Greenland",
+      "year": 2015,
+      "rate": 0.751
+    },
+    {
+      "country": "Argentina",
+      "year": 2024,
+      "rate": 0.708
+    },
+    {
+      "country": "Palau",
+      "year": 2020,
+      "rate": 0.509
+    },
+    {
+      "country": "Qatar",
+      "year": 2020,
+      "rate": 0.3
+    },
+    {
+      "country": "Tajikistan",
+      "year": 2016,
+      "rate": 0.241
+    }
+  ],
+  "tunisia_national": {
+    "en": "Secondary report of INS Q2 2026 figures: overall unemployment 14.9%; graduate unemployment 26.6% (men 14.2%, women 35.6%). Full INS text was not retrievable for the assessment; treat as secondary reporting."
+  }
+}

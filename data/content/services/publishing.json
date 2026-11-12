@@ -1,0 +1,44 @@
+{
+  "id": "publishing",
+  "slug": "publishing",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Publishing & WebBooks",
+    "fr": "Publishing & WebBooks",
+    "ar": "Publishing & WebBooks"
+  },
+  "short": {
+    "en": "Long-form digital publishing, ISBN/DOI.",
+    "fr": "Long-form digital publishing, ISBN/DOI.",
+    "ar": "Long-form digital publishing, ISBN/DOI."
+  },
+  "long": {
+    "en": "End-to-end digital publishing — editorial workflows, ISBN/DOI registration, EPUB and WebBook production, and multi-format distribution with print-on-demand integration.",
+    "fr": "End-to-end digital publishing — editorial workflows, ISBN/DOI registration, EPUB and WebBook production, and multi-format distribution with print-on-demand integration.",
+    "ar": "End-to-end digital publishing — editorial workflows, ISBN/DOI registration, EPUB and WebBook production, and multi-format distribution with print-on-demand integration."
+  },
+  "problem": {
+    "en": "Knowledge remains expensive to publish or inaccessible to readers.",
+    "fr": "Knowledge remains expensive to publish or inaccessible to readers.",
+    "ar": "Knowledge remains expensive to publish or inaccessible to readers."
+  },
+  "solution": {
+    "en": "Edited accessible web/ebook package, rights ledger, and identifiers where eligible.",
+    "fr": "Edited accessible web/ebook package, rights ledger, and identifiers where eligible.",
+    "ar": "Edited accessible web/ebook package, rights ledger, and identifiers where eligible."
+  },
+  "likely_buyer": {
+    "en": "Authors/institutions",
+    "fr": "Authors/institutions",
+    "ar": "Authors/institutions"
+  },
+  "acceptance_boundary": {
+    "en": "editorial, accessibility, link, and rights acceptance. ISBN/DOI availability and registration are conditional, not automatic.",
+    "fr": "editorial, accessibility, link, and rights acceptance. ISBN/DOI availability and registration are conditional, not automatic.",
+    "ar": "editorial, accessibility, link, and rights acceptance. ISBN/DOI availability and registration are conditional, not automatic."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

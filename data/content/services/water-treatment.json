@@ -1,0 +1,44 @@
+{
+  "id": "water-treatment",
+  "slug": "water-treatment",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Water Treatment Technology",
+    "fr": "Water Treatment Technology",
+    "ar": "Water Treatment Technology"
+  },
+  "short": {
+    "en": "Desalination, filtration, reuse.",
+    "fr": "Desalination, filtration, reuse.",
+    "ar": "Desalination, filtration, reuse."
+  },
+  "long": {
+    "en": "Water treatment technology — desalination, advanced filtration, and industrial and municipal water reuse systems.",
+    "fr": "Water treatment technology — desalination, advanced filtration, and industrial and municipal water reuse systems.",
+    "ar": "Water treatment technology — desalination, advanced filtration, and industrial and municipal water reuse systems."
+  },
+  "problem": {
+    "en": "Inconsistent treatment threatens water quality and operating reliability.",
+    "fr": "Inconsistent treatment threatens water quality and operating reliability.",
+    "ar": "Inconsistent treatment threatens water quality and operating reliability."
+  },
+  "solution": {
+    "en": "Process assessment, pilot, qualified commissioning, and maintenance plan.",
+    "fr": "Process assessment, pilot, qualified commissioning, and maintenance plan.",
+    "ar": "Process assessment, pilot, qualified commissioning, and maintenance plan."
+  },
+  "likely_buyer": {
+    "en": "Utilities/industry",
+    "fr": "Utilities/industry",
+    "ar": "Utilities/industry"
+  },
+  "acceptance_boundary": {
+    "en": "independent quality tests and reliability acceptance. Meet permits and treatment standards; separate process plants from 035 civil networks.",
+    "fr": "independent quality tests and reliability acceptance. Meet permits and treatment standards; separate process plants from 035 civil networks.",
+    "ar": "independent quality tests and reliability acceptance. Meet permits and treatment standards; separate process plants from 035 civil networks."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

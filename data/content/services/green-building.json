@@ -1,0 +1,44 @@
+{
+  "id": "green-building",
+  "slug": "green-building",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Green Building Certification",
+    "fr": "Green Building Certification",
+    "ar": "Green Building Certification"
+  },
+  "short": {
+    "en": "EDGE/LEED assessment, retrofit plans.",
+    "fr": "EDGE/LEED assessment, retrofit plans.",
+    "ar": "EDGE/LEED assessment, retrofit plans."
+  },
+  "long": {
+    "en": "Green building assessment and delivery — EDGE and LEED certification pathways, net-zero retrofit planning, and performance verification against the certified targets.",
+    "fr": "Green building assessment and delivery — EDGE and LEED certification pathways, net-zero retrofit planning, and performance verification against the certified targets.",
+    "ar": "Green building assessment and delivery — EDGE and LEED certification pathways, net-zero retrofit planning, and performance verification against the certified targets."
+  },
+  "problem": {
+    "en": "Unsubstantiated environmental claims undermine trust and investment.",
+    "fr": "Unsubstantiated environmental claims undermine trust and investment.",
+    "ar": "Unsubstantiated environmental claims undermine trust and investment."
+  },
+  "solution": {
+    "en": "Certification gap study, evidence preparation, and retrofit recommendations.",
+    "fr": "Certification gap study, evidence preparation, and retrofit recommendations.",
+    "ar": "Certification gap study, evidence preparation, and retrofit recommendations."
+  },
+  "likely_buyer": {
+    "en": "Developers",
+    "fr": "Developers",
+    "ar": "Developers"
+  },
+  "acceptance_boundary": {
+    "en": "complete, independently reviewable submission. Only the authorized certification body awards the relevant certification; W5D cannot self-award it.",
+    "fr": "complete, independently reviewable submission. Only the authorized certification body awards the relevant certification; W5D cannot self-award it.",
+    "ar": "complete, independently reviewable submission. Only the authorized certification body awards the relevant certification; W5D cannot self-award it."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

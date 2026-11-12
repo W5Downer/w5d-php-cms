@@ -1,0 +1,44 @@
+{
+  "id": "data-engineering",
+  "slug": "data-engineering",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Data Engineering & Analytics",
+    "fr": "Data Engineering & Analytics",
+    "ar": "Data Engineering & Analytics"
+  },
+  "short": {
+    "en": "Pipelines, warehouses, BI.",
+    "fr": "Pipelines, warehouses, BI.",
+    "ar": "Pipelines, warehouses, BI."
+  },
+  "long": {
+    "en": "Data engineering and analytics — pipelines, warehouses, and business intelligence that turn raw data into decision-grade insight.",
+    "fr": "Data engineering and analytics — pipelines, warehouses, and business intelligence that turn raw data into decision-grade insight.",
+    "ar": "Data engineering and analytics — pipelines, warehouses, and business intelligence that turn raw data into decision-grade insight."
+  },
+  "problem": {
+    "en": "Inconsistent data produces contradictory management reports.",
+    "fr": "Inconsistent data produces contradictory management reports.",
+    "ar": "Inconsistent data produces contradictory management reports."
+  },
+  "solution": {
+    "en": "Validated pipelines, warehouse models, source reconciliation, and BI dashboards.",
+    "fr": "Validated pipelines, warehouse models, source reconciliation, and BI dashboards.",
+    "ar": "Validated pipelines, warehouse models, source reconciliation, and BI dashboards."
+  },
+  "likely_buyer": {
+    "en": "Companies/labs",
+    "fr": "Companies/labs",
+    "ar": "Companies/labs"
+  },
+  "acceptance_boundary": {
+    "en": "source-to-report reconciliation, freshness, and access testing. Retain lineage and authorized processing; dashboards do not establish truth alone.",
+    "fr": "source-to-report reconciliation, freshness, and access testing. Retain lineage and authorized processing; dashboards do not establish truth alone.",
+    "ar": "source-to-report reconciliation, freshness, and access testing. Retain lineage and authorized processing; dashboards do not establish truth alone."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

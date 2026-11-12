@@ -1,0 +1,18 @@
+{
+  "id": "macro-works",
+  "key": "macro-works",
+  "layer": "L3",
+  "ontology_layer": "macro-works",
+  "title": {
+    "en": "Macro works",
+    "fr": "Macro works",
+    "ar": "Macro works"
+  },
+  "question": {
+    "en": "Which domain does a service belong to?"
+  },
+  "summary": {
+    "en": "Five macro works group the 130 services: Cultures/Humanities, Built Environment, Sciences, Governance and Technology."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

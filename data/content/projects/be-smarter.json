@@ -1,0 +1,23 @@
+{
+  "id": "be-smarter",
+  "slug": "be-smarter",
+  "status": "operational",
+  "evidence": "E1",
+  "meta_solution": null,
+  "title": {
+    "en": "Be Smarter",
+    "fr": "Be Smarter",
+    "ar": "كن أذكى"
+  },
+  "short": {
+    "en": "Operational (2025 in the published roadmap)."
+  },
+  "summary": {
+    "en": "Operational (2025 in the published roadmap)."
+  },
+  "evidence_note": {
+    "en": "Reader numbers, completion rates and outcomes have not been published."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

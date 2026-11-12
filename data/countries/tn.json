@@ -1,0 +1,309 @@
+{
+  "iso": "tn",
+  "names": {
+    "en": "Tunisia",
+    "fr": "Tunisie",
+    "ar": "تونس"
+  },
+  "currency": "TND",
+  "timezone": "Africa/Tunis",
+  "locale": "ar_TN",
+  "default_languages": [
+    "ar",
+    "fr",
+    "en"
+  ],
+  "legal_profile": {
+    "labour_contracts": "Law 2025-9 of 21 May 2025 (contracts; labour subcontracting). Obtain current Tunisian legal advice.",
+    "personal_data": "Organic Law 2004-63 of 27 July 2004; supervising authority: INPDP. Confirm applicability with counsel.",
+    "status": "pending_counsel_review"
+  },
+  "salary_model": "salary_model_default",
+  "calendar": {
+    "weekend": [
+      "sat",
+      "sun"
+    ],
+    "report_deadline": "Fri 12:00",
+    "lock": "Fri 18:00",
+    "notes": [
+      "Ramadan and Eid dates move yearly; set them per year from the official calendar before scheduling sends."
+    ]
+  },
+  "sampling": {
+    "rule": "independent sample of submitted weekly reports",
+    "percent": 5,
+    "fixed": true
+  },
+  "regions": [
+    {
+      "slug": "ariana",
+      "name": {
+        "en": "Ariana",
+        "fr": "Ariana",
+        "ar": "أريانة"
+      },
+      "type": "governorate",
+      "col": 2,
+      "row": 1
+    },
+    {
+      "slug": "beja",
+      "name": {
+        "en": "Béja",
+        "fr": "Béja",
+        "ar": "باجة"
+      },
+      "type": "governorate",
+      "col": 1,
+      "row": 1
+    },
+    {
+      "slug": "ben-arous",
+      "name": {
+        "en": "Ben Arous",
+        "fr": "Ben Arous",
+        "ar": "بن عروس"
+      },
+      "type": "governorate",
+      "col": 3,
+      "row": 2
+    },
+    {
+      "slug": "bizerte",
+      "name": {
+        "en": "Bizerte",
+        "fr": "Bizerte",
+        "ar": "بنزرت"
+      },
+      "type": "governorate",
+      "col": 2,
+      "row": 0
+    },
+    {
+      "slug": "gabes",
+      "name": {
+        "en": "Gabès",
+        "fr": "Gabès",
+        "ar": "قابس"
+      },
+      "type": "governorate",
+      "col": 2,
+      "row": 7
+    },
+    {
+      "slug": "gafsa",
+      "name": {
+        "en": "Gafsa",
+        "fr": "Gafsa",
+        "ar": "قفصة"
+      },
+      "type": "governorate",
+      "col": 0,
+      "row": 4
+    },
+    {
+      "slug": "jendouba",
+      "name": {
+        "en": "Jendouba",
+        "fr": "Jendouba",
+        "ar": "جندوبة"
+      },
+      "type": "governorate",
+      "col": 0,
+      "row": 1
+    },
+    {
+      "slug": "kairouan",
+      "name": {
+        "en": "Kairouan",
+        "fr": "Kairouan",
+        "ar": "القيروان"
+      },
+      "type": "governorate",
+      "col": 1,
+      "row": 3
+    },
+    {
+      "slug": "kasserine",
+      "name": {
+        "en": "Kasserine",
+        "fr": "Kasserine",
+        "ar": "القصرين"
+      },
+      "type": "governorate",
+      "col": 0,
+      "row": 3
+    },
+    {
+      "slug": "kebili",
+      "name": {
+        "en": "Kébili",
+        "fr": "Kébili",
+        "ar": "قبلي"
+      },
+      "type": "governorate",
+      "col": 1,
+      "row": 6
+    },
+    {
+      "slug": "kef",
+      "name": {
+        "en": "Le Kef",
+        "fr": "Le Kef",
+        "ar": "الكاف"
+      },
+      "type": "governorate",
+      "col": 0,
+      "row": 2
+    },
+    {
+      "slug": "mahdia",
+      "name": {
+        "en": "Mahdia",
+        "fr": "Mahdia",
+        "ar": "المهدية"
+      },
+      "type": "governorate",
+      "col": 3,
+      "row": 5
+    },
+    {
+      "slug": "manouba",
+      "name": {
+        "en": "Manouba",
+        "fr": "Manouba",
+        "ar": "منوبة"
+      },
+      "type": "governorate",
+      "col": 2,
+      "row": 2
+    },
+    {
+      "slug": "medenine",
+      "name": {
+        "en": "Médenine",
+        "fr": "Médenine",
+        "ar": "مدنين"
+      },
+      "type": "governorate",
+      "col": 3,
+      "row": 8
+    },
+    {
+      "slug": "monastir",
+      "name": {
+        "en": "Monastir",
+        "fr": "Monastir",
+        "ar": "المنستير"
+      },
+      "type": "governorate",
+      "col": 3,
+      "row": 4
+    },
+    {
+      "slug": "nabeul",
+      "name": {
+        "en": "Nabeul",
+        "fr": "Nabeul",
+        "ar": "نابل"
+      },
+      "type": "governorate",
+      "col": 3,
+      "row": 3
+    },
+    {
+      "slug": "sfax",
+      "name": {
+        "en": "Sfax",
+        "fr": "Sfax",
+        "ar": "صفاقس"
+      },
+      "type": "governorate",
+      "col": 3,
+      "row": 6
+    },
+    {
+      "slug": "sidi-bouzid",
+      "name": {
+        "en": "Sidi Bouzid",
+        "fr": "Sidi Bouzid",
+        "ar": "سيدي بوزيد"
+      },
+      "type": "governorate",
+      "col": 1,
+      "row": 4
+    },
+    {
+      "slug": "siliana",
+      "name": {
+        "en": "Siliana",
+        "fr": "Siliana",
+        "ar": "سليانة"
+      },
+      "type": "governorate",
+      "col": 1,
+      "row": 2
+    },
+    {
+      "slug": "sousse",
+      "name": {
+        "en": "Sousse",
+        "fr": "Sousse",
+        "ar": "سوسة"
+      },
+      "type": "governorate",
+      "col": 2,
+      "row": 4
+    },
+    {
+      "slug": "tataouine",
+      "name": {
+        "en": "Tataouine",
+        "fr": "Tataouine",
+        "ar": "تطاوين"
+      },
+      "type": "governorate",
+      "col": 1,
+      "row": 8
+    },
+    {
+      "slug": "tozeur",
+      "name": {
+        "en": "Tozeur",
+        "fr": "Tozeur",
+        "ar": "توزر"
+      },
+      "type": "governorate",
+      "col": 0,
+      "row": 5
+    },
+    {
+      "slug": "tunis",
+      "name": {
+        "en": "Tunis",
+        "fr": "Tunis",
+        "ar": "تونس"
+      },
+      "type": "governorate",
+      "col": 3,
+      "row": 1
+    },
+    {
+      "slug": "zaghouan",
+      "name": {
+        "en": "Zaghouan",
+        "fr": "Zaghouan",
+        "ar": "زغوان"
+      },
+      "type": "governorate",
+      "col": 2,
+      "row": 3
+    }
+  ],
+  "map": {
+    "grid_cols": 4,
+    "grid_rows": 9,
+    "note": "schematic tile map, not to scale"
+  }
+}

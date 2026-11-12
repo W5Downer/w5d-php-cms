@@ -18,3 +18,8 @@
 # OS noise
 .DS_Store
 Thumbs.db
+
+# Local secrets and runtime state (added for the PHP CMS)
+/.env
+/storage/logs/
+/storage/uploads/

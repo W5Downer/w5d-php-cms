@@ -1,0 +1,44 @@
+{
+  "id": "construction-training",
+  "slug": "construction-training",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Construction Workforce Training",
+    "fr": "Construction Workforce Training",
+    "ar": "Construction Workforce Training"
+  },
+  "short": {
+    "en": "Safety, trades, site supervision.",
+    "fr": "Safety, trades, site supervision.",
+    "ar": "Safety, trades, site supervision."
+  },
+  "long": {
+    "en": "Construction workforce development — safety training, trade certification, site-supervision development, and trainer-of-trainers programs aligned with national accreditation.",
+    "fr": "Construction workforce development — safety training, trade certification, site-supervision development, and trainer-of-trainers programs aligned with national accreditation.",
+    "ar": "Construction workforce development — safety training, trade certification, site-supervision development, and trainer-of-trainers programs aligned with national accreditation."
+  },
+  "problem": {
+    "en": "Weak practical skills and safety routines increase site risk.",
+    "fr": "Weak practical skills and safety routines increase site risk.",
+    "ar": "Weak practical skills and safety routines increase site risk."
+  },
+  "solution": {
+    "en": "Supervised trade, safety, and site-supervision training with observed tasks.",
+    "fr": "Supervised trade, safety, and site-supervision training with observed tasks.",
+    "ar": "Supervised trade, safety, and site-supervision training with observed tasks."
+  },
+  "likely_buyer": {
+    "en": "Contractors/training bodies",
+    "fr": "Contractors/training bodies",
+    "ar": "Contractors/training bodies"
+  },
+  "acceptance_boundary": {
+    "en": "demonstrated competence and safe task execution. An internal completion badge is not a statutory trade or professional license.",
+    "fr": "demonstrated competence and safe task execution. An internal completion badge is not a statutory trade or professional license.",
+    "ar": "demonstrated competence and safe task execution. An internal completion badge is not a statutory trade or professional license."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

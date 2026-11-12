@@ -1,0 +1,18 @@
+{
+  "id": "expert-teams",
+  "key": "expert-teams",
+  "layer": "L1",
+  "ontology_layer": "expert-teams",
+  "title": {
+    "en": "Expert teams",
+    "fr": "Expert teams",
+    "ar": "Expert teams"
+  },
+  "question": {
+    "en": "Who does the work, under which supervision?"
+  },
+  "summary": {
+    "en": "Teams deliver services. Team size is a design convention, not a headcount. Managers supervise a bounded number of experts; the hard cap is 12 experts per manager."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

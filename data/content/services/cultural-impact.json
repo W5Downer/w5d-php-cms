@@ -1,0 +1,44 @@
+{
+  "id": "cultural-impact",
+  "slug": "cultural-impact",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cultural Impact Assessment",
+    "fr": "Cultural Impact Assessment",
+    "ar": "Cultural Impact Assessment"
+  },
+  "short": {
+    "en": "SROI, community consultation, reporting.",
+    "fr": "SROI, community consultation, reporting.",
+    "ar": "SROI, community consultation, reporting."
+  },
+  "long": {
+    "en": "Social return on investment (SROI) and cultural impact assessment — community consultation protocols, outcome measurement, and publication of assessment reports for funders and policymakers.",
+    "fr": "Social return on investment (SROI) and cultural impact assessment — community consultation protocols, outcome measurement, and publication of assessment reports for funders and policymakers.",
+    "ar": "Social return on investment (SROI) and cultural impact assessment — community consultation protocols, outcome measurement, and publication of assessment reports for funders and policymakers."
+  },
+  "problem": {
+    "en": "Projects can damage heritage or exclude community perspectives.",
+    "fr": "Projects can damage heritage or exclude community perspectives.",
+    "ar": "Projects can damage heritage or exclude community perspectives."
+  },
+  "solution": {
+    "en": "Baseline, consultation, impact pathways, alternatives, and mitigation plan.",
+    "fr": "Baseline, consultation, impact pathways, alternatives, and mitigation plan.",
+    "ar": "Baseline, consultation, impact pathways, alternatives, and mitigation plan."
+  },
+  "likely_buyer": {
+    "en": "Developers/funders",
+    "fr": "Developers/funders",
+    "ar": "Developers/funders"
+  },
+  "acceptance_boundary": {
+    "en": "reviewable assumptions and community feedback. Disclose SROI uncertainty; a modeled ratio is not causal proof.",
+    "fr": "reviewable assumptions and community feedback. Disclose SROI uncertainty; a modeled ratio is not causal proof.",
+    "ar": "reviewable assumptions and community feedback. Disclose SROI uncertainty; a modeled ratio is not causal proof."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

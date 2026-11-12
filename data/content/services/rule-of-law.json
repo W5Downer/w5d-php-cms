@@ -1,0 +1,44 @@
+{
+  "id": "rule-of-law",
+  "slug": "rule-of-law",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Rule of Law & Access to Justice",
+    "fr": "Rule of Law & Access to Justice",
+    "ar": "Rule of Law & Access to Justice"
+  },
+  "short": {
+    "en": "Legal aid, court modernisation.",
+    "fr": "Legal aid, court modernisation.",
+    "ar": "Legal aid, court modernisation."
+  },
+  "long": {
+    "en": "Rule of law and access to justice — legal aid design, court modernisation, and alternative dispute resolution mechanisms.",
+    "fr": "Rule of law and access to justice — legal aid design, court modernisation, and alternative dispute resolution mechanisms.",
+    "ar": "Rule of law and access to justice — legal aid design, court modernisation, and alternative dispute resolution mechanisms."
+  },
+  "problem": {
+    "en": "Procedural and information barriers obstruct legitimate access to justice.",
+    "fr": "Procedural and information barriers obstruct legitimate access to justice.",
+    "ar": "Procedural and information barriers obstruct legitimate access to justice."
+  },
+  "solution": {
+    "en": "Plain-language information, referral systems, and authorized process support.",
+    "fr": "Plain-language information, referral systems, and authorized process support.",
+    "ar": "Plain-language information, referral systems, and authorized process support."
+  },
+  "likely_buyer": {
+    "en": "NGOs/courts",
+    "fr": "NGOs/courts",
+    "ar": "NGOs/courts"
+  },
+  "acceptance_boundary": {
+    "en": "referral completion and qualified legal review. Do not offer unlicensed representation or predict judicial outcomes.",
+    "fr": "referral completion and qualified legal review. Do not offer unlicensed representation or predict judicial outcomes.",
+    "ar": "referral completion and qualified legal review. Do not offer unlicensed representation or predict judicial outcomes."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

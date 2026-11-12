@@ -1,0 +1,44 @@
+{
+  "id": "construction-tech",
+  "slug": "construction-tech",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Construction Tech & Modular",
+    "fr": "Construction Tech & Modular",
+    "ar": "Construction Tech & Modular"
+  },
+  "short": {
+    "en": "Prefab, 3D printing, lean construction.",
+    "fr": "Prefab, 3D printing, lean construction.",
+    "ar": "Prefab, 3D printing, lean construction."
+  },
+  "long": {
+    "en": "Modern construction methods — prefabrication and modular delivery, 3D-printed components, lean construction workflows, and site-safety systems for scaled programs.",
+    "fr": "Modern construction methods — prefabrication and modular delivery, 3D-printed components, lean construction workflows, and site-safety systems for scaled programs.",
+    "ar": "Modern construction methods — prefabrication and modular delivery, 3D-printed components, lean construction workflows, and site-safety systems for scaled programs."
+  },
+  "problem": {
+    "en": "Poor process design causes waste and failed offsite-manufacturing pilots.",
+    "fr": "Poor process design causes waste and failed offsite-manufacturing pilots.",
+    "ar": "Poor process design causes waste and failed offsite-manufacturing pilots."
+  },
+  "solution": {
+    "en": "Modular feasibility, prototype design, manufacturing workflow, and QA plan.",
+    "fr": "Modular feasibility, prototype design, manufacturing workflow, and QA plan.",
+    "ar": "Modular feasibility, prototype design, manufacturing workflow, and QA plan."
+  },
+  "likely_buyer": {
+    "en": "Builders/manufacturers",
+    "fr": "Builders/manufacturers",
+    "ar": "Builders/manufacturers"
+  },
+  "acceptance_boundary": {
+    "en": "approved prototype and applicable code checks. Separate process/design development from service 118 technology deployment.",
+    "fr": "approved prototype and applicable code checks. Separate process/design development from service 118 technology deployment.",
+    "ar": "approved prototype and applicable code checks. Separate process/design development from service 118 technology deployment."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

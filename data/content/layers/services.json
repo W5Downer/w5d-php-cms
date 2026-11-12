@@ -1,0 +1,18 @@
+{
+  "id": "services",
+  "key": "services",
+  "layer": "L2",
+  "ontology_layer": "services",
+  "title": {
+    "en": "Services",
+    "fr": "Services",
+    "ar": "Services"
+  },
+  "question": {
+    "en": "What outcome is sold, and how is it accepted?"
+  },
+  "summary": {
+    "en": "Each service declares a buyer problem, a deliverable, an acceptance test and a boundary. Services are proposed until a buyer, price, legal scope and cash are established."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

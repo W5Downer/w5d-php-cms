@@ -1,0 +1,44 @@
+{
+  "id": "cultural-policy",
+  "slug": "cultural-policy",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cultural Policy Advisory",
+    "fr": "Cultural Policy Advisory",
+    "ar": "Cultural Policy Advisory"
+  },
+  "short": {
+    "en": "Mapping, impact assessment, legal frameworks.",
+    "fr": "Mapping, impact assessment, legal frameworks.",
+    "ar": "Mapping, impact assessment, legal frameworks."
+  },
+  "long": {
+    "en": "Advisory services for cultural policy — ecosystem mapping, cultural impact assessment methodologies, drafting of heritage and cultural law, and frameworks for public-private cultural funding.",
+    "fr": "Advisory services for cultural policy — ecosystem mapping, cultural impact assessment methodologies, drafting of heritage and cultural law, and frameworks for public-private cultural funding.",
+    "ar": "Advisory services for cultural policy — ecosystem mapping, cultural impact assessment methodologies, drafting of heritage and cultural law, and frameworks for public-private cultural funding."
+  },
+  "problem": {
+    "en": "Cultural funding choices lack reliable mapping and explicit trade-offs.",
+    "fr": "Cultural funding choices lack reliable mapping and explicit trade-offs.",
+    "ar": "Cultural funding choices lack reliable mapping and explicit trade-offs."
+  },
+  "solution": {
+    "en": "Ecosystem study, impact assumptions, consultation, and policy-options brief.",
+    "fr": "Ecosystem study, impact assumptions, consultation, and policy-options brief.",
+    "ar": "Ecosystem study, impact assumptions, consultation, and policy-options brief."
+  },
+  "likely_buyer": {
+    "en": "Ministries/cities",
+    "fr": "Ministries/cities",
+    "ar": "Ministries/cities"
+  },
+  "acceptance_boundary": {
+    "en": "traceable evidence and documented consultation. Advice is not legislation or a guaranteed cultural/economic effect.",
+    "fr": "traceable evidence and documented consultation. Advice is not legislation or a guaranteed cultural/economic effect.",
+    "ar": "traceable evidence and documented consultation. Advice is not legislation or a guaranteed cultural/economic effect."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "mining-tech",
+  "slug": "mining-tech",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Mining & Materials Processing Tech",
+    "fr": "Mining & Materials Processing Tech",
+    "ar": "Mining & Materials Processing Tech"
+  },
+  "short": {
+    "en": "Extraction, safety, environmental controls.",
+    "fr": "Extraction, safety, environmental controls.",
+    "ar": "Extraction, safety, environmental controls."
+  },
+  "long": {
+    "en": "Mining and materials processing — extraction equipment, safety systems, and environmental controls aligned with international standards.",
+    "fr": "Mining and materials processing — extraction equipment, safety systems, and environmental controls aligned with international standards.",
+    "ar": "Mining and materials processing — extraction equipment, safety systems, and environmental controls aligned with international standards."
+  },
+  "problem": {
+    "en": "Process losses and hazardous conditions threaten people and environment.",
+    "fr": "Process losses and hazardous conditions threaten people and environment.",
+    "ar": "Process losses and hazardous conditions threaten people and environment."
+  },
+  "solution": {
+    "en": "Qualified process, recovery, safety, and environmental assessment.",
+    "fr": "Qualified process, recovery, safety, and environmental assessment.",
+    "ar": "Qualified process, recovery, safety, and environmental assessment."
+  },
+  "likely_buyer": {
+    "en": "Licensed operators",
+    "fr": "Licensed operators",
+    "ar": "Licensed operators"
+  },
+  "acceptance_boundary": {
+    "en": "mass-balance and control validation. Use authorized specialist partners; no hazardous fieldwork by unqualified recruits.",
+    "fr": "mass-balance and control validation. Use authorized specialist partners; no hazardous fieldwork by unqualified recruits.",
+    "ar": "mass-balance and control validation. Use authorized specialist partners; no hazardous fieldwork by unqualified recruits."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

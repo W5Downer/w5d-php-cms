@@ -1,0 +1,44 @@
+{
+  "id": "water-sanitation",
+  "slug": "water-sanitation",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Water & Sanitation Infrastructure",
+    "fr": "Water & Sanitation Infrastructure",
+    "ar": "Water & Sanitation Infrastructure"
+  },
+  "short": {
+    "en": "Network design, leak detection, treatment.",
+    "fr": "Network design, leak detection, treatment.",
+    "ar": "Network design, leak detection, treatment."
+  },
+  "long": {
+    "en": "Water and sanitation infrastructure — network design, non-revenue-water reduction, treatment plant delivery, and operation and maintenance frameworks for utilities.",
+    "fr": "Water and sanitation infrastructure — network design, non-revenue-water reduction, treatment plant delivery, and operation and maintenance frameworks for utilities.",
+    "ar": "Water and sanitation infrastructure — network design, non-revenue-water reduction, treatment plant delivery, and operation and maintenance frameworks for utilities."
+  },
+  "problem": {
+    "en": "Leaks and poorly understood network capacity reduce service quality.",
+    "fr": "Leaks and poorly understood network capacity reduce service quality.",
+    "ar": "Leaks and poorly understood network capacity reduce service quality."
+  },
+  "solution": {
+    "en": "Network audit, hydraulic model, and prioritized civil rehabilitation/design.",
+    "fr": "Network audit, hydraulic model, and prioritized civil rehabilitation/design.",
+    "ar": "Network audit, hydraulic model, and prioritized civil rehabilitation/design."
+  },
+  "likely_buyer": {
+    "en": "Utilities/municipalities",
+    "fr": "Utilities/municipalities",
+    "ar": "Utilities/municipalities"
+  },
+  "acceptance_boundary": {
+    "en": "qualified model approval and baseline tests. Distinguish network engineering from service 120 treatment-process technology.",
+    "fr": "qualified model approval and baseline tests. Distinguish network engineering from service 120 treatment-process technology.",
+    "ar": "qualified model approval and baseline tests. Distinguish network engineering from service 120 treatment-process technology."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

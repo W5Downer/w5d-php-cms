@@ -1,0 +1,44 @@
+{
+  "id": "platform-eng",
+  "slug": "platform-eng",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Platform Engineering",
+    "fr": "Platform Engineering",
+    "ar": "Platform Engineering"
+  },
+  "short": {
+    "en": "Internal developer platforms, SRE.",
+    "fr": "Internal developer platforms, SRE.",
+    "ar": "Internal developer platforms, SRE."
+  },
+  "long": {
+    "en": "Platform engineering — internal developer platforms, site reliability engineering, and golden-path tooling that accelerates delivery.",
+    "fr": "Platform engineering — internal developer platforms, site reliability engineering, and golden-path tooling that accelerates delivery.",
+    "ar": "Platform engineering — internal developer platforms, site reliability engineering, and golden-path tooling that accelerates delivery."
+  },
+  "problem": {
+    "en": "Inconsistent development tooling slows safe software releases.",
+    "fr": "Inconsistent development tooling slows safe software releases.",
+    "ar": "Inconsistent development tooling slows safe software releases."
+  },
+  "solution": {
+    "en": "Internal developer platform, CI/CD templates, observability, and supported deployment paths.",
+    "fr": "Internal developer platform, CI/CD templates, observability, and supported deployment paths.",
+    "ar": "Internal developer platform, CI/CD templates, observability, and supported deployment paths."
+  },
+  "likely_buyer": {
+    "en": "Software organizations",
+    "fr": "Software organizations",
+    "ar": "Software organizations"
+  },
+  "acceptance_boundary": {
+    "en": "lead-time and recovery tests. Define platform responsibilities separately from 107 hosting and app-team acceptance.",
+    "fr": "lead-time and recovery tests. Define platform responsibilities separately from 107 hosting and app-team acceptance.",
+    "ar": "lead-time and recovery tests. Define platform responsibilities separately from 107 hosting and app-team acceptance."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

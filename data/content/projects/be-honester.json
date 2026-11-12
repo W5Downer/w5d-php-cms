@@ -1,0 +1,23 @@
+{
+  "id": "be-honester",
+  "slug": "be-honester",
+  "status": "building",
+  "evidence": "E1",
+  "meta_solution": null,
+  "title": {
+    "en": "Be Honester",
+    "fr": "Be Honester",
+    "ar": "كن أصدق"
+  },
+  "short": {
+    "en": "Building (2026 in the published roadmap)."
+  },
+  "summary": {
+    "en": "Building (2026 in the published roadmap)."
+  },
+  "evidence_note": {
+    "en": "No public product page or book release is confirmed."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

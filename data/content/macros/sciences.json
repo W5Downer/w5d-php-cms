@@ -1,0 +1,139 @@
+{
+  "id": "sciences",
+  "slug": "sciences",
+  "number": 3,
+  "placement": "Between 1.0",
+  "title": {
+    "en": "Sciences",
+    "fr": "Sciences",
+    "ar": "Sciences"
+  },
+  "domain_question": {
+    "en": "How is reliable knowledge produced, measured, validated and translated into decision-grade evidence?"
+  },
+  "typical_fields": {
+    "en": "Epidemiology, analytical chemistry, agronomy, marine biology, materials engineering, metrology, biostatistics"
+  },
+  "output_unit": {
+    "en": "Accessioned samples, validated assay results, pipeline validation runs, calibration certificates, species observation records"
+  },
+  "recurring_boundary": {
+    "en": "Research analyses cannot become clinical diagnoses without authorised validation; laboratories publish method limits and chain of custody"
+  },
+  "problem": {
+    "en": "weak methods, fragmented research data, limited testing access, and unreliable chain of custody can make evidence unusable. Expensive laboratories and equipment are poor first investments without committed demand."
+  },
+  "premium_offer": {
+    "en": "reproducible research-data management, statistical/modeling support, science communication, and laboratory-quality readiness, with testing commissioned from appropriately accredited partners. Potential buyers include research institutions, food and industrial businesses, laboratories, sponsors, and authorized health bodies. The research-data bundle 063/075/108 is lower-capital than building a new laboratory, but still requires domain competence."
+  },
+  "delivery_economics": {
+    "en": "sell validated studies, analysis pipelines, quality-system improvement, or recurring data stewardship. Do not claim W5D accreditation through a partner’s certificate. Ethics approval, professional authorization, biosafety, uncertainty reporting, and privacy are release gates. Track reproducibility, method validation, proficiency results, data completeness, and closed nonconformities; analysis is not a clinical diagnosis."
+  },
+  "services": [
+    {
+      "number": 53,
+      "slug": "clinical-research"
+    },
+    {
+      "number": 54,
+      "slug": "public-health"
+    },
+    {
+      "number": 55,
+      "slug": "water-soil-labs"
+    },
+    {
+      "number": 56,
+      "slug": "agri-science"
+    },
+    {
+      "number": 57,
+      "slug": "marine-science"
+    },
+    {
+      "number": 58,
+      "slug": "climate-modelling"
+    },
+    {
+      "number": 59,
+      "slug": "materials-science"
+    },
+    {
+      "number": 60,
+      "slug": "bioinformatics"
+    },
+    {
+      "number": 61,
+      "slug": "neuroscience"
+    },
+    {
+      "number": 62,
+      "slug": "science-comm"
+    },
+    {
+      "number": 63,
+      "slug": "research-data"
+    },
+    {
+      "number": 64,
+      "slug": "metrology"
+    },
+    {
+      "number": 65,
+      "slug": "chemical-safety"
+    },
+    {
+      "number": 66,
+      "slug": "astronomy"
+    },
+    {
+      "number": 67,
+      "slug": "biodiversity"
+    },
+    {
+      "number": 68,
+      "slug": "renewable-science"
+    },
+    {
+      "number": 69,
+      "slug": "food-safety"
+    },
+    {
+      "number": 70,
+      "slug": "forensics"
+    },
+    {
+      "number": 71,
+      "slug": "ocean-monitoring"
+    },
+    {
+      "number": 72,
+      "slug": "math-modelling"
+    },
+    {
+      "number": 73,
+      "slug": "social-methods"
+    },
+    {
+      "number": 74,
+      "slug": "science-policy"
+    },
+    {
+      "number": 75,
+      "slug": "lab-accreditation"
+    },
+    {
+      "number": 76,
+      "slug": "stem-education"
+    },
+    {
+      "number": 77,
+      "slug": "trial-data"
+    },
+    {
+      "number": 78,
+      "slug": "eia"
+    }
+  ],
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

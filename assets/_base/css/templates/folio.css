@@ -1,0 +1,5 @@
+/* folio — paper / oxblood. Additive only. */
+:root { --accent: #6e1d24; --gold: #9c6b3a; --paper: #fbf7f0; --line: #e6d9c6; }
+body { font-family: Georgia, "Times New Roman", serif; }
+h1, h2, h3 { font-weight: 600; }
+.btn { border-radius: 4px; }

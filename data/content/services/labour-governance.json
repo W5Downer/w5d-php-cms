@@ -1,0 +1,44 @@
+{
+  "id": "labour-governance",
+  "slug": "labour-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Labour Market Governance",
+    "fr": "Labour Market Governance",
+    "ar": "Labour Market Governance"
+  },
+  "short": {
+    "en": "Inspection, tripartite dialogue, ALMPs.",
+    "fr": "Inspection, tripartite dialogue, ALMPs.",
+    "ar": "Inspection, tripartite dialogue, ALMPs."
+  },
+  "long": {
+    "en": "Labour market governance — labour inspection, tripartite dialogue, and active labour market programs for employment outcomes.",
+    "fr": "Labour market governance — labour inspection, tripartite dialogue, and active labour market programs for employment outcomes.",
+    "ar": "Labour market governance — labour inspection, tripartite dialogue, and active labour market programs for employment outcomes."
+  },
+  "problem": {
+    "en": "Skill mismatch and weak compliance impair decent-work outcomes.",
+    "fr": "Skill mismatch and weak compliance impair decent-work outcomes.",
+    "ar": "Skill mismatch and weak compliance impair decent-work outcomes."
+  },
+  "solution": {
+    "en": "Labor-market evidence, program analysis, and lawful employment-compliance support.",
+    "fr": "Labor-market evidence, program analysis, and lawful employment-compliance support.",
+    "ar": "Labor-market evidence, program analysis, and lawful employment-compliance support."
+  },
+  "likely_buyer": {
+    "en": "Agencies/employers",
+    "fr": "Agencies/employers",
+    "ar": "Agencies/employers"
+  },
+  "acceptance_boundary": {
+    "en": "placement quality, income follow-up, and rights review. No labor-inspection power or presumption that registrations equal jobs.",
+    "fr": "placement quality, income follow-up, and rights review. No labor-inspection power or presumption that registrations equal jobs.",
+    "ar": "placement quality, income follow-up, and rights review. No labor-inspection power or presumption that registrations equal jobs."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "flood-defence",
+  "slug": "flood-defence",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Coastal & Flood Defence",
+    "fr": "Coastal & Flood Defence",
+    "ar": "Coastal & Flood Defence"
+  },
+  "short": {
+    "en": "Breakwaters, dunes, early warning.",
+    "fr": "Breakwaters, dunes, early warning.",
+    "ar": "Breakwaters, dunes, early warning."
+  },
+  "long": {
+    "en": "Coastal and flood defence infrastructure — breakwaters, dune restoration, flood barriers, and early-warning systems integrated with municipal emergency response.",
+    "fr": "Coastal and flood defence infrastructure — breakwaters, dune restoration, flood barriers, and early-warning systems integrated with municipal emergency response.",
+    "ar": "Coastal and flood defence infrastructure — breakwaters, dune restoration, flood barriers, and early-warning systems integrated with municipal emergency response."
+  },
+  "problem": {
+    "en": "Erosion and inundation threaten assets and communities.",
+    "fr": "Erosion and inundation threaten assets and communities.",
+    "ar": "Erosion and inundation threaten assets and communities."
+  },
+  "solution": {
+    "en": "Hazard study, hydrodynamic options, and permitted defense design support.",
+    "fr": "Hazard study, hydrodynamic options, and permitted defense design support.",
+    "ar": "Hazard study, hydrodynamic options, and permitted defense design support."
+  },
+  "likely_buyer": {
+    "en": "Coastal bodies",
+    "fr": "Coastal bodies",
+    "ar": "Coastal bodies"
+  },
+  "acceptance_boundary": {
+    "en": "independent technical review and environmental approvals. Report uncertainty, maintenance needs, and residual flood risk.",
+    "fr": "independent technical review and environmental approvals. Report uncertainty, maintenance needs, and residual flood risk.",
+    "ar": "independent technical review and environmental approvals. Report uncertainty, maintenance needs, and residual flood risk."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

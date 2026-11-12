@@ -1,0 +1,44 @@
+{
+  "id": "energy-audits",
+  "slug": "energy-audits",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Energy Efficiency Audits",
+    "fr": "Energy Efficiency Audits",
+    "ar": "Energy Efficiency Audits"
+  },
+  "short": {
+    "en": "Industrial audits, retrofits, monitoring.",
+    "fr": "Industrial audits, retrofits, monitoring.",
+    "ar": "Industrial audits, retrofits, monitoring."
+  },
+  "long": {
+    "en": "Energy efficiency audits — industrial audits, retrofit planning, and continuous monitoring for measurable savings.",
+    "fr": "Energy efficiency audits — industrial audits, retrofit planning, and continuous monitoring for measurable savings.",
+    "ar": "Energy efficiency audits — industrial audits, retrofit planning, and continuous monitoring for measurable savings."
+  },
+  "problem": {
+    "en": "Factories lack reliable energy balances and investment priorities.",
+    "fr": "Factories lack reliable energy balances and investment priorities.",
+    "ar": "Factories lack reliable energy balances and investment priorities."
+  },
+  "solution": {
+    "en": "Metered industrial audit, qualified retrofit options, and verification plan.",
+    "fr": "Metered industrial audit, qualified retrofit options, and verification plan.",
+    "ar": "Metered industrial audit, qualified retrofit options, and verification plan."
+  },
+  "likely_buyer": {
+    "en": "Factories",
+    "fr": "Factories",
+    "ar": "Factories"
+  },
+  "acceptance_boundary": {
+    "en": "traceable measurements and reviewed payback assumptions. Distinguish industrial audit from 036 building-retrofit implementation; no unconditional savings claim.",
+    "fr": "traceable measurements and reviewed payback assumptions. Distinguish industrial audit from 036 building-retrofit implementation; no unconditional savings claim.",
+    "ar": "traceable measurements and reviewed payback assumptions. Distinguish industrial audit from 036 building-retrofit implementation; no unconditional savings claim."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

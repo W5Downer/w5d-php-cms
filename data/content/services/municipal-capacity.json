@@ -1,0 +1,44 @@
+{
+  "id": "municipal-capacity",
+  "slug": "municipal-capacity",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Municipal Capacity Building",
+    "fr": "Municipal Capacity Building",
+    "ar": "Municipal Capacity Building"
+  },
+  "short": {
+    "en": "Budgeting, HR, service delivery.",
+    "fr": "Budgeting, HR, service delivery.",
+    "ar": "Budgeting, HR, service delivery."
+  },
+  "long": {
+    "en": "Municipal capacity building — budgeting, HR systems, and service-delivery improvement for local governments.",
+    "fr": "Municipal capacity building — budgeting, HR systems, and service-delivery improvement for local governments.",
+    "ar": "Municipal capacity building — budgeting, HR systems, and service-delivery improvement for local governments."
+  },
+  "problem": {
+    "en": "Weak budget, HR, and operating procedures impair local services.",
+    "fr": "Weak budget, HR, and operating procedures impair local services.",
+    "ar": "Weak budget, HR, and operating procedures impair local services."
+  },
+  "solution": {
+    "en": "Practical coaching, SOPs, and municipal workflow improvement.",
+    "fr": "Practical coaching, SOPs, and municipal workflow improvement.",
+    "ar": "Practical coaching, SOPs, and municipal workflow improvement."
+  },
+  "likely_buyer": {
+    "en": "Municipalities",
+    "fr": "Municipalities",
+    "ar": "Municipalities"
+  },
+  "acceptance_boundary": {
+    "en": "demonstrated task competence and timeliness measures. Administrative and elected decision-making authority remains with the municipality.",
+    "fr": "demonstrated task competence and timeliness measures. Administrative and elected decision-making authority remains with the municipality.",
+    "ar": "demonstrated task competence and timeliness measures. Administrative and elected decision-making authority remains with the municipality."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

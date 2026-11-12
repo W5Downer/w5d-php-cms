@@ -1,0 +1,81 @@
+{
+  "id": "investors",
+  "path": "/investors/",
+  "title": {
+    "en": "Investors",
+    "fr": "Investors",
+    "ar": "Investors"
+  },
+  "description": {
+    "en": "W5D does not request investment and does not promise returns.",
+    "fr": "W5D does not request investment and does not promise returns.",
+    "ar": "W5D does not request investment and does not promise returns."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "inv-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Investors",
+        "fr": "Investors",
+        "ar": "Investors"
+      },
+      "data": {
+        "lead": {
+          "en": "W5D finances work from client payments first. We are not raising money from applicants and we do not promise dividends or returns.",
+          "fr": "W5D finances work from client payments first. We are not raising money from applicants and we do not promise dividends or returns.",
+          "ar": "W5D finances work from client payments first. We are not raising money from applicants and we do not promise dividends or returns."
+        }
+      }
+    },
+    {
+      "type": "prose",
+      "id": "inv-prose",
+      "tier": "I",
+      "focus": 3,
+      "title": {
+        "en": "Financing order",
+        "fr": "Financing order",
+        "ar": "Financing order"
+      },
+      "data": {
+        "paragraphs": [
+          {
+            "en": "Client deposits and retainers first, then collected milestones, then credit only after repayment capacity is shown, and equity only with proper governance and disclosure.",
+            "fr": "Client deposits and retainers first, then collected milestones, then credit only after repayment capacity is shown, and equity only with proper governance and disclosure.",
+            "ar": "Client deposits and retainers first, then collected milestones, then credit only after repayment capacity is shown, and equity only with proper governance and disclosure."
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "inv-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "This page is not an offer of securities. Nothing here is investment advice.",
+          "fr": "This page is not an offer of securities. Nothing here is investment advice.",
+          "ar": "This page is not an offer of securities. Nothing here is investment advice."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Read the statement",
+          "fr": "Read the statement",
+          "ar": "Read the statement"
+        },
+        "href": "/trust/statement/",
+        "class": "btn-link"
+      }
+    }
+  ]
+}

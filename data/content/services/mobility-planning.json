@@ -1,0 +1,44 @@
+{
+  "id": "mobility-planning",
+  "slug": "mobility-planning",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Transport & Mobility Planning",
+    "fr": "Transport & Mobility Planning",
+    "ar": "Transport & Mobility Planning"
+  },
+  "short": {
+    "en": "Transit-oriented design, cycling networks.",
+    "fr": "Transit-oriented design, cycling networks.",
+    "ar": "Transit-oriented design, cycling networks."
+  },
+  "long": {
+    "en": "Integrated mobility planning — transit-oriented development, cycling and pedestrian networks, demand modelling, and public transport operating frameworks.",
+    "fr": "Integrated mobility planning — transit-oriented development, cycling and pedestrian networks, demand modelling, and public transport operating frameworks.",
+    "ar": "Integrated mobility planning — transit-oriented development, cycling and pedestrian networks, demand modelling, and public transport operating frameworks."
+  },
+  "problem": {
+    "en": "Congestion and inaccessible transport undermine mobility and inclusion.",
+    "fr": "Congestion and inaccessible transport undermine mobility and inclusion.",
+    "ar": "Congestion and inaccessible transport undermine mobility and inclusion."
+  },
+  "solution": {
+    "en": "Traffic counts, accessibility analysis, corridor scenarios, and stakeholder review.",
+    "fr": "Traffic counts, accessibility analysis, corridor scenarios, and stakeholder review.",
+    "ar": "Traffic counts, accessibility analysis, corridor scenarios, and stakeholder review."
+  },
+  "likely_buyer": {
+    "en": "Cities/operators",
+    "fr": "Cities/operators",
+    "ar": "Cities/operators"
+  },
+  "acceptance_boundary": {
+    "en": "validated scenarios and access measures. Models support public decisions; they do not authorize routes or guarantee congestion reductions.",
+    "fr": "validated scenarios and access measures. Models support public decisions; they do not authorize routes or guarantee congestion reductions.",
+    "ar": "validated scenarios and access measures. Models support public decisions; they do not authorize routes or guarantee congestion reductions."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "research-data",
+  "slug": "research-data",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Research Data Management",
+    "fr": "Research Data Management",
+    "ar": "Research Data Management"
+  },
+  "short": {
+    "en": "FAIR data, repositories, DMPs.",
+    "fr": "FAIR data, repositories, DMPs.",
+    "ar": "FAIR data, repositories, DMPs."
+  },
+  "long": {
+    "en": "Research data management — FAIR data practices, institutional repositories, data-management plans, and long-term preservation of research outputs.",
+    "fr": "Research data management — FAIR data practices, institutional repositories, data-management plans, and long-term preservation of research outputs.",
+    "ar": "Research data management — FAIR data practices, institutional repositories, data-management plans, and long-term preservation of research outputs."
+  },
+  "problem": {
+    "en": "Lost files and inadequate metadata prevent reuse and verification.",
+    "fr": "Lost files and inadequate metadata prevent reuse and verification.",
+    "ar": "Lost files and inadequate metadata prevent reuse and verification."
+  },
+  "solution": {
+    "en": "Data-management plan, FAIR metadata, controlled repository, and preservation workflow.",
+    "fr": "Data-management plan, FAIR metadata, controlled repository, and preservation workflow.",
+    "ar": "Data-management plan, FAIR metadata, controlled repository, and preservation workflow."
+  },
+  "likely_buyer": {
+    "en": "Universities/labs",
+    "fr": "Universities/labs",
+    "ar": "Universities/labs"
+  },
+  "acceptance_boundary": {
+    "en": "restore, discovery, and reuse tests. FAIR does not mean unrestricted public release of sensitive or licensed data.",
+    "fr": "restore, discovery, and reuse tests. FAIR does not mean unrestricted public release of sensitive or licensed data.",
+    "ar": "restore, discovery, and reuse tests. FAIR does not mean unrestricted public release of sensitive or licensed data."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

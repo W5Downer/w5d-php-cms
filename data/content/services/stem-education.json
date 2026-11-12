@@ -1,0 +1,44 @@
+{
+  "id": "stem-education",
+  "slug": "stem-education",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "STEM Education & Teacher Training",
+    "fr": "STEM Education & Teacher Training",
+    "ar": "STEM Education & Teacher Training"
+  },
+  "short": {
+    "en": "Curriculum, kits, assessment.",
+    "fr": "Curriculum, kits, assessment.",
+    "ar": "Curriculum, kits, assessment."
+  },
+  "long": {
+    "en": "STEM education and teacher training — curriculum design, hands-on kits, and assessment frameworks that improve STEM outcomes across schools.",
+    "fr": "STEM education and teacher training — curriculum design, hands-on kits, and assessment frameworks that improve STEM outcomes across schools.",
+    "ar": "STEM education and teacher training — curriculum design, hands-on kits, and assessment frameworks that improve STEM outcomes across schools."
+  },
+  "problem": {
+    "en": "Theoretical lessons without practice fail to establish usable competence.",
+    "fr": "Theoretical lessons without practice fail to establish usable competence.",
+    "ar": "Theoretical lessons without practice fail to establish usable competence."
+  },
+  "solution": {
+    "en": "Teacher training, safe experiment kits, curriculum, and practical assessment.",
+    "fr": "Teacher training, safe experiment kits, curriculum, and practical assessment.",
+    "ar": "Teacher training, safe experiment kits, curriculum, and practical assessment."
+  },
+  "likely_buyer": {
+    "en": "Schools/training bodies",
+    "fr": "Schools/training bodies",
+    "ar": "Schools/training bodies"
+  },
+  "acceptance_boundary": {
+    "en": "demonstrated learning and teacher performance. Apply child safeguards and material/equipment safety controls.",
+    "fr": "demonstrated learning and teacher performance. Apply child safeguards and material/equipment safety controls.",
+    "ar": "demonstrated learning and teacher performance. Apply child safeguards and material/equipment safety controls."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

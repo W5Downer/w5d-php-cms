@@ -1,0 +1,44 @@
+{
+  "id": "agri-tech",
+  "slug": "agri-tech",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Agricultural Technology",
+    "fr": "Agricultural Technology",
+    "ar": "Agricultural Technology"
+  },
+  "short": {
+    "en": "Precision irrigation, drones, sensors.",
+    "fr": "Precision irrigation, drones, sensors.",
+    "ar": "Precision irrigation, drones, sensors."
+  },
+  "long": {
+    "en": "Agricultural technology — precision irrigation, drones, and sensor networks that optimize yields and reduce water use.",
+    "fr": "Agricultural technology — precision irrigation, drones, and sensor networks that optimize yields and reduce water use.",
+    "ar": "Agricultural technology — precision irrigation, drones, and sensor networks that optimize yields and reduce water use."
+  },
+  "problem": {
+    "en": "Unmeasured irrigation and inputs waste scarce resources.",
+    "fr": "Unmeasured irrigation and inputs waste scarce resources.",
+    "ar": "Unmeasured irrigation and inputs waste scarce resources."
+  },
+  "solution": {
+    "en": "Precision-irrigation/sensor pilot with field validation and maintenance.",
+    "fr": "Precision-irrigation/sensor pilot with field validation and maintenance.",
+    "ar": "Precision-irrigation/sensor pilot with field validation and maintenance."
+  },
+  "likely_buyer": {
+    "en": "Farms/cooperatives",
+    "fr": "Farms/cooperatives",
+    "ar": "Farms/cooperatives"
+  },
+  "acceptance_boundary": {
+    "en": "water per unit yield with weather controls. Coordinate agronomic claims with qualified service 056 expertise.",
+    "fr": "water per unit yield with weather controls. Coordinate agronomic claims with qualified service 056 expertise.",
+    "ar": "water per unit yield with weather controls. Coordinate agronomic claims with qualified service 056 expertise."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

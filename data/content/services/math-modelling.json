@@ -1,0 +1,44 @@
+{
+  "id": "math-modelling",
+  "slug": "math-modelling",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Mathematical Modelling & Simulation",
+    "fr": "Mathematical Modelling & Simulation",
+    "ar": "Mathematical Modelling & Simulation"
+  },
+  "short": {
+    "en": "Optimisation, stochastic models, HPC.",
+    "fr": "Optimisation, stochastic models, HPC.",
+    "ar": "Optimisation, stochastic models, HPC."
+  },
+  "long": {
+    "en": "Mathematical modelling and simulation — optimisation, stochastic modelling, and high-performance computing for research and industry problems.",
+    "fr": "Mathematical modelling and simulation — optimisation, stochastic modelling, and high-performance computing for research and industry problems.",
+    "ar": "Mathematical modelling and simulation — optimisation, stochastic modelling, and high-performance computing for research and industry problems."
+  },
+  "problem": {
+    "en": "Inefficient schedules and unvalidated models waste resources.",
+    "fr": "Inefficient schedules and unvalidated models waste resources.",
+    "ar": "Inefficient schedules and unvalidated models waste resources."
+  },
+  "solution": {
+    "en": "Optimization, stochastic simulation, documented constraints, and reproducible code.",
+    "fr": "Optimization, stochastic simulation, documented constraints, and reproducible code.",
+    "ar": "Optimization, stochastic simulation, documented constraints, and reproducible code."
+  },
+  "likely_buyer": {
+    "en": "Industry/research",
+    "fr": "Industry/research",
+    "ar": "Industry/research"
+  },
+  "acceptance_boundary": {
+    "en": "out-of-sample validation and constraint correctness. Report model assumptions; simulated gains are not guaranteed operational savings.",
+    "fr": "out-of-sample validation and constraint correctness. Report model assumptions; simulated gains are not guaranteed operational savings.",
+    "ar": "out-of-sample validation and constraint correctness. Report model assumptions; simulated gains are not guaranteed operational savings."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

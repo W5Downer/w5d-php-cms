@@ -1,0 +1,44 @@
+{
+  "id": "transport-tech",
+  "slug": "transport-tech",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Transportation Technology",
+    "fr": "Transportation Technology",
+    "ar": "Transportation Technology"
+  },
+  "short": {
+    "en": "EV charging, fleet telematics, ticketing.",
+    "fr": "EV charging, fleet telematics, ticketing.",
+    "ar": "EV charging, fleet telematics, ticketing."
+  },
+  "long": {
+    "en": "Transportation technology — EV charging networks, fleet telematics, and integrated ticketing systems for public and private operators.",
+    "fr": "Transportation technology — EV charging networks, fleet telematics, and integrated ticketing systems for public and private operators.",
+    "ar": "Transportation technology — EV charging networks, fleet telematics, and integrated ticketing systems for public and private operators."
+  },
+  "problem": {
+    "en": "Fragmented fleet, ticketing, and charging tools reduce reliability.",
+    "fr": "Fragmented fleet, ticketing, and charging tools reduce reliability.",
+    "ar": "Fragmented fleet, ticketing, and charging tools reduce reliability."
+  },
+  "solution": {
+    "en": "Interoperable telematics/charging pilot with monitoring and support.",
+    "fr": "Interoperable telematics/charging pilot with monitoring and support.",
+    "ar": "Interoperable telematics/charging pilot with monitoring and support."
+  },
+  "likely_buyer": {
+    "en": "Operators",
+    "fr": "Operators",
+    "ar": "Operators"
+  },
+  "acceptance_boundary": {
+    "en": "uptime, integration, and privacy tests. Qualified electrical work and lawful tracking are required; avoid unnecessary driver surveillance.",
+    "fr": "uptime, integration, and privacy tests. Qualified electrical work and lawful tracking are required; avoid unnecessary driver surveillance.",
+    "ar": "uptime, integration, and privacy tests. Qualified electrical work and lawful tracking are required; avoid unnecessary driver surveillance."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

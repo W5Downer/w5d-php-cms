@@ -1,0 +1,44 @@
+{
+  "id": "science-comm",
+  "slug": "science-comm",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Science Communication",
+    "fr": "Science Communication",
+    "ar": "Science Communication"
+  },
+  "short": {
+    "en": "Explainers, media training, public engagement.",
+    "fr": "Explainers, media training, public engagement.",
+    "ar": "Explainers, media training, public engagement."
+  },
+  "long": {
+    "en": "Science communication — explainer content, media training for researchers, and public engagement programs that maintain scientific accuracy while being accessible.",
+    "fr": "Science communication — explainer content, media training for researchers, and public engagement programs that maintain scientific accuracy while being accessible.",
+    "ar": "Science communication — explainer content, media training for researchers, and public engagement programs that maintain scientific accuracy while being accessible."
+  },
+  "problem": {
+    "en": "Inaccessible research and misinformation weaken informed decisions.",
+    "fr": "Inaccessible research and misinformation weaken informed decisions.",
+    "ar": "Inaccessible research and misinformation weaken informed decisions."
+  },
+  "solution": {
+    "en": "Source-reviewed Arabic/French/English explainers and public-engagement materials.",
+    "fr": "Source-reviewed Arabic/French/English explainers and public-engagement materials.",
+    "ar": "Source-reviewed Arabic/French/English explainers and public-engagement materials."
+  },
+  "likely_buyer": {
+    "en": "Laboratories/publishers",
+    "fr": "Laboratories/publishers",
+    "ar": "Laboratories/publishers"
+  },
+  "acceptance_boundary": {
+    "en": "expert fact-check and comprehension testing. Measure communication quality, not generic assay certificates or unsupported audience impact.",
+    "fr": "expert fact-check and comprehension testing. Measure communication quality, not generic assay certificates or unsupported audience impact.",
+    "ar": "expert fact-check and comprehension testing. Measure communication quality, not generic assay certificates or unsupported audience impact."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

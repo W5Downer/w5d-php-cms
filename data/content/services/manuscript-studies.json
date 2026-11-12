@@ -1,0 +1,44 @@
+{
+  "id": "manuscript-studies",
+  "slug": "manuscript-studies",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Manuscript Studies",
+    "fr": "Manuscript Studies",
+    "ar": "Manuscript Studies"
+  },
+  "short": {
+    "en": "Codicology, conservation, critical editions.",
+    "fr": "Codicology, conservation, critical editions.",
+    "ar": "Codicology, conservation, critical editions."
+  },
+  "long": {
+    "en": "Manuscript scholarship and conservation — codicology, physical conservation, high-resolution imaging, and critical digital editions for scholars and public access.",
+    "fr": "Manuscript scholarship and conservation — codicology, physical conservation, high-resolution imaging, and critical digital editions for scholars and public access.",
+    "ar": "Manuscript scholarship and conservation — codicology, physical conservation, high-resolution imaging, and critical digital editions for scholars and public access."
+  },
+  "problem": {
+    "en": "Fragile manuscripts lack descriptions, provenance, or reliable editions.",
+    "fr": "Fragile manuscripts lack descriptions, provenance, or reliable editions.",
+    "ar": "Fragile manuscripts lack descriptions, provenance, or reliable editions."
+  },
+  "solution": {
+    "en": "Noninvasive description, codicology, collation, and critical-edition package.",
+    "fr": "Noninvasive description, codicology, collation, and critical-edition package.",
+    "ar": "Noninvasive description, codicology, collation, and critical-edition package."
+  },
+  "likely_buyer": {
+    "en": "Libraries/research bodies",
+    "fr": "Libraries/research bodies",
+    "ar": "Libraries/research bodies"
+  },
+  "acceptance_boundary": {
+    "en": "expert collation and provenance review. Handling or intervention requires custodian permission and qualified conservation oversight.",
+    "fr": "expert collation and provenance review. Handling or intervention requires custodian permission and qualified conservation oversight.",
+    "ar": "expert collation and provenance review. Handling or intervention requires custodian permission and qualified conservation oversight."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

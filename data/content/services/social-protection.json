@@ -1,0 +1,44 @@
+{
+  "id": "social-protection",
+  "slug": "social-protection",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Social Protection Delivery",
+    "fr": "Social Protection Delivery",
+    "ar": "Social Protection Delivery"
+  },
+  "short": {
+    "en": "Targeting, payments, grievance redress.",
+    "fr": "Targeting, payments, grievance redress.",
+    "ar": "Targeting, payments, grievance redress."
+  },
+  "long": {
+    "en": "Social protection delivery — beneficiary targeting, payment rails, grievance-redress mechanisms, and interoperability with health and labour systems.",
+    "fr": "Social protection delivery — beneficiary targeting, payment rails, grievance-redress mechanisms, and interoperability with health and labour systems.",
+    "ar": "Social protection delivery — beneficiary targeting, payment rails, grievance-redress mechanisms, and interoperability with health and labour systems."
+  },
+  "problem": {
+    "en": "Eligibility mistakes and inaccessible grievances exclude vulnerable people.",
+    "fr": "Eligibility mistakes and inaccessible grievances exclude vulnerable people.",
+    "ar": "Eligibility mistakes and inaccessible grievances exclude vulnerable people."
+  },
+  "solution": {
+    "en": "Authorized workflow, payment reconciliation, and grievance handling support.",
+    "fr": "Authorized workflow, payment reconciliation, and grievance handling support.",
+    "ar": "Authorized workflow, payment reconciliation, and grievance handling support."
+  },
+  "likely_buyer": {
+    "en": "Agencies",
+    "fr": "Agencies",
+    "ar": "Agencies"
+  },
+  "acceptance_boundary": {
+    "en": "measured exclusion errors and resolved appeals. Preserve human review, lawful eligibility authority, and strict sensitive-data access.",
+    "fr": "measured exclusion errors and resolved appeals. Preserve human review, lawful eligibility authority, and strict sensitive-data access.",
+    "ar": "measured exclusion errors and resolved appeals. Preserve human review, lawful eligibility authority, and strict sensitive-data access."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

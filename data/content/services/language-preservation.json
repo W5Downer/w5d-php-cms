@@ -1,0 +1,44 @@
+{
+  "id": "language-preservation",
+  "slug": "language-preservation",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Language Preservation",
+    "fr": "Language Preservation",
+    "ar": "Language Preservation"
+  },
+  "short": {
+    "en": "Corpus building, lexicography, endangered-language tools.",
+    "fr": "Corpus building, lexicography, endangered-language tools.",
+    "ar": "Corpus building, lexicography, endangered-language tools."
+  },
+  "long": {
+    "en": "Documentary and computational linguistics for preserving languages at risk — recorded corpora, annotated lexicons, ethical data governance, and mobile-first learning tools for community use.",
+    "fr": "Documentary and computational linguistics for preserving languages at risk — recorded corpora, annotated lexicons, ethical data governance, and mobile-first learning tools for community use.",
+    "ar": "Documentary and computational linguistics for preserving languages at risk — recorded corpora, annotated lexicons, ethical data governance, and mobile-first learning tools for community use."
+  },
+  "problem": {
+    "en": "Endangered varieties lack usable corpora; extractive recording undermines trust.",
+    "fr": "Endangered varieties lack usable corpora; extractive recording undermines trust.",
+    "ar": "Endangered varieties lack usable corpora; extractive recording undermines trust."
+  },
+  "solution": {
+    "en": "Community-governed recordings, lexicon, transcription, and controlled-access corpus.",
+    "fr": "Community-governed recordings, lexicon, transcription, and controlled-access corpus.",
+    "ar": "Community-governed recordings, lexicon, transcription, and controlled-access corpus."
+  },
+  "likely_buyer": {
+    "en": "Universities/foundations",
+    "fr": "Universities/foundations",
+    "ar": "Universities/foundations"
+  },
+  "acceptance_boundary": {
+    "en": "native-speaker-validated entries and consent coverage. Communities determine appropriate access and sensitive-use restrictions.",
+    "fr": "native-speaker-validated entries and consent coverage. Communities determine appropriate access and sensitive-use restrictions.",
+    "ar": "native-speaker-validated entries and consent coverage. Communities determine appropriate access and sensitive-use restrictions."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

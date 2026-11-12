@@ -1,0 +1,44 @@
+{
+  "id": "platform-ai-governance",
+  "slug": "platform-ai-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Platform & AI Governance",
+    "fr": "Platform & AI Governance",
+    "ar": "Platform & AI Governance"
+  },
+  "short": {
+    "en": "Transparency, audits, redress mechanisms.",
+    "fr": "Transparency, audits, redress mechanisms.",
+    "ar": "Transparency, audits, redress mechanisms."
+  },
+  "long": {
+    "en": "Platform and AI governance — transparency reporting, algorithmic audits, and redress mechanisms for users of digital platforms.",
+    "fr": "Platform and AI governance — transparency reporting, algorithmic audits, and redress mechanisms for users of digital platforms.",
+    "ar": "Platform and AI governance — transparency reporting, algorithmic audits, and redress mechanisms for users of digital platforms."
+  },
+  "problem": {
+    "en": "Opaque automated decisions create unexamined harms and weak redress.",
+    "fr": "Opaque automated decisions create unexamined harms and weak redress.",
+    "ar": "Opaque automated decisions create unexamined harms and weak redress."
+  },
+  "solution": {
+    "en": "Model registry, impact/risk review, independent audit, and appeal design.",
+    "fr": "Model registry, impact/risk review, independent audit, and appeal design.",
+    "ar": "Model registry, impact/risk review, independent audit, and appeal design."
+  },
+  "likely_buyer": {
+    "en": "Platforms/regulators",
+    "fr": "Platforms/regulators",
+    "ar": "Platforms/regulators"
+  },
+  "acceptance_boundary": {
+    "en": "documented test coverage and redress performance. Distinguish governance assurance from service 109 model engineering.",
+    "fr": "documented test coverage and redress performance. Distinguish governance assurance from service 109 model engineering.",
+    "ar": "documented test coverage and redress performance. Distinguish governance assurance from service 109 model engineering."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

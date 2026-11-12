@@ -1,0 +1,44 @@
+{
+  "id": "renewable-science",
+  "slug": "renewable-science",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Renewable Energy Science",
+    "fr": "Renewable Energy Science",
+    "ar": "Renewable Energy Science"
+  },
+  "short": {
+    "en": "PV testing, storage chemistry, grid studies.",
+    "fr": "PV testing, storage chemistry, grid studies.",
+    "ar": "PV testing, storage chemistry, grid studies."
+  },
+  "long": {
+    "en": "Renewable energy science — PV performance testing, battery storage chemistry, and grid-integration studies informing national energy strategy.",
+    "fr": "Renewable energy science — PV performance testing, battery storage chemistry, and grid-integration studies informing national energy strategy.",
+    "ar": "Renewable energy science — PV performance testing, battery storage chemistry, and grid-integration studies informing national energy strategy."
+  },
+  "problem": {
+    "en": "Untested performance and storage assumptions undermine energy investment.",
+    "fr": "Untested performance and storage assumptions undermine energy investment.",
+    "ar": "Untested performance and storage assumptions undermine energy investment."
+  },
+  "solution": {
+    "en": "Controlled PV/storage tests, grid studies, and research reports.",
+    "fr": "Controlled PV/storage tests, grid studies, and research reports.",
+    "ar": "Controlled PV/storage tests, grid studies, and research reports."
+  },
+  "likely_buyer": {
+    "en": "Labs/energy developers",
+    "fr": "Labs/energy developers",
+    "ar": "Labs/energy developers"
+  },
+  "acceptance_boundary": {
+    "en": "repeatable performance evidence and uncertainty. This is scientific testing; service 119 covers qualified installation and operation.",
+    "fr": "repeatable performance evidence and uncertainty. This is scientific testing; service 119 covers qualified installation and operation.",
+    "ar": "repeatable performance evidence and uncertainty. This is scientific testing; service 119 covers qualified installation and operation."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

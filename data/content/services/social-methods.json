@@ -1,0 +1,44 @@
+{
+  "id": "social-methods",
+  "slug": "social-methods",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Social Science Research Methods",
+    "fr": "Social Science Research Methods",
+    "ar": "Social Science Research Methods"
+  },
+  "short": {
+    "en": "Surveys, qualitative coding, ethics.",
+    "fr": "Surveys, qualitative coding, ethics.",
+    "ar": "Surveys, qualitative coding, ethics."
+  },
+  "long": {
+    "en": "Social science research methods — survey design, qualitative coding frameworks, and research ethics that support rigorous social inquiry.",
+    "fr": "Social science research methods — survey design, qualitative coding frameworks, and research ethics that support rigorous social inquiry.",
+    "ar": "Social science research methods — survey design, qualitative coding frameworks, and research ethics that support rigorous social inquiry."
+  },
+  "problem": {
+    "en": "Biased samples and weak designs create misleading social conclusions.",
+    "fr": "Biased samples and weak designs create misleading social conclusions.",
+    "ar": "Biased samples and weak designs create misleading social conclusions."
+  },
+  "solution": {
+    "en": "Ethical sampling, survey design, qualitative coding, and analysis package.",
+    "fr": "Ethical sampling, survey design, qualitative coding, and analysis package.",
+    "ar": "Ethical sampling, survey design, qualitative coding, and analysis package."
+  },
+  "likely_buyer": {
+    "en": "NGOs/research bodies",
+    "fr": "NGOs/research bodies",
+    "ar": "NGOs/research bodies"
+  },
+  "acceptance_boundary": {
+    "en": "response quality, coding checks, and limitations. Do not claim causality without a design that supports it.",
+    "fr": "response quality, coding checks, and limitations. Do not claim causality without a design that supports it.",
+    "ar": "response quality, coding checks, and limitations. Do not claim causality without a design that supports it."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

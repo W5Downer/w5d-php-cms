@@ -1,0 +1,139 @@
+{
+  "id": "cultures",
+  "slug": "cultures",
+  "number": 1,
+  "placement": "Real 1.0",
+  "title": {
+    "en": "Cultures / Humanities",
+    "fr": "Cultures / Humanities",
+    "ar": "Cultures / Humanities"
+  },
+  "domain_question": {
+    "en": "How do societies remember, interpret, translate and transmit meaning?"
+  },
+  "typical_fields": {
+    "en": "Archaeology, linguistics, museum studies, translation, film preservation, conservation, cultural economics"
+  },
+  "output_unit": {
+    "en": "Accepted capture packages, annotated recordings, translated words, restored footage minutes, catalogue records"
+  },
+  "recurring_boundary": {
+    "en": "Custodial permission and community consent precede publication; Dyon never substitutes for statutory heritage authority"
+  },
+  "problem": {
+    "en": "heritage and knowledge can be inaccessible, poorly described, untranslated, or reused without clear rights. Digitization alone does not create value if preservation, discovery, interpretation, and community authority are absent. Cultural budgets may be intermittent, making speculative hiring risky."
+  },
+  "premium_offer": {
+    "en": "rights-cleared, Arabic–French–English knowledge packages: archival metadata, accessible publications, translation with independent linguistic review, and maintained digital collections. Likely buyers include museums, universities, publishers, tourism operators, and foundations. Begin with translation/localization or publication if that matches the founding expert; obtain custodian and community permissions before heritage capture."
+  },
+  "delivery_economics": {
+    "en": "price accepted packages, domain-reviewed word volumes, or maintenance retainers rather than generic weekly reports. Partner with custodians and conservators; combine 001/006/009/026/105 only when the buyer funds an integrated heritage outcome. Track acceptance errors, cleared-rights coverage, retrieval success, restoration tests, and repeat revenue. Sensitive religious, minority, and oral-history data need specific protection."
+  },
+  "services": [
+    {
+      "number": 1,
+      "slug": "heritage-digitisation"
+    },
+    {
+      "number": 2,
+      "slug": "language-preservation"
+    },
+    {
+      "number": 3,
+      "slug": "cultural-tourism"
+    },
+    {
+      "number": 4,
+      "slug": "museum-experience"
+    },
+    {
+      "number": 5,
+      "slug": "oral-history"
+    },
+    {
+      "number": 6,
+      "slug": "translation-hubs"
+    },
+    {
+      "number": 7,
+      "slug": "digital-humanities"
+    },
+    {
+      "number": 8,
+      "slug": "arts-economy"
+    },
+    {
+      "number": 9,
+      "slug": "publishing"
+    },
+    {
+      "number": 10,
+      "slug": "film-heritage"
+    },
+    {
+      "number": 11,
+      "slug": "music-archives"
+    },
+    {
+      "number": 12,
+      "slug": "cultural-policy"
+    },
+    {
+      "number": 13,
+      "slug": "interfaith"
+    },
+    {
+      "number": 14,
+      "slug": "philosophy-ethics"
+    },
+    {
+      "number": 15,
+      "slug": "history-science"
+    },
+    {
+      "number": 16,
+      "slug": "archival-science"
+    },
+    {
+      "number": 17,
+      "slug": "library-modernisation"
+    },
+    {
+      "number": 18,
+      "slug": "cultural-diplomacy"
+    },
+    {
+      "number": 19,
+      "slug": "indigenous-studies"
+    },
+    {
+      "number": 20,
+      "slug": "manuscript-studies"
+    },
+    {
+      "number": 21,
+      "slug": "theatre-archives"
+    },
+    {
+      "number": 22,
+      "slug": "cultural-impact"
+    },
+    {
+      "number": 23,
+      "slug": "education-culture"
+    },
+    {
+      "number": 24,
+      "slug": "digital-storytelling"
+    },
+    {
+      "number": 25,
+      "slug": "heritage-conservation"
+    },
+    {
+      "number": 26,
+      "slug": "cultural-data"
+    }
+  ],
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

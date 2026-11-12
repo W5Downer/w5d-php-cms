@@ -1,0 +1,44 @@
+{
+  "id": "geospatial",
+  "slug": "geospatial",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Geospatial & Remote Sensing",
+    "fr": "Geospatial & Remote Sensing",
+    "ar": "Geospatial & Remote Sensing"
+  },
+  "short": {
+    "en": "GIS, satellite analytics, mapping.",
+    "fr": "GIS, satellite analytics, mapping.",
+    "ar": "GIS, satellite analytics, mapping."
+  },
+  "long": {
+    "en": "Geospatial and remote sensing — GIS, satellite analytics, and mapping platforms supporting planning, agriculture, and disaster response.",
+    "fr": "Geospatial and remote sensing — GIS, satellite analytics, and mapping platforms supporting planning, agriculture, and disaster response.",
+    "ar": "Geospatial and remote sensing — GIS, satellite analytics, and mapping platforms supporting planning, agriculture, and disaster response."
+  },
+  "problem": {
+    "en": "Outdated maps undermine location-based planning and monitoring.",
+    "fr": "Outdated maps undermine location-based planning and monitoring.",
+    "ar": "Outdated maps undermine location-based planning and monitoring."
+  },
+  "solution": {
+    "en": "Provenance-tracked GIS layers and ground-validated satellite analysis.",
+    "fr": "Provenance-tracked GIS layers and ground-validated satellite analysis.",
+    "ar": "Provenance-tracked GIS layers and ground-validated satellite analysis."
+  },
+  "likely_buyer": {
+    "en": "Utilities/agencies",
+    "fr": "Utilities/agencies",
+    "ar": "Utilities/agencies"
+  },
+  "acceptance_boundary": {
+    "en": "accuracy, resolution, and ground-truth acceptance. Restrict sensitive locations and avoid unlawful personal profiling.",
+    "fr": "accuracy, resolution, and ground-truth acceptance. Restrict sensitive locations and avoid unlawful personal profiling.",
+    "ar": "accuracy, resolution, and ground-truth acceptance. Restrict sensitive locations and avoid unlawful personal profiling."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "bioinformatics",
+  "slug": "bioinformatics",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Bioinformatics & Genomics",
+    "fr": "Bioinformatics & Genomics",
+    "ar": "Bioinformatics & Genomics"
+  },
+  "short": {
+    "en": "Sequencing pipelines, variant analysis.",
+    "fr": "Sequencing pipelines, variant analysis.",
+    "ar": "Sequencing pipelines, variant analysis."
+  },
+  "long": {
+    "en": "Bioinformatics and genomics — sequencing pipelines, variant analysis, comparative genomics, and reproducible-analysis platforms for research groups.",
+    "fr": "Bioinformatics and genomics — sequencing pipelines, variant analysis, comparative genomics, and reproducible-analysis platforms for research groups.",
+    "ar": "Bioinformatics and genomics — sequencing pipelines, variant analysis, comparative genomics, and reproducible-analysis platforms for research groups."
+  },
+  "problem": {
+    "en": "Unversioned analysis produces unreliable and irreproducible findings.",
+    "fr": "Unversioned analysis produces unreliable and irreproducible findings.",
+    "ar": "Unversioned analysis produces unreliable and irreproducible findings."
+  },
+  "solution": {
+    "en": "Versioned pipelines, reference datasets, benchmarking, and reproducible analysis package.",
+    "fr": "Versioned pipelines, reference datasets, benchmarking, and reproducible analysis package.",
+    "ar": "Versioned pipelines, reference datasets, benchmarking, and reproducible analysis package."
+  },
+  "likely_buyer": {
+    "en": "Research laboratories",
+    "fr": "Research laboratories",
+    "ar": "Research laboratories"
+  },
+  "acceptance_boundary": {
+    "en": "rerun and benchmark acceptance. Genetic data require strict controls; research interpretation is not independent clinical diagnosis.",
+    "fr": "rerun and benchmark acceptance. Genetic data require strict controls; research interpretation is not independent clinical diagnosis.",
+    "ar": "rerun and benchmark acceptance. Genetic data require strict controls; research interpretation is not independent clinical diagnosis."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

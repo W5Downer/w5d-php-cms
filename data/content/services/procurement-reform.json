@@ -1,0 +1,44 @@
+{
+  "id": "procurement-reform",
+  "slug": "procurement-reform",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Public Procurement Reform",
+    "fr": "Public Procurement Reform",
+    "ar": "Public Procurement Reform"
+  },
+  "short": {
+    "en": "Transparency, e-tendering, audit.",
+    "fr": "Transparency, e-tendering, audit.",
+    "ar": "Transparency, e-tendering, audit."
+  },
+  "long": {
+    "en": "Public procurement reform — transparent tendering, e-procurement platforms, and procurement audit aligned with international standards.",
+    "fr": "Public procurement reform — transparent tendering, e-procurement platforms, and procurement audit aligned with international standards.",
+    "ar": "Public procurement reform — transparent tendering, e-procurement platforms, and procurement audit aligned with international standards."
+  },
+  "problem": {
+    "en": "Opaque procedures reduce comparability and accountability.",
+    "fr": "Opaque procedures reduce comparability and accountability.",
+    "ar": "Opaque procedures reduce comparability and accountability."
+  },
+  "solution": {
+    "en": "Process redesign, lawful e-tender/open-contracting specifications, and audit support.",
+    "fr": "Process redesign, lawful e-tender/open-contracting specifications, and audit support.",
+    "ar": "Process redesign, lawful e-tender/open-contracting specifications, and audit support."
+  },
+  "likely_buyer": {
+    "en": "Public purchasers",
+    "fr": "Public purchasers",
+    "ar": "Public purchasers"
+  },
+  "acceptance_boundary": {
+    "en": "traceability and documented process performance. No tender-award power; distinguish system reform from 046 project procurement.",
+    "fr": "traceability and documented process performance. No tender-award power; distinguish system reform from 046 project procurement.",
+    "ar": "traceability and documented process performance. No tender-award power; distinguish system reform from 046 project procurement."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

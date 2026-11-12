@@ -1,0 +1,112 @@
+{
+  "id": "status",
+  "path": "/status/",
+  "title": {
+    "en": "Status",
+    "fr": "Status",
+    "ar": "Status"
+  },
+  "description": {
+    "en": "Declared figures and their status, dated.",
+    "fr": "Declared figures and their status, dated.",
+    "ar": "Declared figures and their status, dated."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "status-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Status",
+        "fr": "Status",
+        "ar": "Status"
+      },
+      "data": {
+        "lead": {
+          "en": "Each figure states whether it is declared, computed or proposed. Live counts appear only when their source is connected.",
+          "fr": "Each figure states whether it is declared, computed or proposed. Live counts appear only when their source is connected.",
+          "ar": "Each figure states whether it is declared, computed or proposed. Live counts appear only when their source is connected."
+        }
+      }
+    },
+    {
+      "type": "kpis",
+      "id": "status-kpis",
+      "tier": "I",
+      "focus": 2,
+      "title": {
+        "en": "Declared figures",
+        "fr": "Declared figures",
+        "ar": "Declared figures"
+      },
+      "data": {
+        "items": [
+          {
+            "label": {
+              "en": "Certified experts (declared)",
+              "fr": "Certified experts (declared)",
+              "ar": "Certified experts (declared)"
+            },
+            "value": {
+              "en": "{{ experts.current }}",
+              "fr": "{{ experts.current }}",
+              "ar": "{{ experts.current }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Design ceiling (capacity, not headcount)",
+              "fr": "Design ceiling (capacity, not headcount)",
+              "ar": "Design ceiling (capacity, not headcount)"
+            },
+            "value": {
+              "en": "{{ experts.target }}",
+              "fr": "{{ experts.target }}",
+              "ar": "{{ experts.target }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Independent sample of weekly reports",
+              "fr": "Independent sample of weekly reports",
+              "ar": "Independent sample of weekly reports"
+            },
+            "value": {
+              "en": "{{ doctrine.quality_sample }}",
+              "fr": "{{ doctrine.quality_sample }}",
+              "ar": "{{ doctrine.quality_sample }}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "status-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Reading this page",
+        "fr": "Reading this page",
+        "ar": "Reading this page"
+      },
+      "data": {
+        "text": {
+          "en": "Registered interest is not the same as verified, certified, contracted or paid people. Those counts are reported separately.",
+          "fr": "Registered interest is not the same as verified, certified, contracted or paid people. Those counts are reported separately.",
+          "ar": "Registered interest is not the same as verified, certified, contracted or paid people. Those counts are reported separately."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Read the statement",
+          "fr": "Read the statement",
+          "ar": "Read the statement"
+        },
+        "href": "/trust/statement/",
+        "class": "btn-link"
+      }
+    }
+  ]
+}

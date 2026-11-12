@@ -1,71 +1,47 @@
-# Onboarding a new template
+# Templates
 
-A template is a **skin**: it changes how blocks look, never what a page says. That is why one page
-JSON renders in every installed template.
+A template is a **skin**. It changes how blocks look, never what a page says.
 
-## Two-tier resolution
+## The one path rule
 
-For any view or block, the engine looks here first, then falls back:
+| What | Where |
+|---|---|
+| Template block override | `views/templates/{name}/blocks/{type}.php` |
+| Template layout / partial override | `views/templates/{name}/layouts/{name}.php`, `views/templates/{name}/partials/{name}.php` |
+| Template CSS (additive only) | `assets/_base/css/templates/{name}.css` |
+| Fallback block | `views/_blocks/{type}.php` |
+| Fallback layout / partial | `views/_shared/layouts/`, `views/_shared/partials/` |
 
-```
-views/{ACTIVE_TEMPLATE}/blocks/{type}.php   →  views/_blocks/{type}.php
-views/{ACTIVE_TEMPLATE}/partials/{name}.php →  views/_shared/partials/{name}.php
-views/{ACTIVE_TEMPLATE}/layouts/{name}.php   →  views/_shared/layouts/{name}.php
-```
+Resolution is two-tier: the template path first, then the shared path. `View::resolveBlock()`
+implements this rule and `docs/templates.md` is the only place it is written down.
 
-A template therefore only needs the files it actually changes. A template with **zero** PHP files is
-valid — it would simply reuse the shared ones and change nothing but its CSS.
+The active template is one value, `template` in `config/app.php` (or `W5D_TEMPLATE` in `.env`).
+Unknown values fall back to `ledger`.
 
-## Steps
+## Installed templates
 
-1. Create the folder:
-
-   ```
-   views/mytemplate/{blocks,layouts,pages,partials}/
-   assets/mytemplate/css/template.css
-   ```
-
-2. Write `assets/mytemplate/css/template.css`. It loads **after** `assets/_base/css/base.css`, so it
-   is purely additive: override tokens and block appearance, never restate layout.
-
-3. Optionally override any block:
-
-   ```bash
-   cp views/_blocks/cards.php views/mytemplate/blocks/cards.php
-   ```
-
-   `$block`, `$doc` and `$lang` are already available.
-
-4. Register the template in `config/app.php`:
-
-   ```php
-   'templates' => ['ledger', 'atlas', 'folio', 'mytemplate'],
-   ```
-
-5. Build:
-
-   ```bash
-   php bin/build.php --template=mytemplate --out=/tmp/preview
-   ```
-
-## Rules a template must keep
-
-- **Do not read content from anywhere but `$block['data']` and `$doc`.** Never hard-code a figure;
-  use `v('counts.services')` so the variable registry stays the single source.
-- **Do not introduce a network request.** No CDN font, no icon library, no external script — the
-  site promises zero third-party requests.
-- **Do not escape-and-forget.** Text goes through `Markup::inline()`; raw HTML only in the `rich`
-  block.
-- **Keep the accessible shell:** one `<h1>` per page, `<main id="main">`, skip link, `lang`/`dir` on
-  `<html>`.
-
-## Shipped templates
-
-| Template | Character | Direction |
+| Template | Feel | Override files |
 |---|---|---|
-| `ledger` | editorial, brass, tabular | default |
-| `atlas` | cartographic, cyan, slate grid | LTR-strong |
-| `folio` | paper, oxblood, drop caps | literary |
+| `ledger` | editorial, brass | CSS only |
+| `atlas` | cartographic, cyan | CSS only |
+| `folio` | paper, oxblood, serif | CSS only |
 
-Arabic inherits `assets/_base/css/rtl.css` in every template, so a template does not need its own
-RTL file unless it wants to change Arabic specifically.
+A template with zero PHP files is valid: it reuses the shared blocks and changes only its CSS.
+
+## Adding a template
+
+1. Create `assets/_base/css/templates/{name}.css`. Override tokens and accents only; do not restate layout.
+2. Optionally copy any block into `views/templates/{name}/blocks/{type}.php` and edit it.
+3. Add the name to `templates` in `config/app.php`.
+4. Run `php tests/RouteMatrixTest.php`. It renders every route in every template and language.
+
+No content file changes. A template may not introduce a third-party request (no CDN, no font
+service, no external script).
+
+## Rules a block or template must keep
+
+- Read content only from `$block['data']` and `$doc`. Never hard-code a figure; use `{{ counts.services }}`.
+- Text goes through `e()` or `Markup::inline()`. Raw HTML is never emitted from content.
+- Every block declares `id`, `tier` (E/I/X) and `focus` (1–5). A block without them throws.
+- Inline `style` attributes are not used (the CSP forbids them). Widths use classes such as `w-40`.
+- Keep one `<h1>` per page and the skip link, `lang` and `dir` on `<html>`.

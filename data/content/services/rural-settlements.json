@@ -1,0 +1,44 @@
+{
+  "id": "rural-settlements",
+  "slug": "rural-settlements",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Rural Settlements & Housing",
+    "fr": "Rural Settlements & Housing",
+    "ar": "Rural Settlements & Housing"
+  },
+  "short": {
+    "en": "Vernacular design, off-grid systems.",
+    "fr": "Vernacular design, off-grid systems.",
+    "ar": "Vernacular design, off-grid systems."
+  },
+  "long": {
+    "en": "Rural settlements and housing — vernacular-informed design, off-grid water and energy systems, and community-managed construction delivery.",
+    "fr": "Rural settlements and housing — vernacular-informed design, off-grid water and energy systems, and community-managed construction delivery.",
+    "ar": "Rural settlements and housing — vernacular-informed design, off-grid water and energy systems, and community-managed construction delivery."
+  },
+  "problem": {
+    "en": "Standard urban designs can be unsuitable for rural climates and services.",
+    "fr": "Standard urban designs can be unsuitable for rural climates and services.",
+    "ar": "Standard urban designs can be unsuitable for rural climates and services."
+  },
+  "solution": {
+    "en": "Community-informed vernacular housing and feasible off-grid systems plan.",
+    "fr": "Community-informed vernacular housing and feasible off-grid systems plan.",
+    "ar": "Community-informed vernacular housing and feasible off-grid systems plan."
+  },
+  "likely_buyer": {
+    "en": "Local agencies/NGOs",
+    "fr": "Local agencies/NGOs",
+    "ar": "Local agencies/NGOs"
+  },
+  "acceptance_boundary": {
+    "en": "community and qualified technical approval. Confirm water availability, maintenance, land rights, and safe utility design.",
+    "fr": "community and qualified technical approval. Confirm water availability, maintenance, land rights, and safe utility design.",
+    "ar": "community and qualified technical approval. Confirm water availability, maintenance, land rights, and safe utility design."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

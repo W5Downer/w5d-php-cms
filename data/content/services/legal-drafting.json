@@ -1,0 +1,44 @@
+{
+  "id": "legal-drafting",
+  "slug": "legal-drafting",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Legal Drafting & Legislative Review",
+    "fr": "Legal Drafting & Legislative Review",
+    "ar": "Legal Drafting & Legislative Review"
+  },
+  "short": {
+    "en": "Statutes, decrees, plain-language versions.",
+    "fr": "Statutes, decrees, plain-language versions.",
+    "ar": "Statutes, decrees, plain-language versions."
+  },
+  "long": {
+    "en": "Legal drafting and review — statutes, decrees, and executive orders in plain language with cross-reference validation and consolidated versions.",
+    "fr": "Legal drafting and review — statutes, decrees, and executive orders in plain language with cross-reference validation and consolidated versions.",
+    "ar": "Legal drafting and review — statutes, decrees, and executive orders in plain language with cross-reference validation and consolidated versions."
+  },
+  "problem": {
+    "en": "Ambiguous or inconsistent texts create legal uncertainty.",
+    "fr": "Ambiguous or inconsistent texts create legal uncertainty.",
+    "ar": "Ambiguous or inconsistent texts create legal uncertainty."
+  },
+  "solution": {
+    "en": "Comparative research, drafting support, and licensed-lawyer review.",
+    "fr": "Comparative research, drafting support, and licensed-lawyer review.",
+    "ar": "Comparative research, drafting support, and licensed-lawyer review."
+  },
+  "likely_buyer": {
+    "en": "Authorized institutions",
+    "fr": "Authorized institutions",
+    "ar": "Authorized institutions"
+  },
+  "acceptance_boundary": {
+    "en": "citation, version, and consistency checks. W5D cannot legislate or provide reserved legal services through unqualified staff.",
+    "fr": "citation, version, and consistency checks. W5D cannot legislate or provide reserved legal services through unqualified staff.",
+    "ar": "citation, version, and consistency checks. W5D cannot legislate or provide reserved legal services through unqualified staff."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

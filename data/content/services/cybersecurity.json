@@ -1,0 +1,44 @@
+{
+  "id": "cybersecurity",
+  "slug": "cybersecurity",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cybersecurity Operations",
+    "fr": "Cybersecurity Operations",
+    "ar": "Cybersecurity Operations"
+  },
+  "short": {
+    "en": "SOC, pentesting, incident response.",
+    "fr": "SOC, pentesting, incident response.",
+    "ar": "SOC, pentesting, incident response."
+  },
+  "long": {
+    "en": "Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001.",
+    "fr": "Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001.",
+    "ar": "Cybersecurity operations — security operations centre (SOC), penetration testing, and incident response aligned with NIST and ISO 27001."
+  },
+  "problem": {
+    "en": "Undetected weaknesses and slow response increase breach damage.",
+    "fr": "Undetected weaknesses and slow response increase breach damage.",
+    "ar": "Undetected weaknesses and slow response increase breach damage."
+  },
+  "solution": {
+    "en": "Written-scope assessments, managed detection, remediation, and response exercises.",
+    "fr": "Written-scope assessments, managed detection, remediation, and response exercises.",
+    "ar": "Written-scope assessments, managed detection, remediation, and response exercises."
+  },
+  "likely_buyer": {
+    "en": "Enterprises",
+    "fr": "Enterprises",
+    "ar": "Enterprises"
+  },
+  "acceptance_boundary": {
+    "en": "tested alerts and remediation timelines. Obtain explicit authorization for testing; no unauthorized access or absolute security guarantee.",
+    "fr": "tested alerts and remediation timelines. Obtain explicit authorization for testing; no unauthorized access or absolute security guarantee.",
+    "ar": "tested alerts and remediation timelines. Obtain explicit authorization for testing; no unauthorized access or absolute security guarantee."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

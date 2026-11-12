@@ -1,0 +1,94 @@
+{
+  "id": "join-eligibility",
+  "path": "/join/eligibility/",
+  "title": {
+    "en": "Eligibility check",
+    "fr": "Eligibility check",
+    "ar": "Eligibility check"
+  },
+  "description": {
+    "en": "Three questions to see whether to register.",
+    "fr": "Three questions to see whether to register.",
+    "ar": "Three questions to see whether to register."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "elig-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Check my eligibility",
+        "fr": "Check my eligibility",
+        "ar": "Check my eligibility"
+      },
+      "data": {
+        "lead": {
+          "en": "Answer three questions. This is a self-check, not an assessment.",
+          "fr": "Answer three questions. This is a self-check, not an assessment.",
+          "ar": "Answer three questions. This is a self-check, not an assessment."
+        }
+      }
+    },
+    {
+      "type": "eligibility",
+      "id": "elig-check",
+      "tier": "E",
+      "focus": 4,
+      "gradient": "focus",
+      "title": {
+        "en": "Three questions",
+        "fr": "Three questions",
+        "ar": "Three questions"
+      },
+      "data": {
+        "service": ""
+      }
+    },
+    {
+      "type": "notice",
+      "id": "elig-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "A self-check does not confirm eligibility for any role. Assessment decides competence.",
+          "fr": "A self-check does not confirm eligibility for any role. Assessment decides competence.",
+          "ar": "A self-check does not confirm eligibility for any role. Assessment decides competence."
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "id": "elig-next",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Continue to registration",
+        "fr": "Continue to registration",
+        "ar": "Continue to registration"
+      },
+      "data": {
+        "text": {
+          "en": "If the answers fit, continue. Nothing is submitted yet.",
+          "fr": "If the answers fit, continue. Nothing is submitted yet.",
+          "ar": "If the answers fit, continue. Nothing is submitted yet."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Continue to registration",
+          "fr": "Continue to registration",
+          "ar": "Continue to registration"
+        },
+        "href": "/app/register/",
+        "class": "btn-peak"
+      }
+    }
+  ]
+}
