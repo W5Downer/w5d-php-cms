@@ -1,0 +1,289 @@
+{
+  "id": "metax-academy",
+  "slug": "metax-academy",
+  "order": 2,
+  "layer": "L2",
+  "status": "live",
+  "evidence": "E2",
+  "stage": 100,
+  "horizon": "meta",
+  "group": {
+    "en": "Formation",
+    "fr": "Formation",
+    "ar": "التكوين"
+  },
+  "parent": null,
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "MetaX Academy",
+    "fr": "MetaX Academy",
+    "ar": "أكاديمية ميتاكس"
+  },
+  "subtitle": {
+    "en": "A professional and scientific education estate.",
+    "fr": "Un domaine de formation professionnelle et scientifique.",
+    "ar": "منظومة تعليم مهني وعلمي."
+  },
+  "short": {
+    "en": "The meta-layer institution: nine pillars, licence ML-2.3, and a public register of harms."
+  },
+  "summary": {
+    "en": "The meta-layer institution: nine pillars, licence ML-2.3, and a public register of harms."
+  },
+  "description": {
+    "en": "A professional and scientific education estate.",
+    "fr": "Un domaine de formation professionnelle et scientifique.",
+    "ar": "منظومة تعليم مهني وعلمي."
+  },
+  "exists": {
+    "en": "A live demo build (v2026.10.1) with nine pillars and a public corrections record."
+  },
+  "missing": {
+    "en": "Enrolment, accreditation and pricing have not been published. The pillar count is nine; the harms register carries 25 entries."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L2 programme",
+        "grand": {
+          "en": "MetaX Academy",
+          "fr": "MetaX Academy",
+          "ar": "أكاديمية ميتاكس"
+        },
+        "lead": {
+          "en": "A professional and scientific education estate.",
+          "fr": "Un domaine de formation professionnelle et scientifique.",
+          "ar": "منظومة تعليم مهني وعلمي."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "live"
+          },
+          {
+            "label": "Evidence",
+            "value": "E2",
+            "sub": "observed on the verification date"
+          },
+          {
+            "label": "Layer",
+            "value": "L2"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "What this project instantiates"
+      },
+      "data": {
+        "lead": {
+          "en": "Projects are downstream of both Meta Solutions and Services: a project is a time-bound instantiation that may consume several services, invoke several meta-solutions and produce a concrete artefact or programme."
+        },
+        "items": [
+          {
+            "term": {
+              "en": "Meta-solution instantiated"
+            },
+            "value": {
+              "en": "Academy and credentialing meta-layer"
+            }
+          },
+          {
+            "term": {
+              "en": "Services consumed"
+            },
+            "value": {
+              "en": "STEM Education & Teacher Training (#076), Education through Culture (#023), Construction Workforce Training (#039)"
+            }
+          },
+          {
+            "term": {
+              "en": "Dependency direction"
+            },
+            "value": {
+              "en": "Projects → Meta Solutions + Services. Projects are downstream of both."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "MetaX Academy is the reflexive layer of the ecosystem: it exists so that every substantive claim carries what a stranger would need in order to find out that it is wrong."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "live"
+          },
+          {
+            "term": "Evidence",
+            "value": "E2",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Programme"
+          },
+          {
+            "term": "Horizon",
+            "value": "meta"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "4th (Information/Structure)",
+              "fr": "4e (Information/Structure)",
+              "ar": "الرابع (المعلومة/البنية)"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "A live demo build (v2026.10.1) with nine pillars and a public corrections record."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "Enrolment, accreditation and pricing have not been published. The pillar count is nine; the harms register carries 25 entries."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A live build is not an accreditation. No certificate, enrolment figure or graduate outcome is claimed on this site."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "metax.academy"
+            },
+            "href": "https://metax.academy/",
+            "open": false
+          },
+          {
+            "term": "State",
+            "value": "live",
+            "open": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ],
+  "meta_solution": "academy-layer",
+  "services_consumed": [
+    "stem-education",
+    "education-culture",
+    "construction-training"
+  ]
+}

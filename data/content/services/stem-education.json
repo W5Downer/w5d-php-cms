@@ -1,0 +1,199 @@
+{
+  "id": "stem-education",
+  "slug": "stem-education",
+  "number": 76,
+  "macro": "sciences",
+  "placement": "between",
+  "status": "building",
+  "audience": "client",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "STEM Education & Teacher Training"
+  },
+  "short": {
+    "en": "Curriculum, kits, assessment."
+  },
+  "summary": {
+    "en": "Curriculum, kits, assessment."
+  },
+  "description": {
+    "en": "STEM education and teacher training — curriculum design, hands-on kits, and assessment frameworks that improve STEM outcomes across schools."
+  },
+  "order": 76,
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "076 · Sciences",
+        "grand": "STEM Education & Teacher Training",
+        "lead": "STEM education and teacher training — curriculum design, hands-on kits, and assessment frameworks that improve STEM outcomes across schools.",
+        "split": false,
+        "meta": [
+          {
+            "label": "Service number",
+            "value": "076"
+          },
+          {
+            "label": "Macro work",
+            "value": {
+              "en": "Sciences",
+              "fr": "Sciences",
+              "ar": "العلوم"
+            }
+          },
+          {
+            "label": "Placement",
+            "value": "Between 1.0"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What the service does",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": "STEM education and teacher training — curriculum design, hands-on kits, and assessment frameworks that improve STEM outcomes across schools."
+          },
+          {
+            "type": "p",
+            "text": "Curriculum, kits, assessment."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Service record",
+      "data": {
+        "items": [
+          {
+            "term": "Registered number",
+            "value": "076"
+          },
+          {
+            "term": "Macro work",
+            "value": {
+              "en": "Sciences",
+              "fr": "Sciences",
+              "ar": "العلوم"
+            }
+          },
+          {
+            "term": "Placement",
+            "value": "Between 1.0"
+          },
+          {
+            "term": "Designed capacity",
+            "var": "counts.service_capacity"
+          },
+          {
+            "term": "Output unit",
+            "value": {
+              "en": "accessioned samples, validated assay results, calibration certificates"
+            }
+          },
+          {
+            "term": "Publication status",
+            "chip": "building"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "Outputs and boundaries",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "accessioned samples, validated assay results, calibration certificates"
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Deliverables are recorded against the weekly report as evidence, not as a claim.",
+              "Every figure published about this service is dated and carries its source."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A research analysis does not become a clinical diagnosis without authorised validation, and every laboratory publishes its method limits and chain of custody."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cards",
+      "title": "Other services in Sciences",
+      "data": {
+        "items": [
+          {
+            "title": "Clinical Research Coordination",
+            "summary": "Protocol design, ethics, site monitoring.",
+            "href": "service:clinical-research",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "053"
+              }
+            ]
+          },
+          {
+            "title": "Public Health Surveillance",
+            "summary": "Epidemiology, dashboards, outbreak response.",
+            "href": "service:public-health",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "054"
+              }
+            ]
+          },
+          {
+            "title": "Water & Soil Quality Labs",
+            "summary": "Sampling, accredited analysis, remediation.",
+            "href": "service:water-soil-labs",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "055"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read the macro work, or the whole register of {{ counts.services }} services.",
+        "actions": [
+          {
+            "label": "The macro work",
+            "href": "macro:sciences"
+          },
+          {
+            "label": "All services",
+            "href": "page:services",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

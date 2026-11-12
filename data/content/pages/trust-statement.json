@@ -1,0 +1,110 @@
+{
+  "id": "trust-statement",
+  "path": "/trust/statement/",
+  "kind": "page",
+  "nav_group": "trust",
+  "audience": "public",
+  "title": {
+    "en": "Our statement",
+    "fr": "Notre déclaration",
+    "ar": "بياننا"
+  },
+  "nav_label": {
+    "en": "Our statement",
+    "fr": "Notre déclaration",
+    "ar": "بياننا"
+  },
+  "summary": {
+    "en": "Where W5D has not yet remedied a harm.",
+    "fr": "Là où W5D n'a pas encore remédié à un préjudice.",
+    "ar": "حيث لم تعالج W5D ضررًا بعد."
+  },
+  "description": {
+    "en": "A company that publishes a harms register owes its readers an account of where it falls short."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Trust · Doctrine"
+        },
+        "grand": {
+          "en": "Where W5D has not yet remedied a harm."
+        },
+        "lead": {
+          "en": "A company that publishes a harms register owes its readers an account of where it falls short. This is the place for it."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "What can be said today"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "p",
+            "text": {
+              "en": "W5D has not published a harm-by-harm assessment of its own work. That is a gap, and it is stated here as one."
+            }
+          },
+          {
+            "type": "p",
+            "text": {
+              "en": "Two programmes touch areas that the register treats as sensitive: identity and cloned selves (KernID, SelfAI), and living substrates (BCIA). Neither has a published consent policy or an independent review."
+            }
+          },
+          {
+            "type": "p",
+            "text": {
+              "en": "A long identifier (W5D UUID) and a ledger design (Aevum and Meridian) are specifications without implementations. No harm can be measured yet, and none is claimed to be absent."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "What is still to be written"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "The harm-by-harm statement, for each of HX-01 to HX-25"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Use the contact page with the reason set to \"Correction\"."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Corrections record"
+            },
+            "href": "page:corrections",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Contact"
+            },
+            "href": "page:contact"
+          }
+        ]
+      }
+    }
+  ]
+}

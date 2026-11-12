@@ -1,0 +1,117 @@
+{
+  "id": "meta-macro-beyond",
+  "slug": "meta-macro-beyond",
+  "order": 2,
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "The Official Wording of Meta, Macro, and Beyond"
+  },
+  "grand_title": {
+    "en": "Three operators in one framework."
+  },
+  "summary": {
+    "en": "The wording that defines meta, macro and beyond, with the reasoning behind each and the errors each one avoids."
+  },
+  "description": {
+    "en": "The wording that defines meta, macro and beyond, with the reasoning behind each and the errors each one avoids."
+  },
+  "date": "2026-10-10",
+  "version": "1.0",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Declaration 2 of 7"
+        },
+        "grand": {
+          "en": "Three operators in one framework."
+        },
+        "lead": {
+          "en": "The wording that defines meta, macro and beyond, with the reasoning behind each and the errors each one avoids."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "In brief"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "Meta is reflexive: a system aware of its own structure."
+              },
+              {
+                "en": "Macro is systemic: technology as a large-scale ensemble."
+              },
+              {
+                "en": "Beyond is generative: the layer from which technology emerges."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "The text"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "p",
+            "text": {
+              "en": "The founder's full text is written in the first person and has not been reproduced here. This record states what the declaration claims, where it is used on this site, and what would refute it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A declaration is a working framework, not a final definition. Each claim above is stated so that a reader can check it and file a correction."
+          }
+        ]
+      },
+      "title": {
+        "en": "Declared limits"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Read the other declarations, or check the register."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "All declarations"
+            },
+            "href": "page:declarations",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Status register"
+            },
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

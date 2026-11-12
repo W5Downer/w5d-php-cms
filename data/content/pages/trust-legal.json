@@ -1,0 +1,152 @@
+{
+  "id": "trust-legal",
+  "path": "/trust/legal/",
+  "kind": "legal",
+  "nav_group": "trust",
+  "audience": "public",
+  "title": {
+    "en": "Legal notice",
+    "fr": "Mentions légales",
+    "ar": "إشعار قانوني"
+  },
+  "nav_label": {
+    "en": "Legal notice",
+    "fr": "Mentions légales",
+    "ar": "إشعار قانوني"
+  },
+  "summary": {
+    "en": "Who publishes this site.",
+    "fr": "Qui publie ce site.",
+    "ar": "من ينشر هذا الموقع."
+  },
+  "description": {
+    "en": "Fields that have not been supplied are shown as open and not guessed."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Trust · Policies"
+        },
+        "grand": {
+          "en": "Legal notice."
+        },
+        "lead": {
+          "en": "Who publishes this site. Fields that have not been supplied are shown as open and not guessed."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "Publisher"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Legal name"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Legal form"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Year founded"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Company register number (RNE)"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Tax identification number"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Share capital"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Registered address"
+            },
+            "value": "{{ site.address }}"
+          },
+          {
+            "term": {
+              "en": "Publication director"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Host"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Host address"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "Liability"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "p",
+            "text": {
+              "en": "This site describes programmes at different stages. A listing is not an offer, and a draft is not a product. Check the status and the date on every item before relying on it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Texts attributed to Maher are his authorship."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Licence"
+            },
+            "href": "page:license",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Privacy"
+            },
+            "href": "page:privacy"
+          }
+        ]
+      }
+    }
+  ]
+}

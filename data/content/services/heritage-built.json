@@ -1,0 +1,199 @@
+{
+  "id": "heritage-built",
+  "slug": "heritage-built",
+  "number": 33,
+  "macro": "built",
+  "placement": "real",
+  "status": "building",
+  "audience": "client",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Heritage Built Environment"
+  },
+  "short": {
+    "en": "Adaptive reuse, conservation engineering."
+  },
+  "summary": {
+    "en": "Adaptive reuse, conservation engineering."
+  },
+  "description": {
+    "en": "Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works."
+  },
+  "order": 33,
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "033 · Built Environment",
+        "grand": "Heritage Built Environment",
+        "lead": "Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works.",
+        "split": false,
+        "meta": [
+          {
+            "label": "Service number",
+            "value": "033"
+          },
+          {
+            "label": "Macro work",
+            "value": {
+              "en": "Built Environment",
+              "fr": "Cadre bâti",
+              "ar": "البيئة العمرانية"
+            }
+          },
+          {
+            "label": "Placement",
+            "value": "Real 1.0"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What the service does",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": "Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works."
+          },
+          {
+            "type": "p",
+            "text": "Adaptive reuse, conservation engineering."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Service record",
+      "data": {
+        "items": [
+          {
+            "term": "Registered number",
+            "value": "033"
+          },
+          {
+            "term": "Macro work",
+            "value": {
+              "en": "Built Environment",
+              "fr": "Cadre bâti",
+              "ar": "البيئة العمرانية"
+            }
+          },
+          {
+            "term": "Placement",
+            "value": "Real 1.0"
+          },
+          {
+            "term": "Designed capacity",
+            "var": "counts.service_capacity"
+          },
+          {
+            "term": "Output unit",
+            "value": {
+              "en": "design package reviews, asset inspections, survey kilometres"
+            }
+          },
+          {
+            "term": "Publication status",
+            "chip": "building"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "Outputs and boundaries",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "design package reviews, asset inspections, survey kilometres"
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Deliverables are recorded against the weekly report as evidence, not as a claim.",
+              "Every figure published about this service is dated and carries its source."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Affordability includes operating cost, not sale price alone. A draft zoning layer stays advisory until the competent authority validates it."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cards",
+      "title": "Other services in Built Environment",
+      "data": {
+        "items": [
+          {
+            "title": "Affordable Housing Delivery",
+            "summary": "Design, finance structuring, construction management.",
+            "href": "service:affordable-housing",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "027"
+              }
+            ]
+          },
+          {
+            "title": "Urban Planning & Zoning",
+            "summary": "Master plans, GIS, participatory design.",
+            "href": "service:urban-planning",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "028"
+              }
+            ]
+          },
+          {
+            "title": "Infrastructure Rehabilitation",
+            "summary": "Roads, water, drainage, structural audits.",
+            "href": "service:infrastructure-rehab",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "029"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read the macro work, or the whole register of {{ counts.services }} services.",
+        "actions": [
+          {
+            "label": "The macro work",
+            "href": "macro:built"
+          },
+          {
+            "label": "All services",
+            "href": "page:services",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

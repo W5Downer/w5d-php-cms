@@ -1,0 +1,101 @@
+{
+  "id": "studio-security",
+  "path": "/studio/security/",
+  "kind": "page",
+  "nav_group": "studio",
+  "audience": "client",
+  "title": {
+    "en": "Security"
+  },
+  "nav_label": {
+    "en": "Security"
+  },
+  "summary": {
+    "en": "Headers, dependencies, forms and build pipeline. Static-first removes whole classes of risk, and the work is to avoid adding them back."
+  },
+  "description": {
+    "en": "Hardening a static-first stack."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Studio"
+        },
+        "grand": {
+          "en": "Hardening a static-first stack."
+        },
+        "lead": {
+          "en": "Headers, dependencies, forms and build pipeline. Static-first removes whole classes of risk, and the work is to avoid adding them back."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "What is reviewed"
+      },
+      "data": {
+        "body": [
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "A Content-Security-Policy that allows only the site's own origin where possible."
+              },
+              {
+                "en": "Transport security, content-type and framing headers."
+              },
+              {
+                "en": "Dependencies and build tooling, pinned and reviewed."
+              },
+              {
+                "en": "Form endpoints: spam protection, rate limits and where messages go."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Penetration testing and incident response are not part of this service. The studio does not claim SOC 2, ISO 27001 or any other certification."
+          }
+        ]
+      },
+      "title": {
+        "en": "What is not offered"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Every claim on this site is dated, and every limit declared."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Start with an audit"
+            },
+            "href": "page:studio-audit",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Write to the studio"
+            },
+            "href": "page:contact"
+          }
+        ]
+      }
+    }
+  ]
+}

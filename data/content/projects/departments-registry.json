@@ -1,0 +1,246 @@
+{
+  "id": "departments-registry",
+  "slug": "departments-registry",
+  "order": 22,
+  "layer": "L3",
+  "status": "draft",
+  "evidence": "E1",
+  "stage": 44,
+  "horizon": "macro",
+  "group": {
+    "en": "2030B · organisation",
+    "fr": "2030B · organisation",
+    "ar": "2030B · التنظيم"
+  },
+  "parent": "2030b",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "2030B departments registry",
+    "fr": "Registre des départements 2030B",
+    "ar": "سجل أقسام 2030B"
+  },
+  "subtitle": {
+    "en": "Sixteen departments documented by slug.",
+    "fr": "Seize départements documentés par slug.",
+    "ar": "ستة عشر قسمًا موثّقًا بالمعرّف."
+  },
+  "short": {
+    "en": "Sixteen departments are documented by slug; names, levels and mandates are not yet published here."
+  },
+  "summary": {
+    "en": "Sixteen departments are documented by slug; names, levels and mandates are not yet published here."
+  },
+  "description": {
+    "en": "Sixteen departments documented by slug.",
+    "fr": "Seize départements documentés par slug.",
+    "ar": "ستة عشر قسمًا موثّقًا بالمعرّف."
+  },
+  "exists": {
+    "en": "Sixteen departments are documented by slug; names, levels and mandates are not yet published here."
+  },
+  "missing": {
+    "en": "Names, levels and mandates for the 16 departments have not been supplied."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L3 project",
+        "grand": {
+          "en": "2030B departments registry",
+          "fr": "Registre des départements 2030B",
+          "ar": "سجل أقسام 2030B"
+        },
+        "lead": {
+          "en": "Sixteen departments documented by slug.",
+          "fr": "Seize départements documentés par slug.",
+          "ar": "ستة عشر قسمًا موثّقًا بالمعرّف."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "draft"
+          },
+          {
+            "label": "Evidence",
+            "value": "E1",
+            "sub": null
+          },
+          {
+            "label": "Layer",
+            "value": "L3"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "The administrative structure around the 2030B ontology. The count is 16 and is stored as a variable in config/variables.php."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "draft"
+          },
+          {
+            "term": "Evidence",
+            "value": "E1",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Project"
+          },
+          {
+            "term": "Horizon",
+            "value": "macro"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "to be confirmed"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "Sixteen departments are documented by slug; names, levels and mandates are not yet published here."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "Names, levels and mandates for the 16 departments have not been supplied."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A slug is not a mandate. The registry lists identifiers only."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "href": null,
+            "open": true
+          },
+          {
+            "term": "State",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "id": "selfai",
+  "slug": "selfai",
+  "order": 4,
+  "layer": "L2",
+  "status": "concept",
+  "evidence": "E1",
+  "stage": 11,
+  "horizon": "beyond",
+  "group": {
+    "en": "Research",
+    "fr": "Recherche",
+    "ar": "البحث"
+  },
+  "parent": null,
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "SelfAI",
+    "fr": "SelfAI",
+    "ar": "SelfAI"
+  },
+  "subtitle": {
+    "en": "The cloned self in the digital world.",
+    "fr": "Le soi cloné dans le monde numérique.",
+    "ar": "الذات المستنسخة في العالم الرقمي."
+  },
+  "short": {
+    "en": "Defined scope and per-project module codes. No product."
+  },
+  "summary": {
+    "en": "Defined scope and per-project module codes. No product."
+  },
+  "description": {
+    "en": "The cloned self in the digital world.",
+    "fr": "Le soi cloné dans le monde numérique.",
+    "ar": "الذات المستنسخة في العالم الرقمي."
+  },
+  "exists": {
+    "en": "A defined scope and per-project module codes in drafts. No product."
+  },
+  "missing": {
+    "en": "No model, dataset, evaluation or service exists. Module codes are defined per 2030B project; none is running."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L2 programme",
+        "grand": {
+          "en": "SelfAI",
+          "fr": "SelfAI",
+          "ar": "SelfAI"
+        },
+        "lead": {
+          "en": "The cloned self in the digital world.",
+          "fr": "Le soi cloné dans le monde numérique.",
+          "ar": "الذات المستنسخة في العالم الرقمي."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "concept"
+          },
+          {
+            "label": "Evidence",
+            "value": "E1",
+            "sub": null
+          },
+          {
+            "label": "Layer",
+            "value": "L2"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "What this project instantiates"
+      },
+      "data": {
+        "lead": {
+          "en": "Projects are downstream of both Meta Solutions and Services: a project is a time-bound instantiation that may consume several services, invoke several meta-solutions and produce a concrete artefact or programme."
+        },
+        "items": [
+          {
+            "term": {
+              "en": "Meta-solution instantiated"
+            },
+            "value": {
+              "en": "Self-training AI agent meta-layer"
+            }
+          },
+          {
+            "term": {
+              "en": "Services consumed"
+            },
+            "value": {
+              "en": "AI & Machine Learning (#109), Platform & AI Governance (#093), Bioinformatics & Genomics (#060)"
+            }
+          },
+          {
+            "term": {
+              "en": "Dependency direction"
+            },
+            "value": {
+              "en": "Projects → Meta Solutions + Services. Projects are downstream of both."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "SelfAI is described as a cloned self that acts for a person in the digital world. Each 2030B project names a SelfAI module code, which is the only concrete artefact at present."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "concept"
+          },
+          {
+            "term": "Evidence",
+            "value": "E1",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Programme"
+          },
+          {
+            "term": "Horizon",
+            "value": "beyond"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "4th–5th boundary",
+              "fr": "Frontière 4e–5e",
+              "ar": "الحدّ بين الرابع والخامس"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "A defined scope and per-project module codes in drafts. No product."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "No model, dataset, evaluation or service exists. Module codes are defined per 2030B project; none is running."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A clone of a person raises consent, identity and harm questions that the register treats as sensitive. No consent policy or independent review is published for SelfAI."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "href": null,
+            "open": true
+          },
+          {
+            "term": "State",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ],
+  "meta_solution": "selfai",
+  "services_consumed": [
+    "ai-ml",
+    "platform-ai-governance",
+    "bioinformatics"
+  ]
+}

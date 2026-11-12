@@ -64,6 +64,93 @@ Built for W5D by Maher Kaddoussi. Contact: [owner@w5d.tech](mailto:owner@w5d.tec
 
 ---
 
+## Delivered: static content engine
+
+This repository now ships a **JSON-driven static site generator**. The public site is compiled to
+plain HTML/CSS/JS and the **contents of `dist/` are uploaded directly to the root of
+https://w5d.tech** — no installer, no database, no SSH command, no PHP at the host.
+
+```bash
+php bin/build.php                     # → dist/  (ledger template, en/fr/ar)
+php bin/build.php --template=atlas    # → dist/  (atlas template)
+php bin/build.php --template=folio    # → dist/  (folio template)
+php bin/build.php --out=/tmp/site     # → anywhere else
+```
+
+A clean build is currently **639 files across 3 languages and 3 templates** with zero render errors.
+
+### Three rules the engine enforces
+
+1. **One page = one JSON file.** Every page, service, macro, project, declaration and ontology
+   layer lives in its own file under `data/content/`. A page cannot contradict another page
+   because no two pages share a data source. Collection indexes (`/services/`, `/ecosystem/`,
+   `/declarations/`) are *derived* from the records, so they cannot drift.
+2. **Any page renders in any installed template.** Blocks resolve two-tier:
+   `views/{ACTIVE_TEMPLATE}/blocks/{type}.php` → `views/_blocks/{type}.php`. A template
+   restyles blocks; it never restates content.
+3. **Every number is a PHP variable.** `config/variables.php` holds the counts, capacity ratios,
+   money figures and doctrine thresholds; page JSON refers to them as `{{ counts.services.value }}`.
+   Types (audience, member, status, ontology layer, meta solution, …) are vocabularies validated at
+   load — an unknown value throws, so a typo can never publish.
+
+### The six-layer ontology
+
+The site models the W5D structure as a **stacked ontology**, not a flat list of features:
+
+> Projects instantiate Meta Solutions; Meta Solutions operate on Macro Works; Macro Works contain
+> Services; Services are delivered by Expert Teams; Academies form the competence that Expert Teams
+> require.
+
+| Layer | Content | Page |
+|---|---|---|
+| L5 Projects | `data/content/projects/*.json` (25) | `/ecosystem/` |
+| L4 Meta Solutions | `data/content/layers/meta-solutions.json` | `/ontology/meta-solutions/` |
+| L3 Macro Works | `data/content/macros/*.json` (5) | `/macro-works/` |
+| L2 Services | `data/content/services/*.json` (130) | `/services/` |
+| L1 Expert Teams | `data/content/layers/expert-teams.json` | `/ontology/expert-teams/` |
+| L0 Academies | `data/content/layers/academies.json` | `/ontology/academies/` |
+
+The full diagram is one block (`stack`) rendered by one file, so every page draws the same stack
+from the same source. Each project record also carries `meta_solution` and `services_consumed`
+(the §4.5 mapping) which its page renders as *"What this project instantiates"*.
+
+**The load-bearing gaps are published, not buried:** 130,000 is a design equation (the real
+footprint is 26 developers in Tunisia); Dyon enforcement is proposed, not verified; the dossier's
+5% sampling recommendation is kept separate from the README's 20-reports-per-service (2%) rule;
+universal dependencies are acyclic only when time-unrolled; and "Live" never means "1,000 experts
+employed". See `docs/ontology-six-layers.md`.
+
+### Documentation
+
+| File | Covers |
+|---|---|
+| `docs/ontology-six-layers.md` | the six-layer stack, dependency directions, §4.5 mapping, §4.7 caveats |
+| `docs/page-data.md` | the page JSON schema: every field and block type |
+| `docs/variables.md` | the variable registry and the type vocabularies |
+| `docs/developer-guide.md` | engine architecture, adding blocks/pages/templates/languages |
+| `docs/deployment.md` | uploading `dist/` to the w5d.tech web root |
+| `docs/templates.md` | onboarding a new template |
+
+### Templates
+
+Three skins ship today: **ledger** (editorial/brass, default), **atlas** (cartographic/cyan) and
+**folio** (paper/oxblood). Each adds only additive CSS over `assets/_base/css/base.css` and may
+override any block or partial. Switching is `--template=` at build time or `active_template` in
+`config/app.php`.
+
+### Discipline kept from the specification
+
+- **Zero third-party requests** — no CDN, no jQuery, no icon font; the carousel, theme switch and
+  language switcher are dependency-free (`assets/_base/js/site.js`).
+- **Honest-disabled forms** — the contact form renders disabled until an `endpoint` is configured.
+- **"Sidq"** — any unsupplied value renders as a shared `to be confirmed` chip from
+  `v('open_value')`; nothing is guessed.
+- **Localisation** — content is `{en,fr,ar}` maps in JSON; UI chrome lives only in `lang/{code}.php`;
+  Arabic is RTL with its own font stack and `assets/_base/css/rttl.css` equivalent.
+
+---
+
+
 ## Features
 
 ### Templating & Public Site

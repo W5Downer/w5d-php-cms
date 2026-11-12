@@ -1,0 +1,130 @@
+{
+  "id": "press",
+  "path": "/press/",
+  "kind": "page",
+  "nav_group": "company",
+  "audience": "press",
+  "title": {
+    "en": "Press",
+    "fr": "Presse",
+    "ar": "الصحافة"
+  },
+  "nav_label": {
+    "en": "Press",
+    "fr": "Presse",
+    "ar": "الصحافة"
+  },
+  "summary": {
+    "en": "Facts, wording and contacts for journalists.",
+    "fr": "Faits, formulations et contacts pour les journalistes.",
+    "ar": "وقائع وصياغات وجهات اتصال للصحافيين."
+  },
+  "description": {
+    "en": "Facts, wording and contacts for journalists."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Company"
+        },
+        "grand": {
+          "en": "Facts, wording and contacts for journalists."
+        },
+        "lead": {
+          "en": "Use the wording on this page. Where a figure is unknown, say that it is unknown rather than estimating it."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "How to describe W5D"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Name"
+            },
+            "value": {
+              "en": "World 5 Dimensions (W5D)."
+            }
+          },
+          {
+            "term": {
+              "en": "One line"
+            },
+            "value": {
+              "en": "W5D is a company and a working ontology operating across IT, sciences and technology."
+            }
+          },
+          {
+            "term": {
+              "en": "Founder"
+            },
+            "value": {
+              "en": "Maher."
+            }
+          },
+          {
+            "term": {
+              "en": "Scale today"
+            },
+            "value": {
+              "en": "Delivered by 26 developers in Tunisia; the 130,000-expert figure is a design ceiling."
+            }
+          },
+          {
+            "term": {
+              "en": "Status of the site"
+            },
+            "value": {
+              "en": "A preview build. Most programmes are in draft, and each carries a dated status."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "warn",
+        "body": [
+          {
+            "en": "Do not describe a draft as a product, an E1 claim as independently verified, or the 130,000 figure as current headcount. Do not attribute a certification to W5D: none is held."
+          }
+        ]
+      },
+      "title": {
+        "en": "What not to write"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Press desk address and assets are still to be confirmed."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Contact"
+            },
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Status register"
+            },
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

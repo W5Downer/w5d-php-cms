@@ -1,0 +1,244 @@
+{
+  "id": "metax-academy-site",
+  "slug": "metax-academy-site",
+  "order": 23,
+  "layer": "L3",
+  "status": "live",
+  "evidence": "E2",
+  "stage": 100,
+  "horizon": "meta",
+  "group": {
+    "en": "MetaX Academy · public site",
+    "fr": "MetaX Academy · site public",
+    "ar": "أكاديمية ميتاكس · الموقع"
+  },
+  "parent": "metax-academy",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "MetaX Academy site",
+    "fr": "Site MetaX Academy",
+    "ar": "موقع أكاديمية ميتاكس"
+  },
+  "subtitle": {
+    "en": "Nine pillars, licence ML-2.3, 25 harms.",
+    "fr": "Neuf piliers, licence ML-2.3, 25 préjudices.",
+    "ar": "تسع ركائز، رخصة ML-2.3، 25 ضررًا."
+  },
+  "short": {
+    "en": "Live: nine pillars, licence ML-2.3 and a register of 25 structural harms."
+  },
+  "summary": {
+    "en": "Live: nine pillars, licence ML-2.3 and a register of 25 structural harms."
+  },
+  "description": {
+    "en": "Nine pillars, licence ML-2.3, 25 harms.",
+    "fr": "Neuf piliers, licence ML-2.3, 25 préjudices.",
+    "ar": "تسع ركائز، رخصة ML-2.3، 25 ضررًا."
+  },
+  "exists": {
+    "en": "Live: nine pillars, licence ML-2.3 and a register of 25 structural harms."
+  },
+  "missing": {
+    "en": "Enrolment, accreditation and pricing are not published on the site."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L3 project",
+        "grand": {
+          "en": "MetaX Academy site",
+          "fr": "Site MetaX Academy",
+          "ar": "موقع أكاديمية ميتاكس"
+        },
+        "lead": {
+          "en": "Nine pillars, licence ML-2.3, 25 harms.",
+          "fr": "Neuf piliers, licence ML-2.3, 25 préjudices.",
+          "ar": "تسع ركائز، رخصة ML-2.3، 25 ضررًا."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "live"
+          },
+          {
+            "label": "Evidence",
+            "value": "E2",
+            "sub": "observed on the verification date"
+          },
+          {
+            "label": "Layer",
+            "value": "L3"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "The public artefact that makes MetaX Academy checkable: its pillars, its licence and its harms register are all reachable."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "live"
+          },
+          {
+            "term": "Evidence",
+            "value": "E2",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Project"
+          },
+          {
+            "term": "Horizon",
+            "value": "meta"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "to be confirmed"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "Live: nine pillars, licence ML-2.3 and a register of 25 structural harms."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "Enrolment, accreditation and pricing are not published on the site."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Observed live on the verification date. Observation is not endorsement."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "metax.academy"
+            },
+            "href": "https://metax.academy/",
+            "open": false
+          },
+          {
+            "term": "State",
+            "value": "live",
+            "open": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

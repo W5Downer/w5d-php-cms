@@ -1,0 +1,466 @@
+{
+  "id": "sciences",
+  "slug": "sciences",
+  "order": 3,
+  "placement": "between",
+  "status": "building",
+  "audience": "public",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Sciences",
+    "fr": "Sciences",
+    "ar": "العلوم"
+  },
+  "short": {
+    "en": "How reliable knowledge is produced, measured, validated and turned into decision-grade evidence.",
+    "fr": "Comment un savoir fiable est produit, mesuré, validé et transformé en preuve décisionnelle.",
+    "ar": "كيف يُنتَج العلم الموثوق ويُقاس ويُتحقَّق منه ويُحوَّل إلى دليل صالح للقرار."
+  },
+  "summary": {
+    "en": "How reliable knowledge is produced, measured, validated and turned into decision-grade evidence.",
+    "fr": "Comment un savoir fiable est produit, mesuré, validé et transformé en preuve décisionnelle.",
+    "ar": "كيف يُنتَج العلم الموثوق ويُقاس ويُتحقَّق منه ويُحوَّل إلى دليل صالح للقرار."
+  },
+  "description": {
+    "en": "How is reliable knowledge produced, measured, validated and translated into decision-grade evidence?",
+    "fr": "Comment un savoir fiable est-il produit, mesuré, validé et traduit en preuve utile à la décision ?",
+    "ar": "كيف يُنتَج العلم الموثوق ويُقاس ويُتحقَّق منه ويُحوَّل إلى دليل صالح للقرار؟"
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Macro work · 053–078",
+        "grand": {
+          "en": "Sciences",
+          "fr": "Sciences",
+          "ar": "العلوم"
+        },
+        "lead": {
+          "en": "How is reliable knowledge produced, measured, validated and translated into decision-grade evidence?",
+          "fr": "Comment un savoir fiable est-il produit, mesuré, validé et traduit en preuve utile à la décision ?",
+          "ar": "كيف يُنتَج العلم الموثوق ويُقاس ويُتحقَّق منه ويُحوَّل إلى دليل صالح للقرار؟"
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Placement",
+            "value": "Between 1.0"
+          },
+          {
+            "label": "Registered services",
+            "value": "26"
+          },
+          {
+            "label": "Service numbers",
+            "value": {
+              "en": "053–078"
+            }
+          },
+          {
+            "label": "Designed capacity",
+            "var": "counts.service_capacity"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "The domain question",
+      "data": {
+        "body": [
+          {
+            "en": "How is reliable knowledge produced, measured, validated and translated into decision-grade evidence?",
+            "fr": "Comment un savoir fiable est-il produit, mesuré, validé et traduit en preuve utile à la décision ?",
+            "ar": "كيف يُنتَج العلم الموثوق ويُقاس ويُتحقَّق منه ويُحوَّل إلى دليل صالح للقرار؟"
+          },
+          {
+            "en": "The 'Between 1.0' placement reflects the macro's laboratory-and-field hybrid character: many outputs are data and method, but samples, field stations and accredited facilities are load-bearing."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Macro record",
+      "data": {
+        "items": [
+          {
+            "term": "Placement",
+            "value": "Between 1.0"
+          },
+          {
+            "term": "Registered services",
+            "value": "26"
+          },
+          {
+            "term": "Expert fields",
+            "value": {
+              "en": "epidemiology, analytical chemistry, agronomy, marine biology, materials engineering, metrology, biostatistics"
+            }
+          },
+          {
+            "term": "Characteristic output unit",
+            "value": {
+              "en": "accessioned samples, validated assay results, calibration certificates"
+            }
+          },
+          {
+            "term": "Feeds",
+            "value": {
+              "en": "every other macro, most critically Governance (health, climate, utility regulation) and Technology (biotech, medical devices, renewables)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "How the services relate",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "The 'Between 1.0' placement reflects the macro's laboratory-and-field hybrid character: many outputs are data and method, but samples, field stations and accredited facilities are load-bearing."
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Each service below is a registered entry with its own page, placement and declared boundary.",
+              "The list is generated from the service records, so adding or retiring a service updates this page on the next build.",
+              "No service page claims more than its own record states."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Registered services",
+      "data": {
+        "items": [
+          {
+            "title": "Clinical Research Coordination",
+            "summary": "Protocol design, ethics, site monitoring.",
+            "href": "service:clinical-research",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "053"
+              }
+            ]
+          },
+          {
+            "title": "Public Health Surveillance",
+            "summary": "Epidemiology, dashboards, outbreak response.",
+            "href": "service:public-health",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "054"
+              }
+            ]
+          },
+          {
+            "title": "Water & Soil Quality Labs",
+            "summary": "Sampling, accredited analysis, remediation.",
+            "href": "service:water-soil-labs",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "055"
+              }
+            ]
+          },
+          {
+            "title": "Agricultural Science & Extension",
+            "summary": "Soil health, seed systems, IPM.",
+            "href": "service:agri-science",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "056"
+              }
+            ]
+          },
+          {
+            "title": "Marine & Coastal Science",
+            "summary": "Biodiversity surveys, blue economy.",
+            "href": "service:marine-science",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "057"
+              }
+            ]
+          },
+          {
+            "title": "Climate Modelling & Adaptation",
+            "summary": "Downscaled scenarios, vulnerability maps.",
+            "href": "service:climate-modelling",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "058"
+              }
+            ]
+          },
+          {
+            "title": "Materials Science & Testing",
+            "summary": "Metallurgy, polymers, failure analysis.",
+            "href": "service:materials-science",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "059"
+              }
+            ]
+          },
+          {
+            "title": "Bioinformatics & Genomics",
+            "summary": "Sequencing pipelines, variant analysis.",
+            "href": "service:bioinformatics",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "060"
+              }
+            ]
+          },
+          {
+            "title": "Neuroscience & Cognition Labs",
+            "summary": "Experimental design, neuroimaging analysis.",
+            "href": "service:neuroscience",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "061"
+              }
+            ]
+          },
+          {
+            "title": "Science Communication",
+            "summary": "Explainers, media training, public engagement.",
+            "href": "service:science-comm",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "062"
+              }
+            ]
+          },
+          {
+            "title": "Research Data Management",
+            "summary": "FAIR data, repositories, DMPs.",
+            "href": "service:research-data",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "063"
+              }
+            ]
+          },
+          {
+            "title": "Metrology & Standards",
+            "summary": "Calibration, conformity assessment.",
+            "href": "service:metrology",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "064"
+              }
+            ]
+          },
+          {
+            "title": "Chemical Safety & Toxicology",
+            "summary": "Risk assessment, SDS authoring.",
+            "href": "service:chemical-safety",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "065"
+              }
+            ]
+          },
+          {
+            "title": "Astronomy & Space Science Outreach",
+            "summary": "Observing programs, citizen science.",
+            "href": "service:astronomy",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "066"
+              }
+            ]
+          },
+          {
+            "title": "Biodiversity & Conservation Science",
+            "summary": "Species monitoring, habitat restoration.",
+            "href": "service:biodiversity",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "067"
+              }
+            ]
+          },
+          {
+            "title": "Renewable Energy Science",
+            "summary": "PV testing, storage chemistry, grid studies.",
+            "href": "service:renewable-science",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "068"
+              }
+            ]
+          },
+          {
+            "title": "Food Safety & Nutrition Science",
+            "summary": "HACCP, labelling, cohort analysis.",
+            "href": "service:food-safety",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "069"
+              }
+            ]
+          },
+          {
+            "title": "Forensic Science Support",
+            "summary": "DNA, ballistics, digital forensics.",
+            "href": "service:forensics",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "070"
+              }
+            ]
+          },
+          {
+            "title": "Ocean & Atmospheric Monitoring",
+            "summary": "Buoys, remote sensing, forecasting.",
+            "href": "service:ocean-monitoring",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "071"
+              }
+            ]
+          },
+          {
+            "title": "Mathematical Modelling & Simulation",
+            "summary": "Optimisation, stochastic models, HPC.",
+            "href": "service:math-modelling",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "072"
+              }
+            ]
+          },
+          {
+            "title": "Social Science Research Methods",
+            "summary": "Surveys, qualitative coding, ethics.",
+            "href": "service:social-methods",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "073"
+              }
+            ]
+          },
+          {
+            "title": "Science Policy & Foresight",
+            "summary": "Horizon scanning, evidence synthesis.",
+            "href": "service:science-policy",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "074"
+              }
+            ]
+          },
+          {
+            "title": "Laboratory Accreditation Support",
+            "summary": "ISO 17025, audits, method validation.",
+            "href": "service:lab-accreditation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "075"
+              }
+            ]
+          },
+          {
+            "title": "STEM Education & Teacher Training",
+            "summary": "Curriculum, kits, assessment.",
+            "href": "service:stem-education",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "076"
+              }
+            ]
+          },
+          {
+            "title": "Clinical Trials Data Management",
+            "summary": "EDC, query resolution, reporting.",
+            "href": "service:trial-data",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "077"
+              }
+            ]
+          },
+          {
+            "title": "Environmental Impact Assessment",
+            "summary": "Scoping, baseline, mitigation plans.",
+            "href": "service:eia",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "078"
+              }
+            ]
+          }
+        ],
+        "columns": 2
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A research analysis does not become a clinical diagnosis without authorised validation, and every laboratory publishes its method limits and chain of custody."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "The whole register is one artefact. Read it once, and every macro page is a view of the same data.",
+        "actions": [
+          {
+            "label": "All {{ counts.services }} services",
+            "href": "page:services",
+            "primary": true
+          },
+          {
+            "label": "The status register",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

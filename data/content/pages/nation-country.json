@@ -1,0 +1,154 @@
+{
+  "id": "nation-country",
+  "path": "/nation-country/",
+  "kind": "page",
+  "nav_group": "dimensions",
+  "audience": "public",
+  "title": {
+    "en": "Nation versus country",
+    "fr": "Nation et pays",
+    "ar": "الأمة والبلد"
+  },
+  "nav_label": {
+    "en": "Nation vs country",
+    "fr": "Nation et pays",
+    "ar": "الأمة والبلد"
+  },
+  "summary": {
+    "en": "L4 and L6 are different orders of reality.",
+    "fr": "L4 et L6 sont d'ordres de réalité différents.",
+    "ar": "L4 وL6 رتبتان مختلفتان من الواقع."
+  },
+  "description": {
+    "en": "A position paper, not a settled finding."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Dimensions"
+        },
+        "grand": {
+          "en": "L4 nation and L6 country are different orders of reality."
+        },
+        "lead": {
+          "en": "A summary of the founder's declaration, with its declared limits shown open. This is a position paper, not a settled finding."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "The distinction"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "L4 nation"
+            },
+            "value": {
+              "en": "The supranational layer: a form of belonging, prior to any border. W5D's stated goal is to develop it and to arrive at three macro-regional identities that together complete the one human identity."
+            }
+          },
+          {
+            "term": {
+              "en": "L6 country"
+            },
+            "value": {
+              "en": "A bordered administrative artefact. The founder's position is that the term is historically recent and was created by a political ideology to make borders."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "quote",
+      "data": {
+        "text": {
+          "en": "Nation is generative and fifth-dimensional. Country is administrative and fourth-dimensional."
+        }
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "The three identities"
+      },
+      "data": {
+        "lead": {
+          "en": "The target is three macro-regional identities. None has been named in the supplied material."
+        },
+        "items": [
+          {
+            "term": {
+              "en": "Macro-regional identity 1"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Macro-regional identity 2"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Macro-regional identity 3"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "(1) The claim that \"country\" is a recent term created by a political ideology to make borders is a position, not a settled finding; the historiography of the state system is contested."
+          },
+          {
+            "en": "(2) The target of three macro-regional identities is a design goal, not a prediction, and it is falsifiable: if two, four or seven prove more coherent, the framework must be corrected."
+          },
+          {
+            "en": "(3) The claim that L4 is prior to L6 is ontological, not chronological."
+          },
+          {
+            "en": "(4) The link between borders and punishment is an analogy of invariant, not an identity of mechanism."
+          }
+        ]
+      },
+      "title": {
+        "en": "Declared limits of the thesis"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Transition: borders may be superseded by a layer that makes them redundant, not abolished by force."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Architecture L1–L8"
+            },
+            "href": "page:architecture",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Principles"
+            },
+            "href": "page:principles"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "id": "careers",
+  "path": "/careers/",
+  "kind": "page",
+  "nav_group": "company",
+  "audience": "candidate",
+  "title": {
+    "en": "Careers",
+    "fr": "Carrières",
+    "ar": "الوظائف"
+  },
+  "nav_label": {
+    "en": "Careers",
+    "fr": "Carrières",
+    "ar": "الوظائف"
+  },
+  "summary": {
+    "en": "How to work with W5D.",
+    "fr": "Comment travailler avec W5D.",
+    "ar": "كيف تعمل مع W5D."
+  },
+  "description": {
+    "en": "How to work with W5D."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Company"
+        },
+        "grand": {
+          "en": "How to work with W5D."
+        },
+        "lead": {
+          "en": "W5D is designed for a large expert workforce and is delivered today by a small one. Both numbers are published, and neither is inflated."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "kpis",
+      "data": {
+        "items": [
+          {
+            "var": "counts.developers_current",
+            "sub": {
+              "en": "real delivery capacity today"
+            }
+          },
+          {
+            "var": "counts.experts_target",
+            "sub": {
+              "en": "design ceiling, not headcount"
+            }
+          }
+        ],
+        "note": {
+          "en": "The 130,000 figure is an organisational design target. No expert employee is onboarded at the time of this build."
+        }
+      },
+      "title": {
+        "en": "Two numbers, kept apart"
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "What working here involves"
+      },
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "Work is organised in weekly cycles: directives on Monday, assignments the same day, reports on Friday, approvals and sign-off on Friday afternoon, and rollups computed overnight."
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "Every deliverable is recorded with evidence, and every week is scored against a published rubric."
+              },
+              {
+                "en": "A blocker has 24 hours at manager level and 48 at leader level before it escalates."
+              },
+              {
+                "en": "Nothing is asked of a candidate that the site does not state publicly."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "Open items"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Open roles"
+            },
+            "open": true,
+            "note": {
+              "en": "No vacancy list has been supplied."
+            }
+          },
+          {
+            "term": {
+              "en": "Careers desk address"
+            },
+            "open": true
+          },
+          {
+            "term": {
+              "en": "Salary and contract terms"
+            },
+            "value": {
+              "en": "600 TND/month for a certified post is the published model; contract terms are not supplied."
+            },
+            "note": {
+              "en": "Modelled figure, not an offer."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Write to the careers desk. Until it has an address, the contact page carries the reason code."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Contact"
+            },
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "The weekly engine"
+            },
+            "href": "page:about"
+          }
+        ]
+      }
+    }
+  ]
+}

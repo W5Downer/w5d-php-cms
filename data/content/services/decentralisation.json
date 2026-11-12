@@ -1,0 +1,199 @@
+{
+  "id": "decentralisation",
+  "slug": "decentralisation",
+  "number": 103,
+  "macro": "governance",
+  "placement": "between",
+  "status": "building",
+  "audience": "client",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Decentralisation & Local Finance"
+  },
+  "short": {
+    "en": "Own-source revenue, transfers, capacity."
+  },
+  "summary": {
+    "en": "Own-source revenue, transfers, capacity."
+  },
+  "description": {
+    "en": "Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments."
+  },
+  "order": 103,
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "103 · Governance",
+        "grand": "Decentralisation & Local Finance",
+        "lead": "Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments.",
+        "split": false,
+        "meta": [
+          {
+            "label": "Service number",
+            "value": "103"
+          },
+          {
+            "label": "Macro work",
+            "value": {
+              "en": "Governance",
+              "fr": "Gouvernance",
+              "ar": "الحوكمة"
+            }
+          },
+          {
+            "label": "Placement",
+            "value": "Between 1.0"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What the service does",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": "Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments."
+          },
+          {
+            "type": "p",
+            "text": "Own-source revenue, transfers, capacity."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Service record",
+      "data": {
+        "items": [
+          {
+            "term": "Registered number",
+            "value": "103"
+          },
+          {
+            "term": "Macro work",
+            "value": {
+              "en": "Governance",
+              "fr": "Gouvernance",
+              "ar": "الحوكمة"
+            }
+          },
+          {
+            "term": "Placement",
+            "value": "Between 1.0"
+          },
+          {
+            "term": "Designed capacity",
+            "var": "counts.service_capacity"
+          },
+          {
+            "term": "Output unit",
+            "value": {
+              "en": "regulatory briefs, legislative drafts, published open-data sets"
+            }
+          },
+          {
+            "term": "Publication status",
+            "chip": "building"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "Outputs and boundaries",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "regulatory briefs, legislative drafts, published open-data sets"
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Deliverables are recorded against the weekly report as evidence, not as a claim.",
+              "Every figure published about this service is dated and carries its source."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "This service advises and drafts. It does not exercise a public power that belongs to an elected or statutory body."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cards",
+      "title": "Other services in Governance",
+      "data": {
+        "items": [
+          {
+            "title": "Regulatory Impact Assessment",
+            "summary": "Cost–benefit, stakeholder consultation.",
+            "href": "service:regulatory-impact",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "079"
+              }
+            ]
+          },
+          {
+            "title": "Legal Drafting & Legislative Review",
+            "summary": "Statutes, decrees, plain-language versions.",
+            "href": "service:legal-drafting",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "080"
+              }
+            ]
+          },
+          {
+            "title": "Anti-Corruption & Integrity",
+            "summary": "Risk mapping, whistleblowing channels.",
+            "href": "service:anti-corruption",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "081"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read the macro work, or the whole register of {{ counts.services }} services.",
+        "actions": [
+          {
+            "label": "The macro work",
+            "href": "macro:governance"
+          },
+          {
+            "label": "All services",
+            "href": "page:services",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

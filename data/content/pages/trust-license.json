@@ -1,0 +1,117 @@
+{
+  "id": "trust-license",
+  "path": "/trust/license/",
+  "kind": "legal",
+  "nav_group": "trust",
+  "audience": "public",
+  "title": {
+    "en": "Licence",
+    "fr": "Licence",
+    "ar": "الرخصة"
+  },
+  "nav_label": {
+    "en": "Licence",
+    "fr": "Licence",
+    "ar": "الرخصة"
+  },
+  "summary": {
+    "en": "Maher's Licence 2.3 (ML-2.3), and the licence of this website.",
+    "fr": "La Licence Maher 2.3 (ML-2.3), et la licence de ce site.",
+    "ar": "رخصة ماهر 2.3 (ML-2.3)، ورخصة هذا الموقع."
+  },
+  "description": {
+    "en": "This site does not restate ML-2.3's terms."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Trust · Doctrine"
+        },
+        "grand": {
+          "en": "Licence: Maher's Licence 2.3 (ML-2.3)."
+        },
+        "lead": {
+          "en": "MetaX Academy publishes its content under a licence called ML-2.3. This site does not restate its terms."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "MetaX Academy"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Licence"
+            },
+            "value": {
+              "en": "ML-2.3, published at metax.academy/license. Read the terms there; a summary here could misstate them."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "This website"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Licence for text and code"
+            },
+            "open": true,
+            "note": {
+              "en": "Until decided, all rights are reserved by the author of each text."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "open",
+        "body": [
+          {
+            "en": "Until the licence is decided, all rights are reserved by the author of each text. Quoting with attribution and a link is welcome."
+          }
+        ]
+      },
+      "title": {
+        "en": "Default rule"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Read the licence where it is published."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "ML-2.3 at MetaX"
+            },
+            "href": "https://metax.academy/license",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Legal notice"
+            },
+            "href": "page:legal"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Template: LEDGER  (default)
+   An editorial, document-first identity: high-contrast type, hairline rules,
+   tabular figures, and a warm brass accent. Reads like a printed register.
+
+   This file is additive: base.css already defines every component. A template
+   only retints and shifts spacing, so swapping templates cannot break a page.
+   ========================================================================== */
+
+:root {
+  --accent: #d8b46a;
+  --accent-soft: rgba(216, 180, 106, 0.13);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --head-h: 4.1rem;
+}
+
+[data-theme="light"] {
+  --accent: #8a6516;
+  --accent-soft: rgba(138, 101, 22, 0.10);
+}
+
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* A visible rule under the hero, like a printed section break. */
+.page--detail .hero,
+.page--index .hero {
+  border-bottom: 1px solid var(--line);
+}
+
+.hero__title {
+  font-weight: 760;
+  letter-spacing: -0.035em;
+  max-width: 24ch;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.hero__eyebrow::before {
+  content: "";
+  width: 1.6rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Sections get a numbered eyebrow treatment on the ledger template. */
+.block__title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+.block__title::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  flex: none;
+  transform: translateY(-0.12em);
+}
+
+.card {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  position: relative;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: -1px;
+  top: -1px;
+  width: 0.3rem;
+  height: 2.6rem;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.card:hover::after { opacity: 1; }
+
+.kpi {
+  background: transparent;
+  border-radius: 2px;
+  border-inline-start: 2px solid var(--accent);
+  border-top: 1px solid var(--line);
+  border-inline-end: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.table { font-variant-numeric: tabular-nums; }
+.table thead th {
+  background: transparent;
+  border-bottom: 1px solid var(--line-strong);
+  letter-spacing: 0.14em;
+}
+
+.band {
+  background: transparent;
+  border-block: 1px solid var(--line-strong);
+}
+.band__value { font-weight: 780; }
+
+.sitefoot { background: transparent; }
+.sitefoot__inner { border-top: 3px double var(--line-strong); padding-top: 1.8rem; }
+
+/* Ledger favours serif-ish rhythm: slightly larger body leading. */
+.prose__main p { line-height: 1.72; }
+
+/* Home hero gets a wider measure on the ledger template. */
+.page--home .hero__title { max-width: 30ch; }
+.page--home .band__value { font-size: var(--step-4); }

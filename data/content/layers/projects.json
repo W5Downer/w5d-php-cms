@@ -1,0 +1,296 @@
+{
+  "id": "projects",
+  "slug": "projects",
+  "order": 5,
+  "ontology_layer": "projects",
+  "status": "draft",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "Projects",
+    "fr": "Projets",
+    "ar": "المشاريع"
+  },
+  "nav_label": {
+    "en": "Projects",
+    "fr": "Projets",
+    "ar": "المشاريع"
+  },
+  "summary": {
+    "en": "What is being built, for whom, by when?"
+  },
+  "description": {
+    "en": "A time-bound instantiation. A project may consume several services, invoke several meta-solutions, and produce a concrete artefact or programme. It is not the same kind of entity as a service."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Ontology · L5"
+        },
+        "grand": {
+          "en": "Projects",
+          "fr": "Projets",
+          "ar": "المشاريع"
+        },
+        "lead": {
+          "en": "A time-bound instantiation. A project may consume several services, invoke several meta-solutions, and produce a concrete artefact or programme. It is not the same kind of entity as a service."
+        },
+        "split": false,
+        "meta": [
+          {
+            "label": {
+              "en": "Layer"
+            },
+            "value": "L5"
+          },
+          {
+            "label": {
+              "en": "Question"
+            },
+            "value": "What is being built, for whom, by when?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "The question this layer answers"
+      },
+      "data": {
+        "lead": {
+          "en": "What is being built, for whom, by when?"
+        },
+        "body": [
+          {
+            "en": "A time-bound instantiation. A project may consume several services, invoke several meta-solutions, and produce a concrete artefact or programme. It is not the same kind of entity as a service. This is why the layer exists: it answers a question no other layer answers, and it constrains the layer directly beneath it."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "Layer specification"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Layer"
+            },
+            "value": "L5"
+          },
+          {
+            "term": {
+              "en": "Name"
+            },
+            "value": {
+              "en": "Projects",
+              "fr": "Projets",
+              "ar": "المشاريع"
+            }
+          },
+          {
+            "term": {
+              "en": "Question"
+            },
+            "value": {
+              "en": "What is being built, for whom, by when?"
+            }
+          },
+          {
+            "term": {
+              "en": "Scale"
+            },
+            "value": "{{ counts.projects.value }} in the register"
+          },
+          {
+            "term": {
+              "en": "Dependency"
+            },
+            "value": {
+              "en": "Consumes Services and instantiates Meta Solutions. Downstream of both."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "stack",
+      "title": {
+        "en": "Where this layer sits"
+      },
+      "data": {
+        "lead": {
+          "en": "The same six layers, every time. The current layer is marked."
+        },
+        "direction": "down",
+        "items": [
+          {
+            "layer": "projects",
+            "number": 5,
+            "title": {
+              "en": "Projects",
+              "fr": "Projets",
+              "ar": "المشاريع"
+            },
+            "question": {
+              "en": "What is being built, for whom, by when?"
+            },
+            "body": {
+              "en": "A time-bound instantiation. A project may consume several services, invoke several meta-solutions, and produce a concrete artefact or programme. It is not the same kind of entity as a service."
+            },
+            "count": "{{ counts.projects.value }} in the register",
+            "examples": [
+              "MetaX Academy",
+              "KernID",
+              "SelfAI",
+              "كن أعلم",
+              "WebBooks",
+              "Studio",
+              "2030B"
+            ],
+            "href": "layer:projects"
+          },
+          {
+            "layer": "meta-solutions",
+            "number": 4,
+            "title": {
+              "en": "Meta Solutions",
+              "fr": "Méta-solutions",
+              "ar": "الحلول الفوقية"
+            },
+            "question": {
+              "en": "What coordinates across domains?"
+            },
+            "body": {
+              "en": "Reusable instruments any service can invoke: identity, credentialing, workflow, evidence, sampling, audit, publication. Deliberately NOT a sixth macro — the meta layer sits above the macro partition so it never becomes a domain."
+            },
+            "count": "{{ counts.meta_solutions.value }} instruments · cross-cutting",
+            "examples": [
+              "Dyon",
+              "Weekly work engine",
+              "Split DB / rollup",
+              "Sampling",
+              "KernID",
+              "SelfAI"
+            ],
+            "href": "layer:meta-solutions"
+          },
+          {
+            "layer": "macro-works",
+            "number": 3,
+            "title": {
+              "en": "Macro Works",
+              "fr": "Œuvres macros",
+              "ar": "الأعمال الكبرى"
+            },
+            "question": {
+              "en": "What domain of accountability?"
+            },
+            "body": {
+              "en": "The top-level partition of the demand space. Each macro answers a distinct domain question — meaning, shelter, knowledge, rules, deployable technique — and carries a distinct Real/Virtual placement."
+            },
+            "count": "{{ counts.macros.value }} macros",
+            "examples": [
+              "Cultures",
+              "Built Environment",
+              "Sciences",
+              "Governance",
+              "Technology"
+            ],
+            "href": "layer:macro-works"
+          },
+          {
+            "layer": "services",
+            "number": 2,
+            "title": {
+              "en": "Services",
+              "fr": "Services",
+              "ar": "الخدمات"
+            },
+            "question": {
+              "en": "What is commissioned?"
+            },
+            "body": {
+              "en": "The atomic, contractible unit of work. Each service carries a canonical ID, a macro placement, a proposed Dyon profile, an expert degree-field cluster, a weekly deliverable set with evidence rules, and declared cross-macro edges."
+            },
+            "count": "{{ counts.services.value }} services · {{ counts.services_per_macro.value }} per macro",
+            "examples": [
+              "#076 STEM Education",
+              "#111 Digital Identity",
+              "#105 Software Engineering"
+            ],
+            "href": "layer:services"
+          },
+          {
+            "layer": "expert-teams",
+            "number": 1,
+            "title": {
+              "en": "Expert Teams",
+              "fr": "Équipes d'experts",
+              "ar": "فرق الخبراء"
+            },
+            "question": {
+              "en": "Who does the work?"
+            },
+            "body": {
+              "en": "The service-level delivery unit: one manager plus about ten experts, producing accepted outputs against a service-specific rubric. Not a cross-service entity."
+            },
+            "count": "{{ counts.expert_teams_total.value }} teams · {{ caps.manager_experts_soft.value }} experts each",
+            "examples": [
+              "1 manager",
+              "~10 experts",
+              "Cluster leads (optional)"
+            ],
+            "href": "layer:expert-teams"
+          },
+          {
+            "layer": "academies",
+            "number": 0,
+            "title": {
+              "en": "Academies",
+              "fr": "Académies",
+              "ar": "الأكاديميات"
+            },
+            "question": {
+              "en": "Who forms the competence?"
+            },
+            "body": {
+              "en": "MetaX Academy and the Dyon certification profiles. Academies produce the assessed competence that expert teams consume: entry competence before assignment, continuing competence throughout."
+            },
+            "count": "{{ counts.pillars.value }} pillars · certification profiles proposed",
+            "examples": [
+              "MetaX Academy",
+              "Dyon certification profiles",
+              "Continuing modules"
+            ],
+            "href": "layer:academies"
+          }
+        ],
+        "feedback": {
+          "en": "Feedback flows upward: acceptance data from a service team informs academy curriculum; a project's delivery experience revises a meta-solution; a macro's cross-dependency friction revises the ontology. The constitutive arrows, however, point downward."
+        }
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "No project on the site is yet a financed hiring promise. \"Live\" means operational as a programme or a site. A project consumes services; it does not staff them by existing."
+          }
+        ]
+      },
+      "title": {
+        "en": "\"Live\" does not mean 1,000 experts are employed."
+      }
+    }
+  ]
+}

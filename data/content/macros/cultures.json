@@ -1,0 +1,466 @@
+{
+  "id": "cultures",
+  "slug": "cultures",
+  "order": 1,
+  "placement": "real",
+  "status": "building",
+  "audience": "public",
+  "nav_group": "services",
+  "kind": "detail",
+  "title": {
+    "en": "Cultures / Humanities",
+    "fr": "Cultures / Humanités",
+    "ar": "الثقافات / الإنسانيات"
+  },
+  "short": {
+    "en": "How societies remember, interpret, translate and transmit meaning.",
+    "fr": "Comment les sociétés se souviennent, interprètent, traduisent et transmettent le sens.",
+    "ar": "كيف تتذكّر المجتمعات المعنى وتفسّره وتترجمه وتنقله."
+  },
+  "summary": {
+    "en": "How societies remember, interpret, translate and transmit meaning.",
+    "fr": "Comment les sociétés se souviennent, interprètent, traduisent et transmettent le sens.",
+    "ar": "كيف تتذكّر المجتمعات المعنى وتفسّره وتترجمه وتنقله."
+  },
+  "description": {
+    "en": "How do societies remember, interpret, translate and transmit meaning?",
+    "fr": "Comment les sociétés se souviennent-elles, interprètent-elles, traduisent-elles et transmettent-elles le sens ?",
+    "ar": "كيف تتذكّر المجتمعات المعنى وتفسّره وتترجمه وتنقله؟"
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Macro work · 001–026",
+        "grand": {
+          "en": "Cultures / Humanities",
+          "fr": "Cultures / Humanités",
+          "ar": "الثقافات / الإنسانيات"
+        },
+        "lead": {
+          "en": "How do societies remember, interpret, translate and transmit meaning?",
+          "fr": "Comment les sociétés se souviennent-elles, interprètent-elles, traduisent-elles et transmettent-elles le sens ?",
+          "ar": "كيف تتذكّر المجتمعات المعنى وتفسّره وتترجمه وتنقله؟"
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Placement",
+            "value": "Real 1.0"
+          },
+          {
+            "label": "Registered services",
+            "value": "26"
+          },
+          {
+            "label": "Service numbers",
+            "value": {
+              "en": "001–026"
+            }
+          },
+          {
+            "label": "Designed capacity",
+            "var": "counts.service_capacity"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "The domain question",
+      "data": {
+        "body": [
+          {
+            "en": "How do societies remember, interpret, translate and transmit meaning?",
+            "fr": "Comment les sociétés se souviennent-elles, interprètent-elles, traduisent-elles et transmettent-elles le sens ?",
+            "ar": "كيف تتذكّر المجتمعات المعنى وتفسّره وتترجمه وتنقله؟"
+          },
+          {
+            "en": "This macro is not an IT-only demand map. Heritage conservation combines materials science, building safety and digital access, and translation hubs feed science communication and digital governance."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Macro record",
+      "data": {
+        "items": [
+          {
+            "term": "Placement",
+            "value": "Real 1.0"
+          },
+          {
+            "term": "Registered services",
+            "value": "26"
+          },
+          {
+            "term": "Expert fields",
+            "value": {
+              "en": "archaeology, linguistics, museum studies, translation, film preservation, conservation, cultural economics"
+            }
+          },
+          {
+            "term": "Characteristic output unit",
+            "value": {
+              "en": "accepted capture packages, annotated records, translated words"
+            }
+          },
+          {
+            "term": "Feeds",
+            "value": {
+              "en": "Built Environment (heritage-built), Sciences (research data), Governance (municipal memory)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "How the services relate",
+      "data": {
+        "body": [
+          {
+            "type": "p",
+            "text": {
+              "en": "This macro is not an IT-only demand map. Heritage conservation combines materials science, building safety and digital access, and translation hubs feed science communication and digital governance."
+            }
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Each service below is a registered entry with its own page, placement and declared boundary.",
+              "The list is generated from the service records, so adding or retiring a service updates this page on the next build.",
+              "No service page claims more than its own record states."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Registered services",
+      "data": {
+        "items": [
+          {
+            "title": "Heritage Digitisation",
+            "summary": "3D scanning, archival metadata, virtual museums.",
+            "href": "service:heritage-digitisation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "001"
+              }
+            ]
+          },
+          {
+            "title": "Language Preservation",
+            "summary": "Corpus building, lexicography, endangered-language tools.",
+            "href": "service:language-preservation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "002"
+              }
+            ]
+          },
+          {
+            "title": "Cultural Tourism Design",
+            "summary": "Interpretive trails, multilingual guides, heritage routes.",
+            "href": "service:cultural-tourism",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "003"
+              }
+            ]
+          },
+          {
+            "title": "Museum Experience Engineering",
+            "summary": "Interactive exhibits, accessibility, narrative design.",
+            "href": "service:museum-experience",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "004"
+              }
+            ]
+          },
+          {
+            "title": "Oral History Programs",
+            "summary": "Recording, transcription, ethical archiving.",
+            "href": "service:oral-history",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "005"
+              }
+            ]
+          },
+          {
+            "title": "Translation & Localisation Hubs",
+            "summary": "Arabic–French–English professional translation.",
+            "href": "service:translation-hubs",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "006"
+              }
+            ]
+          },
+          {
+            "title": "Digital Humanities Labs",
+            "summary": "Text mining, network analysis, scholarly tooling.",
+            "href": "service:digital-humanities",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "007"
+              }
+            ]
+          },
+          {
+            "title": "Arts & Creative Economy",
+            "summary": "Artist residencies, creative entrepreneurship.",
+            "href": "service:arts-economy",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "008"
+              }
+            ]
+          },
+          {
+            "title": "Publishing & WebBooks",
+            "summary": "Long-form digital publishing, ISBN/DOI.",
+            "href": "service:publishing",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "009"
+              }
+            ]
+          },
+          {
+            "title": "Film & Audiovisual Heritage",
+            "summary": "Restoration, subtitling, archival streaming.",
+            "href": "service:film-heritage",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "010"
+              }
+            ]
+          },
+          {
+            "title": "Music & Sound Archives",
+            "summary": "Recording, rights management, distribution.",
+            "href": "service:music-archives",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "011"
+              }
+            ]
+          },
+          {
+            "title": "Cultural Policy Advisory",
+            "summary": "Mapping, impact assessment, legal frameworks.",
+            "href": "service:cultural-policy",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "012"
+              }
+            ]
+          },
+          {
+            "title": "Interfaith & Dialogue Studies",
+            "summary": "Research, facilitation, publication.",
+            "href": "service:interfaith",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "013"
+              }
+            ]
+          },
+          {
+            "title": "Philosophy & Ethics Clinics",
+            "summary": "Applied ethics for technology and governance.",
+            "href": "service:philosophy-ethics",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "014"
+              }
+            ]
+          },
+          {
+            "title": "History of Science & Technology",
+            "summary": "Research, exhibits, curriculum.",
+            "href": "service:history-science",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "015"
+              }
+            ]
+          },
+          {
+            "title": "Archival Science & Records",
+            "summary": "Appraisal, description, digitisation standards.",
+            "href": "service:archival-science",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "016"
+              }
+            ]
+          },
+          {
+            "title": "Library Modernisation",
+            "summary": "Cataloguing, discovery systems, MARC/RDA.",
+            "href": "service:library-modernisation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "017"
+              }
+            ]
+          },
+          {
+            "title": "Cultural Diplomacy Programs",
+            "summary": "Exchange design, protocol, reporting.",
+            "href": "service:cultural-diplomacy",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "018"
+              }
+            ]
+          },
+          {
+            "title": "Indigenous & Minority Studies",
+            "summary": "Participatory research, language rights.",
+            "href": "service:indigenous-studies",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "019"
+              }
+            ]
+          },
+          {
+            "title": "Manuscript Studies",
+            "summary": "Codicology, conservation, critical editions.",
+            "href": "service:manuscript-studies",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "020"
+              }
+            ]
+          },
+          {
+            "title": "Performance & Theatre Archives",
+            "summary": "Recording, rights, pedagogy.",
+            "href": "service:theatre-archives",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "021"
+              }
+            ]
+          },
+          {
+            "title": "Cultural Impact Assessment",
+            "summary": "SROI, community consultation, reporting.",
+            "href": "service:cultural-impact",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "022"
+              }
+            ]
+          },
+          {
+            "title": "Education through Culture",
+            "summary": "Curriculum design, teacher training.",
+            "href": "service:education-culture",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "023"
+              }
+            ]
+          },
+          {
+            "title": "Digital Storytelling Studios",
+            "summary": "Podcasts, short-form video, narrative strategy.",
+            "href": "service:digital-storytelling",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "024"
+              }
+            ]
+          },
+          {
+            "title": "Heritage Conservation Science",
+            "summary": "Materials analysis, climate control, restoration.",
+            "href": "service:heritage-conservation",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "025"
+              }
+            ]
+          },
+          {
+            "title": "Cultural Data Governance",
+            "summary": "Consent, provenance, repatriation frameworks.",
+            "href": "service:cultural-data",
+            "meta": [
+              {
+                "label": "No.",
+                "value": "026"
+              }
+            ]
+          }
+        ],
+        "columns": 2
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Custodial permission and community consent precede publication. Dyon never substitutes for the statutory heritage authority."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "The whole register is one artefact. Read it once, and every macro page is a view of the same data.",
+        "actions": [
+          {
+            "label": "All {{ counts.services }} services",
+            "href": "page:services",
+            "primary": true
+          },
+          {
+            "label": "The status register",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "services",
+  "path": "/services/",
+  "kind": "index",
+  "nav_group": "services",
+  "audience": "public",
+  "title": {
+    "en": "Services",
+    "fr": "Services",
+    "ar": "الخدمات"
+  },
+  "nav_label": {
+    "en": "Services",
+    "fr": "الخدمات",
+    "ar": "الخدمات"
+  },
+  "summary": {
+    "en": "130 registered services across five macro works.",
+    "fr": "130 services enregistrés dans cinq macro-œuvres.",
+    "ar": "130 خدمة مسجّلة عبر خمسة أعمال كبرى."
+  },
+  "description": {
+    "en": "The complete catalogue, grouped by macro work."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Services"
+        },
+        "grand": {
+          "en": "130 registered services."
+        },
+        "lead": {
+          "en": "Twenty-six services per macro work, each with its own record, placement and declared boundary. The catalogue is generated from the service records, so it cannot disagree with them."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": {
+              "en": "Registered services"
+            },
+            "var": "counts.services"
+          },
+          {
+            "label": {
+              "en": "Macro works"
+            },
+            "var": "counts.macros"
+          },
+          {
+            "label": {
+              "en": "Per macro"
+            },
+            "var": "counts.services_per_macro"
+          },
+          {
+            "label": {
+              "en": "Designed capacity"
+            },
+            "var": "counts.service_capacity"
+          }
+        ]
+      }
+    },
+    {
+      "type": "service-catalog",
+      "title": {
+        "en": "The catalogue"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Each service has a page. Each page states its boundary."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "Macro works"
+            },
+            "href": "page:macro-works",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "The register"
+            },
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

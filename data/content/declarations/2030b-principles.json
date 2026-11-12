@@ -1,0 +1,117 @@
+{
+  "id": "2030b-principles",
+  "slug": "2030b-principles",
+  "order": 5,
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "The 2030B Declaration"
+  },
+  "grand_title": {
+    "en": "Seven principles, ten dimensions, one complete human."
+  },
+  "summary": {
+    "en": "The declaration behind 2030B: an equation of ten dimensions, one per project, and an eleventh under construction."
+  },
+  "description": {
+    "en": "The declaration behind 2030B: an equation of ten dimensions, one per project, and an eleventh under construction."
+  },
+  "date": "2026-10-10",
+  "version": "1.0",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Declaration 5 of 7"
+        },
+        "grand": {
+          "en": "Seven principles, ten dimensions, one complete human."
+        },
+        "lead": {
+          "en": "The declaration behind 2030B: an equation of ten dimensions, one per project, and an eleventh under construction."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "In brief"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "ul",
+            "items": [
+              {
+                "en": "Complete Human = Smart + Honest + Healthy + Creative + Kind + Brave + Wise + Fair + Free + Grateful."
+              },
+              {
+                "en": "The ten are not ranked."
+              },
+              {
+                "en": "An earlier draft said eleven principles; the list states seven."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": {
+        "en": "The text"
+      },
+      "data": {
+        "lead": [
+          {
+            "type": "p",
+            "text": {
+              "en": "The founder's full text is written in the first person and has not been reproduced here. This record states what the declaration claims, where it is used on this site, and what would refute it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "A declaration is a working framework, not a final definition. Each claim above is stated so that a reader can check it and file a correction."
+          }
+        ]
+      },
+      "title": {
+        "en": "Declared limits"
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "Read the other declarations, or check the register."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "All declarations"
+            },
+            "href": "page:declarations",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "Status register"
+            },
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}

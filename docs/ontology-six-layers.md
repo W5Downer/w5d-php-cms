@@ -1,0 +1,116 @@
+# The Six-Layer Stacked Ontology
+
+> **Projects instantiate Meta Solutions; Meta Solutions operate on Macro Works; Macro Works contain Services; Services are delivered by Expert Teams; Academies form the competence that Expert Teams require.**
+
+The six feature labels are **not a flat list**. They form a stack in which each layer answers a different question and each layer constrains the one below it.
+
+## The stack
+
+```
+LAYER 5 — PROJECTS        ({{ counts.projects.value }} in the register)
+         MetaX Academy · KernID · SelfAI · Ontology Dept · كن أعلم · WebBooks · Studio · 2030B
+         ↓ instantiate
+LAYER 4 — META SOLUTIONS  ({{ counts.meta_solutions.value }} instruments)
+         Dyon · weekly work engine · split DB/rollup · sampling · KernID · SelfAI
+         ↓ operate across
+LAYER 3 — MACRO WORKS     ({{ counts.macros.value }})
+         Cultures/Humanities · Built Environment · Sciences · Governance · Technology
+         ↓ contain
+LAYER 2 — SERVICES        ({{ counts.services.value }}, {{ counts.services_per_macro.value }} per macro)
+         each with rubric, evidence rule, dependencies
+         ↓ delivered by
+LAYER 1 — EXPERT TEAMS    ({{ counts.expert_teams_total.value }} at design ceiling)
+         1,000 experts per service (design ceiling) · ~10 experts per manager · 100 managers
+         ↑ competence formed by
+LAYER 0 — ACADEMIES
+         MetaX Academy · Dyon certification profiles · continuing modules
+```
+
+## Where each layer lives
+
+| Layer | Content file | Page |
+|---|---|---|
+| L0 Academies | `data/content/layers/academies.json` | `/ontology/academies/` |
+| L1 Expert Teams | `data/content/layers/expert-teams.json` | `/ontology/expert-teams/` |
+| L2 Services | `data/content/layers/services.json` | `/ontology/services/` |
+| L3 Macro Works | `data/content/layers/macro-works.json` | `/ontology/macro-works/` |
+| L4 Meta Solutions | `data/content/layers/meta-solutions.json` | `/ontology/meta-solutions/` |
+| L5 Projects | `data/content/layers/projects.json` | `/ontology/projects/` |
+| *index* | `data/content/pages/ontology.json` | `/ontology/` |
+
+Regenerate with `python3 tools/gen_ontology.py`.
+
+## Dependency directions
+
+- **Macro Works → Services.** No service exists outside a macro; no macro is merely a label without services.
+- **Services → Expert Teams.** The team is *constitutive*: a service without an assigned team is a design, not a delivery.
+- **Academies → Expert Teams.** Academies produce the assessed competence; teams consume it (entry + continuing).
+- **Meta Solutions → Services** (as instruments), **not** Services → Meta Solutions. The meta layer sits *above* the macro partition so it never becomes a sixth domain.
+- **Projects → Meta Solutions + Services.** Projects are downstream of both.
+
+## Project → meta-solution → services (§4.5)
+
+| Project | Meta-solution | Services consumed |
+|---|---|---|
+| MetaX Academy | Academy/credentialing | #076, #023, #039 |
+| KernID | Identity & credential | #111, #084, #026 |
+| SelfAI | Self-training AI agent | #109, #093, #060 |
+| Ontology Department | the ontology itself | cross-cutting, none |
+| كن أعلم | Arabic knowledge/capability | #006, #062, #098 |
+| WebBooks | Publication/dissemination | #009, #007 |
+| Studio | Static-first delivery | #105, #112, #107 |
+| 2030B | Long-horizon frame | all macros, none |
+
+This mapping is stored on each project record as `meta_solution` and `services_consumed`, and rendered by the `definitions` block titled *"What this project instantiates"*.
+
+## The load-bearing gaps (§4.7)
+
+These are **conditions**, not footnotes:
+
+1. **130,000 is a design equation, not a headcount.** The 26 developers in Tunisia are the real delivery footprint today.
+2. **Dyon enforcement is proposed, not verified.** No competency levels are published and no proof that activation is blocked without certification.
+3. **5% sampling is a dossier recommendation, not a README rule.** The README's leader schedule specifies 20 sampled reports per service — 2% of 1,000, not 5%. Both figures are separate variables (`doctrine.quality_sample` = 5%, `doctrine.sampling_readme_percent` = 2%).
+4. **Universal dependencies cannot be acyclic.** Only the time-unrolled delivery graph is certified acyclic.
+5. **No project is yet a financed hiring promise.** "Live" means operational as a programme or a site, not "1,000 experts employed".
+
+## Variables that encode the stack
+
+All in `config/variables.php`:
+
+| Token | Value |
+|---|---|
+| `{{ counts.ontology_layers.value }}` | 6 |
+| `{{ counts.expert_teams_total.value }}` | 130 |
+| `{{ counts.meta_solutions.value }}` | 6 |
+| `{{ caps.managers_per_service.value }}` | 100 |
+| `{{ caps.manager_experts_soft.value }}` | 10 |
+| `{{ doctrine.quality_sample.value }}` | 5% |
+| `{{ doctrine.sampling_readme_percent.value }}` | 2% |
+| `{{ doctrine.dyon_enforcement_verified.value }}` | false |
+| `{{ doctrine.acyclic_only_time_unrolled.value }}` | true |
+
+Types: `types.ontology_layer`, `types.meta_solution`, `types.expert_team`.
+
+## The `stack` block
+
+One renderer draws every version of the diagram:
+
+```json
+{
+  "type": "stack",
+  "title": "The full stack in one view",
+  "data": {
+    "direction": "down",
+    "feedback": "Feedback flows upward…",
+    "items": [
+      { "layer": "projects", "number": 5, "title": "Projects",
+        "question": "What is being built, for whom, by when?",
+        "count": "{{ counts.projects.value }} in the register",
+        "href": "layer:projects",
+        "examples": ["MetaX Academy", "KernID"] }
+    ]
+  }
+}
+```
+
+`layer` keys are validated against `types.ontology_layer`, so a typo cannot publish.

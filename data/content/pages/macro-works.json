@@ -1,0 +1,147 @@
+{
+  "id": "macro-works",
+  "path": "/macro-works/",
+  "kind": "index",
+  "nav_group": "services",
+  "audience": "public",
+  "title": {
+    "en": "Macro works",
+    "fr": "Macro-œuvres",
+    "ar": "الأعمال الكبرى"
+  },
+  "nav_label": {
+    "en": "Macro works",
+    "fr": "Macro-œuvres",
+    "ar": "الأعمال الكبرى"
+  },
+  "summary": {
+    "en": "Five macro works, twenty-six services each.",
+    "fr": "Cinq macro-œuvres, vingt-six services chacune.",
+    "ar": "خمسة أعمال كبرى، ست وعشرون خدمة لكل منها."
+  },
+  "description": {
+    "en": "The top-level demand map of the W5D ontology."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": {
+          "en": "Services"
+        },
+        "grand": {
+          "en": "Five macro works."
+        },
+        "lead": {
+          "en": "The top-level demand map of the W5D ontology: five macro works, 26 registered services each, and a distinct placement on the real/virtual spectrum."
+        },
+        "split": true
+      }
+    },
+    {
+      "type": "cards",
+      "title": {
+        "en": "The macro works"
+      },
+      "data": {
+        "source": "macros",
+        "columns": 2
+      }
+    },
+    {
+      "type": "table",
+      "title": {
+        "en": "Placement across the five macro works"
+      },
+      "data": {
+        "head": [
+          {
+            "en": "Macro work"
+          },
+          {
+            "en": "Services"
+          },
+          {
+            "en": "Placement"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "text": {
+                "en": "Cultures / Humanities"
+              },
+              "href": "macro:cultures"
+            },
+            "001–026",
+            "Real 1.0"
+          ],
+          [
+            {
+              "text": {
+                "en": "Built Environment"
+              },
+              "href": "macro:built"
+            },
+            "027–052",
+            "Real 1.0"
+          ],
+          [
+            {
+              "text": {
+                "en": "Sciences"
+              },
+              "href": "macro:sciences"
+            },
+            "053–078",
+            "Between 1.0"
+          ],
+          [
+            {
+              "text": {
+                "en": "Governance"
+              },
+              "href": "macro:governance"
+            },
+            "079–104",
+            "Between 1.0"
+          ],
+          [
+            {
+              "text": {
+                "en": "Technology"
+              },
+              "href": "macro:technology"
+            },
+            "105–130",
+            "Real 0.5 / Virtual 0.5"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": {
+          "en": "The catalogue lists all 130 in one place."
+        },
+        "actions": [
+          {
+            "label": {
+              "en": "All services"
+            },
+            "href": "page:services",
+            "primary": true
+          },
+          {
+            "label": {
+              "en": "The five dimensions"
+            },
+            "href": "page:dimensions"
+          }
+        ]
+      }
+    }
+  ]
+}

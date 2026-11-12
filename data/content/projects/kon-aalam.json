@@ -1,0 +1,289 @@
+{
+  "id": "kon-aalam",
+  "slug": "kon-aalam",
+  "order": 20,
+  "layer": "L3",
+  "status": "building",
+  "evidence": "E1",
+  "stage": 45,
+  "horizon": "macro",
+  "group": {
+    "en": "2030B · eleventh project",
+    "fr": "2030B · onzième projet",
+    "ar": "2030B · المشروع الحادي عشر"
+  },
+  "parent": "2030b",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "كن أعلم",
+    "fr": "كن أعلم",
+    "ar": "كن أعلم"
+  },
+  "subtitle": {
+    "en": "The eleventh project.",
+    "fr": "Le onzième projet.",
+    "ar": "المشروع الحادي عشر."
+  },
+  "short": {
+    "en": "Under construction; not publicly listed on the 2030B site."
+  },
+  "summary": {
+    "en": "Under construction; not publicly listed on the 2030B site."
+  },
+  "description": {
+    "en": "The eleventh project.",
+    "fr": "Le onzième projet.",
+    "ar": "المشروع الحادي عشر."
+  },
+  "exists": {
+    "en": "Under construction; not publicly listed on the 2030B site."
+  },
+  "missing": {
+    "en": "No public page, book index or product is published on the 2030B site."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L3 project",
+        "grand": {
+          "en": "كن أعلم",
+          "fr": "كن أعلم",
+          "ar": "كن أعلم"
+        },
+        "lead": {
+          "en": "The eleventh project.",
+          "fr": "Le onzième projet.",
+          "ar": "المشروع الحادي عشر."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "building"
+          },
+          {
+            "label": "Evidence",
+            "value": "E1",
+            "sub": null
+          },
+          {
+            "label": "Layer",
+            "value": "L3"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": {
+        "en": "What this project instantiates"
+      },
+      "data": {
+        "lead": {
+          "en": "Projects are downstream of both Meta Solutions and Services: a project is a time-bound instantiation that may consume several services, invoke several meta-solutions and produce a concrete artefact or programme."
+        },
+        "items": [
+          {
+            "term": {
+              "en": "Meta-solution instantiated"
+            },
+            "value": {
+              "en": "Arabic-language knowledge and capability meta-layer"
+            }
+          },
+          {
+            "term": {
+              "en": "Services consumed"
+            },
+            "value": {
+              "en": "Translation & Localisation Hubs (#006), Science Communication (#062), Education Governance (#098)"
+            }
+          },
+          {
+            "term": {
+              "en": "Dependency direction"
+            },
+            "value": {
+              "en": "Projects → Meta Solutions + Services. Projects are downstream of both."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "\"Be more knowing\": an Arabic-language knowledge programme. Its scope beyond the name has not been supplied."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "building"
+          },
+          {
+            "term": "Evidence",
+            "value": "E1",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Project"
+          },
+          {
+            "term": "Horizon",
+            "value": "macro"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "to be confirmed"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "Under construction; not publicly listed on the 2030B site."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "No public page, book index or product is published on the 2030B site."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "The project is named and under construction. No further claim is made about it."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "href": null,
+            "open": true
+          },
+          {
+            "term": "State",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ],
+  "meta_solution": "knowledge-ar",
+  "services_consumed": [
+    "translation-hubs",
+    "science-comm",
+    "education-governance"
+  ]
+}

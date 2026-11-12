@@ -1,0 +1,258 @@
+{
+  "id": "bcia",
+  "slug": "bcia",
+  "order": 25,
+  "layer": "L3",
+  "status": "gated",
+  "evidence": "E1",
+  "stage": 30,
+  "horizon": "beyond",
+  "group": {
+    "en": "Research · beyond",
+    "fr": "Recherche · au-delà",
+    "ar": "البحث · ما بعد"
+  },
+  "parent": "macrolifetech",
+  "audience": "public",
+  "nav_group": "ecosystem",
+  "kind": "detail",
+  "title": {
+    "en": "BCIA",
+    "fr": "BCIA",
+    "ar": "BCIA"
+  },
+  "subtitle": {
+    "en": "Computation in living substrates.",
+    "fr": "Le calcul dans des substrats vivants.",
+    "ar": "الحوسبة في ركائز حيّة."
+  },
+  "short": {
+    "en": "A gated, pre-publication research programme. No findings are reported."
+  },
+  "summary": {
+    "en": "A gated, pre-publication research programme. No findings are reported."
+  },
+  "description": {
+    "en": "Computation in living substrates.",
+    "fr": "Le calcul dans des substrats vivants.",
+    "ar": "الحوسبة في ركائز حيّة."
+  },
+  "exists": {
+    "en": "A gated, pre-publication research programme. No findings are reported."
+  },
+  "missing": {
+    "en": "No findings, methods, protocol or ethics review is published."
+  },
+  "verified": "{{ time.registry_verified }}",
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "top",
+      "data": {
+        "eyebrow": "Ecosystem · L3 project",
+        "grand": {
+          "en": "BCIA",
+          "fr": "BCIA",
+          "ar": "BCIA"
+        },
+        "lead": {
+          "en": "Computation in living substrates.",
+          "fr": "Le calcul dans des substrats vivants.",
+          "ar": "الحوسبة في ركائز حيّة."
+        },
+        "split": true,
+        "meta": [
+          {
+            "label": "Status",
+            "chip": "gated"
+          },
+          {
+            "label": "Evidence",
+            "value": "E1",
+            "sub": null
+          },
+          {
+            "label": "Layer",
+            "value": "L3"
+          },
+          {
+            "label": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Status register",
+            "href": "page:status"
+          },
+          {
+            "label": "The ecosystem",
+            "href": "page:ecosystem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "title": "What it is meant to be",
+      "data": {
+        "body": [
+          {
+            "en": "BCIA is described as the first research programme from the beyond: the layer of conditions and intelligences from which technology emerges."
+          }
+        ]
+      }
+    },
+    {
+      "type": "definitions",
+      "title": "Register record",
+      "data": {
+        "items": [
+          {
+            "term": "Status",
+            "chip": "gated"
+          },
+          {
+            "term": "Evidence",
+            "value": "E1",
+            "badge": true
+          },
+          {
+            "term": "Layer",
+            "value": "Project"
+          },
+          {
+            "term": "Horizon",
+            "value": "beyond"
+          },
+          {
+            "term": "Dimension",
+            "value": {
+              "en": "to be confirmed"
+            }
+          },
+          {
+            "term": "Last verified",
+            "value": "{{ time.registry_verified }}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "title": "What exists, and what does not",
+      "data": {
+        "head": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            {
+              "badge": "✓"
+            },
+            {
+              "en": "A gated, pre-publication research programme. No findings are reported."
+            }
+          ],
+          [
+            {
+              "badge": "○"
+            },
+            {
+              "en": "No findings, methods, protocol or ethics review is published."
+            }
+          ]
+        ],
+        "compact": true
+      }
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "limits",
+        "body": [
+          {
+            "en": "Earlier wording called BCIA a research \"achievement\". MetaX reports no findings, so this site says programme. Work on living substrates raises consent and harm questions that the register treats as sensitive."
+          }
+        ]
+      },
+      "title": "Declared limits"
+    },
+    {
+      "type": "notice",
+      "data": {
+        "tone": "info",
+        "body": [
+          {
+            "en": "Corrected before publication: \"first research achievement\" → \"first research programme\"."
+          }
+        ]
+      },
+      "title": "Correction"
+    },
+    {
+      "type": "definitions",
+      "title": "Link",
+      "data": {
+        "items": [
+          {
+            "term": "Public address",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "href": null,
+            "open": true
+          },
+          {
+            "term": "State",
+            "value": {
+              "en": "to be confirmed"
+            },
+            "open": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "title": "Elsewhere in the register",
+      "data": {
+        "items": [
+          {
+            "title": "The status register",
+            "summary": "Every programme and project, with its status word and dated verification.",
+            "href": "page:status"
+          },
+          {
+            "title": "The ecosystem",
+            "summary": "Everything W5D is building, at its true status.",
+            "href": "page:ecosystem"
+          },
+          {
+            "title": "Corrections",
+            "summary": "What this site changed, when and why.",
+            "href": "page:corrections"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "data": {
+        "text": "Read a claim here, then check it. If something is wrong, file a correction.",
+        "actions": [
+          {
+            "label": "File a correction",
+            "href": "page:contact",
+            "primary": true
+          },
+          {
+            "label": "How verification works",
+            "href": "page:status"
+          }
+        ]
+      }
+    }
+  ]
+}
