@@ -1,0 +1,41 @@
+
+/*----------------------
+ keyframe start here 
+ -----------------------*/
+
+
+
+/* text-slide */
+@keyframes text-slide-animation {
+    0% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+@keyframes text-slide-animation-2 {
+    0% {
+        -webkit-transform: translateX(-90%);
+        transform: translateX(-90%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+
+/* circle rotate 360 deg */
+@keyframes shape-rotate {
+    0% {
+       -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+       -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
