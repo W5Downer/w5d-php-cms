@@ -1,0 +1,44 @@
+{
+  "id": "climate-modelling",
+  "slug": "climate-modelling",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Climate Modelling & Adaptation",
+    "fr": "Climate Modelling & Adaptation",
+    "ar": "Climate Modelling & Adaptation"
+  },
+  "short": {
+    "en": "Downscaled scenarios, vulnerability maps.",
+    "fr": "Downscaled scenarios, vulnerability maps.",
+    "ar": "Downscaled scenarios, vulnerability maps."
+  },
+  "long": {
+    "en": "Climate modelling and adaptation science — downscaled scenarios, vulnerability mapping, and adaptation pathway design for national and regional planning.",
+    "fr": "Climate modelling and adaptation science — downscaled scenarios, vulnerability mapping, and adaptation pathway design for national and regional planning.",
+    "ar": "Climate modelling and adaptation science — downscaled scenarios, vulnerability mapping, and adaptation pathway design for national and regional planning."
+  },
+  "problem": {
+    "en": "Coarse scenarios can mislead local investment decisions.",
+    "fr": "Coarse scenarios can mislead local investment decisions.",
+    "ar": "Coarse scenarios can mislead local investment decisions."
+  },
+  "solution": {
+    "en": "Downscaled scenarios, vulnerability maps, and uncertainty-aware adaptation options.",
+    "fr": "Downscaled scenarios, vulnerability maps, and uncertainty-aware adaptation options.",
+    "ar": "Downscaled scenarios, vulnerability maps, and uncertainty-aware adaptation options."
+  },
+  "likely_buyer": {
+    "en": "Utilities/cities",
+    "fr": "Utilities/cities",
+    "ar": "Utilities/cities"
+  },
+  "acceptance_boundary": {
+    "en": "hindcast checks and independent methodological review. Scenarios are not precise forecasts of future weather or guaranteed losses.",
+    "fr": "hindcast checks and independent methodological review. Scenarios are not precise forecasts of future weather or guaranteed losses.",
+    "ar": "hindcast checks and independent methodological review. Scenarios are not precise forecasts of future weather or guaranteed losses."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

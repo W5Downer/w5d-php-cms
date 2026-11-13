@@ -1,0 +1,44 @@
+{
+  "id": "data-protection",
+  "slug": "data-protection",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Data Protection & Privacy",
+    "fr": "Data Protection & Privacy",
+    "ar": "Data Protection & Privacy"
+  },
+  "short": {
+    "en": "GDPR-style compliance, DPIAs.",
+    "fr": "GDPR-style compliance, DPIAs.",
+    "ar": "GDPR-style compliance, DPIAs."
+  },
+  "long": {
+    "en": "Data protection and privacy — GDPR-aligned compliance, data protection impact assessments, and institutional data-governance frameworks.",
+    "fr": "Data protection and privacy — GDPR-aligned compliance, data protection impact assessments, and institutional data-governance frameworks.",
+    "ar": "Data protection and privacy — GDPR-aligned compliance, data protection impact assessments, and institutional data-governance frameworks."
+  },
+  "problem": {
+    "en": "Unmapped personal-data use creates legal and human risk.",
+    "fr": "Unmapped personal-data use creates legal and human risk.",
+    "ar": "Unmapped personal-data use creates legal and human risk."
+  },
+  "solution": {
+    "en": "Processing inventory, DPIA-style assessment, controls, and rights workflows.",
+    "fr": "Processing inventory, DPIA-style assessment, controls, and rights workflows.",
+    "ar": "Processing inventory, DPIA-style assessment, controls, and rights workflows."
+  },
+  "likely_buyer": {
+    "en": "Data controllers",
+    "fr": "Data controllers",
+    "ar": "Data controllers"
+  },
+  "acceptance_boundary": {
+    "en": "tested access requests and legal/security review. Apply jurisdiction-specific law, not a generic GDPR checkbox or assumed certification.",
+    "fr": "tested access requests and legal/security review. Apply jurisdiction-specific law, not a generic GDPR checkbox or assumed certification.",
+    "ar": "tested access requests and legal/security review. Apply jurisdiction-specific law, not a generic GDPR checkbox or assumed certification."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

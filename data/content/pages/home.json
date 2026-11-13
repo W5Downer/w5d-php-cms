@@ -1,0 +1,515 @@
+{
+  "id": "home",
+  "path": "/",
+  "title": {
+    "en": "W5D — Qualified teams, accountable outcomes",
+    "fr": "W5D — Qualified teams, accountable outcomes",
+    "ar": "W5D — Qualified teams, accountable outcomes"
+  },
+  "description": {
+    "en": "W5D delivers independently accepted outcomes in Arabic, French and English, and builds a verified competence network in Tunisia.",
+    "fr": "W5D delivers independently accepted outcomes in Arabic, French and English, and builds a verified competence network in Tunisia.",
+    "ar": "W5D delivers independently accepted outcomes in Arabic, French and English, and builds a verified competence network in Tunisia."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "home-hero",
+      "tier": "E",
+      "focus": 5,
+      "data": {
+        "eyebrow": {
+          "en": "Tunisia first · Arabic, French, English",
+          "fr": "Tunisia first · Arabic, French, English",
+          "ar": "Tunisia first · Arabic, French, English"
+        },
+        "lead": {
+          "en": "W5D delivers qualified, independently accepted outcomes. We register interest, assess competence and contract bounded work. We do not promise jobs.",
+          "fr": "W5D delivers qualified, independently accepted outcomes. We register interest, assess competence and contract bounded work. We do not promise jobs.",
+          "ar": "W5D delivers qualified, independently accepted outcomes. We register interest, assess competence and contract bounded work. We do not promise jobs."
+        },
+        "meta": [
+          {
+            "label": {
+              "en": "Services",
+              "fr": "Services",
+              "ar": "Services"
+            },
+            "value": {
+              "en": "{{ counts.services }}",
+              "fr": "{{ counts.services }}",
+              "ar": "{{ counts.services }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Macro works",
+              "fr": "Macro works",
+              "ar": "Macro works"
+            },
+            "value": {
+              "en": "{{ counts.macros }}",
+              "fr": "{{ counts.macros }}",
+              "ar": "{{ counts.macros }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Certified experts today",
+              "fr": "Certified experts today",
+              "ar": "Certified experts today"
+            },
+            "value": {
+              "en": "{{ experts.current }}",
+              "fr": "{{ experts.current }}",
+              "ar": "{{ experts.current }}"
+            }
+          }
+        ]
+      },
+      "cta": {
+        "label": {
+          "en": "Check my eligibility",
+          "fr": "Check my eligibility",
+          "ar": "Check my eligibility"
+        },
+        "href": "/join/eligibility/",
+        "class": "btn-peak"
+      }
+    },
+    {
+      "type": "kpis",
+      "id": "home-trust-strip",
+      "tier": "E",
+      "focus": 2,
+      "title": {
+        "en": "The numbers, declared",
+        "fr": "The numbers, declared",
+        "ar": "The numbers, declared"
+      },
+      "data": {
+        "items": [
+          {
+            "label": {
+              "en": "Services in the catalogue",
+              "fr": "Services in the catalogue",
+              "ar": "Services in the catalogue"
+            },
+            "value": {
+              "en": "{{ counts.services }}",
+              "fr": "{{ counts.services }}",
+              "ar": "{{ counts.services }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Macro works",
+              "fr": "Macro works",
+              "ar": "Macro works"
+            },
+            "value": {
+              "en": "{{ counts.macros }}",
+              "fr": "{{ counts.macros }}",
+              "ar": "{{ counts.macros }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Projects in the register",
+              "fr": "Projects in the register",
+              "ar": "Projects in the register"
+            },
+            "value": {
+              "en": "{{ counts.projects }}",
+              "fr": "{{ counts.projects }}",
+              "ar": "{{ counts.projects }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Certified experts today",
+              "fr": "Certified experts today",
+              "ar": "Certified experts today"
+            },
+            "value": {
+              "en": "{{ experts.current }}",
+              "fr": "{{ experts.current }}",
+              "ar": "{{ experts.current }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Design ceiling per service (not a headcount)",
+              "fr": "Design ceiling per service (not a headcount)",
+              "ar": "Design ceiling per service (not a headcount)"
+            },
+            "value": {
+              "en": "{{ experts.per_service }}",
+              "fr": "{{ experts.per_service }}",
+              "ar": "{{ experts.per_service }}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "id": "home-problem",
+      "tier": "E",
+      "focus": 3,
+      "title": {
+        "en": "Why most hiring pitches fail",
+        "fr": "Why most hiring pitches fail",
+        "ar": "Why most hiring pitches fail"
+      },
+      "data": {
+        "paragraphs": [
+          {
+            "en": "Degrees do not prove a service skill, and a long catalogue does not prove a market. Many programmes start with registrations and only later look for buyers.",
+            "fr": "Degrees do not prove a service skill, and a long catalogue does not prove a market. Many programmes start with registrations and only later look for buyers.",
+            "ar": "Degrees do not prove a service skill, and a long catalogue does not prove a market. Many programmes start with registrations and only later look for buyers."
+          },
+          {
+            "en": "W5D starts from the other end: a buyer with a problem, a delivery that someone accepts, and then the people who can deliver it.",
+            "fr": "W5D starts from the other end: a buyer with a problem, a delivery that someone accepts, and then the people who can deliver it.",
+            "ar": "W5D starts from the other end: a buyer with a problem, a delivery that someone accepts, and then the people who can deliver it."
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "id": "home-fit",
+      "tier": "I",
+      "focus": 3,
+      "title": {
+        "en": "Find my field",
+        "fr": "Find my field",
+        "ar": "Find my field"
+      },
+      "data": {
+        "items": []
+      }
+    },
+    {
+      "type": "pipeline",
+      "id": "home-pipeline",
+      "tier": "I",
+      "focus": 3,
+      "title": {
+        "en": "From interest to accepted work",
+        "fr": "From interest to accepted work",
+        "ar": "From interest to accepted work"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "Register",
+              "fr": "Register",
+              "ar": "Register"
+            },
+            "text": {
+              "en": "Tell us your field, degree and availability. Interest only.",
+              "fr": "Tell us your field, degree and availability. Interest only.",
+              "ar": "Tell us your field, degree and availability. Interest only."
+            },
+            "state": "open",
+            "state_label": {
+              "en": "Open now",
+              "fr": "Open now",
+              "ar": "Open now"
+            }
+          },
+          {
+            "title": {
+              "en": "Verify",
+              "fr": "Verify",
+              "ar": "Verify"
+            },
+            "text": {
+              "en": "Identity checks are not yet live on this site.",
+              "fr": "Identity checks are not yet live on this site.",
+              "ar": "Identity checks are not yet live on this site."
+            },
+            "state": "pending",
+            "state_label": {
+              "en": "Not yet available",
+              "fr": "Not yet available",
+              "ar": "Not yet available"
+            }
+          },
+          {
+            "title": {
+              "en": "Certify (L1–L4)",
+              "fr": "Certify (L1–L4)",
+              "ar": "Certify (L1–L4)"
+            },
+            "text": {
+              "en": "A practical task, reviewed against a published rubric for each service.",
+              "fr": "A practical task, reviewed against a published rubric for each service.",
+              "ar": "A practical task, reviewed against a published rubric for each service."
+            },
+            "state": "pending",
+            "state_label": {
+              "en": "Per service, when activated",
+              "fr": "Per service, when activated",
+              "ar": "Per service, when activated"
+            }
+          },
+          {
+            "title": {
+              "en": "Deliver",
+              "fr": "Deliver",
+              "ar": "Deliver"
+            },
+            "text": {
+              "en": "Paid, scoped work with client acceptance. Only when a buyer has commissioned it.",
+              "fr": "Paid, scoped work with client acceptance. Only when a buyer has commissioned it.",
+              "ar": "Paid, scoped work with client acceptance. Only when a buyer has commissioned it."
+            },
+            "state": "pending",
+            "state_label": {
+              "en": "Only when funded",
+              "fr": "Only when funded",
+              "ar": "Only when funded"
+            }
+          }
+        ]
+      },
+      "cta": {
+        "label": {
+          "en": "See the certification path",
+          "fr": "See the certification path",
+          "ar": "See the certification path"
+        },
+        "href": "/how-it-works/",
+        "class": "btn-ghost"
+      }
+    },
+    {
+      "type": "carousel",
+      "id": "home-macros",
+      "tier": "I",
+      "focus": 3,
+      "title": {
+        "en": "Five macro works",
+        "fr": "Five macro works",
+        "ar": "Five macro works"
+      },
+      "data": {
+        "items": []
+      }
+    },
+    {
+      "type": "cta",
+      "id": "home-mid-cta",
+      "tier": "E",
+      "focus": 5,
+      "gradient": "peak",
+      "title": {
+        "en": "Register your interest",
+        "fr": "Register your interest",
+        "ar": "Register your interest"
+      },
+      "data": {
+        "text": {
+          "en": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract.",
+          "fr": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract.",
+          "ar": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Register now",
+          "fr": "Register now",
+          "ar": "Register now"
+        },
+        "href": "/app/register/",
+        "class": "btn-peak"
+      }
+    },
+    {
+      "type": "stack",
+      "id": "home-stack",
+      "tier": "X",
+      "focus": 1,
+      "title": {
+        "en": "The full ontology in one view",
+        "fr": "The full ontology in one view",
+        "ar": "The full ontology in one view"
+      },
+      "data": {
+        "items": []
+      },
+      "cta": {
+        "label": {
+          "en": "See the ontology",
+          "fr": "See the ontology",
+          "ar": "See the ontology"
+        },
+        "href": "/ontology/",
+        "class": "btn-ghost"
+      }
+    },
+    {
+      "type": "cards",
+      "id": "home-projects",
+      "tier": "I",
+      "focus": 2,
+      "title": {
+        "en": "Project register (as recorded)",
+        "fr": "Project register (as recorded)",
+        "ar": "Project register (as recorded)"
+      },
+      "data": {
+        "items": []
+      },
+      "cta": {
+        "label": {
+          "en": "All projects",
+          "fr": "All projects",
+          "ar": "All projects"
+        },
+        "href": "/projects/",
+        "class": "btn-link"
+      }
+    },
+    {
+      "type": "quote",
+      "id": "home-founder",
+      "tier": "E",
+      "focus": 2,
+      "title": {
+        "en": "On declarations",
+        "fr": "On declarations",
+        "ar": "On declarations"
+      },
+      "data": {
+        "text": {
+          "en": "We would rather publish a smaller number that is true than a larger number that sounds good.",
+          "fr": "We would rather publish a smaller number that is true than a larger number that sounds good.",
+          "ar": "We would rather publish a smaller number that is true than a larger number that sounds good."
+        },
+        "by": {
+          "en": "W5D founder declaration",
+          "fr": "W5D founder declaration",
+          "ar": "W5D founder declaration"
+        }
+      }
+    },
+    {
+      "type": "notice",
+      "id": "home-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Our limits",
+        "fr": "Our limits",
+        "ar": "Our limits"
+      },
+      "data": {
+        "text": {
+          "en": "The design ceiling ({{ experts.target }}) is a capacity equation for capacity, not a count of people, jobs or certified experts. Certified experts today: {{ experts.current }}.",
+          "fr": "The design ceiling ({{ experts.target }}) is a capacity equation for capacity, not a count of people, jobs or certified experts. Certified experts today: {{ experts.current }}.",
+          "ar": "The design ceiling ({{ experts.target }}) is a capacity equation for capacity, not a count of people, jobs or certified experts. Certified experts today: {{ experts.current }}."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Read our limits",
+          "fr": "Read our limits",
+          "ar": "Read our limits"
+        },
+        "href": "/trust/statement/",
+        "class": "btn-link"
+      }
+    },
+    {
+      "type": "faq",
+      "id": "home-faq",
+      "tier": "E",
+      "focus": 2,
+      "title": {
+        "en": "Questions",
+        "fr": "Questions",
+        "ar": "Questions"
+      },
+      "data": {
+        "items": [
+          {
+            "q": {
+              "en": "Will I get a job if I register?",
+              "fr": "Will I get a job if I register?",
+              "ar": "Will I get a job if I register?"
+            },
+            "a": {
+              "en": "No. Registering records interest. Work exists only where a buyer has commissioned it and you have passed the assessment for that service.",
+              "fr": "No. Registering records interest. Work exists only where a buyer has commissioned it and you have passed the assessment for that service.",
+              "ar": "No. Registering records interest. Work exists only where a buyer has commissioned it and you have passed the assessment for that service."
+            }
+          },
+          {
+            "q": {
+              "en": "Is there a fee?",
+              "fr": "Is there a fee?",
+              "ar": "Is there a fee?"
+            },
+            "a": {
+              "en": "No application fee and no investment requirement.",
+              "fr": "No application fee and no investment requirement.",
+              "ar": "No application fee and no investment requirement."
+            }
+          },
+          {
+            "q": {
+              "en": "Do you collect my national ID card number?",
+              "fr": "Do you collect my national ID card number?",
+              "ar": "Do you collect my national ID card number?"
+            },
+            "a": {
+              "en": "Not on this site yet. Identity steps open only after legal review.",
+              "fr": "Not on this site yet. Identity steps open only after legal review.",
+              "ar": "Not on this site yet. Identity steps open only after legal review."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "id": "home-final",
+      "tier": "E",
+      "focus": 5,
+      "gradient": "peak",
+      "title": {
+        "en": "Start my registration",
+        "fr": "Start my registration",
+        "ar": "Start my registration"
+      },
+      "data": {
+        "text": {
+          "en": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract.",
+          "fr": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract.",
+          "ar": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Start my registration",
+          "fr": "Start my registration",
+          "ar": "Start my registration"
+        },
+        "href": "/app/register/",
+        "class": "btn-peak"
+      }
+    },
+    {
+      "type": "sticky-cta",
+      "id": "sticky",
+      "tier": "E",
+      "focus": 5,
+      "data": {}
+    }
+  ]
+}

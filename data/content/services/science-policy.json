@@ -1,0 +1,44 @@
+{
+  "id": "science-policy",
+  "slug": "science-policy",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Science Policy & Foresight",
+    "fr": "Science Policy & Foresight",
+    "ar": "Science Policy & Foresight"
+  },
+  "short": {
+    "en": "Horizon scanning, evidence synthesis.",
+    "fr": "Horizon scanning, evidence synthesis.",
+    "ar": "Horizon scanning, evidence synthesis."
+  },
+  "long": {
+    "en": "Science policy and foresight — horizon scanning, evidence synthesis, and policy briefs that translate research into decision-grade intelligence.",
+    "fr": "Science policy and foresight — horizon scanning, evidence synthesis, and policy briefs that translate research into decision-grade intelligence.",
+    "ar": "Science policy and foresight — horizon scanning, evidence synthesis, and policy briefs that translate research into decision-grade intelligence."
+  },
+  "problem": {
+    "en": "Research investment choices lack transparent evidence and alternatives.",
+    "fr": "Research investment choices lack transparent evidence and alternatives.",
+    "ar": "Research investment choices lack transparent evidence and alternatives."
+  },
+  "solution": {
+    "en": "Systematic evidence synthesis, horizon scanning, and scenario-based options.",
+    "fr": "Systematic evidence synthesis, horizon scanning, and scenario-based options.",
+    "ar": "Systematic evidence synthesis, horizon scanning, and scenario-based options."
+  },
+  "likely_buyer": {
+    "en": "Funders/ministries",
+    "fr": "Funders/ministries",
+    "ar": "Funders/ministries"
+  },
+  "acceptance_boundary": {
+    "en": "traceable search methods and reviewed assumptions. Foresight scenarios are not predictions or public policy authority.",
+    "fr": "traceable search methods and reviewed assumptions. Foresight scenarios are not predictions or public policy authority.",
+    "ar": "traceable search methods and reviewed assumptions. Foresight scenarios are not predictions or public policy authority."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

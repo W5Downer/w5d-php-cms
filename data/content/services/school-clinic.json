@@ -1,0 +1,44 @@
+{
+  "id": "school-clinic",
+  "slug": "school-clinic",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "School & Clinic Building Programs",
+    "fr": "School & Clinic Building Programs",
+    "ar": "School & Clinic Building Programs"
+  },
+  "short": {
+    "en": "Standardised designs, fast delivery.",
+    "fr": "Standardised designs, fast delivery.",
+    "ar": "Standardised designs, fast delivery."
+  },
+  "long": {
+    "en": "School and clinic building programs — standardised design libraries, fast-track delivery, and quality assurance protocols for ministries of education and health.",
+    "fr": "School and clinic building programs — standardised design libraries, fast-track delivery, and quality assurance protocols for ministries of education and health.",
+    "ar": "School and clinic building programs — standardised design libraries, fast-track delivery, and quality assurance protocols for ministries of education and health."
+  },
+  "problem": {
+    "en": "Inadequate facilities impede public services and safe access.",
+    "fr": "Inadequate facilities impede public services and safe access.",
+    "ar": "Inadequate facilities impede public services and safe access."
+  },
+  "solution": {
+    "en": "Standard designs adapted to sites and qualified delivery oversight.",
+    "fr": "Standard designs adapted to sites and qualified delivery oversight.",
+    "ar": "Standard designs adapted to sites and qualified delivery oversight."
+  },
+  "likely_buyer": {
+    "en": "Agencies/NGOs",
+    "fr": "Agencies/NGOs",
+    "ar": "Agencies/NGOs"
+  },
+  "acceptance_boundary": {
+    "en": "code, hygiene, accessibility, and handover acceptance. Healthcare and education facility authorizations remain separately required.",
+    "fr": "code, hygiene, accessibility, and handover acceptance. Healthcare and education facility authorizations remain separately required.",
+    "ar": "code, hygiene, accessibility, and handover acceptance. Healthcare and education facility authorizations remain separately required."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

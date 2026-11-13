@@ -1,0 +1,131 @@
+{
+  "id": "about",
+  "path": "/about/",
+  "title": {
+    "en": "About W5D",
+    "fr": "About W5D",
+    "ar": "About W5D"
+  },
+  "description": {
+    "en": "Who is behind W5D and how it is run.",
+    "fr": "Who is behind W5D and how it is run.",
+    "ar": "Who is behind W5D and how it is run."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "about-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "About W5D",
+        "fr": "About W5D",
+        "ar": "About W5D"
+      },
+      "data": {
+        "lead": {
+          "en": "W5D is a company and a working ontology. It is run by its founder and owner, Maher Kaddoussi, with a small team.",
+          "fr": "W5D is a company and a working ontology. It is run by its founder and owner, Maher Kaddoussi, with a small team.",
+          "ar": "W5D is a company and a working ontology. It is run by its founder and owner, Maher Kaddoussi, with a small team."
+        }
+      }
+    },
+    {
+      "type": "definitions",
+      "id": "about-principles",
+      "tier": "I",
+      "focus": 2,
+      "title": {
+        "en": "Principles",
+        "fr": "Principles",
+        "ar": "Principles"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Outcomes over volume",
+              "fr": "Outcomes over volume",
+              "ar": "Outcomes over volume"
+            },
+            "def": {
+              "en": "We sell accepted work, not registrations.",
+              "fr": "We sell accepted work, not registrations.",
+              "ar": "We sell accepted work, not registrations."
+            }
+          },
+          {
+            "term": {
+              "en": "Honest numbers",
+              "fr": "Honest numbers",
+              "ar": "Honest numbers"
+            },
+            "def": {
+              "en": "Every figure is labelled as declared, computed or proposed.",
+              "fr": "Every figure is labelled as declared, computed or proposed.",
+              "ar": "Every figure is labelled as declared, computed or proposed."
+            }
+          },
+          {
+            "term": {
+              "en": "Fair engagement",
+              "fr": "Fair engagement",
+              "ar": "Fair engagement"
+            },
+            "def": {
+              "en": "No application fee, no investment requirement, no unpaid exclusivity.",
+              "fr": "No application fee, no investment requirement, no unpaid exclusivity.",
+              "ar": "No application fee, no investment requirement, no unpaid exclusivity."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "about-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "The organisation and its team are described as they are today. Planned roles are not described as filled.",
+          "fr": "The organisation and its team are described as they are today. Planned roles are not described as filled.",
+          "ar": "The organisation and its team are described as they are today. Planned roles are not described as filled."
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "id": "about-cta",
+      "tier": "E",
+      "focus": 5,
+      "gradient": "calm",
+      "title": {
+        "en": "Meet the team",
+        "fr": "Meet the team",
+        "ar": "Meet the team"
+      },
+      "data": {
+        "text": {
+          "en": "Questions go to the right desk.",
+          "fr": "Questions go to the right desk.",
+          "ar": "Questions go to the right desk."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Write to us",
+          "fr": "Write to us",
+          "ar": "Write to us"
+        },
+        "href": "/contact/",
+        "class": "btn-peak"
+      }
+    }
+  ]
+}

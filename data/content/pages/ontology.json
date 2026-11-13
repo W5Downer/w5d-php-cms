@@ -1,0 +1,66 @@
+{
+  "id": "ontology",
+  "path": "/ontology/",
+  "title": {
+    "en": "Ontology",
+    "fr": "Ontology",
+    "ar": "Ontology"
+  },
+  "description": {
+    "en": "The six-layer ontology: academies, teams, services, macro works, meta solutions and projects.",
+    "fr": "The six-layer ontology: academies, teams, services, macro works, meta solutions and projects.",
+    "ar": "The six-layer ontology: academies, teams, services, macro works, meta solutions and projects."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "ont-hero",
+      "tier": "X",
+      "focus": 5,
+      "title": {
+        "en": "The six-layer ontology",
+        "fr": "The six-layer ontology",
+        "ar": "The six-layer ontology"
+      },
+      "data": {
+        "lead": {
+          "en": "Projects use meta solutions; meta solutions operate across macro works; macro works contain services; services are delivered by teams; academies form the competence teams need.",
+          "fr": "Projects use meta solutions; meta solutions operate across macro works; macro works contain services; services are delivered by teams; academies form the competence teams need.",
+          "ar": "Projects use meta solutions; meta solutions operate across macro works; macro works contain services; services are delivered by teams; academies form the competence teams need."
+        }
+      }
+    },
+    {
+      "type": "stack",
+      "id": "ont-stack",
+      "tier": "X",
+      "focus": 2,
+      "title": {
+        "en": "The stack",
+        "fr": "The stack",
+        "ar": "The stack"
+      },
+      "data": {
+        "items": []
+      }
+    },
+    {
+      "type": "notice",
+      "id": "ont-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "The ontology is a catalogue and a dependency map. A layer existing does not mean it is operating.",
+          "fr": "The ontology is a catalogue and a dependency map. A layer existing does not mean it is operating.",
+          "ar": "The ontology is a catalogue and a dependency map. A layer existing does not mean it is operating."
+        }
+      }
+    }
+  ]
+}

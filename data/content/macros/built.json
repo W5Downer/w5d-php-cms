@@ -1,0 +1,139 @@
+{
+  "id": "built",
+  "slug": "built",
+  "number": 2,
+  "placement": "Real 1.0",
+  "title": {
+    "en": "Built Environment",
+    "fr": "Built Environment",
+    "ar": "Built Environment"
+  },
+  "domain_question": {
+    "en": "How are shelter, infrastructure and inhabited space designed, delivered and maintained?"
+  },
+  "typical_fields": {
+    "en": "Civil engineering, architecture, urban planning, surveying, building services, hydraulics"
+  },
+  "output_unit": {
+    "en": "Design package reviews, asset inspections, leak survey kilometres, condition surveys, zoning layers"
+  },
+  "recurring_boundary": {
+    "en": "Affordability includes operating costs, not sale price alone; draft zoning remains advisory until competent authority validation"
+  },
+  "problem": {
+    "en": "disconnected asset records, design clashes, maintenance backlogs, water losses, and energy waste can inflate lifetime costs. Physical works also carry site hazards, permits, professional liability, and substantial working-capital demands."
+  },
+  "premium_offer": {
+    "en": "begin with asset inventories, BIM coordination, or measured building-retrofit studies under qualified supervision. Buyers may include architecture/engineering firms, building owners, contractors, utilities, and municipalities. BIM 040 can be an exportable remote service, but only a competent founding expert should sell it. Combine 036/040/124 for an explicitly scoped energy-and-building outcome, keeping industrial audit and building implementation distinct."
+  },
+  "delivery_economics": {
+    "en": "earn project fees for accepted models and studies, then recurring maintenance/data services where justified. Require licensed design approval, insurance, safe site access, code compliance, and independent measurement of any savings. Do not assume W5D will finance construction. Track clash closure, asset-data completeness, work-order performance, independently verified energy outcomes, cash collection, and rework."
+  },
+  "services": [
+    {
+      "number": 27,
+      "slug": "affordable-housing"
+    },
+    {
+      "number": 28,
+      "slug": "urban-planning"
+    },
+    {
+      "number": 29,
+      "slug": "infrastructure-rehab"
+    },
+    {
+      "number": 30,
+      "slug": "smart-buildings"
+    },
+    {
+      "number": 31,
+      "slug": "construction-tech"
+    },
+    {
+      "number": 32,
+      "slug": "green-building"
+    },
+    {
+      "number": 33,
+      "slug": "heritage-built"
+    },
+    {
+      "number": 34,
+      "slug": "land-governance"
+    },
+    {
+      "number": 35,
+      "slug": "water-sanitation"
+    },
+    {
+      "number": 36,
+      "slug": "energy-retrofits"
+    },
+    {
+      "number": 37,
+      "slug": "mobility-planning"
+    },
+    {
+      "number": 38,
+      "slug": "disaster-construction"
+    },
+    {
+      "number": 39,
+      "slug": "construction-training"
+    },
+    {
+      "number": 40,
+      "slug": "bim"
+    },
+    {
+      "number": 41,
+      "slug": "public-space"
+    },
+    {
+      "number": 42,
+      "slug": "circular-construction"
+    },
+    {
+      "number": 43,
+      "slug": "rural-settlements"
+    },
+    {
+      "number": 44,
+      "slug": "facilities-mgmt"
+    },
+    {
+      "number": 45,
+      "slug": "real-estate"
+    },
+    {
+      "number": 46,
+      "slug": "procurement"
+    },
+    {
+      "number": 47,
+      "slug": "structural-monitoring"
+    },
+    {
+      "number": 48,
+      "slug": "flood-defence"
+    },
+    {
+      "number": 49,
+      "slug": "school-clinic"
+    },
+    {
+      "number": 50,
+      "slug": "construction-waste"
+    },
+    {
+      "number": 51,
+      "slug": "urban-heat"
+    },
+    {
+      "number": 52,
+      "slug": "neighbourhood-upgrading"
+    }
+  ],
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

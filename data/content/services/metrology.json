@@ -1,0 +1,44 @@
+{
+  "id": "metrology",
+  "slug": "metrology",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Metrology & Standards",
+    "fr": "Metrology & Standards",
+    "ar": "Metrology & Standards"
+  },
+  "short": {
+    "en": "Calibration, conformity assessment.",
+    "fr": "Calibration, conformity assessment.",
+    "ar": "Calibration, conformity assessment."
+  },
+  "long": {
+    "en": "Metrology and standards — calibration, conformity assessment, and traceability frameworks that support industry and regulatory compliance.",
+    "fr": "Metrology and standards — calibration, conformity assessment, and traceability frameworks that support industry and regulatory compliance.",
+    "ar": "Metrology and standards — calibration, conformity assessment, and traceability frameworks that support industry and regulatory compliance."
+  },
+  "problem": {
+    "en": "Untraceable measurement makes manufacturing and testing decisions unreliable.",
+    "fr": "Untraceable measurement makes manufacturing and testing decisions unreliable.",
+    "ar": "Untraceable measurement makes manufacturing and testing decisions unreliable."
+  },
+  "solution": {
+    "en": "Calibration coordination through qualified facilities and uncertainty documentation.",
+    "fr": "Calibration coordination through qualified facilities and uncertainty documentation.",
+    "ar": "Calibration coordination through qualified facilities and uncertainty documentation."
+  },
+  "likely_buyer": {
+    "en": "Industrial clients",
+    "fr": "Industrial clients",
+    "ar": "Industrial clients"
+  },
+  "acceptance_boundary": {
+    "en": "traceable calibration certificate within the facility’s authorized scope. Never claim blanket standards conformity from a narrow calibration.",
+    "fr": "traceable calibration certificate within the facility’s authorized scope. Never claim blanket standards conformity from a narrow calibration.",
+    "ar": "traceable calibration certificate within the facility’s authorized scope. Never claim blanket standards conformity from a narrow calibration."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

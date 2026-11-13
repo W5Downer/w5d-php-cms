@@ -1,0 +1,44 @@
+{
+  "id": "digital-identity",
+  "slug": "digital-identity",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Digital Identity & Authentication",
+    "fr": "Digital Identity & Authentication",
+    "ar": "Digital Identity & Authentication"
+  },
+  "short": {
+    "en": "SSO, eKYC, credential wallets.",
+    "fr": "SSO, eKYC, credential wallets.",
+    "ar": "SSO, eKYC, credential wallets."
+  },
+  "long": {
+    "en": "Digital identity — single sign-on, eKYC, and verifiable credential wallets with privacy-preserving design.",
+    "fr": "Digital identity — single sign-on, eKYC, and verifiable credential wallets with privacy-preserving design.",
+    "ar": "Digital identity — single sign-on, eKYC, and verifiable credential wallets with privacy-preserving design."
+  },
+  "problem": {
+    "en": "Weak account recovery and credential verification enable misuse.",
+    "fr": "Weak account recovery and credential verification enable misuse.",
+    "ar": "Weak account recovery and credential verification enable misuse."
+  },
+  "solution": {
+    "en": "MFA, SSO, credential verification, and tested recovery workflows.",
+    "fr": "MFA, SSO, credential verification, and tested recovery workflows.",
+    "ar": "MFA, SSO, credential verification, and tested recovery workflows."
+  },
+  "likely_buyer": {
+    "en": "Firms/authorized bodies",
+    "fr": "Firms/authorized bodies",
+    "ar": "Firms/authorized bodies"
+  },
+  "acceptance_boundary": {
+    "en": "threat-model and authentication tests. No state identity issuance, unnecessary biometric collection, or assumed right to official databases.",
+    "fr": "threat-model and authentication tests. No state identity issuance, unnecessary biometric collection, or assumed right to official databases.",
+    "ar": "threat-model and authentication tests. No state identity issuance, unnecessary biometric collection, or assumed right to official databases."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

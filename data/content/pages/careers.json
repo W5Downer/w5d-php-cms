@@ -1,0 +1,61 @@
+{
+  "id": "careers",
+  "path": "/careers/",
+  "title": {
+    "en": "Careers",
+    "fr": "Careers",
+    "ar": "Careers"
+  },
+  "description": {
+    "en": "Roles at W5D and what we will not promise.",
+    "fr": "Roles at W5D and what we will not promise.",
+    "ar": "Roles at W5D and what we will not promise."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "car-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Careers",
+        "fr": "Careers",
+        "ar": "Careers"
+      },
+      "data": {
+        "lead": {
+          "en": "We hire only against a funded need, with a written scope, and after lawful engagement is confirmed.",
+          "fr": "We hire only against a funded need, with a written scope, and after lawful engagement is confirmed.",
+          "ar": "We hire only against a funded need, with a written scope, and after lawful engagement is confirmed."
+        }
+      }
+    },
+    {
+      "type": "notice",
+      "id": "car-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "No promise of work",
+        "fr": "No promise of work",
+        "ar": "No promise of work"
+      },
+      "data": {
+        "text": {
+          "en": "Listing a role is not a promise of a job. Contracts follow only after counsel has confirmed the engagement model.",
+          "fr": "Listing a role is not a promise of a job. Contracts follow only after counsel has confirmed the engagement model.",
+          "ar": "Listing a role is not a promise of a job. Contracts follow only after counsel has confirmed the engagement model."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Ask about a role",
+          "fr": "Ask about a role",
+          "ar": "Ask about a role"
+        },
+        "href": "/contact/",
+        "class": "btn-peak"
+      }
+    }
+  ]
+}

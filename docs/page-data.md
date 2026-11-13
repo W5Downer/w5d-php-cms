@@ -102,5 +102,5 @@ does not exist renders as a *pending* link, never a silent 404.
 ## Adding a page
 
 1. Create `data/content/pages/my-page.json`.
-2. Run `php bin/build.php` — it appears at `/my-page/` in all three languages.
+2. Save the file. The page is rendered on request at `/my-page/`. Run `php bin/sync-content.php` and `php bin/lint.php` afterwards.
 3. Add `"my-page"` to a `nav` group in `data/content/site.json` if it should be in the menu.

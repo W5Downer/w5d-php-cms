@@ -1,0 +1,44 @@
+{
+  "id": "marine-science",
+  "slug": "marine-science",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Marine & Coastal Science",
+    "fr": "Marine & Coastal Science",
+    "ar": "Marine & Coastal Science"
+  },
+  "short": {
+    "en": "Biodiversity surveys, blue economy.",
+    "fr": "Biodiversity surveys, blue economy.",
+    "ar": "Biodiversity surveys, blue economy."
+  },
+  "long": {
+    "en": "Marine and coastal science — biodiversity surveys, blue-economy assessment, and integrated coastal-zone management grounded in field data.",
+    "fr": "Marine and coastal science — biodiversity surveys, blue-economy assessment, and integrated coastal-zone management grounded in field data.",
+    "ar": "Marine and coastal science — biodiversity surveys, blue-economy assessment, and integrated coastal-zone management grounded in field data."
+  },
+  "problem": {
+    "en": "Weak ecological baselines impede conservation and project assessment.",
+    "fr": "Weak ecological baselines impede conservation and project assessment.",
+    "ar": "Weak ecological baselines impede conservation and project assessment."
+  },
+  "solution": {
+    "en": "Permitted biodiversity surveys and documented coastal research datasets.",
+    "fr": "Permitted biodiversity surveys and documented coastal research datasets.",
+    "ar": "Permitted biodiversity surveys and documented coastal research datasets."
+  },
+  "likely_buyer": {
+    "en": "Agencies/coastal developers",
+    "fr": "Agencies/coastal developers",
+    "ar": "Agencies/coastal developers"
+  },
+  "acceptance_boundary": {
+    "en": "validated species and location records. Secure collection permits and protect sensitive ecological information.",
+    "fr": "validated species and location records. Secure collection permits and protect sensitive ecological information.",
+    "ar": "validated species and location records. Secure collection permits and protect sensitive ecological information."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

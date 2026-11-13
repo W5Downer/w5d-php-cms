@@ -1,0 +1,18 @@
+{
+  "id": "academies",
+  "key": "academies",
+  "layer": "L0",
+  "ontology_layer": "academies",
+  "title": {
+    "en": "Academies",
+    "fr": "Academies",
+    "ar": "Academies"
+  },
+  "question": {
+    "en": "What competence must exist before work starts?"
+  },
+  "summary": {
+    "en": "MetaX Academy and assessment profiles form the competence that expert teams require. Internal credentials are never statutory licences or accredited degrees."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

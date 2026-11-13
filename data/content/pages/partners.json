@@ -1,0 +1,124 @@
+{
+  "id": "partners",
+  "path": "/partners/",
+  "title": {
+    "en": "Partners",
+    "fr": "Partners",
+    "ar": "Partners"
+  },
+  "description": {
+    "en": "Partners and clients: book a scoping call.",
+    "fr": "Partners and clients: book a scoping call.",
+    "ar": "Partners and clients: book a scoping call."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "partners-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Partners and clients",
+        "fr": "Partners and clients",
+        "ar": "Partners and clients"
+      },
+      "data": {
+        "lead": {
+          "en": "We work with buyers who need an accepted outcome, not headcount. Start with a short scoping call.",
+          "fr": "We work with buyers who need an accepted outcome, not headcount. Start with a short scoping call.",
+          "ar": "We work with buyers who need an accepted outcome, not headcount. Start with a short scoping call."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Book a scoping call",
+          "fr": "Book a scoping call",
+          "ar": "Book a scoping call"
+        },
+        "href": "/contact/",
+        "class": "btn-peak"
+      }
+    },
+    {
+      "type": "cards",
+      "id": "partners-types",
+      "tier": "I",
+      "focus": 3,
+      "title": {
+        "en": "Who we talk to",
+        "fr": "Who we talk to",
+        "ar": "Who we talk to"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "Museums, archives and publishers",
+              "fr": "Museums, archives and publishers",
+              "ar": "Museums, archives and publishers"
+            },
+            "text": {
+              "en": "Rights-cleared knowledge packages and digital collections.",
+              "fr": "Rights-cleared knowledge packages and digital collections.",
+              "ar": "Rights-cleared knowledge packages and digital collections."
+            }
+          },
+          {
+            "title": {
+              "en": "Architects, engineers and contractors",
+              "fr": "Architects, engineers and contractors",
+              "ar": "Architects, engineers and contractors"
+            },
+            "text": {
+              "en": "Coordinated models and reviewed studies under licensed responsibility.",
+              "fr": "Coordinated models and reviewed studies under licensed responsibility.",
+              "ar": "Coordinated models and reviewed studies under licensed responsibility."
+            }
+          },
+          {
+            "title": {
+              "en": "Public bodies and NGOs",
+              "fr": "Public bodies and NGOs",
+              "ar": "Public bodies and NGOs"
+            },
+            "text": {
+              "en": "Bounded process and data work within their legal authority.",
+              "fr": "Bounded process and data work within their legal authority.",
+              "ar": "Bounded process and data work within their legal authority."
+            }
+          },
+          {
+            "title": {
+              "en": "Software buyers",
+              "fr": "Software buyers",
+              "ar": "Software buyers"
+            },
+            "text": {
+              "en": "Tested releases with bounded warranties and maintenance.",
+              "fr": "Tested releases with bounded warranties and maintenance.",
+              "ar": "Tested releases with bounded warranties and maintenance."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "partners-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "No partnership, grant, accreditation or customer is secured unless a signed agreement says so. Prospective relationships are not described as active.",
+          "fr": "No partnership, grant, accreditation or customer is secured unless a signed agreement says so. Prospective relationships are not described as active.",
+          "ar": "No partnership, grant, accreditation or customer is secured unless a signed agreement says so. Prospective relationships are not described as active."
+        }
+      }
+    }
+  ]
+}

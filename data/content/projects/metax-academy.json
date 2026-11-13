@@ -1,0 +1,27 @@
+{
+  "id": "metax-academy",
+  "slug": "metax-academy",
+  "status": "live",
+  "evidence": "E2",
+  "meta_solution": "academy-layer",
+  "title": {
+    "en": "MetaX Academy",
+    "fr": "MetaX Academy",
+    "ar": "أكاديمية ميتاكس"
+  },
+  "short": {
+    "en": "The meta-layer institution: nine pillars, licence ML-2.3, and a public register of harms."
+  },
+  "summary": {
+    "en": "The meta-layer institution: nine pillars, licence ML-2.3, and a public register of harms."
+  },
+  "evidence_note": {
+    "en": "Enrolment, accreditation and pricing have not been published. The pillar count is nine; the harms register carries 25 entries."
+  },
+  "services_consumed": [
+    "stem-education",
+    "education-culture",
+    "construction-training"
+  ],
+  "_source": "legacy registry, git 16a1226"
+}

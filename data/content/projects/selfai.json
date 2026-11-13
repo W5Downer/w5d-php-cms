@@ -1,0 +1,27 @@
+{
+  "id": "selfai",
+  "slug": "selfai",
+  "status": "concept",
+  "evidence": "E1",
+  "meta_solution": "selfai",
+  "title": {
+    "en": "SelfAI",
+    "fr": "SelfAI",
+    "ar": "SelfAI"
+  },
+  "short": {
+    "en": "Defined scope and per-project module codes. No product."
+  },
+  "summary": {
+    "en": "Defined scope and per-project module codes. No product."
+  },
+  "evidence_note": {
+    "en": "No model, dataset, evaluation or service exists. Module codes are defined per 2030B project; none is running."
+  },
+  "services_consumed": [
+    "ai-ml",
+    "platform-ai-governance",
+    "bioinformatics"
+  ],
+  "_source": "legacy registry, git 16a1226"
+}

@@ -1,0 +1,139 @@
+{
+  "id": "technology",
+  "slug": "technology",
+  "number": 5,
+  "placement": "Real 0.5 / Virtual 0.5",
+  "title": {
+    "en": "Technology",
+    "fr": "Technology",
+    "ar": "Technology"
+  },
+  "domain_question": {
+    "en": "How are deployable technical capabilities built, secured, integrated and maintained?"
+  },
+  "typical_fields": {
+    "en": "Computer science, engineering, applied mathematics, cybersecurity, robotics, biomedical engineering"
+  },
+  "output_unit": {
+    "en": "Reviewed feature increments, alert investigations, validated pipeline changes, infrastructure change reviews, site device commissioning tests"
+  },
+  "recurring_boundary": {
+    "en": "Operators approve changes; model deployment requires a defined use case, baseline comparison and human escalation; testing requires written scope"
+  },
+  "problem": {
+    "en": "unreliable software, insecure infrastructure, fragmented data, and unvalidated automation impose real operating costs. Selling generic labor hours invites price competition and may create labor-law exposure if clients direct supplied personnel."
+  },
+  "premium_offer": {
+    "en": "independently tested, multilingual software/data outcomes with maintenance, security evidence, observability, and bounded service commitments. Potential buyers include Tunisian SMEs and export clients in Francophone, European, and Arabic-speaking markets. Start with 105 plus a narrow 108 analytics deliverable if the founding expert is qualified; do not simultaneously open an SOC, robotics lab, or quantum program."
+  },
+  "delivery_economics": {
+    "en": "use paid discovery, fixed-scope releases, change-controlled milestones, and support retainers. Differentiate through accountable acceptance and security, not claims of unlimited AI autonomy. Clarify 107 hosting versus 112 developer platforms; 109 model engineering versus 093 AI governance; 068 energy research versus 119 installation. Track defects, restoration tests, data reconciliation, task-specific model performance, retention, and contribution margin."
+  },
+  "services": [
+    {
+      "number": 105,
+      "slug": "software-eng"
+    },
+    {
+      "number": 106,
+      "slug": "cybersecurity"
+    },
+    {
+      "number": 107,
+      "slug": "cloud-infra"
+    },
+    {
+      "number": 108,
+      "slug": "data-engineering"
+    },
+    {
+      "number": 109,
+      "slug": "ai-ml"
+    },
+    {
+      "number": 110,
+      "slug": "networking"
+    },
+    {
+      "number": 111,
+      "slug": "digital-identity"
+    },
+    {
+      "number": 112,
+      "slug": "platform-eng"
+    },
+    {
+      "number": 113,
+      "slug": "geospatial"
+    },
+    {
+      "number": 114,
+      "slug": "quantum"
+    },
+    {
+      "number": 115,
+      "slug": "blockchain"
+    },
+    {
+      "number": 116,
+      "slug": "robotics"
+    },
+    {
+      "number": 117,
+      "slug": "it-governance"
+    },
+    {
+      "number": 118,
+      "slug": "construction-tech-deploy"
+    },
+    {
+      "number": 119,
+      "slug": "renewable-systems"
+    },
+    {
+      "number": 120,
+      "slug": "water-treatment"
+    },
+    {
+      "number": 121,
+      "slug": "biotech"
+    },
+    {
+      "number": 122,
+      "slug": "manufacturing"
+    },
+    {
+      "number": 123,
+      "slug": "agri-tech"
+    },
+    {
+      "number": 124,
+      "slug": "energy-audits"
+    },
+    {
+      "number": 125,
+      "slug": "waste-to-resource"
+    },
+    {
+      "number": 126,
+      "slug": "medical-devices"
+    },
+    {
+      "number": 127,
+      "slug": "mining-tech"
+    },
+    {
+      "number": 128,
+      "slug": "transport-tech"
+    },
+    {
+      "number": 129,
+      "slug": "cold-chain"
+    },
+    {
+      "number": 130,
+      "slug": "disaster-tech"
+    }
+  ],
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

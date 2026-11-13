@@ -1,0 +1,44 @@
+{
+  "id": "archival-science",
+  "slug": "archival-science",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Archival Science & Records",
+    "fr": "Archival Science & Records",
+    "ar": "Archival Science & Records"
+  },
+  "short": {
+    "en": "Appraisal, description, digitisation standards.",
+    "fr": "Appraisal, description, digitisation standards.",
+    "ar": "Appraisal, description, digitisation standards."
+  },
+  "long": {
+    "en": "Professional archival services — records appraisal, descriptive standards (ISAD(G), ISAAR), digitisation workflows, and long-term preservation frameworks for institutional archives.",
+    "fr": "Professional archival services — records appraisal, descriptive standards (ISAD(G), ISAAR), digitisation workflows, and long-term preservation frameworks for institutional archives.",
+    "ar": "Professional archival services — records appraisal, descriptive standards (ISAD(G), ISAAR), digitisation workflows, and long-term preservation frameworks for institutional archives."
+  },
+  "problem": {
+    "en": "Poor classification and retention obstruct retrieval and legal compliance.",
+    "fr": "Poor classification and retention obstruct retrieval and legal compliance.",
+    "ar": "Poor classification and retention obstruct retrieval and legal compliance."
+  },
+  "solution": {
+    "en": "Records appraisal, classification, lawful retention schedule, and finding aids.",
+    "fr": "Records appraisal, classification, lawful retention schedule, and finding aids.",
+    "ar": "Records appraisal, classification, lawful retention schedule, and finding aids."
+  },
+  "likely_buyer": {
+    "en": "Enterprises/archives",
+    "fr": "Enterprises/archives",
+    "ar": "Enterprises/archives"
+  },
+  "acceptance_boundary": {
+    "en": "retrieval tests and approved retention mapping. No deletion contrary to litigation holds or statutory preservation duties.",
+    "fr": "retrieval tests and approved retention mapping. No deletion contrary to litigation holds or statutory preservation duties.",
+    "ar": "retrieval tests and approved retention mapping. No deletion contrary to litigation holds or statutory preservation duties."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

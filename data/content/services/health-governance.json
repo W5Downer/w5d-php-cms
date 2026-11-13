@@ -1,0 +1,44 @@
+{
+  "id": "health-governance",
+  "slug": "health-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Health Governance",
+    "fr": "Health Governance",
+    "ar": "Health Governance"
+  },
+  "short": {
+    "en": "Insurance design, accreditation, quality.",
+    "fr": "Insurance design, accreditation, quality.",
+    "ar": "Insurance design, accreditation, quality."
+  },
+  "long": {
+    "en": "Health governance — insurance design, facility accreditation, and quality-of-care frameworks aligned with national health strategies.",
+    "fr": "Health governance — insurance design, facility accreditation, and quality-of-care frameworks aligned with national health strategies.",
+    "ar": "Health governance — insurance design, facility accreditation, and quality-of-care frameworks aligned with national health strategies."
+  },
+  "problem": {
+    "en": "Weak quality and accountability structures affect health-service delivery.",
+    "fr": "Weak quality and accountability structures affect health-service delivery.",
+    "ar": "Weak quality and accountability structures affect health-service delivery."
+  },
+  "solution": {
+    "en": "Facility policy, insurance-system analysis, and quality-governance review.",
+    "fr": "Facility policy, insurance-system analysis, and quality-governance review.",
+    "ar": "Facility policy, insurance-system analysis, and quality-governance review."
+  },
+  "likely_buyer": {
+    "en": "Health bodies",
+    "fr": "Health bodies",
+    "ar": "Health bodies"
+  },
+  "acceptance_boundary": {
+    "en": "qualified audit and actionable improvement record. No clinical authorization, insurance coverage, or reimbursement guarantee.",
+    "fr": "qualified audit and actionable improvement record. No clinical authorization, insurance coverage, or reimbursement guarantee.",
+    "ar": "qualified audit and actionable improvement record. No clinical authorization, insurance coverage, or reimbursement guarantee."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

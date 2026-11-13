@@ -1,0 +1,44 @@
+{
+  "id": "cloud-infra",
+  "slug": "cloud-infra",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cloud & Infrastructure",
+    "fr": "Cloud & Infrastructure",
+    "ar": "Cloud & Infrastructure"
+  },
+  "short": {
+    "en": "Migration, IaC, cost optimisation.",
+    "fr": "Migration, IaC, cost optimisation.",
+    "ar": "Migration, IaC, cost optimisation."
+  },
+  "long": {
+    "en": "Cloud and infrastructure — migration, infrastructure-as-code, and cost optimisation across major cloud providers.",
+    "fr": "Cloud and infrastructure — migration, infrastructure-as-code, and cost optimisation across major cloud providers.",
+    "ar": "Cloud and infrastructure — migration, infrastructure-as-code, and cost optimisation across major cloud providers."
+  },
+  "problem": {
+    "en": "Unstable hosting and unmanaged cost impair reliable operations.",
+    "fr": "Unstable hosting and unmanaged cost impair reliable operations.",
+    "ar": "Unstable hosting and unmanaged cost impair reliable operations."
+  },
+  "solution": {
+    "en": "Infrastructure-as-code, migration, observability, backups, and recovery runbooks.",
+    "fr": "Infrastructure-as-code, migration, observability, backups, and recovery runbooks.",
+    "ar": "Infrastructure-as-code, migration, observability, backups, and recovery runbooks."
+  },
+  "likely_buyer": {
+    "en": "Firms",
+    "fr": "Firms",
+    "ar": "Firms"
+  },
+  "acceptance_boundary": {
+    "en": "restore tests, availability measures, and cost reconciliation. Check residency and transfer requirements; distinguish hosting from 112 developer platforms.",
+    "fr": "restore tests, availability measures, and cost reconciliation. Check residency and transfer requirements; distinguish hosting from 112 developer platforms.",
+    "ar": "restore tests, availability measures, and cost reconciliation. Check residency and transfer requirements; distinguish hosting from 112 developer platforms."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "renewable-systems",
+  "slug": "renewable-systems",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Renewable Energy Systems",
+    "fr": "Renewable Energy Systems",
+    "ar": "Renewable Energy Systems"
+  },
+  "short": {
+    "en": "Solar, wind, storage installation.",
+    "fr": "Solar, wind, storage installation.",
+    "ar": "Solar, wind, storage installation."
+  },
+  "long": {
+    "en": "Renewable energy systems — solar PV, wind, and battery storage installation with grid-integration engineering.",
+    "fr": "Renewable energy systems — solar PV, wind, and battery storage installation with grid-integration engineering.",
+    "ar": "Renewable energy systems — solar PV, wind, and battery storage installation with grid-integration engineering."
+  },
+  "problem": {
+    "en": "Installation and maintenance weaknesses reduce safe energy performance.",
+    "fr": "Installation and maintenance weaknesses reduce safe energy performance.",
+    "ar": "Installation and maintenance weaknesses reduce safe energy performance."
+  },
+  "solution": {
+    "en": "Qualified design, installation, commissioning, and O&M support.",
+    "fr": "Qualified design, installation, commissioning, and O&M support.",
+    "ar": "Qualified design, installation, commissioning, and O&M support."
+  },
+  "likely_buyer": {
+    "en": "Owners/developers",
+    "fr": "Owners/developers",
+    "ar": "Owners/developers"
+  },
+  "acceptance_boundary": {
+    "en": "electrical tests and measured yield baseline. Obtain permits and authorized sign-off; service 068 covers research, not installation.",
+    "fr": "electrical tests and measured yield baseline. Obtain permits and authorized sign-off; service 068 covers research, not installation.",
+    "ar": "electrical tests and measured yield baseline. Obtain permits and authorized sign-off; service 068 covers research, not installation."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

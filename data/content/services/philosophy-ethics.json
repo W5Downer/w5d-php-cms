@@ -1,0 +1,44 @@
+{
+  "id": "philosophy-ethics",
+  "slug": "philosophy-ethics",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Philosophy & Ethics Clinics",
+    "fr": "Philosophy & Ethics Clinics",
+    "ar": "Philosophy & Ethics Clinics"
+  },
+  "short": {
+    "en": "Applied ethics for technology and governance.",
+    "fr": "Applied ethics for technology and governance.",
+    "ar": "Applied ethics for technology and governance."
+  },
+  "long": {
+    "en": "Applied philosophy and ethics clinics — case-based ethics consultation for technology, healthcare, and public policy; professional ethics training; and publication of ethical frameworks.",
+    "fr": "Applied philosophy and ethics clinics — case-based ethics consultation for technology, healthcare, and public policy; professional ethics training; and publication of ethical frameworks.",
+    "ar": "Applied philosophy and ethics clinics — case-based ethics consultation for technology, healthcare, and public policy; professional ethics training; and publication of ethical frameworks."
+  },
+  "problem": {
+    "en": "Organizations make consequential choices without examining affected interests.",
+    "fr": "Organizations make consequential choices without examining affected interests.",
+    "ar": "Organizations make consequential choices without examining affected interests."
+  },
+  "solution": {
+    "en": "Stakeholder analysis, ethical options, recommendations, and decision log.",
+    "fr": "Stakeholder analysis, ethical options, recommendations, and decision log.",
+    "ar": "Stakeholder analysis, ethical options, recommendations, and decision log."
+  },
+  "likely_buyer": {
+    "en": "Companies/institutions",
+    "fr": "Companies/institutions",
+    "ar": "Companies/institutions"
+  },
+  "acceptance_boundary": {
+    "en": "actionable recommendations and recorded management decisions. Ethical assessment does not constitute legal or regulatory approval.",
+    "fr": "actionable recommendations and recorded management decisions. Ethical assessment does not constitute legal or regulatory approval.",
+    "ar": "actionable recommendations and recorded management decisions. Ethical assessment does not constitute legal or regulatory approval."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

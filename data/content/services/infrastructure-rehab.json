@@ -1,0 +1,44 @@
+{
+  "id": "infrastructure-rehab",
+  "slug": "infrastructure-rehab",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Infrastructure Rehabilitation",
+    "fr": "Infrastructure Rehabilitation",
+    "ar": "Infrastructure Rehabilitation"
+  },
+  "short": {
+    "en": "Roads, water, drainage, structural audits.",
+    "fr": "Roads, water, drainage, structural audits.",
+    "ar": "Roads, water, drainage, structural audits."
+  },
+  "long": {
+    "en": "Rehabilitation of critical infrastructure — structural audits, road and bridge renewal, water and drainage networks, and staged rehabilitation programs aligned with municipal budgets.",
+    "fr": "Rehabilitation of critical infrastructure — structural audits, road and bridge renewal, water and drainage networks, and staged rehabilitation programs aligned with municipal budgets.",
+    "ar": "Rehabilitation of critical infrastructure — structural audits, road and bridge renewal, water and drainage networks, and staged rehabilitation programs aligned with municipal budgets."
+  },
+  "problem": {
+    "en": "Undiagnosed deterioration makes maintenance reactive and unsafe.",
+    "fr": "Undiagnosed deterioration makes maintenance reactive and unsafe.",
+    "ar": "Undiagnosed deterioration makes maintenance reactive and unsafe."
+  },
+  "solution": {
+    "en": "Asset inventory, qualified inspection, risk ranking, and rehabilitation plan.",
+    "fr": "Asset inventory, qualified inspection, risk ranking, and rehabilitation plan.",
+    "ar": "Asset inventory, qualified inspection, risk ranking, and rehabilitation plan."
+  },
+  "likely_buyer": {
+    "en": "Infrastructure owners",
+    "fr": "Infrastructure owners",
+    "ar": "Infrastructure owners"
+  },
+  "acceptance_boundary": {
+    "en": "engineer-accepted condition evidence and prioritized works. Site access, testing, and worker safety require formal controls.",
+    "fr": "engineer-accepted condition evidence and prioritized works. Site access, testing, and worker safety require formal controls.",
+    "ar": "engineer-accepted condition evidence and prioritized works. Site access, testing, and worker safety require formal controls."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

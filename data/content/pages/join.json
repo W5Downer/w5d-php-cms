@@ -1,0 +1,161 @@
+{
+  "id": "join",
+  "path": "/join/",
+  "title": {
+    "en": "Join W5D",
+    "fr": "Join W5D",
+    "ar": "Join W5D"
+  },
+  "description": {
+    "en": "Register interest in a service. Four short steps. No fee.",
+    "fr": "Register interest in a service. Four short steps. No fee.",
+    "ar": "Register interest in a service. Four short steps. No fee."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "join-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "Join W5D",
+        "fr": "Join W5D",
+        "ar": "Join W5D"
+      },
+      "data": {
+        "lead": {
+          "en": "Four short steps. You can withdraw at any time. Registering is not a job offer.",
+          "fr": "Four short steps. You can withdraw at any time. Registering is not a job offer.",
+          "ar": "Four short steps. You can withdraw at any time. Registering is not a job offer."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Register now",
+          "fr": "Register now",
+          "ar": "Register now"
+        },
+        "href": "/app/register/",
+        "class": "btn-peak"
+      }
+    },
+    {
+      "type": "steps",
+      "id": "join-steps",
+      "tier": "E",
+      "focus": 3,
+      "title": {
+        "en": "What happens next",
+        "fr": "What happens next",
+        "ar": "What happens next"
+      },
+      "data": {
+        "items": [
+          {
+            "title": {
+              "en": "Eligibility",
+              "fr": "Eligibility",
+              "ar": "Eligibility"
+            },
+            "text": {
+              "en": "Three quick questions about your degree, field and availability.",
+              "fr": "Three quick questions about your degree, field and availability.",
+              "ar": "Three quick questions about your degree, field and availability."
+            }
+          },
+          {
+            "title": {
+              "en": "Account",
+              "fr": "Account",
+              "ar": "Account"
+            },
+            "text": {
+              "en": "Your name and e-mail. Consent to how we store them.",
+              "fr": "Your name and e-mail. Consent to how we store them.",
+              "ar": "Your name and e-mail. Consent to how we store them."
+            }
+          },
+          {
+            "title": {
+              "en": "Identity",
+              "fr": "Identity",
+              "ar": "Identity"
+            },
+            "text": {
+              "en": "Not collected on this site yet. Opens only after legal review.",
+              "fr": "Not collected on this site yet. Opens only after legal review.",
+              "ar": "Not collected on this site yet. Opens only after legal review."
+            }
+          },
+          {
+            "title": {
+              "en": "Service",
+              "fr": "Service",
+              "ar": "Service"
+            },
+            "text": {
+              "en": "Choose the service that fits. You can reserve a place, not a job.",
+              "fr": "Choose the service that fits. You can reserve a place, not a job.",
+              "ar": "Choose the service that fits. You can reserve a place, not a job."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "join-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract.",
+          "fr": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract.",
+          "ar": "Registering records your interest. It is not a job, an assessment result, a certificate or a contract."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Read the statement",
+          "fr": "Read the statement",
+          "ar": "Read the statement"
+        },
+        "href": "/trust/statement/",
+        "class": "btn-link"
+      }
+    },
+    {
+      "type": "cta",
+      "id": "join-final",
+      "tier": "E",
+      "focus": 5,
+      "gradient": "peak",
+      "title": {
+        "en": "Ready?",
+        "fr": "Ready?",
+        "ar": "Ready?"
+      },
+      "data": {
+        "text": {
+          "en": "Takes about four minutes.",
+          "fr": "Takes about four minutes.",
+          "ar": "Takes about four minutes."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "Register now",
+          "fr": "Register now",
+          "ar": "Register now"
+        },
+        "href": "/app/register/",
+        "class": "btn-peak"
+      }
+    }
+  ]
+}

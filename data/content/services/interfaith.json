@@ -1,0 +1,44 @@
+{
+  "id": "interfaith",
+  "slug": "interfaith",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Interfaith & Dialogue Studies",
+    "fr": "Interfaith & Dialogue Studies",
+    "ar": "Interfaith & Dialogue Studies"
+  },
+  "short": {
+    "en": "Research, facilitation, publication.",
+    "fr": "Research, facilitation, publication.",
+    "ar": "Research, facilitation, publication."
+  },
+  "long": {
+    "en": "Interfaith and intercultural dialogue — comparative research, facilitated dialogue programs, curriculum development, and scholarly publication on coexistence and pluralism.",
+    "fr": "Interfaith and intercultural dialogue — comparative research, facilitated dialogue programs, curriculum development, and scholarly publication on coexistence and pluralism.",
+    "ar": "Interfaith and intercultural dialogue — comparative research, facilitated dialogue programs, curriculum development, and scholarly publication on coexistence and pluralism."
+  },
+  "problem": {
+    "en": "Mistrust and weak facilitation can intensify sensitive disagreements.",
+    "fr": "Mistrust and weak facilitation can intensify sensitive disagreements.",
+    "ar": "Mistrust and weak facilitation can intensify sensitive disagreements."
+  },
+  "solution": {
+    "en": "Consented research, neutral facilitation, and carefully reviewed findings.",
+    "fr": "Consented research, neutral facilitation, and carefully reviewed findings.",
+    "ar": "Consented research, neutral facilitation, and carefully reviewed findings."
+  },
+  "likely_buyer": {
+    "en": "NGOs/universities",
+    "fr": "NGOs/universities",
+    "ar": "NGOs/universities"
+  },
+  "acceptance_boundary": {
+    "en": "participant-safety review and agreed evaluation. Minimize religious/political data and obtain applicable legal authorization.",
+    "fr": "participant-safety review and agreed evaluation. Minimize religious/political data and obtain applicable legal authorization.",
+    "ar": "participant-safety review and agreed evaluation. Minimize religious/political data and obtain applicable legal authorization."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

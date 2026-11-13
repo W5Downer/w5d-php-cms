@@ -1,0 +1,44 @@
+{
+  "id": "disaster-construction",
+  "slug": "disaster-construction",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Disaster-Resilient Construction",
+    "fr": "Disaster-Resilient Construction",
+    "ar": "Disaster-Resilient Construction"
+  },
+  "short": {
+    "en": "Seismic, flood, climate adaptation.",
+    "fr": "Seismic, flood, climate adaptation.",
+    "ar": "Seismic, flood, climate adaptation."
+  },
+  "long": {
+    "en": "Disaster-resilient construction — seismic detailing, flood-resistant design, climate-adaptation standards, and post-disaster reconstruction frameworks.",
+    "fr": "Disaster-resilient construction — seismic detailing, flood-resistant design, climate-adaptation standards, and post-disaster reconstruction frameworks.",
+    "ar": "Disaster-resilient construction — seismic detailing, flood-resistant design, climate-adaptation standards, and post-disaster reconstruction frameworks."
+  },
+  "problem": {
+    "en": "Hazard-exposed buildings require better design and inspection.",
+    "fr": "Hazard-exposed buildings require better design and inspection.",
+    "ar": "Hazard-exposed buildings require better design and inspection."
+  },
+  "solution": {
+    "en": "Seismic/flood/climate assessment and qualified structural design review.",
+    "fr": "Seismic/flood/climate assessment and qualified structural design review.",
+    "ar": "Seismic/flood/climate assessment and qualified structural design review."
+  },
+  "likely_buyer": {
+    "en": "Owners/insurers",
+    "fr": "Owners/insurers",
+    "ar": "Owners/insurers"
+  },
+  "acceptance_boundary": {
+    "en": "licensed sign-off and code checks. State residual risk explicitly; no claim of zero future disaster loss.",
+    "fr": "licensed sign-off and code checks. State residual risk explicitly; no claim of zero future disaster loss.",
+    "ar": "licensed sign-off and code checks. State residual risk explicitly; no claim of zero future disaster loss."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

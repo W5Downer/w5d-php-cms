@@ -1,0 +1,44 @@
+{
+  "id": "medical-devices",
+  "slug": "medical-devices",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Medical Device & Diagnostics Tech",
+    "fr": "Medical Device & Diagnostics Tech",
+    "ar": "Medical Device & Diagnostics Tech"
+  },
+  "short": {
+    "en": "Installation, maintenance, training.",
+    "fr": "Installation, maintenance, training.",
+    "ar": "Installation, maintenance, training."
+  },
+  "long": {
+    "en": "Medical devices and diagnostics — installation, maintenance, and training for hospitals and laboratories with reliability SLAs.",
+    "fr": "Medical devices and diagnostics — installation, maintenance, and training for hospitals and laboratories with reliability SLAs.",
+    "ar": "Medical devices and diagnostics — installation, maintenance, and training for hospitals and laboratories with reliability SLAs."
+  },
+  "problem": {
+    "en": "Unreliable maintenance can compromise medical equipment safety.",
+    "fr": "Unreliable maintenance can compromise medical equipment safety.",
+    "ar": "Unreliable maintenance can compromise medical equipment safety."
+  },
+  "solution": {
+    "en": "Authorized installation, calibration, service records, and user training.",
+    "fr": "Authorized installation, calibration, service records, and user training.",
+    "ar": "Authorized installation, calibration, service records, and user training."
+  },
+  "likely_buyer": {
+    "en": "Hospitals/distributors",
+    "fr": "Hospitals/distributors",
+    "ar": "Hospitals/distributors"
+  },
+  "acceptance_boundary": {
+    "en": "manufacturer-conformance tests by qualified technicians. No independent diagnosis or unauthorized modification of regulated devices.",
+    "fr": "manufacturer-conformance tests by qualified technicians. No independent diagnosis or unauthorized modification of regulated devices.",
+    "ar": "manufacturer-conformance tests by qualified technicians. No independent diagnosis or unauthorized modification of regulated devices."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

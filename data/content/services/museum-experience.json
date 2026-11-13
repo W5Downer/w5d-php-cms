@@ -1,0 +1,44 @@
+{
+  "id": "museum-experience",
+  "slug": "museum-experience",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Museum Experience Engineering",
+    "fr": "Museum Experience Engineering",
+    "ar": "Museum Experience Engineering"
+  },
+  "short": {
+    "en": "Interactive exhibits, accessibility, narrative design.",
+    "fr": "Interactive exhibits, accessibility, narrative design.",
+    "ar": "Interactive exhibits, accessibility, narrative design."
+  },
+  "long": {
+    "en": "Comprehensive exhibit engineering — interactive installations, tactile and audio accessibility, immersive narrative design, and evaluation protocols that measure learning outcomes, not just footfall.",
+    "fr": "Comprehensive exhibit engineering — interactive installations, tactile and audio accessibility, immersive narrative design, and evaluation protocols that measure learning outcomes, not just footfall.",
+    "ar": "Comprehensive exhibit engineering — interactive installations, tactile and audio accessibility, immersive narrative design, and evaluation protocols that measure learning outcomes, not just footfall."
+  },
+  "problem": {
+    "en": "Inaccessible exhibits and unclear narratives exclude audiences.",
+    "fr": "Inaccessible exhibits and unclear narratives exclude audiences.",
+    "ar": "Inaccessible exhibits and unclear narratives exclude audiences."
+  },
+  "solution": {
+    "en": "Accessibility audit, narrative design, and user-tested interactive prototype.",
+    "fr": "Accessibility audit, narrative design, and user-tested interactive prototype.",
+    "ar": "Accessibility audit, narrative design, and user-tested interactive prototype."
+  },
+  "likely_buyer": {
+    "en": "Museum operators",
+    "fr": "Museum operators",
+    "ar": "Museum operators"
+  },
+  "acceptance_boundary": {
+    "en": "task completion, accessibility checks, and exhibit acceptance. Clear media rights and physical visitor safety before installation.",
+    "fr": "task completion, accessibility checks, and exhibit acceptance. Clear media rights and physical visitor safety before installation.",
+    "ar": "task completion, accessibility checks, and exhibit acceptance. Clear media rights and physical visitor safety before installation."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "cultural-diplomacy",
+  "slug": "cultural-diplomacy",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cultural Diplomacy Programs",
+    "fr": "Cultural Diplomacy Programs",
+    "ar": "Cultural Diplomacy Programs"
+  },
+  "short": {
+    "en": "Exchange design, protocol, reporting.",
+    "fr": "Exchange design, protocol, reporting.",
+    "ar": "Exchange design, protocol, reporting."
+  },
+  "long": {
+    "en": "Cultural diplomacy initiatives — cultural exchange design, protocol and event management, and impact reporting that measures relationship outcomes, not attendance.",
+    "fr": "Cultural diplomacy initiatives — cultural exchange design, protocol and event management, and impact reporting that measures relationship outcomes, not attendance.",
+    "ar": "Cultural diplomacy initiatives — cultural exchange design, protocol and event management, and impact reporting that measures relationship outcomes, not attendance."
+  },
+  "problem": {
+    "en": "Exchanges can consume budgets without clear purpose or evaluation.",
+    "fr": "Exchanges can consume budgets without clear purpose or evaluation.",
+    "ar": "Exchanges can consume budgets without clear purpose or evaluation."
+  },
+  "solution": {
+    "en": "Program design, protocol support, participant deliverables, and audited reporting.",
+    "fr": "Program design, protocol support, participant deliverables, and audited reporting.",
+    "ar": "Program design, protocol support, participant deliverables, and audited reporting."
+  },
+  "likely_buyer": {
+    "en": "Embassies/cultural institutes",
+    "fr": "Embassies/cultural institutes",
+    "ar": "Embassies/cultural institutes"
+  },
+  "acceptance_boundary": {
+    "en": "agreed outputs, consent, and financial accountability. W5D does not assume diplomatic or state representation powers.",
+    "fr": "agreed outputs, consent, and financial accountability. W5D does not assume diplomatic or state representation powers.",
+    "ar": "agreed outputs, consent, and financial accountability. W5D does not assume diplomatic or state representation powers."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

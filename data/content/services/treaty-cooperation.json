@@ -1,0 +1,44 @@
+{
+  "id": "treaty-cooperation",
+  "slug": "treaty-cooperation",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Treaty & International Cooperation",
+    "fr": "Treaty & International Cooperation",
+    "ar": "Treaty & International Cooperation"
+  },
+  "short": {
+    "en": "Negotiation support, compliance reporting.",
+    "fr": "Negotiation support, compliance reporting.",
+    "ar": "Negotiation support, compliance reporting."
+  },
+  "long": {
+    "en": "Treaty and international cooperation — negotiation support, compliance reporting, and multilateral engagement frameworks.",
+    "fr": "Treaty and international cooperation — negotiation support, compliance reporting, and multilateral engagement frameworks.",
+    "ar": "Treaty and international cooperation — negotiation support, compliance reporting, and multilateral engagement frameworks."
+  },
+  "problem": {
+    "en": "Untracked obligations and deadlines create compliance gaps.",
+    "fr": "Untracked obligations and deadlines create compliance gaps.",
+    "ar": "Untracked obligations and deadlines create compliance gaps."
+  },
+  "solution": {
+    "en": "Obligation register, legal research, and authorized negotiation support.",
+    "fr": "Obligation register, legal research, and authorized negotiation support.",
+    "ar": "Obligation register, legal research, and authorized negotiation support."
+  },
+  "likely_buyer": {
+    "en": "Ministries/institutions",
+    "fr": "Ministries/institutions",
+    "ar": "Ministries/institutions"
+  },
+  "acceptance_boundary": {
+    "en": "accurate deadlines, sources, and legal review. No authority to negotiate or bind a state without an explicit lawful mandate.",
+    "fr": "accurate deadlines, sources, and legal review. No authority to negotiate or bind a state without an explicit lawful mandate.",
+    "ar": "accurate deadlines, sources, and legal review. No authority to negotiate or bind a state without an explicit lawful mandate."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "heritage-digitisation",
+  "slug": "heritage-digitisation",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Heritage Digitisation",
+    "fr": "Heritage Digitisation",
+    "ar": "Heritage Digitisation"
+  },
+  "short": {
+    "en": "3D scanning, archival metadata, virtual museums.",
+    "fr": "3D scanning, archival metadata, virtual museums.",
+    "ar": "3D scanning, archival metadata, virtual museums."
+  },
+  "long": {
+    "en": "End-to-end heritage digitisation — field capture via photogrammetry and structured-light scanning, FAIR-compliant metadata catalogues, and immersive virtual museum experiences with ongoing digital preservation.",
+    "fr": "End-to-end heritage digitisation — field capture via photogrammetry and structured-light scanning, FAIR-compliant metadata catalogues, and immersive virtual museum experiences with ongoing digital preservation.",
+    "ar": "End-to-end heritage digitisation — field capture via photogrammetry and structured-light scanning, FAIR-compliant metadata catalogues, and immersive virtual museum experiences with ongoing digital preservation."
+  },
+  "problem": {
+    "en": "Deteriorating, inaccessible collections lose research and public value.",
+    "fr": "Deteriorating, inaccessible collections lose research and public value.",
+    "ar": "Deteriorating, inaccessible collections lose research and public value."
+  },
+  "solution": {
+    "en": "Rights-cleared photogrammetry, metadata, preservation masters, and a documented capture package.",
+    "fr": "Rights-cleared photogrammetry, metadata, preservation masters, and a documented capture package.",
+    "ar": "Rights-cleared photogrammetry, metadata, preservation masters, and a documented capture package."
+  },
+  "likely_buyer": {
+    "en": "Museums/archives",
+    "fr": "Museums/archives",
+    "ar": "Museums/archives"
+  },
+  "acceptance_boundary": {
+    "en": "custodian-approved accuracy, metadata completeness, and restore test. Permissions precede capture and publication.",
+    "fr": "custodian-approved accuracy, metadata completeness, and restore test. Permissions precede capture and publication.",
+    "ar": "custodian-approved accuracy, metadata completeness, and restore test. Permissions precede capture and publication."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

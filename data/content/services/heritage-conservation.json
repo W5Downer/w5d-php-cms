@@ -1,0 +1,44 @@
+{
+  "id": "heritage-conservation",
+  "slug": "heritage-conservation",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Heritage Conservation Science",
+    "fr": "Heritage Conservation Science",
+    "ar": "Heritage Conservation Science"
+  },
+  "short": {
+    "en": "Materials analysis, climate control, restoration.",
+    "fr": "Materials analysis, climate control, restoration.",
+    "ar": "Materials analysis, climate control, restoration."
+  },
+  "long": {
+    "en": "Scientific conservation of heritage materials — analytical materials science, environmental control engineering, restoration planning, and monitoring protocols for preventive conservation.",
+    "fr": "Scientific conservation of heritage materials — analytical materials science, environmental control engineering, restoration planning, and monitoring protocols for preventive conservation.",
+    "ar": "Scientific conservation of heritage materials — analytical materials science, environmental control engineering, restoration planning, and monitoring protocols for preventive conservation."
+  },
+  "problem": {
+    "en": "Unsuitable treatments can irreversibly damage cultural objects.",
+    "fr": "Unsuitable treatments can irreversibly damage cultural objects.",
+    "ar": "Unsuitable treatments can irreversibly damage cultural objects."
+  },
+  "solution": {
+    "en": "Condition assessment, justified materials tests, and conservation plan.",
+    "fr": "Condition assessment, justified materials tests, and conservation plan.",
+    "ar": "Condition assessment, justified materials tests, and conservation plan."
+  },
+  "likely_buyer": {
+    "en": "Custodians",
+    "fr": "Custodians",
+    "ar": "Custodians"
+  },
+  "acceptance_boundary": {
+    "en": "qualified conservator sign-off and documented test methods. Noninvasive methods first; no intervention by unqualified trainees.",
+    "fr": "qualified conservator sign-off and documented test methods. Noninvasive methods first; no intervention by unqualified trainees.",
+    "ar": "qualified conservator sign-off and documented test methods. Noninvasive methods first; no intervention by unqualified trainees."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

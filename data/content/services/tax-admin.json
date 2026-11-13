@@ -1,0 +1,44 @@
+{
+  "id": "tax-admin",
+  "slug": "tax-admin",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Tax Administration Modernisation",
+    "fr": "Tax Administration Modernisation",
+    "ar": "Tax Administration Modernisation"
+  },
+  "short": {
+    "en": "Filing, risk scoring, taxpayer services.",
+    "fr": "Filing, risk scoring, taxpayer services.",
+    "ar": "Filing, risk scoring, taxpayer services."
+  },
+  "long": {
+    "en": "Tax administration modernisation — electronic filing, risk scoring, and taxpayer services that reduce compliance cost while raising revenue integrity.",
+    "fr": "Tax administration modernisation — electronic filing, risk scoring, and taxpayer services that reduce compliance cost while raising revenue integrity.",
+    "ar": "Tax administration modernisation — electronic filing, risk scoring, and taxpayer services that reduce compliance cost while raising revenue integrity."
+  },
+  "problem": {
+    "en": "Manual filings and poor reconciliation impede accurate administration.",
+    "fr": "Manual filings and poor reconciliation impede accurate administration.",
+    "ar": "Manual filings and poor reconciliation impede accurate administration."
+  },
+  "solution": {
+    "en": "Workflow redesign, data QA, and rights-aware analytical tools.",
+    "fr": "Workflow redesign, data QA, and rights-aware analytical tools.",
+    "ar": "Workflow redesign, data QA, and rights-aware analytical tools."
+  },
+  "likely_buyer": {
+    "en": "Tax authorities",
+    "fr": "Tax authorities",
+    "ar": "Tax authorities"
+  },
+  "acceptance_boundary": {
+    "en": "reconciliation and false-positive review. Only authorized officials enforce tax; protect taxpayer confidentiality and appeal rights.",
+    "fr": "reconciliation and false-positive review. Only authorized officials enforce tax; protect taxpayer confidentiality and appeal rights.",
+    "ar": "reconciliation and false-positive review. Only authorized officials enforce tax; protect taxpayer confidentiality and appeal rights."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

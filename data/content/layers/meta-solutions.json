@@ -1,0 +1,80 @@
+{
+  "id": "meta-solutions",
+  "key": "meta-solutions",
+  "layer": "L4",
+  "ontology_layer": "meta-solutions",
+  "title": {
+    "en": "Meta solutions",
+    "fr": "Meta solutions",
+    "ar": "Meta solutions"
+  },
+  "question": {
+    "en": "Which cross-cutting instruments operate across macro works?"
+  },
+  "summary": {
+    "en": "Six instruments, each with its own evidence status."
+  },
+  "items": [
+    {
+      "slug": "dyon",
+      "title": {
+        "en": "Dyon competency records"
+      },
+      "text": {
+        "en": "Practical assessment and credential records. Enforcement is proposed, not verified: no competency levels are published yet."
+      },
+      "status": "proposed"
+    },
+    {
+      "slug": "weekly-work-engine",
+      "title": {
+        "en": "Weekly work engine"
+      },
+      "text": {
+        "en": "Directives, reports, approvals and a Friday lock. Designed; not yet operating for any paid team."
+      },
+      "status": "proposed"
+    },
+    {
+      "slug": "split-db-rollup",
+      "title": {
+        "en": "Rollup-only dashboards"
+      },
+      "text": {
+        "en": "Dashboards read rollups_daily, never raw rows. Implemented in this release (bin/rollup.php)."
+      },
+      "status": "implemented"
+    },
+    {
+      "slug": "sampling",
+      "title": {
+        "en": "Fixed 5% independent sample"
+      },
+      "text": {
+        "en": "Five percent of submitted weekly reports are re-reviewed independently. Fixed by the licence doctrine; not configurable in the UI."
+      },
+      "status": "implemented"
+    },
+    {
+      "slug": "kernid",
+      "title": {
+        "en": "KernID identity kernel"
+      },
+      "text": {
+        "en": "Identity and credential verification layer. Concept only; no audit or implementation is published."
+      },
+      "status": "concept"
+    },
+    {
+      "slug": "selfai",
+      "title": {
+        "en": "SelfAI assistance"
+      },
+      "text": {
+        "en": "Internal documentation and analysis assistance with human review. Concept only; no autonomous credential award."
+      },
+      "status": "concept"
+    }
+  ],
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

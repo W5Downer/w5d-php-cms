@@ -1,0 +1,23 @@
+{
+  "id": "w5d-uuid",
+  "slug": "w5d-uuid",
+  "status": "research-preview",
+  "evidence": "E1",
+  "meta_solution": null,
+  "title": {
+    "en": "W5D UUID",
+    "fr": "W5D UUID",
+    "ar": "W5D UUID"
+  },
+  "short": {
+    "en": "A research direction described in a founder declaration. No specification is published."
+  },
+  "summary": {
+    "en": "A research direction described in a founder declaration. No specification is published."
+  },
+  "evidence_note": {
+    "en": "No specification, reference implementation or storage and transfer measurements are published."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

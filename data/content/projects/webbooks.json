@@ -1,0 +1,26 @@
+{
+  "id": "webbooks",
+  "slug": "webbooks",
+  "status": "draft",
+  "evidence": "E1",
+  "meta_solution": "publication",
+  "title": {
+    "en": "WebBooks",
+    "fr": "WebBooks",
+    "ar": "WebBooks"
+  },
+  "short": {
+    "en": "A reader page exists in the repository. No public reader URL is confirmed."
+  },
+  "summary": {
+    "en": "A reader page exists in the repository. No public reader URL is confirmed."
+  },
+  "evidence_note": {
+    "en": "No confirmed public reader URL. No catalogue, licence or distribution arrangement is published."
+  },
+  "services_consumed": [
+    "publishing",
+    "digital-humanities"
+  ],
+  "_source": "legacy registry, git 16a1226"
+}

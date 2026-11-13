@@ -1,0 +1,44 @@
+{
+  "id": "energy-retrofits",
+  "slug": "energy-retrofits",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Energy-Efficient Retrofits",
+    "fr": "Energy-Efficient Retrofits",
+    "ar": "Energy-Efficient Retrofits"
+  },
+  "short": {
+    "en": "Insulation, HVAC, solar integration.",
+    "fr": "Insulation, HVAC, solar integration.",
+    "ar": "Insulation, HVAC, solar integration."
+  },
+  "long": {
+    "en": "Energy efficiency retrofits for buildings — envelope insulation, HVAC replacement, solar PV integration, and measured performance contracts against baseline consumption.",
+    "fr": "Energy efficiency retrofits for buildings — envelope insulation, HVAC replacement, solar PV integration, and measured performance contracts against baseline consumption.",
+    "ar": "Energy efficiency retrofits for buildings — envelope insulation, HVAC replacement, solar PV integration, and measured performance contracts against baseline consumption."
+  },
+  "problem": {
+    "en": "Building inefficiency creates high operating costs and discomfort.",
+    "fr": "Building inefficiency creates high operating costs and discomfort.",
+    "ar": "Building inefficiency creates high operating costs and discomfort."
+  },
+  "solution": {
+    "en": "Metered baseline, envelope/HVAC retrofit plan, and measurement/verification protocol.",
+    "fr": "Metered baseline, envelope/HVAC retrofit plan, and measurement/verification protocol.",
+    "ar": "Metered baseline, envelope/HVAC retrofit plan, and measurement/verification protocol."
+  },
+  "likely_buyer": {
+    "en": "Property owners",
+    "fr": "Property owners",
+    "ar": "Property owners"
+  },
+  "acceptance_boundary": {
+    "en": "weather-adjusted performance verification and qualified installation acceptance. Savings depend on occupancy, weather, operation, and agreed assumptions.",
+    "fr": "weather-adjusted performance verification and qualified installation acceptance. Savings depend on occupancy, weather, operation, and agreed assumptions.",
+    "ar": "weather-adjusted performance verification and qualified installation acceptance. Savings depend on occupancy, weather, operation, and agreed assumptions."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

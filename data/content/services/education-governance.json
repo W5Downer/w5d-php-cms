@@ -1,0 +1,44 @@
+{
+  "id": "education-governance",
+  "slug": "education-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Education Governance",
+    "fr": "Education Governance",
+    "ar": "Education Governance"
+  },
+  "short": {
+    "en": "School mapping, teacher deployment, QA.",
+    "fr": "School mapping, teacher deployment, QA.",
+    "ar": "School mapping, teacher deployment, QA."
+  },
+  "long": {
+    "en": "Education governance — school mapping, teacher deployment optimization, and quality assurance frameworks for ministries of education.",
+    "fr": "Education governance — school mapping, teacher deployment optimization, and quality assurance frameworks for ministries of education.",
+    "ar": "Education governance — school mapping, teacher deployment optimization, and quality assurance frameworks for ministries of education."
+  },
+  "problem": {
+    "en": "Unreliable school data and uneven resources impede equitable access.",
+    "fr": "Unreliable school data and uneven resources impede equitable access.",
+    "ar": "Unreliable school data and uneven resources impede equitable access."
+  },
+  "solution": {
+    "en": "Verified school mapping and reviewed staffing/resource-allocation scenarios.",
+    "fr": "Verified school mapping and reviewed staffing/resource-allocation scenarios.",
+    "ar": "Verified school mapping and reviewed staffing/resource-allocation scenarios."
+  },
+  "likely_buyer": {
+    "en": "Education bodies",
+    "fr": "Education bodies",
+    "ar": "Education bodies"
+  },
+  "acceptance_boundary": {
+    "en": "source validation and fairness review. Authorities make allocation decisions; avoid black-box pupil tracking and unnecessary child data.",
+    "fr": "source validation and fairness review. Authorities make allocation decisions; avoid black-box pupil tracking and unnecessary child data.",
+    "ar": "source validation and fairness review. Authorities make allocation decisions; avoid black-box pupil tracking and unnecessary child data."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

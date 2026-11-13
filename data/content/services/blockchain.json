@@ -1,0 +1,44 @@
+{
+  "id": "blockchain",
+  "slug": "blockchain",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Blockchain & Distributed Systems",
+    "fr": "Blockchain & Distributed Systems",
+    "ar": "Blockchain & Distributed Systems"
+  },
+  "short": {
+    "en": "Ledgers, smart contracts, audit.",
+    "fr": "Ledgers, smart contracts, audit.",
+    "ar": "Ledgers, smart contracts, audit."
+  },
+  "long": {
+    "en": "Blockchain and distributed systems — ledgers, smart contracts, and independent security audits for distributed applications.",
+    "fr": "Blockchain and distributed systems — ledgers, smart contracts, and independent security audits for distributed applications.",
+    "ar": "Blockchain and distributed systems — ledgers, smart contracts, and independent security audits for distributed applications."
+  },
+  "problem": {
+    "en": "Multi-party records may conflict, but a ledger is not always needed.",
+    "fr": "Multi-party records may conflict, but a ledger is not always needed.",
+    "ar": "Multi-party records may conflict, but a ledger is not always needed."
+  },
+  "solution": {
+    "en": "Necessity assessment; justified permissioned-ledger prototype and security review.",
+    "fr": "Necessity assessment; justified permissioned-ledger prototype and security review.",
+    "ar": "Necessity assessment; justified permissioned-ledger prototype and security review."
+  },
+  "likely_buyer": {
+    "en": "Consortia",
+    "fr": "Consortia",
+    "ar": "Consortia"
+  },
+  "acceptance_boundary": {
+    "en": "independently tested access, consistency, and audit requirements. Prefer simpler databases where adequate; no token-investment or return promises.",
+    "fr": "independently tested access, consistency, and audit requirements. Prefer simpler databases where adequate; no token-investment or return promises.",
+    "ar": "independently tested access, consistency, and audit requirements. Prefer simpler databases where adequate; no token-investment or return promises."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urban-planning",
+  "slug": "urban-planning",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Urban Planning & Zoning",
+    "fr": "Urban Planning & Zoning",
+    "ar": "Urban Planning & Zoning"
+  },
+  "short": {
+    "en": "Master plans, GIS, participatory design.",
+    "fr": "Master plans, GIS, participatory design.",
+    "ar": "Master plans, GIS, participatory design."
+  },
+  "long": {
+    "en": "Comprehensive urban planning — master plan drafting, GIS-based zoning analysis, participatory design methods, and statutory plan review for municipalities and regional authorities.",
+    "fr": "Comprehensive urban planning — master plan drafting, GIS-based zoning analysis, participatory design methods, and statutory plan review for municipalities and regional authorities.",
+    "ar": "Comprehensive urban planning — master plan drafting, GIS-based zoning analysis, participatory design methods, and statutory plan review for municipalities and regional authorities."
+  },
+  "problem": {
+    "en": "Fragmented GIS and uncoordinated growth weaken land-use decisions.",
+    "fr": "Fragmented GIS and uncoordinated growth weaken land-use decisions.",
+    "ar": "Fragmented GIS and uncoordinated growth weaken land-use decisions."
+  },
+  "solution": {
+    "en": "Validated GIS, participatory scenarios, and planning-options package.",
+    "fr": "Validated GIS, participatory scenarios, and planning-options package.",
+    "ar": "Validated GIS, participatory scenarios, and planning-options package."
+  },
+  "likely_buyer": {
+    "en": "Municipalities",
+    "fr": "Municipalities",
+    "ar": "Municipalities"
+  },
+  "acceptance_boundary": {
+    "en": "checked layers and consultation records. Draft zoning remains advisory until the competent authority approves it.",
+    "fr": "checked layers and consultation records. Draft zoning remains advisory until the competent authority approves it.",
+    "ar": "checked layers and consultation records. Draft zoning remains advisory until the competent authority approves it."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

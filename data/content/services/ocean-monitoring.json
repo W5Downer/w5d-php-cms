@@ -1,0 +1,44 @@
+{
+  "id": "ocean-monitoring",
+  "slug": "ocean-monitoring",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Ocean & Atmospheric Monitoring",
+    "fr": "Ocean & Atmospheric Monitoring",
+    "ar": "Ocean & Atmospheric Monitoring"
+  },
+  "short": {
+    "en": "Buoys, remote sensing, forecasting.",
+    "fr": "Buoys, remote sensing, forecasting.",
+    "ar": "Buoys, remote sensing, forecasting."
+  },
+  "long": {
+    "en": "Ocean and atmospheric monitoring — buoy networks, satellite remote sensing, and forecasting systems feeding national meteorological services.",
+    "fr": "Ocean and atmospheric monitoring — buoy networks, satellite remote sensing, and forecasting systems feeding national meteorological services.",
+    "ar": "Ocean and atmospheric monitoring — buoy networks, satellite remote sensing, and forecasting systems feeding national meteorological services."
+  },
+  "problem": {
+    "en": "Observation gaps weaken forecasting and maritime decisions.",
+    "fr": "Observation gaps weaken forecasting and maritime decisions.",
+    "ar": "Observation gaps weaken forecasting and maritime decisions."
+  },
+  "solution": {
+    "en": "Instrument deployment support, continuous monitoring, calibration, and data QA.",
+    "fr": "Instrument deployment support, continuous monitoring, calibration, and data QA.",
+    "ar": "Instrument deployment support, continuous monitoring, calibration, and data QA."
+  },
+  "likely_buyer": {
+    "en": "Ports/agencies",
+    "fr": "Ports/agencies",
+    "ar": "Ports/agencies"
+  },
+  "acceptance_boundary": {
+    "en": "uptime and measurement-quality acceptance. Distinguish continuous instrumentation from service 057 ecological survey work.",
+    "fr": "uptime and measurement-quality acceptance. Distinguish continuous instrumentation from service 057 ecological survey work.",
+    "ar": "uptime and measurement-quality acceptance. Distinguish continuous instrumentation from service 057 ecological survey work."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

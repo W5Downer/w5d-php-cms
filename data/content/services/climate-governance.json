@@ -1,0 +1,44 @@
+{
+  "id": "climate-governance",
+  "slug": "climate-governance",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Climate Governance & NDCs",
+    "fr": "Climate Governance & NDCs",
+    "ar": "Climate Governance & NDCs"
+  },
+  "short": {
+    "en": "MRV, policy alignment, reporting.",
+    "fr": "MRV, policy alignment, reporting.",
+    "ar": "MRV, policy alignment, reporting."
+  },
+  "long": {
+    "en": "Climate governance — measurement, reporting, and verification (MRV), policy alignment, and NDC reporting for national climate commitments.",
+    "fr": "Climate governance — measurement, reporting, and verification (MRV), policy alignment, and NDC reporting for national climate commitments.",
+    "ar": "Climate governance — measurement, reporting, and verification (MRV), policy alignment, and NDC reporting for national climate commitments."
+  },
+  "problem": {
+    "en": "Commitments lack transparent measurement and policy alignment.",
+    "fr": "Commitments lack transparent measurement and policy alignment.",
+    "ar": "Commitments lack transparent measurement and policy alignment."
+  },
+  "solution": {
+    "en": "MRV inventories, evidence registers, and policy/reporting support.",
+    "fr": "MRV inventories, evidence registers, and policy/reporting support.",
+    "ar": "MRV inventories, evidence registers, and policy/reporting support."
+  },
+  "likely_buyer": {
+    "en": "Ministries/enterprises",
+    "fr": "Ministries/enterprises",
+    "ar": "Ministries/enterprises"
+  },
+  "acceptance_boundary": {
+    "en": "traceable emissions factors and reviewed inventories. Do not issue unverified carbon credits or claim policy authority.",
+    "fr": "traceable emissions factors and reviewed inventories. Do not issue unverified carbon credits or claim policy authority.",
+    "ar": "traceable emissions factors and reviewed inventories. Do not issue unverified carbon credits or claim policy authority."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

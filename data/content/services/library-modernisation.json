@@ -1,0 +1,44 @@
+{
+  "id": "library-modernisation",
+  "slug": "library-modernisation",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Library Modernisation",
+    "fr": "Library Modernisation",
+    "ar": "Library Modernisation"
+  },
+  "short": {
+    "en": "Cataloguing, discovery systems, MARC/RDA.",
+    "fr": "Cataloguing, discovery systems, MARC/RDA.",
+    "ar": "Cataloguing, discovery systems, MARC/RDA."
+  },
+  "long": {
+    "en": "Library modernisation programs — MARC/RDA cataloguing, next-generation discovery systems, digital repository integration, and staff training on emerging library standards.",
+    "fr": "Library modernisation programs — MARC/RDA cataloguing, next-generation discovery systems, digital repository integration, and staff training on emerging library standards.",
+    "ar": "Library modernisation programs — MARC/RDA cataloguing, next-generation discovery systems, digital repository integration, and staff training on emerging library standards."
+  },
+  "problem": {
+    "en": "Inconsistent catalogs make collections difficult to discover.",
+    "fr": "Inconsistent catalogs make collections difficult to discover.",
+    "ar": "Inconsistent catalogs make collections difficult to discover."
+  },
+  "solution": {
+    "en": "MARC/RDA cleaning, tested catalog migration, and accessible discovery interface.",
+    "fr": "MARC/RDA cleaning, tested catalog migration, and accessible discovery interface.",
+    "ar": "MARC/RDA cleaning, tested catalog migration, and accessible discovery interface."
+  },
+  "likely_buyer": {
+    "en": "Libraries",
+    "fr": "Libraries",
+    "ar": "Libraries"
+  },
+  "acceptance_boundary": {
+    "en": "record-match accuracy, successful searches, and rollback/backup tests. Preserve provenance and licensed bibliographic data restrictions.",
+    "fr": "record-match accuracy, successful searches, and rollback/backup tests. Preserve provenance and licensed bibliographic data restrictions.",
+    "ar": "record-match accuracy, successful searches, and rollback/backup tests. Preserve provenance and licensed bibliographic data restrictions."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

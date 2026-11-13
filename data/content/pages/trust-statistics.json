@@ -1,0 +1,83 @@
+{
+  "id": "trust-statistics",
+  "path": "/trust/statistics/",
+  "title": {
+    "en": "Country statistics",
+    "fr": "Country statistics",
+    "ar": "Country statistics"
+  },
+  "description": {
+    "en": "Advanced-education unemployment, by country, with observation years.",
+    "fr": "Advanced-education unemployment, by country, with observation years.",
+    "ar": "Advanced-education unemployment, by country, with observation years."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "tst-hero",
+      "tier": "X",
+      "focus": 5,
+      "title": {
+        "en": "Country statistics",
+        "fr": "Country statistics",
+        "ar": "Country statistics"
+      },
+      "data": {
+        "lead": {
+          "en": "Observed unemployment among the labour force with advanced education. These are observations from different years and are not a current ranking or a headcount of people W5D can hire.",
+          "fr": "Observed unemployment among the labour force with advanced education. These are observations from different years and are not a current ranking or a headcount of people W5D can hire.",
+          "ar": "Observed unemployment among the labour force with advanced education. These are observations from different years and are not a current ranking or a headcount of people W5D can hire."
+        }
+      }
+    },
+    {
+      "type": "notice",
+      "id": "tst-caveat",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Read before using",
+        "fr": "Read before using",
+        "ar": "Read before using"
+      },
+      "data": {
+        "text": {
+          "en": "Observation years range from 2000 to 2025. Countries missing from the table are not observed here, and are not zero.",
+          "fr": "Observation years range from 2000 to 2025. Countries missing from the table are not observed here, and are not zero.",
+          "ar": "Observation years range from 2000 to 2025. Countries missing from the table are not observed here, and are not zero."
+        }
+      }
+    },
+    {
+      "type": "table",
+      "id": "stat-table",
+      "tier": "X",
+      "focus": 2,
+      "title": {
+        "en": "Observations by country",
+        "fr": "Observations by country",
+        "ar": "Observations by country"
+      },
+      "data": {
+        "head": [
+          {
+            "en": "Country",
+            "fr": "Country",
+            "ar": "Country"
+          },
+          {
+            "en": "Observation year",
+            "fr": "Observation year",
+            "ar": "Observation year"
+          },
+          {
+            "en": "Rate (%)",
+            "fr": "Rate (%)",
+            "ar": "Rate (%)"
+          }
+        ],
+        "rows": []
+      }
+    }
+  ]
+}

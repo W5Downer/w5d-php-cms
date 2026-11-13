@@ -1,0 +1,44 @@
+{
+  "id": "decentralisation",
+  "slug": "decentralisation",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Decentralisation & Local Finance",
+    "fr": "Decentralisation & Local Finance",
+    "ar": "Decentralisation & Local Finance"
+  },
+  "short": {
+    "en": "Own-source revenue, transfers, capacity.",
+    "fr": "Own-source revenue, transfers, capacity.",
+    "ar": "Own-source revenue, transfers, capacity."
+  },
+  "long": {
+    "en": "Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments.",
+    "fr": "Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments.",
+    "ar": "Decentralisation and local finance — own-source revenue design, intergovernmental transfers, and local capacity building for subnational governments."
+  },
+  "problem": {
+    "en": "Unfunded mandates and opaque transfers impair local delivery.",
+    "fr": "Unfunded mandates and opaque transfers impair local delivery.",
+    "ar": "Unfunded mandates and opaque transfers impair local delivery."
+  },
+  "solution": {
+    "en": "Revenue/transfer scenarios, fiscal-capacity analysis, and financing options.",
+    "fr": "Revenue/transfer scenarios, fiscal-capacity analysis, and financing options.",
+    "ar": "Revenue/transfer scenarios, fiscal-capacity analysis, and financing options."
+  },
+  "likely_buyer": {
+    "en": "Local bodies/donors",
+    "fr": "Local bodies/donors",
+    "ar": "Local bodies/donors"
+  },
+  "acceptance_boundary": {
+    "en": "transparent assumptions and balanced funding scenarios. W5D cannot create taxation authority or promise transfers.",
+    "fr": "transparent assumptions and balanced funding scenarios. W5D cannot create taxation authority or promise transfers.",
+    "ar": "transparent assumptions and balanced funding scenarios. W5D cannot create taxation authority or promise transfers."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

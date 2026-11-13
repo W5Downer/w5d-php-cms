@@ -1,0 +1,44 @@
+{
+  "id": "public-health",
+  "slug": "public-health",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Public Health Surveillance",
+    "fr": "Public Health Surveillance",
+    "ar": "Public Health Surveillance"
+  },
+  "short": {
+    "en": "Epidemiology, dashboards, outbreak response.",
+    "fr": "Epidemiology, dashboards, outbreak response.",
+    "ar": "Epidemiology, dashboards, outbreak response."
+  },
+  "long": {
+    "en": "Public health surveillance — epidemiological analysis, real-time dashboards, outbreak response protocols, and integrated lab-and-clinic data pipelines.",
+    "fr": "Public health surveillance — epidemiological analysis, real-time dashboards, outbreak response protocols, and integrated lab-and-clinic data pipelines.",
+    "ar": "Public health surveillance — epidemiological analysis, real-time dashboards, outbreak response protocols, and integrated lab-and-clinic data pipelines."
+  },
+  "problem": {
+    "en": "Poor data and slow reporting delay legitimate public-health action.",
+    "fr": "Poor data and slow reporting delay legitimate public-health action.",
+    "ar": "Poor data and slow reporting delay legitimate public-health action."
+  },
+  "solution": {
+    "en": "Authorized, privacy-preserving surveillance data QA, dashboards, and validated alerts.",
+    "fr": "Authorized, privacy-preserving surveillance data QA, dashboards, and validated alerts.",
+    "ar": "Authorized, privacy-preserving surveillance data QA, dashboards, and validated alerts."
+  },
+  "likely_buyer": {
+    "en": "Health authorities",
+    "fr": "Health authorities",
+    "ar": "Health authorities"
+  },
+  "acceptance_boundary": {
+    "en": "completeness, timeliness, and alert validation. Authorities retain response decisions; restrict identifiable health data and publish methodological limits.",
+    "fr": "completeness, timeliness, and alert validation. Authorities retain response decisions; restrict identifiable health data and publish methodological limits.",
+    "ar": "completeness, timeliness, and alert validation. Authorities retain response decisions; restrict identifiable health data and publish methodological limits."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

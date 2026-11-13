@@ -1,0 +1,44 @@
+{
+  "id": "clinical-research",
+  "slug": "clinical-research",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Clinical Research Coordination",
+    "fr": "Clinical Research Coordination",
+    "ar": "Clinical Research Coordination"
+  },
+  "short": {
+    "en": "Protocol design, ethics, site monitoring.",
+    "fr": "Protocol design, ethics, site monitoring.",
+    "ar": "Protocol design, ethics, site monitoring."
+  },
+  "long": {
+    "en": "Clinical research coordination — protocol design, ethics submissions, site monitoring, and Good Clinical Practice compliance for academic and industry sponsors.",
+    "fr": "Clinical research coordination — protocol design, ethics submissions, site monitoring, and Good Clinical Practice compliance for academic and industry sponsors.",
+    "ar": "Clinical research coordination — protocol design, ethics submissions, site monitoring, and Good Clinical Practice compliance for academic and industry sponsors."
+  },
+  "problem": {
+    "en": "Protocol deviations and weak coordination threaten study validity and participants.",
+    "fr": "Protocol deviations and weak coordination threaten study validity and participants.",
+    "ar": "Protocol deviations and weak coordination threaten study validity and participants."
+  },
+  "solution": {
+    "en": "Approved protocols, site coordination, ethics documentation, and monitoring support.",
+    "fr": "Approved protocols, site coordination, ethics documentation, and monitoring support.",
+    "ar": "Approved protocols, site coordination, ethics documentation, and monitoring support."
+  },
+  "likely_buyer": {
+    "en": "Sponsors/authorized sites",
+    "fr": "Sponsors/authorized sites",
+    "ar": "Sponsors/authorized sites"
+  },
+  "acceptance_boundary": {
+    "en": "ethics approval and deviation tracking. Work under approved responsibilities; no unlicensed clinical practice or bypass of research oversight.",
+    "fr": "ethics approval and deviation tracking. Work under approved responsibilities; no unlicensed clinical practice or bypass of research oversight.",
+    "ar": "ethics approval and deviation tracking. Work under approved responsibilities; no unlicensed clinical practice or bypass of research oversight."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

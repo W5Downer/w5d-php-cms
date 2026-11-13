@@ -1,0 +1,44 @@
+{
+  "id": "cultural-tourism",
+  "slug": "cultural-tourism",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cultural Tourism Design",
+    "fr": "Cultural Tourism Design",
+    "ar": "Cultural Tourism Design"
+  },
+  "short": {
+    "en": "Interpretive trails, multilingual guides, heritage routes.",
+    "fr": "Interpretive trails, multilingual guides, heritage routes.",
+    "ar": "Interpretive trails, multilingual guides, heritage routes."
+  },
+  "long": {
+    "en": "Design and delivery of cultural tourism products — interpretive signage, multilingual audio guides, curated heritage routes, and local partnership models that respect community consent.",
+    "fr": "Design and delivery of cultural tourism products — interpretive signage, multilingual audio guides, curated heritage routes, and local partnership models that respect community consent.",
+    "ar": "Design and delivery of cultural tourism products — interpretive signage, multilingual audio guides, curated heritage routes, and local partnership models that respect community consent."
+  },
+  "problem": {
+    "en": "Poor interpretation disconnects visitors from local cultural value.",
+    "fr": "Poor interpretation disconnects visitors from local cultural value.",
+    "ar": "Poor interpretation disconnects visitors from local cultural value."
+  },
+  "solution": {
+    "en": "Historically reviewed multilingual routes, guides, and tested interpretive materials.",
+    "fr": "Historically reviewed multilingual routes, guides, and tested interpretive materials.",
+    "ar": "Historically reviewed multilingual routes, guides, and tested interpretive materials."
+  },
+  "likely_buyer": {
+    "en": "Destinations/operators",
+    "fr": "Destinations/operators",
+    "ar": "Destinations/operators"
+  },
+  "acceptance_boundary": {
+    "en": "route usability and verified claims. Access permissions and accessibility checked; no visitor-volume or revenue guarantee.",
+    "fr": "route usability and verified claims. Access permissions and accessibility checked; no visitor-volume or revenue guarantee.",
+    "ar": "route usability and verified claims. Access permissions and accessibility checked; no visitor-volume or revenue guarantee."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

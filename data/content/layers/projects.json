@@ -1,0 +1,18 @@
+{
+  "id": "projects",
+  "key": "projects",
+  "layer": "L5",
+  "ontology_layer": "projects",
+  "title": {
+    "en": "Projects",
+    "fr": "Projects",
+    "ar": "Projects"
+  },
+  "question": {
+    "en": "What is being built, for whom, and at what evidence level?"
+  },
+  "summary": {
+    "en": "The 25-entry project register. A register entry is not a funded business. Each carries its recorded status and evidence level."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

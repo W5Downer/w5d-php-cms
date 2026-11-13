@@ -1,0 +1,44 @@
+{
+  "id": "biotech",
+  "slug": "biotech",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Biotech & Lab Automation",
+    "fr": "Biotech & Lab Automation",
+    "ar": "Biotech & Lab Automation"
+  },
+  "short": {
+    "en": "Bioreactors, LIMS, quality systems.",
+    "fr": "Bioreactors, LIMS, quality systems.",
+    "ar": "Bioreactors, LIMS, quality systems."
+  },
+  "long": {
+    "en": "Biotech and lab automation — bioreactors, LIMS, and quality-management systems for life-science organizations.",
+    "fr": "Biotech and lab automation — bioreactors, LIMS, and quality-management systems for life-science organizations.",
+    "ar": "Biotech and lab automation — bioreactors, LIMS, and quality-management systems for life-science organizations."
+  },
+  "problem": {
+    "en": "Manual handling increases traceability errors and contamination risk.",
+    "fr": "Manual handling increases traceability errors and contamination risk.",
+    "ar": "Manual handling increases traceability errors and contamination risk."
+  },
+  "solution": {
+    "en": "Validated LIMS, automation integration, and quality-system documentation.",
+    "fr": "Validated LIMS, automation integration, and quality-system documentation.",
+    "ar": "Validated LIMS, automation integration, and quality-system documentation."
+  },
+  "likely_buyer": {
+    "en": "Laboratories/biomanufacturers",
+    "fr": "Laboratories/biomanufacturers",
+    "ar": "Laboratories/biomanufacturers"
+  },
+  "acceptance_boundary": {
+    "en": "validation and traceability acceptance. Biosafety and authorized QA release are mandatory; engineering changes cannot bypass them.",
+    "fr": "validation and traceability acceptance. Biosafety and authorized QA release are mandatory; engineering changes cannot bypass them.",
+    "ar": "validation and traceability acceptance. Biosafety and authorized QA release are mandatory; engineering changes cannot bypass them."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

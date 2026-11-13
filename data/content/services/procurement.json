@@ -1,0 +1,44 @@
+{
+  "id": "procurement",
+  "slug": "procurement",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Construction Procurement",
+    "fr": "Construction Procurement",
+    "ar": "Construction Procurement"
+  },
+  "short": {
+    "en": "Tendering, contract administration.",
+    "fr": "Tendering, contract administration.",
+    "ar": "Tendering, contract administration."
+  },
+  "long": {
+    "en": "Construction procurement — tender documentation, contract administration under FIDIC and national forms, and dispute avoidance through structured contract management.",
+    "fr": "Construction procurement — tender documentation, contract administration under FIDIC and national forms, and dispute avoidance through structured contract management.",
+    "ar": "Construction procurement — tender documentation, contract administration under FIDIC and national forms, and dispute avoidance through structured contract management."
+  },
+  "problem": {
+    "en": "Scope gaps and inconsistent bids create claims and overruns.",
+    "fr": "Scope gaps and inconsistent bids create claims and overruns.",
+    "ar": "Scope gaps and inconsistent bids create claims and overruns."
+  },
+  "solution": {
+    "en": "Project tender documents, quantities, bid comparison, and contract administration.",
+    "fr": "Project tender documents, quantities, bid comparison, and contract administration.",
+    "ar": "Project tender documents, quantities, bid comparison, and contract administration."
+  },
+  "likely_buyer": {
+    "en": "Asset owners",
+    "fr": "Asset owners",
+    "ar": "Asset owners"
+  },
+  "acceptance_boundary": {
+    "en": "comparable bids and accepted change control. Manage conflicts; distinguish project procurement from service 082 public-system reform.",
+    "fr": "comparable bids and accepted change control. Manage conflicts; distinguish project procurement from service 082 public-system reform.",
+    "ar": "comparable bids and accepted change control. Manage conflicts; distinguish project procurement from service 082 public-system reform."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

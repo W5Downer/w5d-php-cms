@@ -1,0 +1,27 @@
+{
+  "id": "kernid",
+  "slug": "kernid",
+  "status": "concept",
+  "evidence": "E1",
+  "meta_solution": "kernid",
+  "title": {
+    "en": "KernID",
+    "fr": "KernID",
+    "ar": "KernID"
+  },
+  "short": {
+    "en": "One sign-in, with profiles, events and transactions in a vault the user controls."
+  },
+  "summary": {
+    "en": "One sign-in, with profiles, events and transactions in a vault the user controls."
+  },
+  "evidence_note": {
+    "en": "No specification, threat model, audit or implementation is published. It has not been independently audited."
+  },
+  "services_consumed": [
+    "digital-identity",
+    "data-protection",
+    "cultural-data"
+  ],
+  "_source": "legacy registry, git 16a1226"
+}

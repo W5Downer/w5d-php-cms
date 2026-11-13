@@ -1,0 +1,44 @@
+{
+  "id": "networking",
+  "slug": "networking",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Network Engineering",
+    "fr": "Network Engineering",
+    "ar": "Network Engineering"
+  },
+  "short": {
+    "en": "Design, rollout, monitoring.",
+    "fr": "Design, rollout, monitoring.",
+    "ar": "Design, rollout, monitoring."
+  },
+  "long": {
+    "en": "Network engineering — design, rollout, and monitoring of enterprise and carrier-grade networks.",
+    "fr": "Network engineering — design, rollout, and monitoring of enterprise and carrier-grade networks.",
+    "ar": "Network engineering — design, rollout, and monitoring of enterprise and carrier-grade networks."
+  },
+  "problem": {
+    "en": "Unreliable or insecure networks interrupt service delivery.",
+    "fr": "Unreliable or insecure networks interrupt service delivery.",
+    "ar": "Unreliable or insecure networks interrupt service delivery."
+  },
+  "solution": {
+    "en": "Qualified design, segmentation, deployment, and monitoring.",
+    "fr": "Qualified design, segmentation, deployment, and monitoring.",
+    "ar": "Qualified design, segmentation, deployment, and monitoring."
+  },
+  "likely_buyer": {
+    "en": "Enterprises/operators",
+    "fr": "Enterprises/operators",
+    "ar": "Enterprises/operators"
+  },
+  "acceptance_boundary": {
+    "en": "throughput, coverage, and failover tests. Respect installation qualifications, operator permissions, and lawful communications access.",
+    "fr": "throughput, coverage, and failover tests. Respect installation qualifications, operator permissions, and lawful communications access.",
+    "ar": "throughput, coverage, and failover tests. Respect installation qualifications, operator permissions, and lawful communications access."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

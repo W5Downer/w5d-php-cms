@@ -1,0 +1,23 @@
+{
+  "id": "meridian",
+  "slug": "meridian",
+  "status": "specification",
+  "evidence": "E1",
+  "meta_solution": null,
+  "title": {
+    "en": "Meridian",
+    "fr": "Meridian",
+    "ar": "Meridian"
+  },
+  "short": {
+    "en": "A specification. The repository is not public."
+  },
+  "summary": {
+    "en": "A specification. The repository is not public."
+  },
+  "evidence_note": {
+    "en": "No public repository, implementation or audit."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

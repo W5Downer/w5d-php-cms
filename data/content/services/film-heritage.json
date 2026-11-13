@@ -1,0 +1,44 @@
+{
+  "id": "film-heritage",
+  "slug": "film-heritage",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Film & Audiovisual Heritage",
+    "fr": "Film & Audiovisual Heritage",
+    "ar": "Film & Audiovisual Heritage"
+  },
+  "short": {
+    "en": "Restoration, subtitling, archival streaming.",
+    "fr": "Restoration, subtitling, archival streaming.",
+    "ar": "Restoration, subtitling, archival streaming."
+  },
+  "long": {
+    "en": "Audiovisual heritage services — film and video restoration, frame-accurate subtitling, archival streaming infrastructure, and rights management for heritage footage.",
+    "fr": "Audiovisual heritage services — film and video restoration, frame-accurate subtitling, archival streaming infrastructure, and rights management for heritage footage.",
+    "ar": "Audiovisual heritage services — film and video restoration, frame-accurate subtitling, archival streaming infrastructure, and rights management for heritage footage."
+  },
+  "problem": {
+    "en": "Obsolete formats and unclear rights threaten audiovisual collections.",
+    "fr": "Obsolete formats and unclear rights threaten audiovisual collections.",
+    "ar": "Obsolete formats and unclear rights threaten audiovisual collections."
+  },
+  "solution": {
+    "en": "Inventory, restoration workflow, preservation masters, subtitles, and licensed access copies.",
+    "fr": "Inventory, restoration workflow, preservation masters, subtitles, and licensed access copies.",
+    "ar": "Inventory, restoration workflow, preservation masters, subtitles, and licensed access copies."
+  },
+  "likely_buyer": {
+    "en": "Film archives/broadcasters",
+    "fr": "Film archives/broadcasters",
+    "ar": "Film archives/broadcasters"
+  },
+  "acceptance_boundary": {
+    "en": "audiovisual QC, checksums, format validation, and documented rights. Do not assume possession permits streaming.",
+    "fr": "audiovisual QC, checksums, format validation, and documented rights. Do not assume possession permits streaming.",
+    "ar": "audiovisual QC, checksums, format validation, and documented rights. Do not assume possession permits streaming."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

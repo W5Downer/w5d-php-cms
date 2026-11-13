@@ -1,0 +1,27 @@
+{
+  "id": "kon-aalam",
+  "slug": "kon-aalam",
+  "status": "building",
+  "evidence": "E1",
+  "meta_solution": "knowledge-ar",
+  "title": {
+    "en": "كن أعلم",
+    "fr": "كن أعلم",
+    "ar": "كن أعلم"
+  },
+  "short": {
+    "en": "Under construction; not publicly listed on the 2030B site."
+  },
+  "summary": {
+    "en": "Under construction; not publicly listed on the 2030B site."
+  },
+  "evidence_note": {
+    "en": "No public page, book index or product is published on the 2030B site."
+  },
+  "services_consumed": [
+    "translation-hubs",
+    "science-comm",
+    "education-governance"
+  ],
+  "_source": "legacy registry, git 16a1226"
+}

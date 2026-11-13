@@ -1,0 +1,44 @@
+{
+  "id": "utility-regulation",
+  "slug": "utility-regulation",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Water & Energy Regulation",
+    "fr": "Water & Energy Regulation",
+    "ar": "Water & Energy Regulation"
+  },
+  "short": {
+    "en": "Tariffs, licensing, consumer protection.",
+    "fr": "Tariffs, licensing, consumer protection.",
+    "ar": "Tariffs, licensing, consumer protection."
+  },
+  "long": {
+    "en": "Water and energy regulation — tariff design, licensing, and consumer protection frameworks for utilities.",
+    "fr": "Water and energy regulation — tariff design, licensing, and consumer protection frameworks for utilities.",
+    "ar": "Water and energy regulation — tariff design, licensing, and consumer protection frameworks for utilities."
+  },
+  "problem": {
+    "en": "Opaque tariffs and weak consumer processes undermine trust.",
+    "fr": "Opaque tariffs and weak consumer processes undermine trust.",
+    "ar": "Opaque tariffs and weak consumer processes undermine trust."
+  },
+  "solution": {
+    "en": "Cost/affordability models, licensing-process support, and consultation evidence.",
+    "fr": "Cost/affordability models, licensing-process support, and consultation evidence.",
+    "ar": "Cost/affordability models, licensing-process support, and consultation evidence."
+  },
+  "likely_buyer": {
+    "en": "Regulators/utilities",
+    "fr": "Regulators/utilities",
+    "ar": "Regulators/utilities"
+  },
+  "acceptance_boundary": {
+    "en": "auditable inputs and consumer-impact review. The regulator alone approves tariffs and licenses; disclose assumptions and conflicts.",
+    "fr": "auditable inputs and consumer-impact review. The regulator alone approves tariffs and licenses; disclose assumptions and conflicts.",
+    "ar": "auditable inputs and consumer-impact review. The regulator alone approves tariffs and licenses; disclose assumptions and conflicts."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

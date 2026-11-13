@@ -1,0 +1,23 @@
+{
+  "id": "metax-estates",
+  "slug": "metax-estates",
+  "status": "building",
+  "evidence": "E0",
+  "meta_solution": null,
+  "title": {
+    "en": "MetaX Estates",
+    "fr": "MetaX Estates",
+    "ar": "MetaX Estates"
+  },
+  "short": {
+    "en": "Described only. estates.metax.academy did not resolve on the verification date."
+  },
+  "summary": {
+    "en": "Described only. estates.metax.academy did not resolve on the verification date."
+  },
+  "evidence_note": {
+    "en": "The subdomain did not resolve. No developer site, listing or deliverable is public."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

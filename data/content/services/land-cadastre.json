@@ -1,0 +1,44 @@
+{
+  "id": "land-cadastre",
+  "slug": "land-cadastre",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Land Governance & Cadastre",
+    "fr": "Land Governance & Cadastre",
+    "ar": "Land Governance & Cadastre"
+  },
+  "short": {
+    "en": "Registration, dispute resolution, GIS.",
+    "fr": "Registration, dispute resolution, GIS.",
+    "ar": "Registration, dispute resolution, GIS."
+  },
+  "long": {
+    "en": "Land governance and cadastre — registration systems, dispute resolution, and GIS-based land information infrastructure.",
+    "fr": "Land governance and cadastre — registration systems, dispute resolution, and GIS-based land information infrastructure.",
+    "ar": "Land governance and cadastre — registration systems, dispute resolution, and GIS-based land information infrastructure."
+  },
+  "problem": {
+    "en": "Conflicting official records obstruct reliable land administration.",
+    "fr": "Conflicting official records obstruct reliable land administration.",
+    "ar": "Conflicting official records obstruct reliable land administration."
+  },
+  "solution": {
+    "en": "Authorized registry/GIS reconciliation and auditable workflow modernization.",
+    "fr": "Authorized registry/GIS reconciliation and auditable workflow modernization.",
+    "ar": "Authorized registry/GIS reconciliation and auditable workflow modernization."
+  },
+  "likely_buyer": {
+    "en": "Land agencies",
+    "fr": "Land agencies",
+    "ar": "Land agencies"
+  },
+  "acceptance_boundary": {
+    "en": "verified parcel reconciliation and change logs. Only competent authorities issue titles; service 034 serves project due diligence.",
+    "fr": "verified parcel reconciliation and change logs. Only competent authorities issue titles; service 034 serves project due diligence.",
+    "ar": "verified parcel reconciliation and change logs. Only competent authorities issue titles; service 034 serves project due diligence."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

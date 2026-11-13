@@ -1,0 +1,44 @@
+{
+  "id": "construction-waste",
+  "slug": "construction-waste",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Construction Waste Logistics",
+    "fr": "Construction Waste Logistics",
+    "ar": "Construction Waste Logistics"
+  },
+  "short": {
+    "en": "Sorting, recycling, landfill diversion.",
+    "fr": "Sorting, recycling, landfill diversion.",
+    "ar": "Sorting, recycling, landfill diversion."
+  },
+  "long": {
+    "en": "Construction waste logistics — on-site sorting, recycling partnerships, landfill diversion targets, and reporting frameworks aligned with circular construction standards.",
+    "fr": "Construction waste logistics — on-site sorting, recycling partnerships, landfill diversion targets, and reporting frameworks aligned with circular construction standards.",
+    "ar": "Construction waste logistics — on-site sorting, recycling partnerships, landfill diversion targets, and reporting frameworks aligned with circular construction standards."
+  },
+  "problem": {
+    "en": "Untraceable hauling enables illegal disposal and material loss.",
+    "fr": "Untraceable hauling enables illegal disposal and material loss.",
+    "ar": "Untraceable hauling enables illegal disposal and material loss."
+  },
+  "solution": {
+    "en": "Sorting plan, licensed haul coordination, and destination tracking.",
+    "fr": "Sorting plan, licensed haul coordination, and destination tracking.",
+    "ar": "Sorting plan, licensed haul coordination, and destination tracking."
+  },
+  "likely_buyer": {
+    "en": "Contractors",
+    "fr": "Contractors",
+    "ar": "Contractors"
+  },
+  "acceptance_boundary": {
+    "en": "weighbridge reconciliation and approved receiving-site receipts. Hazardous materials require specifically authorized handling and disposal.",
+    "fr": "weighbridge reconciliation and approved receiving-site receipts. Hazardous materials require specifically authorized handling and disposal.",
+    "ar": "weighbridge reconciliation and approved receiving-site receipts. Hazardous materials require specifically authorized handling and disposal."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

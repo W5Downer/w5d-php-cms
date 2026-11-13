@@ -1,0 +1,23 @@
+{
+  "id": "ontology-department",
+  "slug": "ontology-department",
+  "status": "draft",
+  "evidence": "E2",
+  "meta_solution": "ontology",
+  "title": {
+    "en": "Ontology Department",
+    "fr": "Département d'ontologie",
+    "ar": "قسم الأنطولوجيا"
+  },
+  "short": {
+    "en": "A draft site with manifesto, path, library, credits and agent pages."
+  },
+  "summary": {
+    "en": "A draft site with manifesto, path, library, credits and agent pages."
+  },
+  "evidence_note": {
+    "en": "The department's formal mandate, staffing and outputs have not been published. The site remains a draft."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

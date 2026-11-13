@@ -1,0 +1,44 @@
+{
+  "id": "cultural-data",
+  "slug": "cultural-data",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Cultural Data Governance",
+    "fr": "Cultural Data Governance",
+    "ar": "Cultural Data Governance"
+  },
+  "short": {
+    "en": "Consent, provenance, repatriation frameworks.",
+    "fr": "Consent, provenance, repatriation frameworks.",
+    "ar": "Consent, provenance, repatriation frameworks."
+  },
+  "long": {
+    "en": "Governance of cultural data — consent frameworks, provenance documentation, repatriation policy design, and legal review of cultural data collection, use, and sharing.",
+    "fr": "Governance of cultural data — consent frameworks, provenance documentation, repatriation policy design, and legal review of cultural data collection, use, and sharing.",
+    "ar": "Governance of cultural data — consent frameworks, provenance documentation, repatriation policy design, and legal review of cultural data collection, use, and sharing."
+  },
+  "problem": {
+    "en": "Unclear provenance and access rights enable unauthorized cultural reuse.",
+    "fr": "Unclear provenance and access rights enable unauthorized cultural reuse.",
+    "ar": "Unclear provenance and access rights enable unauthorized cultural reuse."
+  },
+  "solution": {
+    "en": "Provenance register, consent/access controls, and repatriation or restitution protocols.",
+    "fr": "Provenance register, consent/access controls, and repatriation or restitution protocols.",
+    "ar": "Provenance register, consent/access controls, and repatriation or restitution protocols."
+  },
+  "likely_buyer": {
+    "en": "Archives/platforms",
+    "fr": "Archives/platforms",
+    "ar": "Archives/platforms"
+  },
+  "acceptance_boundary": {
+    "en": "access audits and tested restriction/revocation workflows. Cultural data is not automatically public or commercially reusable.",
+    "fr": "access audits and tested restriction/revocation workflows. Cultural data is not automatically public or commercially reusable.",
+    "ar": "access audits and tested restriction/revocation workflows. Cultural data is not automatically public or commercially reusable."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

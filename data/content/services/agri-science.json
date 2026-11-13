@@ -1,0 +1,44 @@
+{
+  "id": "agri-science",
+  "slug": "agri-science",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Agricultural Science & Extension",
+    "fr": "Agricultural Science & Extension",
+    "ar": "Agricultural Science & Extension"
+  },
+  "short": {
+    "en": "Soil health, seed systems, IPM.",
+    "fr": "Soil health, seed systems, IPM.",
+    "ar": "Soil health, seed systems, IPM."
+  },
+  "long": {
+    "en": "Agricultural science and extension — soil health assessment, seed-system development, integrated pest management, and farmer-focused extension training.",
+    "fr": "Agricultural science and extension — soil health assessment, seed-system development, integrated pest management, and farmer-focused extension training.",
+    "ar": "Agricultural science and extension — soil health assessment, seed-system development, integrated pest management, and farmer-focused extension training."
+  },
+  "problem": {
+    "en": "Unsupported practices waste inputs and can reduce resilience.",
+    "fr": "Unsupported practices waste inputs and can reduce resilience.",
+    "ar": "Unsupported practices waste inputs and can reduce resilience."
+  },
+  "solution": {
+    "en": "Controlled field trials, soil-health assessment, and qualified extension advice.",
+    "fr": "Controlled field trials, soil-health assessment, and qualified extension advice.",
+    "ar": "Controlled field trials, soil-health assessment, and qualified extension advice."
+  },
+  "likely_buyer": {
+    "en": "Farms/cooperatives",
+    "fr": "Farms/cooperatives",
+    "ar": "Farms/cooperatives"
+  },
+  "acceptance_boundary": {
+    "en": "documented comparison of yield and input use. Report weather/design limitations; advice does not authorize regulated agrochemicals.",
+    "fr": "documented comparison of yield and input use. Report weather/design limitations; advice does not authorize regulated agrochemicals.",
+    "ar": "documented comparison of yield and input use. Report weather/design limitations; advice does not authorize regulated agrochemicals."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

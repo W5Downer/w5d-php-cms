@@ -1,0 +1,44 @@
+{
+  "id": "eia",
+  "slug": "eia",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Environmental Impact Assessment",
+    "fr": "Environmental Impact Assessment",
+    "ar": "Environmental Impact Assessment"
+  },
+  "short": {
+    "en": "Scoping, baseline, mitigation plans.",
+    "fr": "Scoping, baseline, mitigation plans.",
+    "ar": "Scoping, baseline, mitigation plans."
+  },
+  "long": {
+    "en": "Environmental impact assessment — scoping studies, baseline data collection, mitigation planning, and monitoring frameworks for major projects.",
+    "fr": "Environmental impact assessment — scoping studies, baseline data collection, mitigation planning, and monitoring frameworks for major projects.",
+    "ar": "Environmental impact assessment — scoping studies, baseline data collection, mitigation planning, and monitoring frameworks for major projects."
+  },
+  "problem": {
+    "en": "Projects can overlook ecological harm and viable alternatives.",
+    "fr": "Projects can overlook ecological harm and viable alternatives.",
+    "ar": "Projects can overlook ecological harm and viable alternatives."
+  },
+  "solution": {
+    "en": "Qualified baseline, alternatives, mitigation, and monitoring assessment.",
+    "fr": "Qualified baseline, alternatives, mitigation, and monitoring assessment.",
+    "ar": "Qualified baseline, alternatives, mitigation, and monitoring assessment."
+  },
+  "likely_buyer": {
+    "en": "Developers/competent bodies",
+    "fr": "Developers/competent bodies",
+    "ar": "Developers/competent bodies"
+  },
+  "acceptance_boundary": {
+    "en": "independently reviewed evidence and completeness. The regulator retains approval; disclose conflicts and residual impacts.",
+    "fr": "independently reviewed evidence and completeness. The regulator retains approval; disclose conflicts and residual impacts.",
+    "ar": "independently reviewed evidence and completeness. The regulator retains approval; disclose conflicts and residual impacts."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

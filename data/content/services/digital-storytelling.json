@@ -1,0 +1,44 @@
+{
+  "id": "digital-storytelling",
+  "slug": "digital-storytelling",
+  "macro": "cultures",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Digital Storytelling Studios",
+    "fr": "Digital Storytelling Studios",
+    "ar": "Digital Storytelling Studios"
+  },
+  "short": {
+    "en": "Podcasts, short-form video, narrative strategy.",
+    "fr": "Podcasts, short-form video, narrative strategy.",
+    "ar": "Podcasts, short-form video, narrative strategy."
+  },
+  "long": {
+    "en": "Digital storytelling production — podcast and short-form video production, narrative strategy consulting, and ethical training on documenting sensitive lived experience.",
+    "fr": "Digital storytelling production — podcast and short-form video production, narrative strategy consulting, and ethical training on documenting sensitive lived experience.",
+    "ar": "Digital storytelling production — podcast and short-form video production, narrative strategy consulting, and ethical training on documenting sensitive lived experience."
+  },
+  "problem": {
+    "en": "Important messages are unclear, inaccessible, or unsupported.",
+    "fr": "Important messages are unclear, inaccessible, or unsupported.",
+    "ar": "Important messages are unclear, inaccessible, or unsupported."
+  },
+  "solution": {
+    "en": "Fact-checked multilingual podcasts/video with captions and asset-rights documentation.",
+    "fr": "Fact-checked multilingual podcasts/video with captions and asset-rights documentation.",
+    "ar": "Fact-checked multilingual podcasts/video with captions and asset-rights documentation."
+  },
+  "likely_buyer": {
+    "en": "Brands/NGOs",
+    "fr": "Brands/NGOs",
+    "ar": "Brands/NGOs"
+  },
+  "acceptance_boundary": {
+    "en": "brief acceptance, factual review, and accessibility. No fabricated testimonials, unlicensed media, or misleading impact narratives.",
+    "fr": "brief acceptance, factual review, and accessibility. No fabricated testimonials, unlicensed media, or misleading impact narratives.",
+    "ar": "brief acceptance, factual review, and accessibility. No fabricated testimonials, unlicensed media, or misleading impact narratives."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

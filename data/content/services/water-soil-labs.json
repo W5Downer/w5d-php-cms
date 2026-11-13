@@ -1,0 +1,44 @@
+{
+  "id": "water-soil-labs",
+  "slug": "water-soil-labs",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Water & Soil Quality Labs",
+    "fr": "Water & Soil Quality Labs",
+    "ar": "Water & Soil Quality Labs"
+  },
+  "short": {
+    "en": "Sampling, accredited analysis, remediation.",
+    "fr": "Sampling, accredited analysis, remediation.",
+    "ar": "Sampling, accredited analysis, remediation."
+  },
+  "long": {
+    "en": "Water and soil quality laboratories — accredited sampling, chemical and biological analysis, remediation design, and long-term monitoring programs.",
+    "fr": "Water and soil quality laboratories — accredited sampling, chemical and biological analysis, remediation design, and long-term monitoring programs.",
+    "ar": "Water and soil quality laboratories — accredited sampling, chemical and biological analysis, remediation design, and long-term monitoring programs."
+  },
+  "problem": {
+    "en": "Unreliable sampling can conceal contamination and undermine decisions.",
+    "fr": "Unreliable sampling can conceal contamination and undermine decisions.",
+    "ar": "Unreliable sampling can conceal contamination and undermine decisions."
+  },
+  "solution": {
+    "en": "Chain-of-custody sampling and analysis by appropriately accredited partner facilities.",
+    "fr": "Chain-of-custody sampling and analysis by appropriately accredited partner facilities.",
+    "ar": "Chain-of-custody sampling and analysis by appropriately accredited partner facilities."
+  },
+  "likely_buyer": {
+    "en": "Utilities/farms",
+    "fr": "Utilities/farms",
+    "ar": "Utilities/farms"
+  },
+  "acceptance_boundary": {
+    "en": "validated results, uncertainty, and custody records. Do not imply W5D itself holds a partner’s laboratory accreditation.",
+    "fr": "validated results, uncertainty, and custody records. Do not imply W5D itself holds a partner’s laboratory accreditation.",
+    "ar": "validated results, uncertainty, and custody records. Do not imply W5D itself holds a partner’s laboratory accreditation."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

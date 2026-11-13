@@ -1,0 +1,44 @@
+{
+  "id": "circular-construction",
+  "slug": "circular-construction",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Waste & Circular Construction",
+    "fr": "Waste & Circular Construction",
+    "ar": "Waste & Circular Construction"
+  },
+  "short": {
+    "en": "Material reuse, demolition auditing.",
+    "fr": "Material reuse, demolition auditing.",
+    "ar": "Material reuse, demolition auditing."
+  },
+  "long": {
+    "en": "Circular construction — pre-demolition material audits, salvage and reuse strategies, and life-cycle assessment for major construction and demolition projects.",
+    "fr": "Circular construction — pre-demolition material audits, salvage and reuse strategies, and life-cycle assessment for major construction and demolition projects.",
+    "ar": "Circular construction — pre-demolition material audits, salvage and reuse strategies, and life-cycle assessment for major construction and demolition projects."
+  },
+  "problem": {
+    "en": "Reusable materials are discarded because reuse is not planned.",
+    "fr": "Reusable materials are discarded because reuse is not planned.",
+    "ar": "Reusable materials are discarded because reuse is not planned."
+  },
+  "solution": {
+    "en": "Pre-demolition materials audit and circular-design/reuse strategy.",
+    "fr": "Pre-demolition materials audit and circular-design/reuse strategy.",
+    "ar": "Pre-demolition materials audit and circular-design/reuse strategy."
+  },
+  "likely_buyer": {
+    "en": "Developers",
+    "fr": "Developers",
+    "ar": "Developers"
+  },
+  "acceptance_boundary": {
+    "en": "quantified, verified reuse potential and material-safety checks. This is design strategy; service 050 manages physical waste logistics.",
+    "fr": "quantified, verified reuse potential and material-safety checks. This is design strategy; service 050 manages physical waste logistics.",
+    "ar": "quantified, verified reuse potential and material-safety checks. This is design strategy; service 050 manages physical waste logistics."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

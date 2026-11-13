@@ -1,0 +1,44 @@
+{
+  "id": "trial-data",
+  "slug": "trial-data",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Clinical Trials Data Management",
+    "fr": "Clinical Trials Data Management",
+    "ar": "Clinical Trials Data Management"
+  },
+  "short": {
+    "en": "EDC, query resolution, reporting.",
+    "fr": "EDC, query resolution, reporting.",
+    "ar": "EDC, query resolution, reporting."
+  },
+  "long": {
+    "en": "Clinical trials data management — electronic data capture, query resolution workflows, and analysis-ready datasets for sponsors and regulators.",
+    "fr": "Clinical trials data management — electronic data capture, query resolution workflows, and analysis-ready datasets for sponsors and regulators.",
+    "ar": "Clinical trials data management — electronic data capture, query resolution workflows, and analysis-ready datasets for sponsors and regulators."
+  },
+  "problem": {
+    "en": "Incomplete or inconsistent datasets undermine trial integrity.",
+    "fr": "Incomplete or inconsistent datasets undermine trial integrity.",
+    "ar": "Incomplete or inconsistent datasets undermine trial integrity."
+  },
+  "solution": {
+    "en": "Validated EDC workflows, query resolution, audit trails, and lock preparation.",
+    "fr": "Validated EDC workflows, query resolution, audit trails, and lock preparation.",
+    "ar": "Validated EDC workflows, query resolution, audit trails, and lock preparation."
+  },
+  "likely_buyer": {
+    "en": "Sponsors/trial sites",
+    "fr": "Sponsors/trial sites",
+    "ar": "Sponsors/trial sites"
+  },
+  "acceptance_boundary": {
+    "en": "query closure and database-lock QC. Operate under approved protocols and health-data protections, not independent clinical decisions.",
+    "fr": "query closure and database-lock QC. Operate under approved protocols and health-data protections, not independent clinical decisions.",
+    "ar": "query closure and database-lock QC. Operate under approved protocols and health-data protections, not independent clinical decisions."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

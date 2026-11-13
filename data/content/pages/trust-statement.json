@@ -1,0 +1,144 @@
+{
+  "id": "trust-statement",
+  "path": "/trust/statement/",
+  "title": {
+    "en": "Declared limits and statement",
+    "fr": "Declared limits and statement",
+    "ar": "Declared limits and statement"
+  },
+  "description": {
+    "en": "What W5D claims, what it does not claim, and why.",
+    "fr": "What W5D claims, what it does not claim, and why.",
+    "ar": "What W5D claims, what it does not claim, and why."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "ts-hero",
+      "tier": "X",
+      "focus": 5,
+      "title": {
+        "en": "Declared limits and statement",
+        "fr": "Declared limits and statement",
+        "ar": "Declared limits and statement"
+      },
+      "data": {
+        "lead": {
+          "en": "W5D should grow by financing useful work, proving competence and keeping people through fair opportunities, not by accumulating registrations.",
+          "fr": "W5D should grow by financing useful work, proving competence and keeping people through fair opportunities, not by accumulating registrations.",
+          "ar": "W5D should grow by financing useful work, proving competence and keeping people through fair opportunities, not by accumulating registrations."
+        }
+      }
+    },
+    {
+      "type": "definitions",
+      "id": "ts-ambitions",
+      "tier": "X",
+      "focus": 2,
+      "title": {
+        "en": "Two ambitions that are never conflated",
+        "fr": "Two ambitions that are never conflated",
+        "ar": "Two ambitions that are never conflated"
+      },
+      "data": {
+        "items": [
+          {
+            "term": {
+              "en": "Objective A: a verified Tunisian competence network",
+              "fr": "Objective A: a verified Tunisian competence network",
+              "ar": "Objective A: a verified Tunisian competence network"
+            },
+            "def": {
+              "en": "Voluntary members whose identity and competence are assessed. Not every member is employed or paid in a given month.",
+              "fr": "Voluntary members whose identity and competence are assessed. Not every member is employed or paid in a given month.",
+              "ar": "Voluntary members whose identity and competence are assessed. Not every member is employed or paid in a given month."
+            }
+          },
+          {
+            "term": {
+              "en": "Objective B: concurrently paid contributors",
+              "fr": "Objective B: concurrently paid contributors",
+              "ar": "Objective B: concurrently paid contributors"
+            },
+            "def": {
+              "en": "People actually performing financed work with lawful engagement and timely payment. This requires sustained sales and capital.",
+              "fr": "People actually performing financed work with lawful engagement and timely payment. This requires sustained sales and capital.",
+              "ar": "People actually performing financed work with lawful engagement and timely payment. This requires sustained sales and capital."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "id": "ts-capacity",
+      "tier": "X",
+      "focus": 3,
+      "title": {
+        "en": "What the design ceiling means",
+        "fr": "What the design ceiling means",
+        "ar": "What the design ceiling means"
+      },
+      "data": {
+        "paragraphs": [
+          {
+            "en": "The design ceiling is {{ experts.target }}: {{ counts.macros }} macro works × {{ counts.services_per_macro }} services × {{ experts.per_service }} experts. It is a capacity equation. It is not evidence of jobs, verified experts, clients, funded positions or recruitable people.",
+            "fr": "The design ceiling is {{ experts.target }}: {{ counts.macros }} macro works × {{ counts.services_per_macro }} services × {{ experts.per_service }} experts. It is a capacity equation. It is not evidence of jobs, verified experts, clients, funded positions or recruitable people.",
+            "ar": "The design ceiling is {{ experts.target }}: {{ counts.macros }} macro works × {{ counts.services_per_macro }} services × {{ experts.per_service }} experts. It is a capacity equation. It is not evidence of jobs, verified experts, clients, funded positions or recruitable people."
+          },
+          {
+            "en": "Declared certified experts today: {{ experts.current }}. The declared footprint is {{ footprint.developers_tn }} developers in Tunisia, not independently audited.",
+            "fr": "Declared certified experts today: {{ experts.current }}. The declared footprint is {{ footprint.developers_tn }} developers in Tunisia, not independently audited.",
+            "ar": "Declared certified experts today: {{ experts.current }}. The declared footprint is {{ footprint.developers_tn }} developers in Tunisia, not independently audited."
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "ts-sampling",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Quality sample",
+        "fr": "Quality sample",
+        "ar": "Quality sample"
+      },
+      "data": {
+        "text": {
+          "en": "{{ doctrine.quality_sample }} of submitted weekly reports are re-reviewed independently. This rate is fixed and is not a setting.",
+          "fr": "{{ doctrine.quality_sample }} of submitted weekly reports are re-reviewed independently. This rate is fixed and is not a setting.",
+          "ar": "{{ doctrine.quality_sample }} of submitted weekly reports are re-reviewed independently. This rate is fixed and is not a setting."
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "id": "ts-cta",
+      "tier": "E",
+      "focus": 5,
+      "gradient": "calm",
+      "title": {
+        "en": "See a correction or question",
+        "fr": "See a correction or question",
+        "ar": "See a correction or question"
+      },
+      "data": {
+        "text": {
+          "en": "If a figure here is wrong, tell us which one. We reply within the stated period.",
+          "fr": "If a figure here is wrong, tell us which one. We reply within the stated period.",
+          "ar": "If a figure here is wrong, tell us which one. We reply within the stated period."
+        }
+      },
+      "cta": {
+        "label": {
+          "en": "File a correction",
+          "fr": "File a correction",
+          "ar": "File a correction"
+        },
+        "href": "/trust/corrections/",
+        "class": "btn-peak"
+      }
+    }
+  ]
+}

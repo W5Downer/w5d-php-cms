@@ -1,0 +1,44 @@
+{
+  "id": "border-migration",
+  "slug": "border-migration",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Border & Migration Governance",
+    "fr": "Border & Migration Governance",
+    "ar": "Border & Migration Governance"
+  },
+  "short": {
+    "en": "Documentation, screening, rights.",
+    "fr": "Documentation, screening, rights.",
+    "ar": "Documentation, screening, rights."
+  },
+  "long": {
+    "en": "Border and migration governance — documentation, screening protocols, and rights-based migration frameworks aligned with international law.",
+    "fr": "Border and migration governance — documentation, screening protocols, and rights-based migration frameworks aligned with international law.",
+    "ar": "Border and migration governance — documentation, screening protocols, and rights-based migration frameworks aligned with international law."
+  },
+  "problem": {
+    "en": "Documentation gaps and weak procedures create rights risks.",
+    "fr": "Documentation gaps and weak procedures create rights risks.",
+    "ar": "Documentation gaps and weak procedures create rights risks."
+  },
+  "solution": {
+    "en": "Rights-reviewed process mapping, translation, and documentation support.",
+    "fr": "Rights-reviewed process mapping, translation, and documentation support.",
+    "ar": "Rights-reviewed process mapping, translation, and documentation support."
+  },
+  "likely_buyer": {
+    "en": "Authorized bodies/rights NGOs",
+    "fr": "Authorized bodies/rights NGOs",
+    "ar": "Authorized bodies/rights NGOs"
+  },
+  "acceptance_boundary": {
+    "en": "case audits and procedural accuracy. No coercive enforcement, unlawful profiling, or unauthorized access to migration records.",
+    "fr": "case audits and procedural accuracy. No coercive enforcement, unlawful profiling, or unauthorized access to migration records.",
+    "ar": "case audits and procedural accuracy. No coercive enforcement, unlawful profiling, or unauthorized access to migration records."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

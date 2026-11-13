@@ -1,0 +1,23 @@
+{
+  "id": "2030b",
+  "slug": "2030b",
+  "status": "building",
+  "evidence": "E2",
+  "meta_solution": "long-horizon",
+  "title": {
+    "en": "2030B",
+    "fr": "2030B",
+    "ar": "2030B"
+  },
+  "short": {
+    "en": "Ten programmes, one per dimension, and an eleventh under construction."
+  },
+  "summary": {
+    "en": "Ten programmes, one per dimension, and an eleventh under construction."
+  },
+  "evidence_note": {
+    "en": "Projects 3 to 10 have book indexes in draft and no public product. The eleventh project is not listed on the 2030B site. Currencies and SelfAI modules are defined, not issued or running."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

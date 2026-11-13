@@ -1,0 +1,44 @@
+{
+  "id": "waste-to-resource",
+  "slug": "waste-to-resource",
+  "macro": "technology",
+  "placement": "Real instantiation",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Waste-to-Resource Technology",
+    "fr": "Waste-to-Resource Technology",
+    "ar": "Waste-to-Resource Technology"
+  },
+  "short": {
+    "en": "Sorting, composting, anaerobic digestion.",
+    "fr": "Sorting, composting, anaerobic digestion.",
+    "ar": "Sorting, composting, anaerobic digestion."
+  },
+  "long": {
+    "en": "Waste-to-resource technology — automated sorting, composting, and anaerobic digestion for municipal and industrial waste streams.",
+    "fr": "Waste-to-resource technology — automated sorting, composting, and anaerobic digestion for municipal and industrial waste streams.",
+    "ar": "Waste-to-resource technology — automated sorting, composting, and anaerobic digestion for municipal and industrial waste streams."
+  },
+  "problem": {
+    "en": "Plants fail when feedstock, markets, or process assumptions are weak.",
+    "fr": "Plants fail when feedstock, markets, or process assumptions are weak.",
+    "ar": "Plants fail when feedstock, markets, or process assumptions are weak."
+  },
+  "solution": {
+    "en": "Feedstock/offtake study, mass balance, and permitted process pilot.",
+    "fr": "Feedstock/offtake study, mass balance, and permitted process pilot.",
+    "ar": "Feedstock/offtake study, mass balance, and permitted process pilot."
+  },
+  "likely_buyer": {
+    "en": "Municipalities/industry",
+    "fr": "Municipalities/industry",
+    "ar": "Municipalities/industry"
+  },
+  "acceptance_boundary": {
+    "en": "validated supply, outputs, and environmental controls. No assured ROI; secure permits before physical operation.",
+    "fr": "validated supply, outputs, and environmental controls. No assured ROI; secure permits before physical operation.",
+    "ar": "validated supply, outputs, and environmental controls. No assured ROI; secure permits before physical operation."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

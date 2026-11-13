@@ -1,0 +1,44 @@
+{
+  "id": "facilities-mgmt",
+  "slug": "facilities-mgmt",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Facilities Management",
+    "fr": "Facilities Management",
+    "ar": "Facilities Management"
+  },
+  "short": {
+    "en": "Maintenance planning, KPIs, CMMS.",
+    "fr": "Maintenance planning, KPIs, CMMS.",
+    "ar": "Maintenance planning, KPIs, CMMS."
+  },
+  "long": {
+    "en": "Facilities management — maintenance planning, KPI frameworks, CMMS implementation, and lifecycle asset management for public and private estates.",
+    "fr": "Facilities management — maintenance planning, KPI frameworks, CMMS implementation, and lifecycle asset management for public and private estates.",
+    "ar": "Facilities management — maintenance planning, KPI frameworks, CMMS implementation, and lifecycle asset management for public and private estates."
+  },
+  "problem": {
+    "en": "Reactive maintenance raises downtime and lifecycle cost.",
+    "fr": "Reactive maintenance raises downtime and lifecycle cost.",
+    "ar": "Reactive maintenance raises downtime and lifecycle cost."
+  },
+  "solution": {
+    "en": "Asset register, CMMS configuration, preventive schedule, and service reporting.",
+    "fr": "Asset register, CMMS configuration, preventive schedule, and service reporting.",
+    "ar": "Asset register, CMMS configuration, preventive schedule, and service reporting."
+  },
+  "likely_buyer": {
+    "en": "Building operators",
+    "fr": "Building operators",
+    "ar": "Building operators"
+  },
+  "acceptance_boundary": {
+    "en": "work-order completion and measured critical downtime. Qualified professionals retain responsibility for mandatory safety inspections.",
+    "fr": "work-order completion and measured critical downtime. Qualified professionals retain responsibility for mandatory safety inspections.",
+    "ar": "work-order completion and measured critical downtime. Qualified professionals retain responsibility for mandatory safety inspections."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

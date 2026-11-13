@@ -1,0 +1,23 @@
+{
+  "id": "bcia",
+  "slug": "bcia",
+  "status": "gated",
+  "evidence": "E1",
+  "meta_solution": null,
+  "title": {
+    "en": "BCIA",
+    "fr": "BCIA",
+    "ar": "BCIA"
+  },
+  "short": {
+    "en": "A gated, pre-publication research programme. No findings are reported."
+  },
+  "summary": {
+    "en": "A gated, pre-publication research programme. No findings are reported."
+  },
+  "evidence_note": {
+    "en": "No findings, methods, protocol or ethics review is published."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

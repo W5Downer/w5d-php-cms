@@ -1,0 +1,44 @@
+{
+  "id": "heritage-built",
+  "slug": "heritage-built",
+  "macro": "built",
+  "placement": "Real 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Heritage Built Environment",
+    "fr": "Heritage Built Environment",
+    "ar": "Heritage Built Environment"
+  },
+  "short": {
+    "en": "Adaptive reuse, conservation engineering.",
+    "fr": "Adaptive reuse, conservation engineering.",
+    "ar": "Adaptive reuse, conservation engineering."
+  },
+  "long": {
+    "en": "Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works.",
+    "fr": "Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works.",
+    "ar": "Conservation-led built environment work — adaptive reuse of historic structures, structural conservation engineering, and heritage impact assessment for new works."
+  },
+  "problem": {
+    "en": "Unsafe or insensitive reuse can damage historic buildings.",
+    "fr": "Unsafe or insensitive reuse can damage historic buildings.",
+    "ar": "Unsafe or insensitive reuse can damage historic buildings."
+  },
+  "solution": {
+    "en": "Building survey and conservation-led adaptive-reuse design coordination.",
+    "fr": "Building survey and conservation-led adaptive-reuse design coordination.",
+    "ar": "Building survey and conservation-led adaptive-reuse design coordination."
+  },
+  "likely_buyer": {
+    "en": "Heritage owners",
+    "fr": "Heritage owners",
+    "ar": "Heritage owners"
+  },
+  "acceptance_boundary": {
+    "en": "engineer and competent-authority approval. Conservation permissions, structural responsibility, and safe occupation remain explicit release gates.",
+    "fr": "engineer and competent-authority approval. Conservation permissions, structural responsibility, and safe occupation remain explicit release gates.",
+    "ar": "engineer and competent-authority approval. Conservation permissions, structural responsibility, and safe occupation remain explicit release gates."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

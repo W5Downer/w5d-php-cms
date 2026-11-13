@@ -1,0 +1,116 @@
+{
+  "id": "countries-tunisia",
+  "path": "/countries/tunisia/",
+  "title": {
+    "en": "Tunisia",
+    "fr": "Tunisia",
+    "ar": "Tunisia"
+  },
+  "description": {
+    "en": "Country hub: Tunisia, governorates and declared limits.",
+    "fr": "Country hub: Tunisia, governorates and declared limits.",
+    "ar": "Country hub: Tunisia, governorates and declared limits."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "id": "tn-hero",
+      "tier": "E",
+      "focus": 5,
+      "title": {
+        "en": "{{ country.name }}",
+        "fr": "{{ country.name }}",
+        "ar": "{{ country.name }}"
+      },
+      "data": {
+        "eyebrow": {
+          "en": "Country hub",
+          "fr": "Country hub",
+          "ar": "Country hub"
+        },
+        "lead": {
+          "en": "Tunisia is the first country. Services open when they have buyers, assessors and lawful delivery.",
+          "fr": "Tunisia is the first country. Services open when they have buyers, assessors and lawful delivery.",
+          "ar": "Tunisia is the first country. Services open when they have buyers, assessors and lawful delivery."
+        }
+      }
+    },
+    {
+      "type": "kpis",
+      "id": "tn-kpis",
+      "tier": "I",
+      "focus": 2,
+      "title": {
+        "en": "Declared footprint",
+        "fr": "Declared footprint",
+        "ar": "Declared footprint"
+      },
+      "data": {
+        "items": [
+          {
+            "label": {
+              "en": "Developers in Tunisia (declared, not audited)",
+              "fr": "Developers in Tunisia (declared, not audited)",
+              "ar": "Developers in Tunisia (declared, not audited)"
+            },
+            "value": {
+              "en": "{{ footprint.developers_tn }}",
+              "fr": "{{ footprint.developers_tn }}",
+              "ar": "{{ footprint.developers_tn }}"
+            }
+          },
+          {
+            "label": {
+              "en": "Governorates",
+              "fr": "Governorates",
+              "ar": "Governorates"
+            },
+            "value": {
+              "en": "24",
+              "fr": "24",
+              "ar": "24"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "prose",
+      "id": "tn-prose",
+      "tier": "E",
+      "focus": 3,
+      "title": {
+        "en": "Where we operate",
+        "fr": "Where we operate",
+        "ar": "Where we operate"
+      },
+      "data": {
+        "paragraphs": [
+          {
+            "en": "Choose your governorate on the map below. Registration is open across all 24 governorates. There are no regional quotas.",
+            "fr": "Choose your governorate on the map below. Registration is open across all 24 governorates. There are no regional quotas.",
+            "ar": "Choose your governorate on the map below. Registration is open across all 24 governorates. There are no regional quotas."
+          }
+        ]
+      }
+    },
+    {
+      "type": "notice",
+      "id": "tn-limits",
+      "tier": "I",
+      "focus": 1,
+      "title": {
+        "en": "Declared limits",
+        "fr": "Declared limits",
+        "ar": "Declared limits"
+      },
+      "data": {
+        "text": {
+          "en": "Regional counts are interest, not employment. Labour law (Law 2025-9) and data law (Organic Law 2004-63) apply and are under counsel review.",
+          "fr": "Regional counts are interest, not employment. Labour law (Law 2025-9) and data law (Organic Law 2004-63) apply and are under counsel review.",
+          "ar": "Regional counts are interest, not employment. Labour law (Law 2025-9) and data law (Organic Law 2004-63) apply and are under counsel review."
+        }
+      }
+    }
+  ]
+}

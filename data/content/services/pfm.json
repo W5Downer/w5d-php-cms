@@ -1,0 +1,44 @@
+{
+  "id": "pfm",
+  "slug": "pfm",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Public Financial Management",
+    "fr": "Public Financial Management",
+    "ar": "Public Financial Management"
+  },
+  "short": {
+    "en": "MTEF, cash management, internal audit.",
+    "fr": "MTEF, cash management, internal audit.",
+    "ar": "MTEF, cash management, internal audit."
+  },
+  "long": {
+    "en": "Public financial management — medium-term expenditure frameworks, cash management, and internal audit strengthening across government.",
+    "fr": "Public financial management — medium-term expenditure frameworks, cash management, and internal audit strengthening across government.",
+    "ar": "Public financial management — medium-term expenditure frameworks, cash management, and internal audit strengthening across government."
+  },
+  "problem": {
+    "en": "Unreconciled cash and weak controls obscure public finances.",
+    "fr": "Unreconciled cash and weak controls obscure public finances.",
+    "ar": "Unreconciled cash and weak controls obscure public finances."
+  },
+  "solution": {
+    "en": "Budget/cash processes, reconciliations, and independent internal-audit support.",
+    "fr": "Budget/cash processes, reconciliations, and independent internal-audit support.",
+    "ar": "Budget/cash processes, reconciliations, and independent internal-audit support."
+  },
+  "likely_buyer": {
+    "en": "Public agencies",
+    "fr": "Public agencies",
+    "ar": "Public agencies"
+  },
+  "acceptance_boundary": {
+    "en": "documented reconciliation and closure times. Preserve audit independence; W5D does not authorize public expenditure.",
+    "fr": "documented reconciliation and closure times. Preserve audit independence; W5D does not authorize public expenditure.",
+    "ar": "documented reconciliation and closure times. Preserve audit independence; W5D does not authorize public expenditure."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

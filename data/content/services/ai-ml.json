@@ -1,0 +1,44 @@
+{
+  "id": "ai-ml",
+  "slug": "ai-ml",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "AI & Machine Learning",
+    "fr": "AI & Machine Learning",
+    "ar": "AI & Machine Learning"
+  },
+  "short": {
+    "en": "Model development, MLOps, evaluation.",
+    "fr": "Model development, MLOps, evaluation.",
+    "ar": "Model development, MLOps, evaluation."
+  },
+  "long": {
+    "en": "AI and machine learning — model development, MLOps, and evaluation frameworks that ensure models are fair, robust, and auditable.",
+    "fr": "AI and machine learning — model development, MLOps, and evaluation frameworks that ensure models are fair, robust, and auditable.",
+    "ar": "AI and machine learning — model development, MLOps, and evaluation frameworks that ensure models are fair, robust, and auditable."
+  },
+  "problem": {
+    "en": "Unvalidated models create costly errors and inflated expectations.",
+    "fr": "Unvalidated models create costly errors and inflated expectations.",
+    "ar": "Unvalidated models create costly errors and inflated expectations."
+  },
+  "solution": {
+    "en": "Task-specific benchmark, controlled pilot, evaluation, and monitored MLOps.",
+    "fr": "Task-specific benchmark, controlled pilot, evaluation, and monitored MLOps.",
+    "ar": "Task-specific benchmark, controlled pilot, evaluation, and monitored MLOps."
+  },
+  "likely_buyer": {
+    "en": "Firms",
+    "fr": "Firms",
+    "ar": "Firms"
+  },
+  "acceptance_boundary": {
+    "en": "held-out performance, bias/drift review, and human oversight. No guaranteed autonomy; establish rights to training and evaluation data.",
+    "fr": "held-out performance, bias/drift review, and human oversight. No guaranteed autonomy; establish rights to training and evaluation data.",
+    "ar": "held-out performance, bias/drift review, and human oversight. No guaranteed autonomy; establish rights to training and evaluation data."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "departments-registry",
+  "slug": "departments-registry",
+  "status": "draft",
+  "evidence": "E1",
+  "meta_solution": null,
+  "title": {
+    "en": "2030B departments registry",
+    "fr": "Registre des départements 2030B",
+    "ar": "سجل أقسام 2030B"
+  },
+  "short": {
+    "en": "Sixteen departments are documented by slug; names, levels and mandates are not yet published here."
+  },
+  "summary": {
+    "en": "Sixteen departments are documented by slug; names, levels and mandates are not yet published here."
+  },
+  "evidence_note": {
+    "en": "Names, levels and mandates for the 16 departments have not been supplied."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

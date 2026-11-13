@@ -1,0 +1,23 @@
+{
+  "id": "macrolifetech",
+  "slug": "macrolifetech",
+  "status": "research-preview",
+  "evidence": "E2",
+  "meta_solution": null,
+  "title": {
+    "en": "MacroLifeTech",
+    "fr": "MacroLifeTech",
+    "ar": "MacroLifeTech"
+  },
+  "short": {
+    "en": "A research-preview umbrella on MetaX; three hub groups are research-preview and two are gated."
+  },
+  "summary": {
+    "en": "A research-preview umbrella on MetaX; three hub groups are research-preview and two are gated."
+  },
+  "evidence_note": {
+    "en": "Findings from the hub groups have not been published."
+  },
+  "services_consumed": [],
+  "_source": "legacy registry, git 16a1226"
+}

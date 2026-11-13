@@ -1,0 +1,44 @@
+{
+  "id": "soe-oversight",
+  "slug": "soe-oversight",
+  "macro": "governance",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "State-Owned Enterprise Oversight",
+    "fr": "State-Owned Enterprise Oversight",
+    "ar": "State-Owned Enterprise Oversight"
+  },
+  "short": {
+    "en": "Performance contracts, boards.",
+    "fr": "Performance contracts, boards.",
+    "ar": "Performance contracts, boards."
+  },
+  "long": {
+    "en": "State-owned enterprise oversight — performance contracts, board governance, and financial transparency for SOEs.",
+    "fr": "State-owned enterprise oversight — performance contracts, board governance, and financial transparency for SOEs.",
+    "ar": "State-owned enterprise oversight — performance contracts, board governance, and financial transparency for SOEs."
+  },
+  "problem": {
+    "en": "Unclear performance and conflicts weaken enterprise accountability.",
+    "fr": "Unclear performance and conflicts weaken enterprise accountability.",
+    "ar": "Unclear performance and conflicts weaken enterprise accountability."
+  },
+  "solution": {
+    "en": "Board dashboards, risk registers, and performance-framework support.",
+    "fr": "Board dashboards, risk registers, and performance-framework support.",
+    "ar": "Board dashboards, risk registers, and performance-framework support."
+  },
+  "likely_buyer": {
+    "en": "SOEs/oversight bodies",
+    "fr": "SOEs/oversight bodies",
+    "ar": "SOEs/oversight bodies"
+  },
+  "acceptance_boundary": {
+    "en": "reconciled KPIs and documented control review. No appointment power or substitution for statutory board/auditor duties.",
+    "fr": "reconciled KPIs and documented control review. No appointment power or substitution for statutory board/auditor duties.",
+    "ar": "reconciled KPIs and documented control review. No appointment power or substitution for statutory board/auditor duties."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

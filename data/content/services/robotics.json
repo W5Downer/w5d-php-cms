@@ -1,0 +1,44 @@
+{
+  "id": "robotics",
+  "slug": "robotics",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Robotics Software",
+    "fr": "Robotics Software",
+    "ar": "Robotics Software"
+  },
+  "short": {
+    "en": "Perception, control, simulation.",
+    "fr": "Perception, control, simulation.",
+    "ar": "Perception, control, simulation."
+  },
+  "long": {
+    "en": "Robotics software — perception, control, and simulation frameworks for industrial, agricultural, and service robotics.",
+    "fr": "Robotics software — perception, control, and simulation frameworks for industrial, agricultural, and service robotics.",
+    "ar": "Robotics software — perception, control, and simulation frameworks for industrial, agricultural, and service robotics."
+  },
+  "problem": {
+    "en": "Unsafe control and unreliable perception undermine automation.",
+    "fr": "Unsafe control and unreliable perception undermine automation.",
+    "ar": "Unsafe control and unreliable perception undermine automation."
+  },
+  "solution": {
+    "en": "Simulation, perception/control development, and staged validation.",
+    "fr": "Simulation, perception/control development, and staged validation.",
+    "ar": "Simulation, perception/control development, and staged validation."
+  },
+  "likely_buyer": {
+    "en": "Manufacturers/labs",
+    "fr": "Manufacturers/labs",
+    "ar": "Manufacturers/labs"
+  },
+  "acceptance_boundary": {
+    "en": "bench tests and qualified safety acceptance. No autonomous safety claims or live deployment without appropriate engineering safeguards.",
+    "fr": "bench tests and qualified safety acceptance. No autonomous safety claims or live deployment without appropriate engineering safeguards.",
+    "ar": "bench tests and qualified safety acceptance. No autonomous safety claims or live deployment without appropriate engineering safeguards."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

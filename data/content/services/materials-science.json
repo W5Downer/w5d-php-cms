@@ -1,0 +1,44 @@
+{
+  "id": "materials-science",
+  "slug": "materials-science",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Materials Science & Testing",
+    "fr": "Materials Science & Testing",
+    "ar": "Materials Science & Testing"
+  },
+  "short": {
+    "en": "Metallurgy, polymers, failure analysis.",
+    "fr": "Metallurgy, polymers, failure analysis.",
+    "ar": "Metallurgy, polymers, failure analysis."
+  },
+  "long": {
+    "en": "Materials science and testing — metallurgy, polymers and composites, failure analysis, and materials selection support for engineering and industry.",
+    "fr": "Materials science and testing — metallurgy, polymers and composites, failure analysis, and materials selection support for engineering and industry.",
+    "ar": "Materials science and testing — metallurgy, polymers and composites, failure analysis, and materials selection support for engineering and industry."
+  },
+  "problem": {
+    "en": "Unknown properties and failure causes increase industrial cost and risk.",
+    "fr": "Unknown properties and failure causes increase industrial cost and risk.",
+    "ar": "Unknown properties and failure causes increase industrial cost and risk."
+  },
+  "solution": {
+    "en": "Qualified materials tests, failure analysis, and traceable technical report.",
+    "fr": "Qualified materials tests, failure analysis, and traceable technical report.",
+    "ar": "Qualified materials tests, failure analysis, and traceable technical report."
+  },
+  "likely_buyer": {
+    "en": "Manufacturers",
+    "fr": "Manufacturers",
+    "ar": "Manufacturers"
+  },
+  "acceptance_boundary": {
+    "en": "applicable standard, uncertainty, and sample traceability. Define test scope; avoid unsupported product-safety certification.",
+    "fr": "applicable standard, uncertainty, and sample traceability. Define test scope; avoid unsupported product-safety certification.",
+    "ar": "applicable standard, uncertainty, and sample traceability. Define test scope; avoid unsupported product-safety certification."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

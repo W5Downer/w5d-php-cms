@@ -1,0 +1,44 @@
+{
+  "id": "quantum",
+  "slug": "quantum",
+  "macro": "technology",
+  "placement": "Virtual core",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Quantum & Advanced Computing",
+    "fr": "Quantum & Advanced Computing",
+    "ar": "Quantum & Advanced Computing"
+  },
+  "short": {
+    "en": "Simulation, algorithm design, education.",
+    "fr": "Simulation, algorithm design, education.",
+    "ar": "Simulation, algorithm design, education."
+  },
+  "long": {
+    "en": "Quantum and advanced computing — quantum simulation, algorithm design, and workforce education for the next computing paradigm.",
+    "fr": "Quantum and advanced computing — quantum simulation, algorithm design, and workforce education for the next computing paradigm.",
+    "ar": "Quantum and advanced computing — quantum simulation, algorithm design, and workforce education for the next computing paradigm."
+  },
+  "problem": {
+    "en": "Technology hype can drive expensive work without a valid advantage.",
+    "fr": "Technology hype can drive expensive work without a valid advantage.",
+    "ar": "Technology hype can drive expensive work without a valid advantage."
+  },
+  "solution": {
+    "en": "Paid feasibility, simulation, training, and classical-baseline comparison.",
+    "fr": "Paid feasibility, simulation, training, and classical-baseline comparison.",
+    "ar": "Paid feasibility, simulation, training, and classical-baseline comparison."
+  },
+  "likely_buyer": {
+    "en": "Research/industrial R&D",
+    "fr": "Research/industrial R&D",
+    "ar": "Research/industrial R&D"
+  },
+  "acceptance_boundary": {
+    "en": "reproducible benchmark and clear go/no-go finding. Defer hardware capital and use qualified partners until demand is demonstrated.",
+    "fr": "reproducible benchmark and clear go/no-go finding. Defer hardware capital and use qualified partners until demand is demonstrated.",
+    "ar": "reproducible benchmark and clear go/no-go finding. Defer hardware capital and use qualified partners until demand is demonstrated."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}

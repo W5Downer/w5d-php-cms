@@ -1,0 +1,44 @@
+{
+  "id": "food-safety",
+  "slug": "food-safety",
+  "macro": "sciences",
+  "placement": "Between 1.0",
+  "status": "proposed",
+  "evidence": "E0",
+  "title": {
+    "en": "Food Safety & Nutrition Science",
+    "fr": "Food Safety & Nutrition Science",
+    "ar": "Food Safety & Nutrition Science"
+  },
+  "short": {
+    "en": "HACCP, labelling, cohort analysis.",
+    "fr": "HACCP, labelling, cohort analysis.",
+    "ar": "HACCP, labelling, cohort analysis."
+  },
+  "long": {
+    "en": "Food safety and nutrition science — HACCP implementation, labelling compliance, and cohort-based nutritional epidemiology for public health agencies.",
+    "fr": "Food safety and nutrition science — HACCP implementation, labelling compliance, and cohort-based nutritional epidemiology for public health agencies.",
+    "ar": "Food safety and nutrition science — HACCP implementation, labelling compliance, and cohort-based nutritional epidemiology for public health agencies."
+  },
+  "problem": {
+    "en": "Weak hazard controls and unsupported labels endanger consumers.",
+    "fr": "Weak hazard controls and unsupported labels endanger consumers.",
+    "ar": "Weak hazard controls and unsupported labels endanger consumers."
+  },
+  "solution": {
+    "en": "HACCP gap assessment, testing plans, and qualified nutrition analysis.",
+    "fr": "HACCP gap assessment, testing plans, and qualified nutrition analysis.",
+    "ar": "HACCP gap assessment, testing plans, and qualified nutrition analysis."
+  },
+  "likely_buyer": {
+    "en": "Food firms",
+    "fr": "Food firms",
+    "ar": "Food firms"
+  },
+  "acceptance_boundary": {
+    "en": "documented hazard controls and reviewed claims. No shortcut around inspection, authorized testing, or health-claim requirements.",
+    "fr": "documented hazard controls and reviewed claims. No shortcut around inspection, authorized testing, or health-claim requirements.",
+    "ar": "documented hazard controls and reviewed claims. No shortcut around inspection, authorized testing, or health-claim requirements."
+  },
+  "_todo": "fr/ar are placeholders copied from en; human translation pending"
+}
