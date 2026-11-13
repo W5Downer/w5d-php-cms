@@ -1,11 +1,15 @@
 <?php
 /**
- * Applies db/migrations/*.sql in order, records each in schema_migrations, then seeds the
- * reference data (countries, regions, roles, permissions, services_country) and creates the
+ * Applies the schema for the active DB_DRIVER, records each file in schema_migrations, then seeds
+ * the reference data (countries, regions, roles, permissions, services_country) and creates the
  * owner account from WEBMASTER_* settings when no user exists.
  *
- *   php bin/migrate.php            apply pending migrations and seed
- *   php bin/migrate.php --status   list applied migrations
+ *   php bin/migrate.php                 apply pending migrations and seed (driver from DB_DRIVER, default sqlite)
+ *   php bin/migrate.php --status        list applied migrations
+ *   DB_DRIVER=mysql php bin/migrate.php uses db/mysql/ instead of db/sqlite/
+ *
+ * Each SQLite migration runs in one transaction (BEGIN IMMEDIATE ... COMMIT). MySQL DDL commits
+ * implicitly, so there each statement runs on its own and a failure stops the run.
  */
 declare(strict_types=1);
 define('W5D_ROOT', dirname(__DIR__));
@@ -16,12 +20,22 @@ use W5D\Content;
 use W5D\Country;
 use W5D\DB;
 use W5D\Env;
+use W5D\Sql;
 
+$driver = DB::driver();
 $pdo = DB::pdo();
-$pdo->exec('CREATE TABLE IF NOT EXISTS schema_migrations (
+echo "driver: {$driver}" . ($driver === 'sqlite' ? ' (' . DB::sqlitePath() . ')' : '') . PHP_EOL;
+
+$tracking = $driver === 'sqlite'
+    ? "CREATE TABLE IF NOT EXISTS schema_migrations (
+  name TEXT NOT NULL PRIMARY KEY,
+  applied_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)"
+    : "CREATE TABLE IF NOT EXISTS schema_migrations (
   name VARCHAR(190) NOT NULL PRIMARY KEY,
   applied_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
+$pdo->exec($tracking);
 
 if (in_array('--status', $argv, true)) {
     foreach (DB::all('SELECT name, applied_at FROM schema_migrations ORDER BY name') as $r) {
@@ -30,7 +44,8 @@ if (in_array('--status', $argv, true)) {
     exit(0);
 }
 
-$files = glob(W5D_ROOT . '/db/migrations/*.sql') ?: [];
+$dir = W5D_ROOT . '/db/' . $driver;
+$files = glob($dir . '/*.sql') ?: [];
 sort($files, SORT_STRING);
 $applied = 0;
 foreach ($files as $file) {
@@ -38,17 +53,33 @@ foreach ($files as $file) {
     if (DB::value('SELECT 1 FROM schema_migrations WHERE name = ?', [$name])) {
         continue;
     }
-    echo "applying {$name} ... ";
+    echo "applying {$driver}/{$name} ... ";
     $sql = (string) file_get_contents($file);
-    // Split on ; at line end. Migrations are plain DDL with no semicolons inside string literals.
-    // Drop comment lines first so a leading comment does not hide the statement that follows it.
-    $sql = implode("\n", array_filter(explode("\n", $sql), static fn ($l) => !str_starts_with(ltrim($l), '--')));
-    foreach (array_filter(array_map('trim', preg_split('/;\s*$/m', $sql) ?: [])) as $stmt) {
-        if ($stmt !== '') {
-            $pdo->exec($stmt);
+    if ($driver === 'sqlite') {
+        // Triggers contain semicolons, so the whole file runs as one script inside one transaction.
+        $pdo->exec('BEGIN IMMEDIATE');
+        try {
+            $pdo->exec($sql);
+            DB::run('INSERT INTO schema_migrations (name) VALUES (?)', [$name]);
+            $pdo->exec('COMMIT');
+        } catch (Throwable $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->exec('ROLLBACK');
+            }
+            echo "FAILED\n";
+            throw $e;
         }
+    } else {
+        // MySQL: split on ; at line end. Comment lines are dropped first so a leading comment
+        // does not hide the statement that follows it.
+        $sql = implode("\n", array_filter(explode("\n", $sql), static fn ($l) => !str_starts_with(ltrim($l), '--')));
+        foreach (array_filter(array_map('trim', preg_split('/;\s*$/m', $sql) ?: [])) as $stmt) {
+            if ($stmt !== '') {
+                $pdo->exec($stmt);
+            }
+        }
+        DB::run('INSERT INTO schema_migrations (name) VALUES (?)', [$name]);
     }
-    DB::run('INSERT INTO schema_migrations (name) VALUES (?)', [$name]);
     echo "ok\n";
     $applied++;
 }
@@ -57,51 +88,48 @@ echo "migrations applied: {$applied}\n";
 // ---------------------------------------------------------------- seed reference data (idempotent)
 $roles = require W5D_ROOT . '/config/roles.php';
 foreach ($roles['roles'] as $code => $def) {
-    DB::run('INSERT INTO roles (code, label_en) VALUES (?, ?) ON DUPLICATE KEY UPDATE label_en = VALUES(label_en)', [$code, $def['label']]);
+    DB::run(Sql::upsert('roles', ['code', 'label_en'], ['code'], ['label_en']), [$code, $def['label']]);
     foreach ($def['perms'] as $perm) {
-        DB::run('INSERT IGNORE INTO permissions (code, label_en) VALUES (?, ?)', [$perm, $perm]);
-        DB::run('INSERT IGNORE INTO role_permissions (role_code, permission_code) VALUES (?, ?)', [$code, $perm]);
+        DB::run(Sql::insertIgnore('permissions', ['code', 'label_en']), [$perm, $perm]);
+        DB::run(Sql::insertIgnore('role_permissions', ['role_code', 'permission_code']), [$code, $perm]);
     }
 }
 
 foreach (Country::codes() as $iso) {
     $c = Country::get($iso);
-    DB::run('INSERT INTO countries (iso, name_en, currency, timezone, status) VALUES (?, ?, ?, ?, \'active\')
-        ON DUPLICATE KEY UPDATE name_en = VALUES(name_en), currency = VALUES(currency), timezone = VALUES(timezone)',
-        [$iso, $c['names']['en'], $c['currency'], $c['timezone']]);
+    DB::run(Sql::upsert('countries', ['iso', 'name_en', 'currency', 'timezone', 'status'], ['iso'], ['name_en', 'currency', 'timezone']),
+        [$iso, $c['names']['en'], $c['currency'], $c['timezone'], 'active']);
     $cid = (int) DB::value('SELECT id FROM countries WHERE iso = ?', [$iso]);
     foreach ($c['regions'] as $r) {
-        DB::run('INSERT INTO regions (country_id, slug, name_en) VALUES (?, ?, ?)
-            ON DUPLICATE KEY UPDATE name_en = VALUES(name_en)', [$cid, $r['slug'], $r['name']['en']]);
+        DB::run(Sql::upsert('regions', ['country_id', 'slug', 'name_en'], ['country_id', 'slug'], ['name_en']),
+            [$cid, $r['slug'], $r['name']['en']]);
     }
 }
 
 // Services are catalogue entries. Per-country activation starts inactive (country wizard rule).
 foreach (Content::all('macros') as $slug => $m) {
-    DB::run('INSERT INTO macros (slug, number, title_en) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE number = VALUES(number), title_en = VALUES(title_en)',
+    DB::run(Sql::upsert('macros', ['slug', 'number', 'title_en'], ['slug'], ['number', 'title_en']),
         [$slug, (int) $m['number'], $m['title']['en']]);
 }
 foreach (Content::all('services') as $slug => $s) {
-    DB::run('INSERT INTO services (slug, number, macro_slug, title_en) VALUES (?, ?, ?, ?)
-        ON DUPLICATE KEY UPDATE number = VALUES(number), macro_slug = VALUES(macro_slug), title_en = VALUES(title_en)',
+    DB::run(Sql::upsert('services', ['slug', 'number', 'macro_slug', 'title_en'], ['slug'], ['number', 'macro_slug', 'title_en']),
         [$slug, (int) $s['number'], $s['macro'], $s['title']['en']]);
 }
 foreach (Content::all('projects') as $slug => $p) {
-    DB::run('INSERT INTO projects (slug, title_en, status, evidence) VALUES (?, ?, ?, ?)
-        ON DUPLICATE KEY UPDATE title_en = VALUES(title_en), status = VALUES(status), evidence = VALUES(evidence)',
+    DB::run(Sql::upsert('projects', ['slug', 'title_en', 'status', 'evidence'], ['slug'], ['title_en', 'status', 'evidence']),
         [$slug, $p['title']['en'], $p['status'], $p['evidence']]);
 }
 foreach (Content::all('layers') as $slug => $l) {
-    DB::run('INSERT INTO layers (slug, layer, title_en) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE layer = VALUES(layer), title_en = VALUES(title_en)',
+    DB::run(Sql::upsert('layers', ['slug', 'layer', 'title_en'], ['slug'], ['layer', 'title_en']),
         [$slug, (string) $l['layer'], $l['title']['en']]);
 }
 foreach (Content::all('pages') as $id => $p) {
-    DB::run('INSERT INTO pages (id, path, title_en) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE path = VALUES(path), title_en = VALUES(title_en)',
+    DB::run(Sql::upsert('pages', ['id', 'path', 'title_en'], ['id'], ['path', 'title_en']),
         [$id, (string) ($p['path'] ?? '/' . $id . '/'), $p['title']['en']]);
 }
 $cid = (int) DB::value('SELECT id FROM countries WHERE iso = ?', [Country::defaultIso()]);
 foreach (array_keys(Content::all('services')) as $slug) {
-    DB::run('INSERT IGNORE INTO services_country (country_id, service_slug, active, seats) VALUES (?, ?, 0, 0)', [$cid, $slug]);
+    DB::run(Sql::insertIgnore('services_country', ['country_id', 'service_slug', 'active', 'seats']), [$cid, $slug, 0, 0]);
 }
 echo "seeded: roles, countries, regions, services, projects, layers\n";
 

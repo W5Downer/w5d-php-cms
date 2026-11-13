@@ -18,7 +18,9 @@ data/content/             JSON content: pages, macros, services, projects, layer
 data/countries/tn.json    every Tunisia-specific fact (regions, currency, legal profile, calendar)
 config/                   app.php, variables.php (numbers, one place), vocab.php, roles.php
 lang/{en,fr,ar}.php       UI chrome only (content text lives in JSON)
-db/migrations/            ordered SQL, applied by bin/migrate.php
+db/sqlite/              ordered SQL for the default driver (SQLite)
+db/mysql/               ordered SQL for the optional MySQL/MariaDB driver; same tables
+                        applied by bin/migrate.php (chooses the folder from DB_DRIVER)
 bin/                      migrate, sync-content, rollup, lint, import-w5d.py (content generator)
 tests/                    RouteMatrixTest.php, FlowTest.php, serve.php (local router)
 ```

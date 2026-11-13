@@ -19,6 +19,11 @@ return [
     'default_language' => 'en',
     'rtl_languages' => ['ar'],
 
+    // Database. SQLite is the default (no server, one file). MySQL/MariaDB is optional: set DB_DRIVER=mysql
+    // and the DB_HOST/DB_NAME/DB_USER/DB_PASSWORD values in .env. Both drivers run the same schema (db/sqlite, db/mysql).
+    'db_driver' => W5D\Env::get('DB_DRIVER', 'sqlite'),
+    'db_sqlite_path' => W5D\Env::get('DB_SQLITE_PATH', 'storage/w5d.sqlite'),
+
     // Owner portal mount point (obfuscated; set in .env).
     'admin_path' => trim(W5D\Env::get('ADMIN_URL_PATH', 'panel-x9z'), '/'),
 

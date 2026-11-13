@@ -28,7 +28,7 @@ function check(bool $ok, string $name): void {
 
 // Isolated state for this run.
 DB::run('DELETE FROM rate_limits');
-DB::run("DELETE c FROM consents c JOIN applicants a ON a.id = c.applicant_id WHERE a.email LIKE 'test-%@example.test'");
+DB::run("DELETE FROM consents WHERE applicant_id IN (SELECT id FROM applicants WHERE email LIKE 'test-%@example.test')");
 DB::run("DELETE FROM applicants WHERE email LIKE 'test-%@example.test'");
 Session::start();
 Config::override('rate_limit_register_per_hour', 5);
@@ -78,7 +78,7 @@ $hash = password_hash('Test-manager-2026!', PASSWORD_ARGON2ID);
 $tn = (int) DB::value("SELECT id FROM countries WHERE iso = 'tn'");
 DB::run("DELETE FROM users WHERE username = 'test-manager'");
 DB::run("INSERT INTO users (country_id, username, email, password_hash, role_code) VALUES (?, 'test-manager', 'test-manager@example.test', ?, 'manager')", [$tn, $hash]);
-DB::run("INSERT IGNORE INTO countries (iso, name_en, currency, timezone, status) VALUES ('ma', 'Morocco (test)', 'MAD', 'Africa/Casablanca', 'draft')");
+DB::run(W5D\Sql::insertIgnore('countries', ['iso', 'name_en', 'currency', 'timezone', 'status']), ['ma', 'Morocco (test)', 'MAD', 'Africa/Casablanca', 'draft']);
 
 $bad = Auth::attempt('owner', 'wrong-password', '198.51.100.20');
 check($bad === 'invalid', 'wrong password is refused');
@@ -96,7 +96,7 @@ check(W5D\ACL::can('member', 'menu.payroll') === false, 'ACL denies payroll to m
 
 echo "Portal: 50-row cap, country scope, quality rule\n";
 // Seed 60 applicants for TN so pagination is exercised.
-DB::run("DELETE c FROM consents c JOIN applicants a ON a.id = c.applicant_id WHERE a.email LIKE 'test-bulk%@example.test'");
+DB::run("DELETE FROM consents WHERE applicant_id IN (SELECT id FROM applicants WHERE email LIKE 'test-bulk%@example.test')");
 DB::run("DELETE FROM applicants WHERE email LIKE 'test-bulk%@example.test'");
 $svc = 'heritage-digitisation';
 $macro = 'cultures';

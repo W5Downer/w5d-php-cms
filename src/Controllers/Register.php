@@ -11,6 +11,7 @@ use W5D\Env;
 use W5D\Lang;
 use W5D\Page;
 use W5D\RateLimit;
+use W5D\Sql;
 use W5D\Scope;
 use W5D\View;
 
@@ -125,15 +126,15 @@ final class Register
         $emailHmac = hash_hmac('sha256', strtolower(trim((string) $v['email'])), $key);
         $cinHmac = Config::app('collect_cin', false) ? hash_hmac('sha256', (string) $v['cin'], $key) : null;
 
-        $pdo = DB::pdo();
-        $pdo->beginTransaction();
+        // BEGIN IMMEDIATE on SQLite, a plain transaction with row locks on MySQL (see DB::begin).
+        DB::begin();
         try {
-            if ($cinHmac !== null && DB::value('SELECT id FROM applicants WHERE country_id = ? AND cin_hmac = ? FOR UPDATE', [$cid, $cinHmac])) {
-                $pdo->rollBack();
+            if ($cinHmac !== null && DB::value('SELECT id FROM applicants WHERE country_id = ? AND cin_hmac = ?' . Sql::forUpdate(), [$cid, $cinHmac])) {
+                DB::rollBack();
                 return 'duplicate';
             }
-            if (DB::value('SELECT id FROM applicants WHERE country_id = ? AND email_hmac = ? FOR UPDATE', [$cid, $emailHmac])) {
-                $pdo->rollBack();
+            if (DB::value('SELECT id FROM applicants WHERE country_id = ? AND email_hmac = ?' . Sql::forUpdate(), [$cid, $emailHmac])) {
+                DB::rollBack();
                 return 'duplicate';
             }
             $id = DB::insert('INSERT INTO applicants
@@ -148,13 +149,11 @@ final class Register
                     VALUES (?, ?, ?, \'registration-v1\', 1)', [$cid, $id, $purpose]);
             }
             Audit::write(null, $cid, 'applicant.registered', 'applicant', (string) $id, 'service=' . $v['service'], $ip);
-            $pdo->commit();
+            DB::commit();
         } catch (\Throwable $e) {
-            if ($pdo->inTransaction()) {
-                $pdo->rollBack();
-            }
-            // A concurrent duplicate that slipped past the SELECT is caught by the unique index (1062).
-            if (str_contains($e->getMessage(), '1062') || str_contains($e->getMessage(), 'Duplicate entry')) {
+            DB::rollBack();
+            // A concurrent duplicate that slipped past the SELECT is caught by the unique index.
+            if (Sql::isDuplicate($e)) {
                 return 'duplicate';
             }
             throw new \RuntimeException('register write failed', 0, $e);

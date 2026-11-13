@@ -143,6 +143,29 @@ foreach (array_merge(glob(W5D_ROOT . '/views/*/*.php') ?: [], glob(W5D_ROOT . '/
     }
 }
 
+// 9a. Database dialect: MySQL-only SQL lives in src/Sql.php only, so SQLite stays the default path.
+$mysqlOnly = ['ON DUPLICATE KEY', 'INSERT IGNORE', 'GET_LOCK(', 'RELEASE_LOCK(', 'FOR UPDATE', 'UTC_TIMESTAMP', 'DATE_ADD(', 'ON UPDATE CURRENT_TIMESTAMP', 'SET NAMES'];
+foreach (array_merge(glob(W5D_ROOT . '/src/*.php') ?: [], glob(W5D_ROOT . '/src/Controllers/*.php') ?: [], glob(W5D_ROOT . '/bin/*.php') ?: []) as $f) {
+    if (in_array(basename($f), ['Sql.php', 'DB.php', 'lint.php'], true)) { continue; } // lint.php holds the token list
+    $txt = (string) file_get_contents($f);
+    foreach ($mysqlOnly as $tok) {
+        if (str_contains($txt, $tok)) { $fail(str_replace(W5D_ROOT . '/', '', $f) . ": MySQL-only SQL '{$tok}' outside src/Sql.php"); }
+    }
+}
+
+// 9b. Schema parity: both drivers define the same tables and the same migration files.
+$tablesOf = static function (string $file): array {
+    preg_match_all('/CREATE TABLE (?:IF NOT EXISTS )?(\w+)/i', (string) file_get_contents($file), $m);
+    $t = array_unique($m[1]); sort($t); return $t;
+};
+$sqlFiles = array_map('basename', glob(W5D_ROOT . '/db/sqlite/*.sql') ?: []);
+$myFiles = array_map('basename', glob(W5D_ROOT . '/db/mysql/*.sql') ?: []);
+sort($sqlFiles); sort($myFiles);
+if ($sqlFiles !== $myFiles) { $fail('db/sqlite and db/mysql migration files differ: ' . implode(',', $sqlFiles) . ' vs ' . implode(',', $myFiles)); }
+$sqliteTables = $tablesOf(W5D_ROOT . '/db/sqlite/001_initial.sql');
+$mysqlTables = $tablesOf(W5D_ROOT . '/db/mysql/001_initial.sql');
+if ($sqliteTables !== $mysqlTables) { $fail('table list differs between db/sqlite/001 and db/mysql/001: ' . count($sqliteTables) . ' vs ' . count($mysqlTables)); }
+
 // 9. No forbidden folders.
 foreach (['public', 'dist'] as $d) {
     if (is_dir(W5D_ROOT . '/' . $d)) { $fail("forbidden folder present: {$d}/"); }

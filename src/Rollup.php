@@ -4,7 +4,8 @@ namespace W5D;
 /**
  * Aggregates raw rows into rollups_daily. Idempotent: rows are upserted on the unique key
  * (country, day, macro, service, metric), so a re-run or an overlapping cron run cannot
- * double-count. A MySQL named lock stops two runs from computing at the same time.
+ * double-count. A named job lock (job_locks table, see Sql::acquireLock) stops two runs from
+ * computing at the same time on either driver.
  */
 final class Rollup
 {
@@ -12,8 +13,8 @@ final class Rollup
     {
         $day ??= gmdate('Y-m-d');
         $lock = 'w5d_rollup';
-        $got = (int) DB::value('SELECT GET_LOCK(?, 0)', [$lock]);
-        if ($got !== 1) {
+        $owner = Sql::acquireLock($lock);
+        if ($owner === null) {
             return ['status' => 'skipped', 'reason' => 'another rollup is running'];
         }
         try {
@@ -21,7 +22,7 @@ final class Rollup
             foreach (DB::all('SELECT id FROM countries') as $c) {
                 $cid = (int) $c['id'];
                 $written += self::upsert($cid, $day, '', '', 'applicants_registered',
-                    (int) DB::value('SELECT COUNT(*) FROM applicants WHERE country_id = ? AND DATE(created_at) = ?', [$cid, $day]));
+                    (int) DB::value('SELECT COUNT(*) FROM applicants WHERE country_id = ? AND ' . Sql::dateOf('created_at') . ' = ?', [$cid, $day]));
                 $written += self::upsert($cid, $day, '', '', 'applicants_total',
                     (int) DB::value('SELECT COUNT(*) FROM applicants WHERE country_id = ?', [$cid]));
                 $written += self::upsert($cid, $day, '', '', 'applicants_certified',
@@ -40,7 +41,7 @@ final class Rollup
             }
             return ['status' => 'ok', 'day' => $day, 'rows_written' => $written];
         } finally {
-            DB::value('SELECT RELEASE_LOCK(?)', [$lock]);
+            Sql::releaseLock($lock, $owner);
         }
     }
 
@@ -60,9 +61,10 @@ final class Rollup
 
     private static function upsert(int $country, string $day, string $macro, string $service, string $metric, int $value): int
     {
-        DB::run('INSERT INTO rollups_daily (country_id, day, macro_slug, service_slug, metric, value)
-            VALUES (?, ?, ?, ?, ?, ?)
-            ON DUPLICATE KEY UPDATE value = VALUES(value), computed_at = CURRENT_TIMESTAMP',
+        DB::run(Sql::upsert('rollups_daily',
+            ['country_id', 'day', 'macro_slug', 'service_slug', 'metric', 'value'],
+            ['country_id', 'day', 'macro_slug', 'service_slug', 'metric'],
+            ['value', 'computed_at']),
             [$country, $day, $macro, $service, $metric, $value]);
         return 1;
     }

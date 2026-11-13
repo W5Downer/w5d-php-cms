@@ -7,6 +7,7 @@ use W5D\Config;
 use W5D\DB;
 use W5D\Page;
 use W5D\RateLimit;
+use W5D\Sql;
 use W5D\Scope;
 use W5D\View;
 
@@ -120,7 +121,7 @@ final class Forms
         $kind = $id === 'contact' ? 'contact' : 'correction';
         $body = $v['message'] . ($kind === 'correction' ? "\n\nReference: " . $v['statement_ref'] : '');
         $tid = DB::insert('INSERT INTO tickets (country_id, kind, sender_name, sender_email, subject, body, status, due_at)
-            VALUES (?, ?, ?, ?, ?, ?, \'open\', DATE_ADD(UTC_TIMESTAMP(), INTERVAL 14 DAY))', [
+            VALUES (?, ?, ?, ?, ?, ?, \'open\', ' . Sql::daysFromNow(14) . ')', [
             $cid, $kind, substr($v['name'], 0, 120), substr($v['email'], 0, 190),
             $kind === 'contact' ? 'Contact' : 'Correction: ' . substr((string) ($v['statement_ref'] ?? ''), 0, 150),
             substr($body, 0, 4000),

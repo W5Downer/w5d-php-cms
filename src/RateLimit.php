@@ -2,7 +2,7 @@
 namespace W5D;
 
 /**
- * Fixed-window rate limiter backed by the rate_limits table (atomic upsert).
+ * Fixed-window rate limiter backed by the rate_limits table (atomic upsert via Sql::counterUpsert).
  * Buckets are keyed by purpose and identity, e.g. "register:203.0.113.5".
  */
 final class RateLimit
@@ -18,10 +18,7 @@ final class RateLimit
         $key = substr(hash('sha256', $bucket), 0, 64);
         $now = time();
         $start = $now - ($now % self::WINDOW);
-        DB::run('INSERT INTO rate_limits (bucket, window_start, hits) VALUES (?, ?, 1)
-            ON DUPLICATE KEY UPDATE
-              hits = IF(window_start = VALUES(window_start), hits + 1, 1),
-              window_start = VALUES(window_start)', [$key, $start]);
+        DB::run(Sql::counterUpsert(), [$key, $start]);
         $hits = (int) DB::value('SELECT hits FROM rate_limits WHERE bucket = ?', [$key]);
         return $hits <= $limit;
     }
